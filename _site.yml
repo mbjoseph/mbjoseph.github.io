@@ -14,3 +14,4 @@ output:
   radix::radix_article:
     css: styles.css
 creative_commons: CC BY
+exclude: ["DESCRIPTION"]
