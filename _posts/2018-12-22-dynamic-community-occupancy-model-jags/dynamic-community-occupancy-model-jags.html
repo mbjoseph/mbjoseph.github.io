@@ -977,25 +977,25 @@
 <p>we can begin to consider occupancy. We’re interested in making inferences about the rates of colonization and population persistence for each species in a community, while estimating and accounting for imperfect detection.</p>
 <p>Occupancy status at site <span class="math inline">\(j\)</span>, by species <span class="math inline">\(i\)</span>, in year <span class="math inline">\(t\)</span> is represented by <span class="math inline">\(z(j,i,t)\)</span>. For occupied sites <span class="math inline">\(z=1\)</span>; for unoccupied sites <span class="math inline">\(z=0\)</span>. However, <span class="math inline">\(Z\)</span> is incompletely observed: it is possible that a species <span class="math inline">\(i\)</span> is present at a site <span class="math inline">\(j\)</span> in some year <span class="math inline">\(t\)</span> (<span class="math inline">\(z(j,i,t)=1\)</span>) but species <span class="math inline">\(i\)</span> was never seen at at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> across all <span class="math inline">\(k\)</span> repeat surveys because of imperfect detection. These observations are represented by <span class="math inline">\(x(j,i,t,k)\)</span>. Here we assume that there are no “false positive” observations. In other words, if <span class="math inline">\(\sum_{1}^{k}x(j,i,t,k)&gt;0\)</span> , then <span class="math inline">\(z(j,i,t)=1\)</span>. If a site is occupied, the probability that <span class="math inline">\(x(j,i,t,k)=1\)</span> is represented as a Bernoulli trial with probability of detection <span class="math inline">\(p(j,i,t,k)\)</span>, such that</p>
 <p><span class="math display">\[
-x(j,i,t,k) \sim Bernoulli(z(j,i,t)p(j,i,t,k))
+x(j,i,t,k) \sim \text{Bernoulli}(z(j,i,t)p(j,i,t,k))
 \]</span></p>
 <p>The occupancy status <span class="math inline">\(z\)</span> of species <span class="math inline">\(i\)</span> at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> is modeled as a Markov Bernoulli trial. In other words whether a species is present at a site in year <span class="math inline">\(t\)</span> is influenced by whether it was present at year <span class="math inline">\(t−1\)</span>.</p>
 <p><span class="math display">\[
-z(j,i,t) \sim Bernoulli(\psi_{j,i,t})
+z(j,i,t) \sim \text{Bernoulli}(\psi(j,i,t))
 \]</span></p>
 <p>where for <span class="math inline">\(t&gt;1\)</span></p>
 <p><span class="math display">\[
-logit(\psi_{j,i,t})=\beta_i + \rho_i z(i, j, t-1)
+\text{logit}(\psi_{j,i,t})=\beta_i + \rho_i z(i, j, t-1)
 \]</span></p>
 <p>and in year one <span class="math inline">\((t=1)\)</span></p>
 <p><span class="math display">\[
-logit(\psi_{j,i,1})=\beta_i + \rho_i z_0(i, j)
+\text{logit}(\psi_{j,i,1})=\beta_i + \rho_i z_0(i, j)
 \]</span></p>
-<p>where the occupancy status in year 0, <span class="math inline">\(z_0(i,j) \sim Bernoulli(\rho_{0i})\)</span>, and <span class="math inline">\(\rho_{0i} \sim Uniform(0,1)\)</span>. <span class="math inline">\(\beta_i\)</span> and <span class="math inline">\(\rho_i\)</span> are parameters that control the probabilities of colonization and persistence. If a site was unoccupied by species <span class="math inline">\(i\)</span> in a previous year <span class="math inline">\(z(i,j,t−1)=0\)</span>, then the probability of colonization is given by the antilogit of <span class="math inline">\(\beta_i\)</span>. If a site was previously occupied <span class="math inline">\(z(i,j,t−1)=1\)</span>, the probability of population persistence is given by the anitlogit of <span class="math inline">\(\beta_i + \rho_i\)</span>. We assume that the distributions of species specific parameters are defined by community level hyperparameters such that <span class="math inline">\(\beta_i \sim Norm(\mu_\beta, \sigma_\beta)\)</span> and <span class="math inline">\(rho_i \sim Norm(\mu_\rho, \sigma_\rho)\)</span>. We can generate occupancy data as follows:</p>
+<p>where the occupancy status in year 0, <span class="math inline">\(z_0(i,j) \sim \text{Bernoulli}(\rho_{0i})\)</span>, and <span class="math inline">\(\rho_{0i} \sim \text{Uniform}(0,1)\)</span>. <span class="math inline">\(\beta_i\)</span> and <span class="math inline">\(\rho_i\)</span> are parameters that control the probabilities of colonization and persistence. If a site was unoccupied by species <span class="math inline">\(i\)</span> in a previous year <span class="math inline">\(z(i,j,t−1)=0\)</span>, then the probability of colonization is given by the antilogit of <span class="math inline">\(\beta_i\)</span>. If a site was previously occupied <span class="math inline">\(z(i,j,t−1)=1\)</span>, the probability of population persistence is given by the anitlogit of <span class="math inline">\(\beta_i + \rho_i\)</span>. We assume that the distributions of species specific parameters are defined by community level hyperparameters such that <span class="math inline">\(\beta_i \sim \text{Normal}(\mu_\beta, \sigma_\beta)\)</span> and <span class="math inline">\(rho_i \sim \text{Normal}(\mu_\rho, \sigma_\rho)\)</span>. We can generate occupancy data as follows:</p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<p>For simplicity, we’ll assume that there are no differences in species detectability among sites, years, or repeat surveys, but that detectability varies among species. We’ll again use hyperparameters to specify a distribution of detection probabilities in our community, such that <span class="math inline">\(logit(p_i) \sim Norm(\mu_p, \sigma_p)\)</span>.</p>
+<p>For simplicity, we’ll assume that there are no differences in species detectability among sites, years, or repeat surveys, but that detectability varies among species. We’ll again use hyperparameters to specify a distribution of detection probabilities in our community, such that <span class="math inline">\(\text{logit}(p_i) \sim \text{Normal}(\mu_p, \sigma_p)\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
@@ -1042,51 +1042,51 @@ Sample size per chain = 10000
    plus standard error of the mean:
 
              Mean     SD Naive SE Time-series SE
-beta[1] -0.136404 0.4879 0.002817       0.011299
-beta[2]  5.107996 3.7142 0.021444       0.080598
-beta[3] -1.342948 0.3370 0.001946       0.004372
-beta[4]  5.034333 3.7981 0.021928       0.095132
-lp[1]    3.869905 0.7093 0.004095       0.006394
-lp[2]    0.940678 0.1951 0.001126       0.002081
-lp[3]    2.378986 0.6247 0.003606       0.005574
-lp[4]   -0.001175 0.1919 0.001108       0.002960
-rho[1]   1.297504 0.5952 0.003436       0.014102
-rho[2]   1.660380 2.5078 0.014479       0.059563
-rho[3]   0.561936 0.6108 0.003526       0.010942
-rho[4]   1.145660 2.6906 0.015534       0.075605
+beta[1] -0.157689 0.4843 0.002796       0.010618
+beta[2]  5.202259 3.8945 0.022485       0.088729
+beta[3] -1.350593 0.3457 0.001996       0.004570
+beta[4]  5.011672 3.7619 0.021719       0.096885
+lp[1]    3.871359 0.7066 0.004080       0.006500
+lp[2]    0.938340 0.1937 0.001119       0.002011
+lp[3]    2.374913 0.6322 0.003650       0.005666
+lp[4]   -0.001276 0.1909 0.001102       0.002875
+rho[1]   1.325605 0.5899 0.003406       0.013661
+rho[2]   1.724383 2.7188 0.015697       0.085649
+rho[3]   0.576876 0.6177 0.003566       0.011654
+rho[4]   1.264257 2.8261 0.016316       0.090603
 
 2. Quantiles for each variable:
 
-           2.5%      25%      50%     75%   97.5%
-beta[1] -1.1297 -0.45672 -0.12035  0.1970  0.7851
-beta[2]  0.2229  2.53572  4.23082  6.7867 14.7987
-beta[3] -2.0239 -1.56305 -1.33150 -1.1119 -0.7059
-beta[4]  0.6354  2.46984  3.99294  6.5255 15.3499
-lp[1]    2.6790  3.37180  3.80306  4.2836  5.4722
-lp[2]    0.5758  0.80767  0.93255  1.0652  1.3462
-lp[3]    1.2649  1.94503  2.33922  2.7715  3.7230
-lp[4]   -0.3487 -0.13123 -0.01167  0.1167  0.4170
-rho[1]   0.1758  0.89454  1.27950  1.6910  2.5119
-rho[2]  -2.1637  0.43776  1.19299  2.3376  8.3312
-rho[3]  -0.6816  0.16553  0.58093  0.9767  1.7161
-rho[4]  -3.4377  0.04748  0.92744  1.8717  7.6874</code></pre>
+           2.5%     25%      50%     75%   97.5%
+beta[1] -1.1622 -0.4697 -0.13622  0.1767  0.7314
+beta[2]  0.1138  2.5813  4.28823  6.8553 15.1585
+beta[3] -2.0560 -1.5771 -1.34198 -1.1131 -0.6959
+beta[4]  0.5211  2.4385  3.97110  6.5990 14.8174
+lp[1]    2.6936  3.3733  3.80044  4.2916  5.4678
+lp[2]    0.5759  0.8056  0.93105  1.0644  1.3348
+lp[3]    1.2492  1.9377  2.33086  2.7639  3.7441
+lp[4]   -0.3497 -0.1307 -0.01108  0.1155  0.4100
+rho[1]   0.2366  0.9196  1.30965  1.7035  2.5554
+rho[2]  -2.3450  0.4488  1.23522  2.4508  8.5978
+rho[3]  -0.7079  0.1765  0.59449  1.0063  1.7092
+rho[4]  -3.5067  0.0641  0.97623  1.9416  8.3755</code></pre>
 <p><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-4.png" width="768" /></p>
 </div>
 <div id="refs" class="references">
 <div id="ref-dorazio2010models">
-<p>Dorazio, Robert M, Marc Kery, J Andrew Royle, and Matthias Plattner. 2010. “Models for Inference in Dynamic Metacommunity Systems.” <em>Ecology</em> 91 (8): 2466–75.</p>
+<p>Dorazio, Robert M, Marc Kery, J Andrew Royle, and Matthias Plattner. 2010. “Models for Inference in Dynamic Metacommunity Systems.” <em>Ecology</em> 91 (8): 2466–75. <a href="https://doi.org/10.1890/09-1033.1">https://doi.org/10.1890/09-1033.1</a>.</p>
 </div>
 <div id="ref-kery2008hierarchical">
-<p>Kéry, M, and J Andrew Royle. 2008. “Hierarchical Bayes Estimation of Species Richness and Occupancy in Spatially Replicated Surveys.” <em>Journal of Applied Ecology</em> 45 (2): 589–98.</p>
+<p>Kéry, M, and J Andrew Royle. 2008. “Hierarchical Bayes Estimation of Species Richness and Occupancy in Spatially Replicated Surveys.” <em>Journal of Applied Ecology</em> 45 (2): 589–98. <a href="https://doi.org/10.1111/j.1365-2664.2007.01441.x">https://doi.org/10.1111/j.1365-2664.2007.01441.x</a>.</p>
 </div>
 <div id="ref-mackenzie2002estimating">
-<p>MacKenzie, Darryl I, James D Nichols, Gideon B Lachman, Sam Droege, J Andrew Royle, and Catherine A Langtimm. 2002. “Estimating Site Occupancy Rates When Detection Probabilities Are Less Than One.” <em>Ecology</em> 83 (8): 2248–55.</p>
+<p>MacKenzie, Darryl I, James D Nichols, Gideon B Lachman, Sam Droege, J Andrew Royle, and Catherine A Langtimm. 2002. “Estimating Site Occupancy Rates When Detection Probabilities Are Less Than One.” <em>Ecology</em> 83 (8): 2248–55. <a href="https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2">https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2</a>.</p>
 </div>
 <div id="ref-royle2008hierarchical">
-<p>Royle, J Andrew, and Robert M Dorazio. 2008. <em>Hierarchical Modeling and Inference in Ecology: The Analysis of Data from Populations, Metapopulations and Communities</em>. Elsevier.</p>
+<p>Royle, J Andrew, and Robert M Dorazio. 2008. <em>Hierarchical Modeling and Inference in Ecology: The Analysis of Data from Populations, Metapopulations and Communities</em>. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-374097-7.50001-5">https://doi.org/10.1016/B978-0-12-374097-7.50001-5</a>.</p>
 </div>
 <div id="ref-royle2007bayesian">
-<p>Royle, J Andrew, and Marc Kéry. 2007. “A Bayesian State-Space Formulation of Dynamic Occupancy Models.” <em>Ecology</em> 88 (7): 1813–23.</p>
+<p>Royle, J Andrew, and Marc Kéry. 2007. “A Bayesian State-Space Formulation of Dynamic Occupancy Models.” <em>Ecology</em> 88 (7): 1813–23. <a href="https://doi.org/10.1890/06-0669.1">https://doi.org/10.1890/06-0669.1</a>.</p>
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
@@ -1119,7 +1119,8 @@ rho[4]  -3.4377  0.04748  0.92744  1.8717  7.6874</code></pre>
   number={8},
   pages={2248--2255},
   year={2002},
-  publisher={Wiley Online Library}
+  publisher={Wiley Online Library}, 
+  url={https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2}
 }
 
 @article{royle2007bayesian,
@@ -1130,7 +1131,8 @@ rho[4]  -3.4377  0.04748  0.92744  1.8717  7.6874</code></pre>
   number={7},
   pages={1813--1823},
   year={2007},
-  publisher={Wiley Online Library}
+  publisher={Wiley Online Library}, 
+  url={https://doi.org/10.1890/06-0669.1}
 }
 
 @article{kery2008hierarchical,
@@ -1141,7 +1143,8 @@ rho[4]  -3.4377  0.04748  0.92744  1.8717  7.6874</code></pre>
   number={2},
   pages={589--598},
   year={2008},
-  publisher={Wiley Online Library}
+  publisher={Wiley Online Library}, 
+  url={https://doi.org/10.1111/j.1365-2664.2007.01441.x}
 }
 
 @article{dorazio2010models,
@@ -1152,14 +1155,16 @@ rho[4]  -3.4377  0.04748  0.92744  1.8717  7.6874</code></pre>
   number={8},
   pages={2466--2475},
   year={2010},
-  publisher={Wiley Online Library}
+  publisher={Wiley Online Library}, 
+  url={https://doi.org/10.1890/09-1033.1}
 }
 
 @book{royle2008hierarchical,
   title={Hierarchical modeling and inference in ecology: the analysis of data from populations, metapopulations and communities},
   author={Royle, J Andrew and Dorazio, Robert M},
   year={2008},
-  publisher={Elsevier}
+  publisher={Elsevier}, 
+  url={https://doi.org/10.1016/B978-0-12-374097-7.50001-5}
 }
 
 </script>

@@ -64,7 +64,7 @@ If a site is occupied, the probability that $x(j,i,t,k)=1$ is represented as a
 Bernoulli trial with probability of detection $p(j,i,t,k)$, such that
 
 $$
-x(j,i,t,k) \sim Bernoulli(z(j,i,t)p(j,i,t,k))
+x(j,i,t,k) \sim \text{Bernoulli}(z(j,i,t)p(j,i,t,k))
 $$
 
 The occupancy status $z$ of species $i$ at site $j$ in year $t$ is modeled as a 
@@ -72,31 +72,31 @@ Markov Bernoulli trial. In other words whether a species is present at a site
 in year $t$ is influenced by whether it was present at year $t−1$.
 
 $$
-z(j,i,t) \sim Bernoulli(\psi_{j,i,t})
+z(j,i,t) \sim \text{Bernoulli}(\psi(j,i,t))
 $$
 
 where for $t>1$
 
 $$
-logit(\psi_{j,i,t})=\beta_i + \rho_i z(i, j, t-1)
+\text{logit}(\psi_{j,i,t})=\beta_i + \rho_i z(i, j, t-1)
 $$
 
 and in year one $(t=1)$
 
 $$
-logit(\psi_{j,i,1})=\beta_i + \rho_i z_0(i, j)
+\text{logit}(\psi_{j,i,1})=\beta_i + \rho_i z_0(i, j)
 $$
 
-where the occupancy status in year 0, $z_0(i,j) \sim Bernoulli(\rho_{0i})$, and 
-$\rho_{0i} \sim Uniform(0,1)$. $\beta_i$ and $\rho_i$ are parameters that 
+where the occupancy status in year 0, $z_0(i,j) \sim \text{Bernoulli}(\rho_{0i})$, and 
+$\rho_{0i} \sim \text{Uniform}(0,1)$. $\beta_i$ and $\rho_i$ are parameters that 
 control the probabilities of colonization and persistence. 
 If a site was unoccupied by species $i$ in a previous year $z(i,j,t−1)=0$, then 
 the probability of colonization is given by the antilogit of $\beta_i$. 
 If a site was previously occupied $z(i,j,t−1)=1$, the probability of population 
 persistence is given by the anitlogit of $\beta_i + \rho_i$. We assume that 
 the distributions of species specific parameters are defined by community level 
-hyperparameters such that $\beta_i \sim Norm(\mu_\beta, \sigma_\beta)$ and 
-$rho_i \sim Norm(\mu_\rho, \sigma_\rho)$. We can generate occupancy data as 
+hyperparameters such that $\beta_i \sim \text{Normal}(\mu_\beta, \sigma_\beta)$ and 
+$rho_i \sim \text{Normal}(\mu_\rho, \sigma_\rho)$. We can generate occupancy data as 
 follows:
 
 ```{r hyperparams}
@@ -148,7 +148,7 @@ For simplicity, we’ll assume that there are no differences in species
 detectability among sites, years, or repeat surveys, but that detectability 
 varies among species. We’ll again use hyperparameters to specify a distribution 
 of detection probabilities in our community, such that 
-$logit(p_i) \sim Norm(\mu_p, \sigma_p)$.
+$\text{logit}(p_i) \sim \text{Normal}(\mu_p, \sigma_p)$.
 
 ```{r detection-params}
 p_p <- 0.7
