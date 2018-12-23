@@ -1,0 +1,14 @@
+language: r
+
+r:
+  - oldrel
+  - release
+  - devel
+
+addons:
+  apt:
+    packages:
+      - jags
+
+script:
+- Rscript -e "rmarkdown::render_site(encoding = 'UTF-8')"

@@ -1,0 +1,16 @@
+name: "maxwell-b-joseph"
+title: "Maxwell B. Joseph"
+description: |
+  Personal site of Maxwell B. Joseph - Earth data science, open science 
+  architecture, Bayesian statistics, and spatial analysis.
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output:
+  radix::radix_article:
+    css: styles.css
+creative_commons: CC BY

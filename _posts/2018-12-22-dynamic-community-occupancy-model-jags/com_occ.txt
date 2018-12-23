@@ -1,0 +1,61 @@
+
+model{
+  #### priors
+  # beta hyperparameters
+  p_beta ~ dbeta(1, 1)
+	mubeta <- log(p_beta / (1 - p_beta))
+  sigmabeta ~ dunif(0, 10)
+  taubeta <- (1 / (sigmabeta * sigmabeta))
+
+  # rho hyperparameters
+  p_rho ~ dbeta(1, 1)
+	murho <- log(p_rho / (1 - p_rho))
+	sigmarho~dunif(0,10)
+	taurho<-1/(sigmarho*sigmarho)
+
+  # p hyperparameters
+  p_p ~ dbeta(1, 1)
+  mup <- log(p_p / (1 - p_p))
+  sigmap ~ dunif(0,10)
+  taup <- (1 / (sigmap * sigmap))
+
+  #### occupancy model
+  # species specific random effects
+  for (i in 1:(nspec)) {
+    rho0[i] ~ dbeta(1, 1)
+    beta[i] ~ dnorm(mubeta, taubeta)
+    rho[i] ~ dnorm(murho, taurho)
+  }
+
+  # occupancy states
+  for (j in 1:nsite) {
+    for (i in 1:nspec) {
+      z0[j, i] ~ dbern(rho0[i])
+      logit(psi[j, i, 1]) <- beta[i] + rho[i] * z0[j, i]
+      z[j, i, 1] ~ dbern(psi[j, i, 1])
+      for (t in 2:nyear) {
+        logit(psi[j, i, t]) <- beta[i] + rho[i] * z[j, i, t-1]
+        z[j, i, t] ~ dbern(psi[j, i, t])
+      }
+    }
+  }
+
+  #### detection model
+	for(i in 1:nspec){
+		lp[i] ~ dnorm(mup, taup)
+		p[i] <- (exp(lp[i])) / (1 + exp(lp[i]))
+	}
+
+  #### observation model
+  for (j in 1:nsite){
+    for (i in 1:nspec){
+      for (t in 1:nyear){
+        mu[j, i, t] <- z[j, i, t] * p[i]
+        for (k in 1:nrep){
+          x[j, i, t, k] ~ dbern(mu[j, i, t])
+        }
+      }
+    }
+  }
+}
+

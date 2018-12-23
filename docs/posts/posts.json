@@ -1,0 +1,47 @@
+[
+  {
+    "path": "posts/2018-12-22-interactive-two-host-sir-model/",
+    "title": "Interactive two host SIR model",
+    "description": "Creating an interactive two host SIR model in R and shiny.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2018-12-22",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-22T23:46:10-07:00"
+  },
+  {
+    "path": "posts/2018-12-20-interactive-stage-structured-population-model/",
+    "title": "Interactive stage-structured population model",
+    "description": "Building an interactive stage-structured population model with shiny.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2013-02-16",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-20T23:28:46-07:00"
+  },
+  {
+    "path": "posts/2018-12-22-dynamic-community-occupancy-model-jags/",
+    "title": "Dynamic community occupancy modeling with R and JAGS",
+    "description": "Multi-species, multi-timestep occupancy model in R and JAGS",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2013-02-04",
+    "categories": [],
+    "preview": "posts/2018-12-22-dynamic-community-occupancy-model-jags/dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png",
+    "last_modified": "2018-12-23T10:42:33-07:00"
+  }
+]
