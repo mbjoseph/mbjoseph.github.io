@@ -5,7 +5,7 @@ description: |
 author:
   - name: Maxwell B. Joseph
     url: {}
-date: 12-23-2018
+date: 06-24-2013
 output:
   radix::radix_article:
     self_contained: false
@@ -28,6 +28,7 @@ library(digest)
 library(beanplot)
 
 # Simulate data
+set.seed(1234)
 n.each <- 1000
 A1 <- rnorm(n.each, 2, 1)
 A2 <- rnorm(n.each, 1.5, 2)
