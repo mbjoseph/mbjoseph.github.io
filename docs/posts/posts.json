@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2018-12-23-split-violin-plots/",
+    "title": "Split violin plots",
+    "description": "Comparing distributions with split violin plots in R.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2018-12-23",
+    "categories": [],
+    "preview": "posts/2018-12-23-split-violin-plots/split-violin-plots_files/figure-html5/make-boxplot-1.png",
+    "last_modified": "2018-12-23T20:21:03-07:00"
+  },
+  {
     "path": "posts/2018-12-23-bayesian-model-ii-regression/",
     "title": "Bayesian model II regression in JAGS",
     "description": "Fitting a regression model with uncertainty in the explanatory variable.",
