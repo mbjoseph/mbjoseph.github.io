@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2018-12-24-clarifying-vague-interactions/",
+    "title": "Clarifying vague interactions",
+    "description": "One quick way to improve reporting of interaction effects in linear models.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2013-08-18",
+    "categories": [],
+    "preview": "posts/2018-12-24-clarifying-vague-interactions/clarifying-vague-interactions_files/figure-html5/simulate-data-1.png",
+    "last_modified": "2018-12-24T09:38:52-07:00"
+  },
+  {
     "path": "posts/2018-12-23-split-violin-plots/",
     "title": "Split violin plots",
     "description": "Comparing distributions with split violin plots in R.",
