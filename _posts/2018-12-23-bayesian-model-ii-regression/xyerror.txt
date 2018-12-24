@@ -1,0 +1,18 @@
+
+    model {
+## Priors
+alpha ~ dnorm(0, .001)
+beta ~ dnorm(0, .001)
+sdy ~ dunif(0, 100)
+tauy <- 1 / (sdy * sdy)
+taux ~ dunif(.03, .05)
+
+## Likelihood
+  for (i in 1:n){
+    truex[i] ~ dnorm(0, .04)
+    x[i] ~ dnorm(truex[i], taux)
+    y[i] ~ dnorm(mu[i], tauy)
+    mu[i] <- alpha + beta * truex[i]
+  }
+}
+    

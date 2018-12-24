@@ -19,367 +19,39 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Maxwell B. Joseph: Blog</title>
+  <title>Bayesian model II regression in JAGS</title>
+  
+  <meta property="description" itemprop="description" content="Fitting a regression model with uncertainty in the explanatory variable."/>
   
   
-  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
-  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2013-05-27"/>
+  <meta property="article:created" itemprop="dateCreated" content="2013-05-27"/>
+  <meta name="article:author" content="Maxwell B. Joseph"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Maxwell B. Joseph: Blog"/>
+  <meta property="og:title" content="Bayesian model II regression in JAGS"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Fitting a regression model with uncertainty in the explanatory variable."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Maxwell B. Joseph"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Maxwell B. Joseph: Blog"/>
+  <meta property="twitter:title" content="Bayesian model II regression in JAGS"/>
+  <meta property="twitter:description" content="Fitting a regression model with uncertainty in the explanatory variable."/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog"]},{"type":"character","attributes":{},"value":["radix::radix_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Bayesian model II regression in JAGS"]},{"type":"character","attributes":{},"value":["Fitting a regression model with uncertainty in the explanatory variable.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["05-27-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
   
-  <script type="application/javascript">
-  
-    window.headroom_prevent_pin = false;
-  
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-  
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-  
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-  
-      // responsive menu
-      $('.radix-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-  
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["bayesian-model-ii-regression_files/bowser-1.9.3/bowser.min.js","bayesian-model-ii-regression_files/distill-2.2.21/template.v2.js","bayesian-model-ii-regression_files/figure-html5/compare-models-1.png","bayesian-model-ii-regression_files/jquery-1.11.3/jquery.min.js","bayesian-model-ii-regression_files/webcomponents-2.0.0/webcomponents.js","xyerror.txt","yerror.txt"]}
   </script>
-  
-  <style type="text/css">
-  
-  /* Theme (user-documented overrideables for nav appearance) */
-  
-  .radix-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #455a64;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  
-  .radix-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .radix-site-nav a:hover {
-    color: white;
-  }
-  
-  @media print {
-    .radix-site-nav {
-      display: none;
-    }
-  }
-  
-  .radix-site-header {
-  
-  }
-  
-  .radix-site-footer {
-  
-  }
-  
-  
-  /* Site Header */
-  
-  .radix-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-  
-  .radix-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .radix-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-  
-  
-  .radix-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-  
-  .radix-site-header a,
-  .radix-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-  
-  .radix-site-header .title {
-    font-size: 18px;
-  }
-  
-  .radix-site-header .logo {
-    padding: 0;
-  }
-  
-  .radix-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-  
-  .radix-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-  
-  
-  
-  @media screen and (min-width: 1000px) {
-    .radix-site-header .logo img {
-      display: inline-block;
-    }
-    .radix-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .radix-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .radix-site-header .title {
-      padding-left: 12px;
-    }
-  }
-  
-  
-  .radix-site-header .nav-toggle {
-    display: none;
-  }
-  
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-  
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-  
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-dropdown-active {
-    display: block;
-  }
-  
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-  
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-  
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .radix-site-header a, .radix-site-header .nav-dropdown  {display: none;}
-    .radix-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .radix-site-header .title {
-      margin-left: 0;
-    }
-    .radix-site-header .nav-right {
-      margin-right: 0;
-    }
-    .radix-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .radix-site-header.responsive {position: relative;}
-    .radix-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .radix-site-header.responsive a,
-    .radix-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .radix-site-header.responsive .nav-left,
-    .radix-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .radix-site-header.responsive .nav-dropdown {float: none;}
-    .radix-site-header.responsive .nav-dropdown-content {position: relative;}
-    .radix-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-  
-  /* Site Footer */
-  
-  .radix-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-  
-  /* Headroom */
-  
-  d-title {
-    padding-top: 6rem;
-  }
-  
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-  
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-  
-  .headroom--unpinned {
-    top: -100px;
-  }
-  
-  .headroom--pinned {
-    top: 0;
-  }
-  
-  </style>
-  
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
   
@@ -1255,449 +927,182 @@
   </script>
   
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="bayesian-model-ii-regression_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="bayesian-model-ii-regression_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="bayesian-model-ii-regression_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="bayesian-model-ii-regression_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <style type="text/css">
-  .radix-site-nav {
-    color: rgba(255, 255, 255, 1);
-    background-color: #00869b;
-  }
-  
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Blog","authors":[]}
+{"title":"Bayesian model II regression in JAGS","description":"Fitting a regression model with uncertainty in the explanatory variable.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2013-05-27T00:00:00.000-06:00","citationText":"Joseph, 2013"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="radix-site-nav radix-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Maxwell B. Joseph</a>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-<style type="text/css">
-
-/* Styles for listing layout (hide title) */
-.layout-listing d-title, .layout-listing .d-title {
-  display: none;
-}
-
-/* Styles for posts lists (not auto-injected) */
-
-
-.posts-with-sidebar {
-  padding-left: 45px;
-  padding-right: 45px;
-}
-
-.posts-list .description h2,
-.posts-list .description p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
-.posts-list .description h2 {
-  font-weight: 700;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.posts-list h2.post-tag {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 12px;
-}
-.posts-list {
-  margin-top: 60px;
-  margin-bottom: 24px;
-}
-
-.posts-list .post-preview {
-  text-decoration: none;
-  overflow: hidden;
-  display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 24px 0;
-}
-
-.post-preview-last {
-  border-bottom: none !important;
-}
-
-.posts-list .posts-list-caption {
-  grid-column: screen;
-  font-weight: 400;
-}
-
-.posts-list .post-preview h2 {
-  margin: 0 0 6px 0;
-  line-height: 1.2em;
-  font-style: normal;
-  font-size: 24px;
-}
-
-.posts-list .post-preview p {
-  margin: 0 0 12px 0;
-  line-height: 1.4em;
-  font-size: 16px;
-}
-
-.posts-list .post-preview .thumbnail {
-  box-sizing: border-box;
-  margin-bottom: 24px;
-  position: relative;
-  max-width: 500px;
-}
-.posts-list .post-preview img {
-  width: 100%;
-  display: block;
-}
-
-.posts-list .metadata {
-  font-size: 12px;
-  line-height: 1.4em;
-  margin-bottom: 18px;
-}
-
-.posts-list .metadata > * {
-  display: inline-block;
-}
-
-.posts-list .metadata .publishedDate {
-  margin-right: 1em;
-}
-
-.posts-list .metadata .tags {
-  margin-top: 1em;
-}
-
-.posts-list .tags .tag {
-  color: rgba(0,0,0,0.67);
-  padding: 0.3em 0.5em;
-  margin: 0;
-  font-size: 80%;
-  border: 1px solid rgba(0,0,0,0.4);
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.posts-list img {
-  opacity: 1;
-}
-
-.posts-list img[data-src] {
-  opacity: 0;
-}
-
-.posts-more {
-  clear: both;
-}
-
-
-.posts-sidebar {
-  font-size: 16px;
-}
-
-.posts-sidebar h3 {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.sidebar-section {
-  margin-bottom: 30px;
-}
-
-.categories ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.categories li {
-  color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 0;
-}
-
-.categories li>a {
-  border-bottom: none;
-}
-
-.categories li>a:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.categories .active {
-  font-weight: 600;
-}
-
-.categories .category-count {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-@media(min-width: 768px) {
-  .posts-list .post-preview h2 {
-    font-size: 26px;
-  }
-  .posts-list .post-preview .thumbnail {
-    float: right;
-    width: 35%;
-    margin-bottom: 0;
-  }
-  .posts-list .post-preview .description {
-    float: left;
-    width: 45%;
-  }
-  .posts-list .post-preview .metadata {
-    float: left;
-    width: 15%;
-    margin-top: 8px;
-  }
-  .posts-list .post-preview p {
-    margin: 0 0 12px 0;
-    line-height: 1.5em;
-    font-size: 16px;
-  }
-  .posts-with-sidebar .posts-list {
-    float: left;
-    width: 72%;
-  }
-  .posts-with-sidebar .posts-sidebar {
-    float: right;
-    width: 20%;
-    margin-top: 60px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
-.downlevel .posts-list .post-preview {
-  color: inherit;
-}
-
-</style>
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace("#", "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if (category == page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption">Blog</h1>
-<a href="posts/2018-12-23-bayesian-model-ii-regression/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">May 27, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-23-bayesian-model-ii-regression/bayesian-model-ii-regression_files/figure-html5/compare-models-1.png"/>
-</div>
-<div class="description">
-<h2>Bayesian model II regression in JAGS</h2>
-<p>Fitting a regression model with uncertainty in the explanatory variable.</p>
-</div>
-</a>
-<a href="posts/2018-12-23-modeling-habitat-diversity-and-species-richness/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">April 20, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-23-modeling-habitat-diversity-and-species-richness/modeling-habitat-diversity-and-species-richness_files/figure-html5/run-model-1.png"/>
-</div>
-<div class="description">
-<h2>Modeling habitat diversity and species richness</h2>
-<p>Experimenting with an agent based model of habitat diversity and species richness in R.</p>
-</div>
-</a>
-<a href="posts/2018-12-22-interactive-two-host-sir-model/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 20, 2013</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Interactive two host SIR model</h2>
-<p>Creating an interactive two host SIR model in R and shiny.</p>
-</div>
-</a>
-<a href="posts/2018-12-20-interactive-stage-structured-population-model/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 16, 2013</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Interactive stage-structured population model</h2>
-<p>Building an interactive stage-structured population model in R with shiny.</p>
-</div>
-</a>
-<a href="posts/2018-12-22-dynamic-community-occupancy-model-jags/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 4, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-22-dynamic-community-occupancy-model-jags/dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png"/>
-</div>
-<div class="description">
-<h2>Dynamic community occupancy modeling with R and JAGS</h2>
-<p>Multi-species, multi-timestep occupancy model in R and JAGS</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Blog</h1>
-
+<h1>Bayesian model II regression in JAGS</h1>
+<p>Fitting a regression model with uncertainty in the explanatory variable.</p>
 </div>
 
+<div class="d-byline">
+  Maxwell B. Joseph true 
+  
+<br/>05-27-2013
+</div>
 
 <div class="d-article">
+<p>Regression is a mainstay of ecological and evolutionary data analysis. For example, a disease ecologist may use body size (e.g. a weight from a scale with measurement error) to predict infection. Classical linear regression assumes no error in covariates; they are known exactly. This is rarely the case in ecology, and ignoring error in covariates can bias regression coefficient estimates. This is where model II (aka errors-in variables and measurement errors) regression models come in handy. Here I’ll demonstrate how to construct such a model in a Bayesian framework, where substantive prior knowledge of covariate error facilitates less-biased parameter estimates.</p>
+<p>Here’s a quick illustration of the problem: I’ll generate data from a known simple linear regression model, and fit models that ignore or incorporate error in the covariate.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+library(rjags)
+library(ggmcmc)
 
+# simulate covariate data
+n &lt;- 40
+sdx &lt;- 6
+sdobs &lt;- 5
+taux &lt;- 1 / (sdobs * sdobs)
+truex &lt;- rnorm(n, 0, sdx)
+errorx &lt;- rnorm(n, 0, sdobs)
+obsx &lt;- truex + errorx
+
+# simulate response data
+alpha &lt;- 0
+beta &lt;- 10
+sdy &lt;- 20
+errory &lt;- rnorm(n, 0, sdy)
+obsy &lt;- alpha + beta*truex + errory
+observed_data &lt;- data.frame(obsx = obsx, obsy = obsy)
+parms &lt;- data.frame(alpha, beta)</code></pre>
+</div>
+<p>Ignoring error in the covariate:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+# bundle data
+jags_d &lt;- list(x = obsx, y = obsy, n = length(obsx))
+
+# write model
+cat(&quot;
+    model{
+## Priors
+alpha ~ dnorm(0, .001)
+beta ~ dnorm(0, .001)
+sdy ~ dunif(0, 100)
+tauy &lt;- 1 / (sdy * sdy)
+
+## Likelihood
+  for (i in 1:n){
+    mu[i] &lt;- alpha + beta * x[i]
+    y[i] ~ dnorm(mu[i], tauy)
+  }
+}
+&quot;,
+    fill=TRUE, file=&quot;yerror.txt&quot;)
+
+# initiate model
+mod1 &lt;- jags.model(&quot;yerror.txt&quot;, data=jags_d,
+                   n.chains=3, n.adapt=1000)</code></pre>
+<pre><code>
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 40
+   Unobserved stochastic nodes: 3
+   Total graph size: 170
+
+Initializing model</code></pre>
+<pre class="r"><code>
+# simulate posterior
+out &lt;- coda.samples(mod1, n.iter=1000, thin=1,
+                    variable.names=c(&quot;alpha&quot;, &quot;beta&quot;, &quot;sdy&quot;))
+
+# store parameter estimates
+ggd &lt;- ggs(out)
+a &lt;- ggd$value[which(ggd$Parameter == &quot;alpha&quot;)]
+b &lt;- ggd$value[which(ggd$Parameter == &quot;beta&quot;)]
+d &lt;- data.frame(a, b)</code></pre>
+</div>
+<p>Incorporating error in the covariate: I’m assuming that we have substantive knowledge about covariate measurement represented in the prior for the precision in X. Further, the prior for the true X values reflects knowledge of the distribution of our X value in the population from which the sample was taken.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+# specify model
+cat(&quot;
+    model {
+## Priors
+alpha ~ dnorm(0, .001)
+beta ~ dnorm(0, .001)
+sdy ~ dunif(0, 100)
+tauy &lt;- 1 / (sdy * sdy)
+taux ~ dunif(.03, .05)
+
+## Likelihood
+  for (i in 1:n){
+    truex[i] ~ dnorm(0, .04)
+    x[i] ~ dnorm(truex[i], taux)
+    y[i] ~ dnorm(mu[i], tauy)
+    mu[i] &lt;- alpha + beta * truex[i]
+  }
+}
+    &quot;, fill=T, file=&quot;xyerror.txt&quot;)
+
+# bundle data
+jags_d &lt;- list(x = obsx, y = obsy, n = length(obsx))
+
+# initiate model
+mod2 &lt;- jags.model(&quot;xyerror.txt&quot;, data=jags_d,
+                   n.chains=3, n.adapt=1000)</code></pre>
+<pre><code>
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 80
+   Unobserved stochastic nodes: 44
+   Total graph size: 214
+
+Initializing model</code></pre>
+<pre class="r"><code>
+# simulate posterior
+out &lt;- coda.samples(mod2, n.iter=30000, thin=30,
+                    variable.names=c(&quot;alpha&quot;, &quot;beta&quot;, &quot;tauy&quot;, &quot;taux&quot;))
+# store parameter estimates
+ggd &lt;- ggs(out)
+a2 &lt;- ggd$value[which(ggd$Parameter == &quot;alpha&quot;)]
+b2 &lt;- ggd$value[which(ggd$Parameter == &quot;beta&quot;)]
+d2 &lt;- data.frame(a2, b2)</code></pre>
+</div>
+<p>Now let’s see how the two models perform.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+ggplot(observed_data, aes(x=obsx, obsy)) +
+  geom_abline(aes(intercept=a, slope=b), data=d, 
+              color=&quot;red&quot;, alpha=0.05) +
+  geom_abline(aes(intercept=a2, slope=b2), data=d2, 
+              color=&quot;dodgerblue&quot;, alpha=0.05) +
+  geom_abline(aes(intercept=alpha, slope=beta),
+              data=parms, color=&quot;green&quot;, size=1.5, linetype=&quot;dashed&quot;) +
+  geom_point(shape=19, size=3) +
+  theme_minimal() +
+  xlab(&quot;X values&quot;) + 
+  ylab(&quot;Observed Y values&quot;) +
+  ggtitle(&quot;Model results with and without modeling error in X&quot;)</code></pre>
+<p><img src="bayesian-model-ii-regression_files/figure-html5/compare-models-1.png" width="624" /></p>
+</div>
+<p>The dashed green line shows the model that generated the data, i.e. the “true” line. The red lines show the posterior for the naive model ignoring error in X, while the less-biased blue lines show the posterior for the model incorporating error in X.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1709,10 +1114,7 @@ function init_posts_list() {
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="reuse">Reuse</h3>
-<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
