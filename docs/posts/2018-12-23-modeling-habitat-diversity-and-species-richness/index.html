@@ -19,39 +19,42 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-<title>Maxwell B. Joseph: Interactive two host SIR model</title>
+<title>Maxwell B. Joseph: Modeling habitat diversity and species richness</title>
 
-<meta property="description" itemprop="description" content="Creating an interactive two host SIR model in R and shiny."/>
+<meta property="description" itemprop="description" content="Experimenting with an agent based model of habitat diversity and species richness in R."/>
 
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2013-02-20"/>
-<meta property="article:created" itemprop="dateCreated" content="2013-02-20"/>
+<meta property="article:published" itemprop="datePublished" content="2013-04-20"/>
+<meta property="article:created" itemprop="dateCreated" content="2013-04-20"/>
 <meta name="article:author" content="Maxwell B. Joseph"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Maxwell B. Joseph: Interactive two host SIR model"/>
+<meta property="og:title" content="Maxwell B. Joseph: Modeling habitat diversity and species richness"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Creating an interactive two host SIR model in R and shiny."/>
+<meta property="og:description" content="Experimenting with an agent based model of habitat diversity and species richness in R."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Maxwell B. Joseph"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Maxwell B. Joseph: Interactive two host SIR model"/>
-<meta property="twitter:description" content="Creating an interactive two host SIR model in R and shiny."/>
+<meta property="twitter:title" content="Maxwell B. Joseph: Modeling habitat diversity and species richness"/>
+<meta property="twitter:description" content="Experimenting with an agent based model of habitat diversity and species richness in R."/>
 
 <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Area–heterogeneity tradeoff and the diversity of ecological communities;citation_publication_date=2012;citation_publisher=National Acad Sciences;citation_volume=109;citation_author=Omri Allouche;citation_author=Michael Kalyuzhny;citation_author=Gregorio Moreno-Rueda;citation_author=Manuel Pizarro;citation_author=Ronen Kadmon"/>
+  <meta name="citation_reference" content="citation_title=A practical guide to ecological modelling: Using r as a simulation platform;citation_publication_date=2008;citation_publisher=Springer Science &amp; Business Media;citation_author=Karline Soetaert;citation_author=Peter MJ Herman"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Interactive two host SIR model"]},{"type":"character","attributes":{},"value":["Creating an interactive two host SIR model in R and shiny."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]}]}]},{"type":"character","attributes":{},"value":["02-20-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Modeling habitat diversity and species richness"]},{"type":"character","attributes":{},"value":["Experimenting with an agent based model of habitat diversity and species richness in R."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["04-20-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["interactive-two-host-sir-model_files/bowser-1.9.3/bowser.min.js","interactive-two-host-sir-model_files/distill-2.2.21/template.v2.js","interactive-two-host-sir-model_files/jquery-1.11.3/jquery.min.js","interactive-two-host-sir-model_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","modeling-habitat-diversity-and-species-richness_files/bowser-1.9.3/bowser.min.js","modeling-habitat-diversity-and-species-richness_files/distill-2.2.21/template.v2.js","modeling-habitat-diversity-and-species-richness_files/figure-html5/run-many-models-1.png","modeling-habitat-diversity-and-species-richness_files/figure-html5/run-model-1.png","modeling-habitat-diversity-and-species-richness_files/jquery-1.11.3/jquery.min.js","modeling-habitat-diversity-and-species-richness_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1288,7 +1291,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Interactive two host SIR model","description":"Creating an interactive two host SIR model in R and shiny.","authors":[{"author":"Maxwell B. Joseph","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2013-02-20T00:00:00.000-07:00","citationText":"Joseph, 2013"}
+{"title":"Modeling habitat diversity and species richness","description":"Experimenting with an agent based model of habitat diversity and species richness in R.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2013-04-20T00:00:00.000-06:00","citationText":"Joseph, 2013"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1310,33 +1313,56 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Interactive two host SIR model</h1>
-<p>Creating an interactive two host SIR model in R and shiny.</p>
+<h1>Modeling habitat diversity and species richness</h1>
+<p>Experimenting with an agent based model of habitat diversity and species richness in R.</p>
 </div>
 
 <div class="d-byline">
-  Maxwell B. Joseph  
+  Maxwell B. Joseph true 
   
-<br/>02-20-2013
+<br/>04-20-2013
 </div>
 
 <div class="d-article">
-<p>This is an example of interfacing R, shiny, and deSolve to produce an interactive environment where users can explore model behavior by altering parameters in an easy to use GUI.</p>
-<p>The model tracks the number of susceptible, infectious, and recovered individuals in two co-occuring host species. The rates of change for each class are represented as a system of differential equations:</p>
-<p><span class="math display">\[\dot{S_1} = (b_1 - \Delta_1N_1)N_1 - d_1S_1 - S_1 (\beta_{11} I_1 + \beta_{12} I_2)\]</span></p>
-<p><span class="math display">\[\dot{I_1} =  S_1 (\beta_{11} I_1 + \beta_{12} I_2) - (d_1 + \alpha_1 + \sigma_1)I_1\]</span></p>
-<p><span class="math display">\[\dot{R_1} = \sigma_1 I_1 - d_1R_1\]</span></p>
-<p><span class="math display">\[\dot{S_2} = (b_2 - \Delta_2N_2)N_2 - d_2S_2 - S_2 (\beta_{22} I_2 + \beta_{21} I_1)\]</span></p>
-<p><span class="math display">\[\dot{I_2} = S_2 (\beta_{22} I_2 + \beta_{21} I_1) - (d_2 + \alpha_2 + \sigma_2)I_2\]</span></p>
-<p><span class="math display">\[\dot{R_2} = \sigma_2 I_2 - d_2R_2\]</span></p>
-<p>Where <span class="math inline">\(S_i\)</span>, <span class="math inline">\(I_i\)</span>, and <span class="math inline">\(R_i\)</span> represent the density of susceptible, infectious, and recovered individuals respectively of species <span class="math inline">\(i\)</span>. The total number of individuals of each species is <span class="math inline">\(N_i\)</span>. Per capita birth and death rates are represented by <span class="math inline">\(b_i\)</span> and <span class="math inline">\(d_i\)</span>, and the strength of density dependence in population growth is <span class="math inline">\(\delta_i\)</span>. Transmission rates from species <span class="math inline">\(j\)</span> to species <span class="math inline">\(i\)</span> are given by <span class="math inline">\(\beta_{ij}\)</span>. The pathogen imposes additional mortality for infected individuals at rate <span class="math inline">\(\alpha_{i}\)</span>, and infected individuals recover at rate <span class="math inline">\(\sigma_{i}\)</span> so that the average infectious period is <span class="math inline">\(\frac{1}{\sigma_{i}}\)</span>. Here, it is assumed that the pathogen does not castrate its hosts. Thus, susceptible, infectious, and recovered individuals reproduce at the same rate.</p>
-<p>Epidemiological models often differentiate between two transmission dynamics. With <em>density-dependent transmission</em>, the number of host contacts and transmission events increases with the density of individuals (as shown in the above system of equations). In contrast, with <em>frequency-dependent transmission</em>, hosts have a constant contact rate so that the transmission rate depends on the relative proportion of infectious individuals. As an example, models of sexually transmitted infections often assume frequency dependent transmission, implying that the number of sexual partners one has is independent of population density. To incorporate frequency dependent transmission into the above model, it is necessary to divide the transmission term <span class="math inline">\(S\sum{(\beta I)}\)</span> by <span class="math inline">\(N\)</span>.</p>
-<p>Based on this system of equations, a criterion for pathogen invasion called <span class="math inline">\(R_0\)</span> can be derived based on the dominant eigenvalue of the next generation matrix (Dobson 2004). If <span class="math inline">\(R_0 &lt; 1\)</span>, the pathogen does not invade; if <span class="math inline">\(R_0&gt;1\)</span>, the pathogen invades.</p>
-<h3 id="building-the-r-shiny-app">Building the R shiny app</h3>
-<p>Shiny requires two files to run: a file containing all of the calculations, plotting functionality, etc., and a file defining a user interface.</p>
-<p><a href="https://github.com/mbjoseph/2hostSIR/blob/master/server.R">Here</a> is the file defining what you want the server to do. Note the use of ifelse() to have either density- or frequency-dependent transmission.</p>
-<p><a href="https://github.com/mbjoseph/2hostSIR/blob/master/ui.R">Here</a> is the file defining the user interface.</p>
-<p><a href="https://mbjoseph.shinyapps.io/2hostSIR/">Here</a> is a link to the resulting app.</p>
+<p>How does habitat diversity affect species richness? Perhaps intuition suggests that habitat diversity increases species richness by facilitating niche or resource partitioning among species. But, for a fixed area, as habitat heterogeneity increases, the area that can be allocated to each habitat type decreases. A recent paper provides a theoretical and empirical treatment of the habitat area-heterogeneity trade-off’s consequences for species richness <span class="citation" data-cites="allouche2012area">(Allouche et al. <a href="#ref-allouche2012area">2012</a>)</span>. Both treatments of the subject indicated that the relationship between habitat heterogeneity and species richness may be unimodal, rather than strictly increasing.</p>
+<p>Conceptually, this is expected to occur when on the left side of the curve, increasing habitat heterogeneity opens up new regions in niche space, facilitating colonization by new species. However, as heterogeneity continues to increase, each species has fewer habitat patches to utilize, population sizes decrease, and local extinction risk increases due to demographic stochasticity.</p>
+<p>To explore this idea theoretically, Allouche et al. (2012) developed an individually based model using a continuous time Markov process. The details of their modeling approach can be found in the <a href="http://www.pnas.org/content/suppl/2012/10/04/1208652109.DCSupplemental/sapp.pdf">supplement</a> to their <a href="http://www.pnas.org/content/109/43/17495">article</a>, which I recommend. In this post, I’ll demonstrate how to implement a discrete time version of their model in R. Thanks to the agent-based modeling working group at the University of Colorado for providing motivation to code up model in R.</p>
+<h3 id="model-structure">Model structure</h3>
+<p>This model is spatially implicit, with <span class="math inline">\(A\)</span> equally connected sites. Each site falls on an environmental condition axis, receiving some value <span class="math inline">\(E\)</span> that characterizes local conditions. The environmental conditions for each site are uniformly distributed between two values that dictate the range of environmental conditions in a focal area. The local range of environmental conditions is a subset of some global range. There are <span class="math inline">\(N\)</span> species in the regional pool that can colonize habitat patches. Each species has some environmental optimum <span class="math inline">\(\mu_i\)</span>, and some niche width <span class="math inline">\(\sigma_i\)</span>, which together define a Gaussian function for the probability of establishment given a colonization attempt and a habitat patch environmental condition <span class="math inline">\(E\)</span>.</p>
+<p>It is assumed that all individuals that occupy a patch have the same per-timestep probabilities of death and reproduction. If an individual reproduces, the number of offspring it produces is a Poisson distributed random variable, and each individual offspring attempts to colonize one randomly selected site. At each time-step, every site has an equal probability of a colonization attempt by an individual from each species in the regional pool. Every habitat patch holds only one individual.</p>
+<p>Offspring and immigrants from the regional pool do not displace individuals from habitat patches when they attempt to colonize. In empty sites, offspring receive colonization priority, with regional colonization occurring after breeding. When multiple offspring or immigrants from the regional pool could establish in an empty site, one successful individual is randomly chosen to establish regardless of species identity.</p>
+<h3 id="parameters">Parameters</h3>
+<p>The following parameters are supplied to the function <code>alloucheIBM()</code>:</p>
+<p><code>A</code> = number of sites; <code>N</code> = number of species in the regional pool; <code>ERmin</code> = global environmental conditions minimum; <code>ERmax</code> = global environmental conditions maximum; <code>Emin</code> = local environmental minimum; <code>Emax</code> = local environmental maximum; <code>sig</code> = niche width standard deviation for all species; <code>pM</code> = per timestep probability of mortality; <code>pR</code> = per timestep probability of reproduction; <code>R</code> = per capita expected number of offspring; and <code>I</code> = per timestep probability of attempted colonization by an immigrant from the regional pool for each patch.</p>
+<h3 id="implementation-in-r">Implementation in R</h3>
+<p>The function <code>alloucheIBM()</code> does the majority of work for this model:</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>The function returns a list containing a vector of species richness at each timestep, the proportion of sites occupied at each timestep, a state array containing all occupancy information for each patch, species, and timestep, and lastly a dataframe containing information on the niches of each species in the regional pool.</p>
+<p>Using this function we can simulate richness through time:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="modeling-habitat-diversity-and-species-richness_files/figure-html5/run-model-1.png" width="624" /></p>
+</div>
+<p>Finally, we can address the issue of habitat heterogeneity and its effect on species richness. There are many ways to approach this issue, and many parameter combinations to consider. Allouche et al. (2012) provides a thorough treatment of the subject; I’ll demonstrate just one result: that under certain conditions, species richness peaks at intermediate levels of habitat heterogeneity.</p>
+<p>To construct a range of habitat heterogeneity values, let’s construct an interval and take subsequently narrower intervals centered around the middle of the original interval.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Now, for each interval, we can iteratively run the model and track species richness. Because species richness tends to vary through time, let’s take the mean of the final 100 timesteps as a measure of species richness for each model run, and record the standard deviation to track variability.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="modeling-habitat-diversity-and-species-richness_files/figure-html5/run-many-models-1.png" width="624" /></p>
+</div>
+<p>Of course, the shape of this relationship is sensitive to the parameters. As an example, changing niche width to increase or decrease niche overlap will mediate the strength of interspecific competition for space. Also, increasing reproductive rates may buffer each species from stochastic extinction so that the relationship between environmental heterogeneity and richness is monotonically increasing. Furthermore, here I centered all intervals around the same value, but the exact position of the environmental heterogeneity interval will affect the net establishment probability for each site, depending on how the interval relates to species niches. The parameter space is yours to explore.</p>
+<p>These types of stochastic simulation models are fairly straightforward to implement in R. Indeed there’s a package dedicated to facilitating the implementation of such models: <a href="http://simecol.r-forge.r-project.org/">simecol</a>. There’s even a book <span class="citation" data-cites="soetaert2008practical">(Soetaert and Herman <a href="#ref-soetaert2008practical">2008</a>)</span>.</p>
+<div id="refs" class="references">
+<div id="ref-allouche2012area">
+<p>Allouche, Omri, Michael Kalyuzhny, Gregorio Moreno-Rueda, Manuel Pizarro, and Ronen Kadmon. 2012. “Area–Heterogeneity Tradeoff and the Diversity of Ecological Communities.” <em>Proceedings of the National Academy of Sciences</em> 109 (43): 17495–17500. <a href="https://doi.org/10.1073/pnas.1208652109">https://doi.org/10.1073/pnas.1208652109</a>.</p>
+</div>
+<div id="ref-soetaert2008practical">
+<p>Soetaert, Karline, and Peter MJ Herman. 2008. <em>A Practical Guide to Ecological Modelling: Using R as a Simulation Platform</em>. Springer Science &amp; Business Media.</p>
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1361,6 +1387,26 @@ document.addEventListener('DOMContentLoaded', function() {
   <h3 id="reuse">Reuse</h3>
   <p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
 </div>
+<script id="distill-bibliography" type="text/bibtex">
+@article{allouche2012area,
+  title={Area--heterogeneity tradeoff and the diversity of ecological communities},
+  author={Allouche, Omri and Kalyuzhny, Michael and Moreno-Rueda, Gregorio and Pizarro, Manuel and Kadmon, Ronen},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={109},
+  number={43},
+  pages={17495--17500},
+  year={2012},
+  publisher={National Acad Sciences}, 
+  url={https://doi.org/10.1073/pnas.1208652109}
+}
+
+@book{soetaert2008practical,
+  title={A practical guide to ecological modelling: using R as a simulation platform},
+  author={Soetaert, Karline and Herman, Peter MJ},
+  year={2008},
+  publisher={Springer Science \& Business Media}
+}
+</script>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

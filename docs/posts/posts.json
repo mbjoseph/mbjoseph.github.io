@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2018-12-23-modeling-habitat-diversity-and-species-richness/",
+    "title": "Modeling habitat diversity and species richness",
+    "description": "Experimenting with an agent based model of habitat diversity and species richness in R.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2013-04-20",
+    "categories": [],
+    "preview": "posts/2018-12-23-modeling-habitat-diversity-and-species-richness/modeling-habitat-diversity-and-species-richness_files/figure-html5/run-model-1.png",
+    "last_modified": "2018-12-23T19:49:39-07:00"
+  },
+  {
     "path": "posts/2018-12-22-interactive-two-host-sir-model/",
     "title": "Interactive two host SIR model",
     "description": "Creating an interactive two host SIR model in R and shiny.",
@@ -9,10 +24,10 @@
         "url": {}
       }
     ],
-    "date": "2018-12-22",
+    "date": "2013-02-20",
     "categories": [],
     "preview": {},
-    "last_modified": "2018-12-23T17:28:34-07:00"
+    "last_modified": "2018-12-23T19:45:24-07:00"
   },
   {
     "path": "posts/2018-12-20-interactive-stage-structured-population-model/",
