@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/",
+    "title": "Quantifying uncertainty around R-squared for generalized linear models",
+    "description": "How to propage posterior uncertainty to R-squared in R and JAGS.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2013-08-22",
+    "categories": [],
+    "preview": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png",
+    "last_modified": "2018-12-24T10:19:45-07:00"
+  },
+  {
     "path": "posts/2018-12-24-clarifying-vague-interactions/",
     "title": "Clarifying vague interactions",
     "description": "One quick way to improve reporting of interaction effects in linear models.",

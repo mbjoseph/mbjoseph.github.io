@@ -1,0 +1,33 @@
+
+model{
+  # priors on precisions (inverse variances)
+  tau.pop ~ dgamma(0.01, 0.01)
+  sd.pop <- sqrt(1/tau.pop)
+  tau.cont ~ dgamma(0.01, 0.01)
+  sd.cont <- sqrt(1/tau.cont)
+  tau.unit ~ dgamma(0.01, 0.01)
+  sd.unit <- sqrt(1/tau.unit)
+  # priors on coefficients
+  alpha ~ dnorm(0, 0.01)
+  beta1 ~ dnorm(0, 0.01)
+  beta2 ~ dnorm(0, 0.01)
+
+  # random effect of container
+  for (i in 1:ncont){
+    cont[i] ~ dnorm(0, tau.cont)
+  }
+
+  # random effect of population
+  for (i in 1:npop){
+    pop[i] ~ dnorm(0, tau.pop)
+  }
+
+  # likelihood
+  for (i in 1:nobs){
+    Egg[i] ~ dpois(mu[i])
+    log(mu[i]) <- cont[Container[i]] + pop[Population[i]] + unit[i]
+    mu_f[i] <- alpha + beta1 * Treatment[i] + beta2 * Habitat[i]
+    unit[i] ~ dnorm(mu_f[i], tau.unit)
+  }
+}
+    

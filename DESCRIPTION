@@ -14,12 +14,14 @@ License: CC-BY
 Encoding: UTF-8
 LazyData: true
 Imports: 
+    arm,
     beanplot,
     devtools, 
     digest,
     ggmcmc,
     ggplot2,
     knitr,
+    lme4,
     radix,
     rjags, 
     rmarkdown, 
