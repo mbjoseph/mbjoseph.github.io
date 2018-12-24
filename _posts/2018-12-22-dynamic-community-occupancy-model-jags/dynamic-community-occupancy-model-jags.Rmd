@@ -43,7 +43,7 @@ be constant),
 
 ```{r global-constants}
 nsite <- 20
-nspec <- 4
+nspec <- 3
 nyear <- 4
 nrep <- 2
 ```
@@ -101,13 +101,11 @@ follows:
 
 ```{r hyperparams}
 # community level hyperparameters
-p_beta = 0.7
-mubeta <- logit(p_beta)
-sdbeta <- 2
+mubeta <- 1
+sdbeta <- 0.2
 
-p_rho <- 0.8
-murho <- logit(p_rho)
-sdrho <- 1
+murho <- -2
+sdrho <- .1
 
 # species specific random effects
 set.seed(1)  # for reproducibility
@@ -284,7 +282,8 @@ interest using JAGS.
 
 ```{r fit-model, fig.width = 8, fig.height = 5}
 params <- c("lp", "beta", "rho")
-ocmod <- jags.model(file = "com_occ.txt", inits = inits, data = data, n.chains = 3)
+ocmod <- jags.model(file = "com_occ.txt", inits = inits, data = data, 
+                    n.chains = 2)
 nburn <- 10000
 update(ocmod, n.iter = nburn)
 out <- coda.samples(ocmod, n.iter = 10000, variable.names = params)

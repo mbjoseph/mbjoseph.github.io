@@ -11,4 +11,4 @@ addons:
       - jags
 
 script:
-- Rscript -e "rmarkdown::render_site(encoding = 'UTF-8')"
+- Rscript main.R

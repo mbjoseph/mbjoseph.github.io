@@ -12,12 +12,12 @@
     "date": "2018-12-22",
     "categories": [],
     "preview": {},
-    "last_modified": "2018-12-22T23:46:10-07:00"
+    "last_modified": "2018-12-23T17:28:34-07:00"
   },
   {
     "path": "posts/2018-12-20-interactive-stage-structured-population-model/",
     "title": "Interactive stage-structured population model",
-    "description": "Building an interactive stage-structured population model with shiny.",
+    "description": "Building an interactive stage-structured population model in R with shiny.",
     "author": [
       {
         "name": "Maxwell B. Joseph",
@@ -27,7 +27,7 @@
     "date": "2013-02-16",
     "categories": [],
     "preview": {},
-    "last_modified": "2018-12-20T23:28:46-07:00"
+    "last_modified": "2018-12-23T18:53:55-07:00"
   },
   {
     "path": "posts/2018-12-22-dynamic-community-occupancy-model-jags/",
@@ -42,6 +42,6 @@
     "date": "2013-02-04",
     "categories": [],
     "preview": "posts/2018-12-22-dynamic-community-occupancy-model-jags/dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png",
-    "last_modified": "2018-12-23T11:09:18-07:00"
+    "last_modified": "2018-12-23T17:28:34-07:00"
   }
 ]
