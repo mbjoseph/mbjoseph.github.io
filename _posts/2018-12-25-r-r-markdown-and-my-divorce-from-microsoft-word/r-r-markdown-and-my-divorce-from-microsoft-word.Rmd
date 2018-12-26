@@ -1,0 +1,52 @@
+---
+title: "R Markdown and my divorce from Microsoft Word"
+description: |
+  A short description of the post.
+author:
+  - name: Maxwell B. Joseph
+    url: {}
+date: 2013-10-30
+output:
+  radix::radix_article:
+    self_contained: false
+bibliography: biblio.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I do a lot of scholarly writing that requires associated or embedded R analyses, 
+figures, and tables, plus bibliographies.
+
+Microsoft Word makes this unnecessarily difficult.
+
+Many tools are now available to break free from 
+[the tyranny of Word](http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html).
+The ones I like involve writing an article in
+[markdown](http://daringfireball.net/projects/markdown/) format, integrating all 
+data preparation, analysis, and outputs with the document (e.g. with the 
+excellent and accessible [knitr](http://yihui.name/knitr/) package or with a 
+custom `make` set up 
+[like this one](https://github.com/mbjoseph/project-template)).
+Add in version control with [Git](http://git-scm.com/), and you've got a nice 
+stew going.
+
+If you're involved in the open source/reproducible research blogo-twittersphere, 
+this is probably old hat.
+To many in my department, this looks like black magic.
+It's not.
+
+I can't give an authoritative overview, but here are some resources that helped 
+me get through my divorce with Microsoft Word:
+
+- [R Markdown](https://rmarkdown.rstudio.com/authoring_quick_tour.html) = [knitr](http://yihui.name/knitr/) + [RStudio](http://www.rstudio.com/) may be one of the better places to start
+- [How to ditch Word](http://old.inundata.org/2012/12/04/how-to-ditch-word/index.html) by Karthik Ram
+- [Markdown and the future of collaborative manuscript writing](http://inundata.org/2012/06/01/markdown-and-the-future-of-collaborative-manuscript-writing/) by Karthik Ram
+- Git can facilitate greater reproducibility and increased transparency in science [@ram2013git]
+- [What is scholarly markdown?](http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown/) by Martin Fenner
+- [Markdown for scientific writing](https://github.com/karthikram/markdown_science)
+- [Pandoc](http://johnmacfarlane.net/pandoc/index.html) to convert from markdown to almost any other format
+- [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc) for citations
+- [Citations in markdown using knitr](http://carlboettiger.info/2012/03/24/citations-in-markdown-using-knitr.html) for another take on citations, from Carl Boettiger
+- [Getting started with make](http://linux.omnipotent.net/article.php?article_id=7822)

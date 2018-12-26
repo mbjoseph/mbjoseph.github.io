@@ -25,4 +25,6 @@ Imports:
     radix,
     rjags, 
     rmarkdown, 
+    rstan,
+    sm,
     vioplot

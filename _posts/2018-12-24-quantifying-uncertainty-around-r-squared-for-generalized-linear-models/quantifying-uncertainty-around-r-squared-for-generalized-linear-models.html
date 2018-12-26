@@ -1061,22 +1061,22 @@ Formula: Egg ~ 1 + (1 | Population) + (1 | Container) + (1 | Unit)
    Data: DataF
 
      AIC      BIC   logLik deviance df.resid 
-   277.2    284.9   -134.6    269.2       46 
+   258.5    266.7   -125.2    250.5       53 
 
 Scaled residuals: 
-     Min       1Q   Median       3Q      Max 
--1.44893 -0.55559 -0.06305  0.41142  1.68721 
+    Min      1Q  Median      3Q     Max 
+-1.5165 -0.7099 -0.0290  0.3184  2.4847 
 
 Random effects:
- Groups     Name        Variance Std.Dev.
- Unit       (Intercept) 0.09041  0.3007  
- Container  (Intercept) 0.00000  0.0000  
- Population (Intercept) 1.02576  1.0128  
-Number of obs: 50, groups:  Unit, 50; Container, 10; Population, 8
+ Groups     Name        Variance  Std.Dev. 
+ Unit       (Intercept) 3.509e-02 0.1873297
+ Container  (Intercept) 1.190e-09 0.0000345
+ Population (Intercept) 2.584e-01 0.5083268
+Number of obs: 57, groups:  Unit, 57; Container, 10; Population, 8
 
 Fixed effects:
             Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)   1.6289     0.3692   4.412 1.03e-05 ***
+(Intercept)   1.2621     0.1974   6.392 1.63e-10 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 convergence code: 0
@@ -1093,31 +1093,31 @@ Egg ~ Treatment + Habitat + (1 | Population) + (1 | Container) +
    Data: DataF
 
      AIC      BIC   logLik deviance df.resid 
-   266.6    278.1   -127.3    254.6       44 
+   256.2    268.5   -122.1    244.2       51 
 
 Scaled residuals: 
-     Min       1Q   Median       3Q      Max 
--1.38914 -0.89803 -0.02162  0.59248  1.81969 
+    Min      1Q  Median      3Q     Max 
+-1.7335 -0.6259 -0.0880  0.4473  3.3394 
 
 Random effects:
  Groups     Name        Variance  Std.Dev. 
- Unit       (Intercept) 2.396e-02 1.548e-01
- Container  (Intercept) 9.360e-09 9.675e-05
- Population (Intercept) 9.045e-01 9.510e-01
-Number of obs: 50, groups:  Unit, 50; Container, 10; Population, 8
+ Unit       (Intercept) 6.190e-09 7.867e-05
+ Container  (Intercept) 0.000e+00 0.000e+00
+ Population (Intercept) 2.812e-01 5.303e-01
+Number of obs: 57, groups:  Unit, 57; Container, 10; Population, 8
 
 Fixed effects:
              Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)    1.3427     0.3606   3.723 0.000197 ***
-TreatmentExp   0.5472     0.1306   4.191 2.78e-05 ***
-Habitatwet     0.1169     0.1319   0.886 0.375585    
+(Intercept)   1.06322    0.23147   4.593 4.36e-06 ***
+TreatmentExp  0.37496    0.14356   2.612    0.009 ** 
+Habitatwet   -0.01495    0.14257  -0.105    0.917    
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Correlation of Fixed Effects:
             (Intr) TrtmnE
-TreatmntExp -0.239       
-Habitatwet  -0.217  0.308
+TreatmntExp -0.409       
+Habitatwet  -0.296  0.081
 convergence code: 0
 singular fit</code></pre>
 <pre class="r"><code>
@@ -1148,7 +1148,7 @@ R2c &lt;- (VarF + VarCorr(mF)$Container[1] + VarCorr(mF)$Population[1])/
 cbind(R2m, R2c)</code></pre>
 <pre><code>
             R2m       R2c
-[1,] 0.06407174 0.8284027</code></pre>
+[1,] 0.06283296 0.5596841</code></pre>
 </div>
 <p>Having stored our point estimates, we can now turn to Bayesian methods instead, and generate <span class="math inline">\(R^2\)</span> posteriors.</p>
 <h3 id="posterior-uncertainty-in-r2_glmm">Posterior uncertainty in <span class="math inline">\(R^2_{GLMM}\)</span></h3>
@@ -1174,13 +1174,13 @@ jags_d$Treatment &lt;- ifelse(jags_d$Treatment == &quot;Cont&quot;, 0, 1)
 str(jags_d)</code></pre>
 <pre><code>
 List of 8
- $ Population: Factor w/ 8 levels &quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,..: 1 1 1 1 2 2 2 2 2 2 ...
- $ Habitat   : num [1:50] 0 0 0 0 1 1 0 1 0 0 ...
- $ Treatment : num [1:50] 0 0 0 0 0 0 0 1 0 0 ...
- $ Egg       : int [1:50] 2 4 3 2 0 0 2 2 1 2 ...
- $ nobs      : int 50
+ $ Population: Factor w/ 8 levels &quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,..: 1 1 1 1 1 1 2 2 2 2 ...
+ $ Habitat   : num [1:57] 0 1 0 0 0 1 0 0 0 1 ...
+ $ Treatment : num [1:57] 0 0 1 0 1 1 0 1 0 0 ...
+ $ Egg       : int [1:57] 1 3 3 2 0 3 5 13 8 9 ...
+ $ nobs      : int 57
  $ npop      : int 8
- $ Container : int [1:50] 1 1 1 1 2 2 2 2 2 3 ...
+ $ Container : int [1:57] 1 1 1 1 1 2 2 2 2 2 ...
  $ ncont     : int 10</code></pre>
 </div>
 <p>Then, fitting the intercept model:</p>
@@ -1231,9 +1231,9 @@ Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
-   Observed stochastic nodes: 50
-   Unobserved stochastic nodes: 72
-   Total graph size: 334
+   Observed stochastic nodes: 57
+   Unobserved stochastic nodes: 79
+   Total graph size: 376
 
 Initializing model</code></pre>
 <pre class="r"><code>
@@ -1288,9 +1288,9 @@ Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
-   Observed stochastic nodes: 50
-   Unobserved stochastic nodes: 74
-   Total graph size: 444
+   Observed stochastic nodes: 57
+   Unobserved stochastic nodes: 81
+   Total graph size: 500
 
 Initializing model</code></pre>
 <pre class="r"><code>

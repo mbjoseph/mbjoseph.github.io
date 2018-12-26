@@ -13,6 +13,7 @@ r:
 addons:
   apt:
     packages:
+      - imagemagick
       - jags
 
 script:

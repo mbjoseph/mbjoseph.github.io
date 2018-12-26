@@ -1,5 +1,65 @@
 [
   {
+    "path": "posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/",
+    "title": "Better living through zero-one inflated beta regression",
+    "description": "Fitting a Bayesian ZOIB regression model in JAGS.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2014-02-06",
+    "categories": [],
+    "preview": "posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png",
+    "last_modified": "2018-12-25T21:44:23-07:00"
+  },
+  {
+    "path": "posts/2018-12-25-errors-in-variables-models-in-stan/",
+    "title": "Errors-in-variables models in stan",
+    "description": "Fitting a Bayesian regression with covariate uncertainty.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2013-11-27",
+    "categories": [],
+    "preview": "posts/2018-12-25-errors-in-variables-models-in-stan/errors-in-variables-models-in-stan_files/figure-html5/simulate-data-1.png",
+    "last_modified": "2018-12-25T21:22:59-07:00"
+  },
+  {
+    "path": "posts/2018-12-25-r-r-markdown-and-my-divorce-from-microsoft-word/",
+    "title": "R Markdown and my divorce from Microsoft Word",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2013-10-30",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-25T20:44:42-07:00"
+  },
+  {
+    "path": "posts/2018-12-25-animating-the-metropolis-algorithm/",
+    "title": "Animating the Metropolis algorithm",
+    "description": "A homemade Metropolis algorithm animation using R and the animation package.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2013-09-08",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-25T13:10:32-07:00"
+  },
+  {
     "path": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/",
     "title": "Quantifying uncertainty around R-squared for generalized linear models",
     "description": "How to propage posterior uncertainty to R-squared in R and JAGS.",
@@ -12,7 +72,7 @@
     "date": "2013-08-22",
     "categories": [],
     "preview": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png",
-    "last_modified": "2018-12-24T10:19:45-07:00"
+    "last_modified": "2018-12-25T11:02:06-07:00"
   },
   {
     "path": "posts/2018-12-24-clarifying-vague-interactions/",

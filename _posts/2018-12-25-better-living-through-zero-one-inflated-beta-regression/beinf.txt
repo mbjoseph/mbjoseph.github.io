@@ -1,0 +1,32 @@
+
+  model{
+  # priors
+  a0 ~ dnorm(0, .001)
+  a1 ~ dnorm(0, .001)
+  a2 ~ dnorm(0, .001)
+  b0 ~ dnorm(0, .001)
+  b1 ~ dnorm(0, .001)
+  t0 ~ dnorm(0, .01)
+  tau <- exp(t0)
+
+  # likelihood for alpha
+  for (i in 1:n){
+    logit(alpha[i]) <- a0 + a1 * x[i] + a2 * x[i] ^ 2
+    y.discrete[i] ~ dbern(alpha[i])
+  }
+
+  # likelihood for gamma
+  for (i in 1:n.discrete){
+    y.d[i] ~ dbern(mu[i])
+    logit(mu[i]) <- b0 + b1 * x.d[i]
+  }
+
+  # likelihood for mu and tau
+  for (i in 1:n.cont){
+    y.c[i] ~ dbeta(p[i], q[i])
+    p[i] <- mu2[i] * tau
+    q[i] <- (1 - mu2[i]) * tau
+    logit(mu2[i]) <- b0 + b1 * x.c[i]
+  }
+  }  
+  
