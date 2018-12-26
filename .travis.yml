@@ -5,6 +5,11 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
+env:
+  global:
+    - MAKEFLAGS="-j 2"
+    - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
+
 r:
   - oldrel
   - release
@@ -13,7 +18,7 @@ r:
 addons:
   apt:
     packages:
-      - gcc
+      - clang-6.0
       - imagemagick
       - jags
 
