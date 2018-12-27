@@ -19,11 +19,11 @@ before_install:
   - sudo apt-get install jags
 
 addons:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-7
-      - imagemagick
+  sources:
+    - ubuntu-toolchain-r-test
+  packages:
+    - g++-7
+    - imagemagick
 
 script:
 - Rscript main.R
