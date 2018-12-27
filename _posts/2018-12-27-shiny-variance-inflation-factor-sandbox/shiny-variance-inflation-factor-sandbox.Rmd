@@ -1,0 +1,28 @@
+---
+title: "Shiny variance inflation factor sandbox"
+description: |
+  Exploring how correlation among covariates inflates uncertainty in coefficient estmates.
+author:
+  - name: Maxwell B. Joseph
+    url: {}
+date: 2014-04-03
+output:
+  radix::radix_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+In multiple regression, strong correlations among covariates increases the uncertainty or variance in estimated regression coefficients.
+Variance inflation factors (VIFs) are one tool that has been used as an indicator of problematic covariate collinearity.
+In teaching students about VIFs, it may be useful to have some interactive supplementary material so that they can manipulate factors affecting the uncertainty in slope terms in real-time.
+
+Here's a little R shiny app that could be used as a starting point for such a supplement: https://mbjoseph.shinyapps.io/vif-sandbox/
+Currently it only includes two covariates for simplicity, and gives the user control over the covariate $R^2$ value, the residual variance, and the variance of both covariates.
+Code is on GitHub: https://github.com/mbjoseph/vif
+
+Screenshot: 
+
+![](https://raw.githubusercontent.com/mbjoseph/vif/master/tests/test-expected/001.png)
