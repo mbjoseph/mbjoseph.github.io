@@ -19,367 +19,41 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Maxwell B. Joseph: Blog</title>
+  <title>Stochastic search variable selection in JAGS</title>
+  
+  <meta property="description" itemprop="description" content="Using spike and slab priors to shrink coefficients toward zero."/>
   
   
-  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
-  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2014-03-22"/>
+  <meta property="article:created" itemprop="dateCreated" content="2014-03-22"/>
+  <meta name="article:author" content="Maxwell B. Joseph"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Maxwell B. Joseph: Blog"/>
+  <meta property="og:title" content="Stochastic search variable selection in JAGS"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Using spike and slab priors to shrink coefficients toward zero."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Maxwell B. Joseph"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Maxwell B. Joseph: Blog"/>
+  <meta property="twitter:title" content="Stochastic search variable selection in JAGS"/>
+  <meta property="twitter:description" content="Using spike and slab priors to shrink coefficients toward zero."/>
   
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Variable selection via gibbs sampling;citation_publication_date=1993;citation_publisher=Taylor &amp; Francis;citation_volume=88;citation_author=Edward I George;citation_author=Robert E McCulloch"/>
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog"]},{"type":"character","attributes":{},"value":["radix::radix_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Stochastic search variable selection in JAGS"]},{"type":"character","attributes":{},"value":["Using spike and slab priors to shrink coefficients toward zero.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2014-03-22"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
   
-  <script type="application/javascript">
-  
-    window.headroom_prevent_pin = false;
-  
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-  
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-  
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-  
-      // responsive menu
-      $('.radix-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-  
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["biblio.bib","ssvs.txt","stochastic-search-variable-selection-in-jags_files/bowser-1.9.3/bowser.min.js","stochastic-search-variable-selection-in-jags_files/distill-2.2.21/template.v2.js","stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png","stochastic-search-variable-selection-in-jags_files/jquery-1.11.3/jquery.min.js","stochastic-search-variable-selection-in-jags_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
-  
-  <style type="text/css">
-  
-  /* Theme (user-documented overrideables for nav appearance) */
-  
-  .radix-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #455a64;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  
-  .radix-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .radix-site-nav a:hover {
-    color: white;
-  }
-  
-  @media print {
-    .radix-site-nav {
-      display: none;
-    }
-  }
-  
-  .radix-site-header {
-  
-  }
-  
-  .radix-site-footer {
-  
-  }
-  
-  
-  /* Site Header */
-  
-  .radix-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-  
-  .radix-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .radix-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-  
-  
-  .radix-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-  
-  .radix-site-header a,
-  .radix-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-  
-  .radix-site-header .title {
-    font-size: 18px;
-  }
-  
-  .radix-site-header .logo {
-    padding: 0;
-  }
-  
-  .radix-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-  
-  .radix-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-  
-  
-  
-  @media screen and (min-width: 1000px) {
-    .radix-site-header .logo img {
-      display: inline-block;
-    }
-    .radix-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .radix-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .radix-site-header .title {
-      padding-left: 12px;
-    }
-  }
-  
-  
-  .radix-site-header .nav-toggle {
-    display: none;
-  }
-  
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-  
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-  
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-dropdown-active {
-    display: block;
-  }
-  
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-  
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-  
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .radix-site-header a, .radix-site-header .nav-dropdown  {display: none;}
-    .radix-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .radix-site-header .title {
-      margin-left: 0;
-    }
-    .radix-site-header .nav-right {
-      margin-right: 0;
-    }
-    .radix-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .radix-site-header.responsive {position: relative;}
-    .radix-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .radix-site-header.responsive a,
-    .radix-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .radix-site-header.responsive .nav-left,
-    .radix-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .radix-site-header.responsive .nav-dropdown {float: none;}
-    .radix-site-header.responsive .nav-dropdown-content {position: relative;}
-    .radix-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-  
-  /* Site Footer */
-  
-  .radix-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-  
-  /* Headroom */
-  
-  d-title {
-    padding-top: 6rem;
-  }
-  
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-  
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-  
-  .headroom--unpinned {
-    top: -100px;
-  }
-  
-  .headroom--pinned {
-    top: 0;
-  }
-  
-  </style>
-  
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
   
@@ -1255,553 +929,181 @@
   </script>
   
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="stochastic-search-variable-selection-in-jags_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="stochastic-search-variable-selection-in-jags_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="stochastic-search-variable-selection-in-jags_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="stochastic-search-variable-selection-in-jags_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <style type="text/css">
-  .radix-site-nav {
-    color: rgba(255, 255, 255, 1);
-    background-color: #00869b;
-  }
-  
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Blog","authors":[]}
+{"title":"Stochastic search variable selection in JAGS","description":"Using spike and slab priors to shrink coefficients toward zero.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2014-03-22T00:00:00.000-06:00","citationText":"Joseph, 2014"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="radix-site-nav radix-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Maxwell B. Joseph</a>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-<style type="text/css">
-
-/* Styles for listing layout (hide title) */
-.layout-listing d-title, .layout-listing .d-title {
-  display: none;
-}
-
-/* Styles for posts lists (not auto-injected) */
-
-
-.posts-with-sidebar {
-  padding-left: 45px;
-  padding-right: 45px;
-}
-
-.posts-list .description h2,
-.posts-list .description p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
-.posts-list .description h2 {
-  font-weight: 700;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.posts-list h2.post-tag {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 12px;
-}
-.posts-list {
-  margin-top: 60px;
-  margin-bottom: 24px;
-}
-
-.posts-list .post-preview {
-  text-decoration: none;
-  overflow: hidden;
-  display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 24px 0;
-}
-
-.post-preview-last {
-  border-bottom: none !important;
-}
-
-.posts-list .posts-list-caption {
-  grid-column: screen;
-  font-weight: 400;
-}
-
-.posts-list .post-preview h2 {
-  margin: 0 0 6px 0;
-  line-height: 1.2em;
-  font-style: normal;
-  font-size: 24px;
-}
-
-.posts-list .post-preview p {
-  margin: 0 0 12px 0;
-  line-height: 1.4em;
-  font-size: 16px;
-}
-
-.posts-list .post-preview .thumbnail {
-  box-sizing: border-box;
-  margin-bottom: 24px;
-  position: relative;
-  max-width: 500px;
-}
-.posts-list .post-preview img {
-  width: 100%;
-  display: block;
-}
-
-.posts-list .metadata {
-  font-size: 12px;
-  line-height: 1.4em;
-  margin-bottom: 18px;
-}
-
-.posts-list .metadata > * {
-  display: inline-block;
-}
-
-.posts-list .metadata .publishedDate {
-  margin-right: 1em;
-}
-
-.posts-list .metadata .tags {
-  margin-top: 1em;
-}
-
-.posts-list .tags .tag {
-  color: rgba(0,0,0,0.67);
-  padding: 0.3em 0.5em;
-  margin: 0;
-  font-size: 80%;
-  border: 1px solid rgba(0,0,0,0.4);
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.posts-list img {
-  opacity: 1;
-}
-
-.posts-list img[data-src] {
-  opacity: 0;
-}
-
-.posts-more {
-  clear: both;
-}
-
-
-.posts-sidebar {
-  font-size: 16px;
-}
-
-.posts-sidebar h3 {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.sidebar-section {
-  margin-bottom: 30px;
-}
-
-.categories ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.categories li {
-  color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 0;
-}
-
-.categories li>a {
-  border-bottom: none;
-}
-
-.categories li>a:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.categories .active {
-  font-weight: 600;
-}
-
-.categories .category-count {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-@media(min-width: 768px) {
-  .posts-list .post-preview h2 {
-    font-size: 26px;
-  }
-  .posts-list .post-preview .thumbnail {
-    float: right;
-    width: 35%;
-    margin-bottom: 0;
-  }
-  .posts-list .post-preview .description {
-    float: left;
-    width: 45%;
-  }
-  .posts-list .post-preview .metadata {
-    float: left;
-    width: 15%;
-    margin-top: 8px;
-  }
-  .posts-list .post-preview p {
-    margin: 0 0 12px 0;
-    line-height: 1.5em;
-    font-size: 16px;
-  }
-  .posts-with-sidebar .posts-list {
-    float: left;
-    width: 72%;
-  }
-  .posts-with-sidebar .posts-sidebar {
-    float: right;
-    width: 20%;
-    margin-top: 60px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
-.downlevel .posts-list .post-preview {
-  color: inherit;
-}
-
-</style>
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace("#", "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if (category == page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption">Blog</h1>
-<a href="posts/2018-12-27-stochastic-search-variable-selection-in-jags/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">March 22, 2014</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-27-stochastic-search-variable-selection-in-jags/stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png"/>
-</div>
-<div class="description">
-<h2>Stochastic search variable selection in JAGS</h2>
-<p>Using spike and slab priors to shrink coefficients toward zero.</p>
-</div>
-</a>
-<a href="posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 6, 2014</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png"/>
-</div>
-<div class="description">
-<h2>Better living through zero-one inflated beta regression</h2>
-<p>Fitting a Bayesian ZOIB regression model in JAGS.</p>
-</div>
-</a>
-<a href="posts/2018-12-25-errors-in-variables-models-in-stan/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Nov. 27, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-25-errors-in-variables-models-in-stan/errors-in-variables-models-in-stan_files/figure-html5/simulate-data-1.png"/>
-</div>
-<div class="description">
-<h2>Errors-in-variables models in stan</h2>
-<p>Fitting a Bayesian regression with covariate uncertainty.</p>
-</div>
-</a>
-<a href="posts/2018-12-25-r-r-markdown-and-my-divorce-from-microsoft-word/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Oct. 30, 2013</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>R Markdown and my divorce from Microsoft Word</h2>
-<p>A short description of the post.</p>
-</div>
-</a>
-<a href="posts/2018-12-25-animating-the-metropolis-algorithm/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 8, 2013</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Animating the Metropolis algorithm</h2>
-<p>A homemade Metropolis algorithm animation using R and the animation package.</p>
-</div>
-</a>
-<a href="posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 22, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png"/>
-</div>
-<div class="description">
-<h2>Quantifying uncertainty around R-squared for generalized linear models</h2>
-<p>How to propage posterior uncertainty to R-squared in R and JAGS.</p>
-</div>
-</a>
-<a href="posts/2018-12-24-clarifying-vague-interactions/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 18, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-24-clarifying-vague-interactions/clarifying-vague-interactions_files/figure-html5/simulate-data-1.png"/>
-</div>
-<div class="description">
-<h2>Clarifying vague interactions</h2>
-<p>One quick way to improve reporting of interaction effects in linear models.</p>
-</div>
-</a>
-<a href="posts/2018-12-23-split-violin-plots/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">June 24, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-23-split-violin-plots/split-violin-plots_files/figure-html5/make-boxplot-1.png"/>
-</div>
-<div class="description">
-<h2>Split violin plots</h2>
-<p>Comparing distributions with split violin plots in R.</p>
-</div>
-</a>
-<a href="posts/2018-12-23-bayesian-model-ii-regression/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">May 27, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-23-bayesian-model-ii-regression/bayesian-model-ii-regression_files/figure-html5/compare-models-1.png"/>
-</div>
-<div class="description">
-<h2>Bayesian model II regression in JAGS</h2>
-<p>Fitting a regression model with uncertainty in the explanatory variable.</p>
-</div>
-</a>
-<a href="posts/2018-12-23-modeling-habitat-diversity-and-species-richness/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">April 20, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-23-modeling-habitat-diversity-and-species-richness/modeling-habitat-diversity-and-species-richness_files/figure-html5/run-model-1.png"/>
-</div>
-<div class="description">
-<h2>Modeling habitat diversity and species richness</h2>
-<p>Experimenting with an agent based model of habitat diversity and species richness in R.</p>
-</div>
-</a>
-<a href="posts/2018-12-22-interactive-two-host-sir-model/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 20, 2013</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Interactive two host SIR model</h2>
-<p>Creating an interactive two host SIR model in R and shiny.</p>
-</div>
-</a>
-<a href="posts/2018-12-20-interactive-stage-structured-population-model/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 16, 2013</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Interactive stage-structured population model</h2>
-<p>Building an interactive stage-structured population model in R with shiny.</p>
-</div>
-</a>
-<a href="posts/2018-12-22-dynamic-community-occupancy-model-jags/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 4, 2013</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2018-12-22-dynamic-community-occupancy-model-jags/dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png"/>
-</div>
-<div class="description">
-<h2>Dynamic community occupancy modeling with R and JAGS</h2>
-<p>Multi-species, multi-timestep occupancy model in R and JAGS</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Blog</h1>
-
+<h1>Stochastic search variable selection in JAGS</h1>
+<p>Using spike and slab priors to shrink coefficients toward zero.</p>
 </div>
 
+<div class="d-byline">
+  Maxwell B. Joseph true 
+  
+<br/>2014-03-22
+</div>
 
 <div class="d-article">
+<p>Stochastic search variable selection (SSVS) identifies promising subsets of multiple regression covariates via Gibbs sampling <span class="citation" data-cites="george1993variable">(George and McCulloch <a href="#ref-george1993variable">1993</a>)</span>. Here’s a short SSVS demo with <a href="http://mcmc-jags.sourceforge.net/">JAGS</a> and <a href="http://www.r-project.org/">R</a>.</p>
+<p>Assume we have a multiple regression problem:</p>
+<p><span class="math display">\[\boldsymbol{Y} \sim N_n(\boldsymbol{X \beta}, \sigma^2 \boldsymbol{I})\]</span></p>
+<p>We suspect only a subset of the elements of <span class="math inline">\(\boldsymbol{\beta}\)</span> are non-zero, i.e. some of the covariates have no effect.</p>
+<p>Assume <span class="math inline">\(\boldsymbol{\beta}\)</span> arises from one of two normal mixture components, depending on a latent variable <span class="math inline">\(\gamma_i\)</span>:</p>
+<p><span class="math display">\[
+\beta_i \mid \gamma_i  \sim \left\{
+  \begin{array}{lr}
+    N(0, \tau^2_i) &amp;  \gamma_i = 0\\
+    N(0, c^2_i \tau^2_i) &amp;  \gamma_i = 1
+  \end{array}
+\right.
+\]</span></p>
+<p><span class="math inline">\(\tau_i\)</span> is positive but small s.t. <span class="math inline">\(\beta_i\)</span> is close to zero when <span class="math inline">\(\gamma_i = 0\)</span>. <span class="math inline">\(c_i\)</span> is large enough to allow reasonable deviations from zero when <span class="math inline">\(\gamma_i = 1\)</span>. The prior probability that covariate <span class="math inline">\(i\)</span> has a nonzero effect is <span class="math inline">\(Pr(\gamma_i = 1) = p_i\)</span>.</p>
+<p>Let’s simulate a dataset in which some covariates have strong effects on the linear predictor, and other don’t.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+library(gridExtra)
+library(runjags)
+library(ggmcmc)
+library(coda)
+library(knitr)
 
+ncov &lt;- 20
+nobs &lt;- 60
+var_beta &lt;- .004
+c &lt;- 1000
+p_inclusion &lt;- .5
+sigma_y &lt;- 1
+
+# generate covariates
+X &lt;- array(dim=c(nobs, ncov))
+for (i in 1:ncov){
+  X[, i] &lt;- rnorm(nobs, 0, 1)
+}
+
+included &lt;- rbinom(ncov, 1, p_inclusion)
+coefs &lt;- rnorm(n=ncov,
+               mean=0,
+               sd=ifelse(included==1,
+                         sqrt(var_beta * c),
+                         sqrt(var_beta)
+                         )
+               )
+coefs &lt;- sort(coefs)
+Y &lt;- rnorm(nobs, mean=X %*% coefs, sd=sigma_y)</code></pre>
+</div>
+<p>Specifying the model:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+cat(&quot;model{
+  alpha ~ dnorm(0, 1)
+  sd_y ~ dunif(0, 10)
+  tau_y &lt;- pow(sd_y, -2)
+
+  # ssvs priors
+  sd_bet ~ dunif(0, 10)
+  tau_in &lt;- pow(sd_bet, -2)
+  tau[1] &lt;- tau_in            # coef effectively zero
+  tau[2] &lt;- tau_in / 1000     # nonzero coef
+  p_ind[1] &lt;- 1/2
+  p_ind[2] &lt;- 1 - p_ind[1]
+
+  for (j in 1:ncov){
+    indA[j] ~ dcat(p_ind[]) # returns 1 or 2
+    gamma[j] &lt;- indA[j] - 1   # returns 0 or 1
+    beta[j] ~ dnorm(0, tau[indA[j]])
+  }
+
+  # likelihood
+  for (i in 1:nobs){
+    Y[i] ~ dnorm(alpha + X[i ,] %*% beta[], tau_y)
+  }
+}
+    &quot;
+    , file=&quot;ssvs.txt&quot;)</code></pre>
+</div>
+<p>Fitting the model:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+dat &lt;- list(Y=Y, X=X, nobs=nobs, ncov=ncov)
+vars &lt;- c(&quot;alpha&quot;, &quot;sd_bet&quot;, &quot;gamma&quot;, &quot;beta&quot;, &quot;tau_in&quot;, &quot;sd_y&quot;)
+out &lt;- run.jags(&quot;ssvs.txt&quot;, vars, data=dat, n.chains=3,
+                adapt=10000, burnin=10000)</code></pre>
+<pre><code>
+Compiling rjags model...
+Calling the simulation using the rjags method...
+Adapting the model for 10000 iterations...
+Burning in the model for 10000 iterations...
+Running the model for 10000 iterations...
+Simulation complete
+Calculating summary statistics...
+Note: The monitored variables &#39;gamma[1]&#39;, &#39;gamma[17]&#39;,
+&#39;gamma[18]&#39;, &#39;gamma[19]&#39; and &#39;gamma[20]&#39; appear to be
+non-stochastic; they will not be included in the convergence
+diagnostic
+Calculating the Gelman-Rubin statistic for 44 variables....
+Finished running the simulation</code></pre>
+<pre class="r"><code>
+outdf &lt;- ggs(as.mcmc.list(out))
+out_summary &lt;- summary(out)</code></pre>
+</div>
+<p>Now, let’s visualize the inclusion probabilities.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+gamma_rows &lt;- grepl(rownames(out_summary), pattern = &quot;^gamma\\[&quot;)
+probs &lt;- out_summary[gamma_rows, &quot;Mean&quot;]
+
+labels &lt;- rep(NA, ncov)
+for (i in 1:ncov){
+  labels[i] &lt;- paste(&quot;beta[&quot;, i, &quot;]&quot;, sep=&quot;&quot;)
+}
+xdf &lt;- data.frame(Parameter = labels, value = 1:ncov)
+p1 &lt;- ggs_caterpillar(outdf, &quot;beta&quot;, X=xdf) +
+  theme_classic() +
+  geom_vline(xintercept = 0, linetype = &quot;longdash&quot;) +
+  geom_point(data=data.frame(coefs, pos = 1:ncov),
+              aes(x=coefs, y=pos), size=5, col=&quot;green4&quot;, alpha=.7) +
+  xlab(&quot;Value&quot;) +
+  ylab(&quot;Coefficient&quot;) +
+  geom_hline(yintercept = 1:ncov, alpha=.05) +
+  scale_y_continuous(breaks=seq(0, ncov, 1))
+
+df &lt;- data.frame(probs=probs, coefs = coefs)
+p2 &lt;- ggplot(df, aes(x=abs(coefs), y=probs)) +
+  geom_point(size=5, alpha=.7) +
+  theme_classic() +
+  xlab(&quot;Absolute value of true coefficient&quot;) +
+  ylab(&quot;Posterior probability of non-zeroness&quot;)
+
+grid.arrange(p1, p2, ncol=2)</code></pre>
+<p><img src="stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png" width="624" /></p>
+</div>
+<p>On the left, green points indicate true coefficient values, with black posterior credible intervals. The right plot shows the relationship between the true magnitude of the effect and the posterior probability that the coefficient was non-zero, <span class="math inline">\(E(\gamma_i \mid \boldsymbol{Y})\)</span>.</p>
+<div id="refs" class="references">
+<div id="ref-george1993variable">
+<p>George, Edward I, and Robert E McCulloch. 1993. “Variable Selection via Gibbs Sampling.” <em>Journal of the American Statistical Association</em> 88 (423): 881–89. <a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476353">https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476353</a>.</p>
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1809,14 +1111,33 @@ function init_posts_list() {
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="reuse">Reuse</h3>
-<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
-</div>
+<div class="appendix-bottom"></div>
+<script id="distill-bibliography" type="text/bibtex">
+@article{george1993variable,
+  title={Variable selection via Gibbs sampling},
+  author={George, Edward I and McCulloch, Robert E},
+  journal={Journal of the American Statistical Association},
+  volume={88},
+  number={423},
+  pages={881--889},
+  year={1993},
+  publisher={Taylor \& Francis}, 
+  url={https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476353}
+}
+</script>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

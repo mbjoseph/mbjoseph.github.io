@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2018-12-27-stochastic-search-variable-selection-in-jags/",
+    "title": "Stochastic search variable selection in JAGS",
+    "description": "Using spike and slab priors to shrink coefficients toward zero.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2014-03-22",
+    "categories": [],
+    "preview": "posts/2018-12-27-stochastic-search-variable-selection-in-jags/stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png",
+    "last_modified": "2018-12-27T10:09:25-07:00"
+  },
+  {
     "path": "posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/",
     "title": "Better living through zero-one inflated beta regression",
     "description": "Fitting a Bayesian ZOIB regression model in JAGS.",
