@@ -15,6 +15,21 @@
     "last_modified": "2018-12-27T14:35:46-07:00"
   },
   {
+    "path": "posts/2018-12-27-plotting-spatial-neighbors-in-ggplot2/",
+    "title": "Plotting spatial neighbors in ggplot2",
+    "description": "How to visualize spatial neighbors using ggplot2, spdep, and sf.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2015-06-15",
+    "categories": [],
+    "preview": "posts/2018-12-27-plotting-spatial-neighbors-in-ggplot2/plotting-spatial-neighbors-in-ggplot2_files/figure-html5/plot-neighbors-1.png",
+    "last_modified": "2018-12-27T22:16:23-07:00"
+  },
+  {
     "path": "posts/2018-12-27-why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc/",
     "title": "Why I think twice before editing plots in Powerpoint, Illustrator, Inkscape, etc.",
     "description": "TLDR: scripting plots is more reproducible and efficient long term",

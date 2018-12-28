@@ -1,0 +1,47 @@
+---
+title: "Plotting spatial neighbors in ggplot2"
+description: |
+  How to visualize spatial neighbors using ggplot2, spdep, and sf.
+author:
+  - name: Maxwell B. Joseph
+    url: {}
+date: 2015-06-15
+output:
+  radix::radix_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The R package [spdep](http://cran.r-project.org/web/packages/spdep/index.html) 
+has great utilities to define spatial neighbors (e.g. `dnearneigh`, 
+`knearneigh`, with a nice
+[vignette](http://cran.r-project.org/web/packages/spdep/vignettes/nb.pdf) to 
+boot), but the plotting functionality is aimed at base graphics.
+
+So, to save others some trouble, I thought I'd share a little snippet to
+convert a spatial neighbors object (of class `nb`) to an `sf` data frame.
+
+```{r plot-neighbors, message = FALSE}
+library(sf)
+library(spdep)
+library(ggplot2)
+
+fname <- system.file("shape/nc.shp", package="sf")
+nc <- st_read(fname, quiet = TRUE)
+
+nc_sp <- as(nc, 'Spatial')
+neighbors <- poly2nb(nc_sp)
+neighbors_sf <- as(nb2lines(neighbors, coords = coordinates(nc_sp)), 'sf')
+neighbors_sf <- st_set_crs(neighbors_sf, st_crs(nc))
+
+ggplot(nc) + 
+  geom_sf(fill = 'salmon', color = 'white') +
+  geom_sf(data = neighbors_sf) +
+  theme_minimal() +
+  ylab("Latitude") +
+  xlab("Longitude")
+```
+

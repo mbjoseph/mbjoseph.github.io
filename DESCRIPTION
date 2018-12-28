@@ -31,5 +31,7 @@ Imports:
     runjags,
     rmarkdown, 
     rstan,
+    sf, 
     sm,
+    spdep,
     vioplot
