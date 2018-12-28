@@ -25,6 +25,7 @@ Imports:
     lme4,
     radix,
     raster,
+    reshape2,
     rgdal,
     rjags, 
     runjags,
