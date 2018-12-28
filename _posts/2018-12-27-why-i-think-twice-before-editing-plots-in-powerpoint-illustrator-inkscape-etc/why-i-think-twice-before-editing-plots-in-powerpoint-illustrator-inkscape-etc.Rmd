@@ -10,6 +10,9 @@ output:
   radix::radix_article:
     self_contained: false
 bibliography: biblio.bib
+categories: 
+  - visualization
+  - rants
 ---
 
 ```{r setup, include=FALSE}
@@ -40,7 +43,12 @@ edited it in Inkscape (~30 minutes invested), and ended up with a
 ["final"](http://www.phdcomics.com/comics/archive.php?comicid=1531) version for 
 submission.
 
-![Figure from Does life history mediate changing disease risk when communities disassemble? [@joseph2013does] ](ele12180-fig-0002-m.jpg)
+
+```{r plot-tape, fig.cap="Figure from Does life history mediate changing disease risk when communities disassemble? [@joseph2013does]", fig.width = 12, fig.height = 8}
+library(imager)
+im <- load.image("ele12180-fig-0002-m.jpg")
+plot(im, axes = FALSE)
+```
 
 Turns out that I had to remake the figure three times throughout the revision 
 process (for the better). Eventually I realized I should

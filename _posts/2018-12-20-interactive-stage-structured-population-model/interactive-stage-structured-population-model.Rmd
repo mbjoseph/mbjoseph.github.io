@@ -9,10 +9,13 @@ output:
   radix::radix_article:
     self_contained: false
 bibliography: biblio.bib
+categories:
+  - teaching
+  - shiny
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 This is an example of interfacing R and shiny to allow users to explore a 
@@ -79,5 +82,11 @@ $\frac{L_{ij}}{\lambda_1}$ for a measure of elasticity.
 Files are accessible in [this](https://github.com/mbjoseph/leslie) repository. 
 Please feel free to clone for your own use and/or contribute.
 
-[Here](https://mbjoseph.shinyapps.io/leslie/) is the resulting graphical 
-user interface for the model.
+[Here](https://mbjoseph.shinyapps.io/leslie/) is a link to the resulting app.
+
+
+```{r plot-img, fig.width=7, fig.height = 7}
+library(imager)
+im <- load.image("https://raw.githubusercontent.com/mbjoseph/leslie/master/tests/test-expected/002.png")
+plot(im, axes = FALSE)
+```

@@ -9,6 +9,8 @@ date: 2014-12-13
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - teaching
 ---
 
 ```{r setup, include=FALSE}
@@ -34,6 +36,14 @@ For fun, I've included a toy
 demonstrating the value of shrinkage when trying to rank NBA players by their 
 free throw shooting ability, a situation with wildly varying amounts of 
 information (free throw attempts) on each player.
+
+
+```{r plot-tape, fig.cap="Kobe_Bryant_7144.jpg: Sgt. Joseph A. Leederivative work: JoeJohnson2 [Public domain], via Wikimedia Commons", fig.width = 10, fig.height = 10}
+library(imager)
+im <- load.image("https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Kobe_Bryant_8.jpg/686px-Kobe_Bryant_8.jpg")
+plot(im, axes = FALSE)
+```
+
 The example admittedly is not ecological, and sensitive readers may replace free
 throw attempts with prey capture attempts for topical consistency.
 Many if not most ecological datasets suffer from similar issues, with varying 

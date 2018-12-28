@@ -10,6 +10,9 @@ output:
   radix::radix_article:
     self_contained: false
 bibliography: biblio.bib
+categories: 
+  - visualization
+  - rants
 ---
 
 ```{r setup, include=FALSE}

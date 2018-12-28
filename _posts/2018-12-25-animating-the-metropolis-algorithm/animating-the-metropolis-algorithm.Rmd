@@ -10,6 +10,9 @@ output:
   radix::radix_article:
     self_contained: false
 bibliography: biblio.bib
+categories: 
+  - visualization
+  - teaching
 ---
 
 ```{r setup, include=FALSE}
@@ -75,6 +78,7 @@ chains <- 3
 posterior <- array(dim = c(chains, 2, iter))
 accepted <- array(dim=c(chains, iter - 1))
 
+set.seed(1234)
 for (c in 1:chains){
   theta.post <- array(dim=c(2, iter))
   inits <- geninits()
@@ -108,37 +112,27 @@ chains in 2-parameter space, along with the posterior density at different
 iterations,  joining these plots together using ImageMagick's `convert` command
 (in the terminal) to create an animated .gif:
 
-```{r create-gif, warning=FALSE, message=FALSE, results='hide'}
-require(sm)
-seq1 <- seq(1, 300, by=5)
-seq2 <- seq(300, 500, by=10)
-seq3 <- seq(500, iter, by=300)
-sequence <- c(seq1, seq2, seq3)
-length(sequence)
+```{r create-gif, warning=FALSE, message=FALSE, fig.show='animate', interval=0.05, ffmpeg.format='gif', dev='jpeg'}
+sequence <- unique(round(exp(seq(0, log(iter), length.out = 150))))
 
 xlims <- c(4, 10)
 ylims <- c(1, 6)
 
-png(file = "metrop%03d.png", width=700, height=350)
-  for (i in sequence){
-    par(mfrow=c(1, 2))
-    plot(posterior[1, 1, 1:i], posterior[1, 2, 1:i],
-         type="l", xlim=xlims, ylim=ylims, col="blue",
-         xlab="mu", ylab="sigma", main="Markov chains")
-    lines(posterior[2, 1, 1:i], posterior[2, 2, 1:i],
-          col="purple")
-    lines(posterior[3, 1, 1:i], posterior[3, 2, 1:i],
-          col="red")
-    text(x=7, y=1.2, paste("Iteration ", i), cex=1.5)
-    sm.density(x=cbind(c(posterior[, 1, 1:i]), c(posterior[, 2, 1:i])),
-               xlab="mu", ylab="sigma",
-               zlab="", zlim=c(0, .7),
-               xlim=xlims, ylim=ylims, col="white")
-    title("Posterior density")
-  }
-dev.off()
-system("convert -delay 15 *.png metrop.gif")
-file.remove(list.files(pattern=".png"))
+for (i in sequence){
+  par(mfrow=c(1, 2))
+  plot(posterior[1, 1, 1:i], posterior[1, 2, 1:i],
+       type="l", xlim=xlims, ylim=ylims, col="blue",
+       xlab="mu", ylab="sigma", main="Markov chains")
+  lines(posterior[2, 1, 1:i], posterior[2, 2, 1:i],
+        col="purple")
+  lines(posterior[3, 1, 1:i], posterior[3, 2, 1:i],
+        col="red")
+  text(x=7, y=1.2, paste("Iteration ", i), cex=1.5)
+  sm.density(x=cbind(c(posterior[, 1, 1:i]), c(posterior[, 2, 1:i])),
+             xlab="mu", ylab="sigma",
+             zlab="", zlim=c(0, .7),
+             xlim=xlims, ylim=ylims, col="white", 
+             verbose=0)
+  title("Posterior density")
+}
 ```
-
-![](metrop.gif)

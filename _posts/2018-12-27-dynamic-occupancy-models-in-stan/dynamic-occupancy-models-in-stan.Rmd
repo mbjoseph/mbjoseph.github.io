@@ -10,6 +10,8 @@ output:
   radix::radix_article:
     self_contained: false
 bibliography: biblio.bib
+categories: 
+  - stan
 ---
 
 ```{r setup, include=FALSE}

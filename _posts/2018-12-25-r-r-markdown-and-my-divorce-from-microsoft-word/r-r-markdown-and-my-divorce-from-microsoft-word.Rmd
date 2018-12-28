@@ -10,6 +10,8 @@ output:
   radix::radix_article:
     self_contained: false
 bibliography: biblio.bib
+categories: 
+  - rants
 ---
 
 ```{r setup, include=FALSE}
@@ -34,8 +36,22 @@ stew going.
 
 If you're involved in the open source/reproducible research blogo-twittersphere, 
 this is probably old hat.
-To many in my department, this looks like black magic.
-It's not.
+To many others, it's not.
+
+Most scientists I see in the wild still manually insert figures and results 
+from statistical analyses in Word documents, perhaps the manufacturing 
+equivalent of hand-crafting each document. 
+R markdown provides a level of automation that is amenable to creating many
+documents or recreating/updating one document many times, the manufacturing
+equivalent of automated robots that increase efficiency (but do require some
+programming to function properly).
+
+
+```{r plot-robot, fig.width = 10, fig.height = 10}
+library(imager)
+im <- load.image("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/FANUC_R2000iB_AtWork.jpg/1024px-FANUC_R2000iB_AtWork.jpg")
+plot(im, axes = FALSE)
+```
 
 I can't give an authoritative overview, but here are some resources that helped 
 me get through my divorce with Microsoft Word:

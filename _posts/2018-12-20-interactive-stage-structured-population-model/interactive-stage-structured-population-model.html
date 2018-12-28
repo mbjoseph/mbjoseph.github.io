@@ -46,12 +46,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Interactive stage-structured population model"]},{"type":"character","attributes":{},"value":["Building an interactive stage-structured population model in R with shiny.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]}]}]},{"type":"character","attributes":{},"value":["02-16-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["Interactive stage-structured population model"]},{"type":"character","attributes":{},"value":["Building an interactive stage-structured population model in R with shiny.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]}]}]},{"type":"character","attributes":{},"value":["02-16-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["teaching","shiny"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","interactive-stage-structured-population-model_files/bowser-1.9.3/bowser.min.js","interactive-stage-structured-population-model_files/distill-2.2.21/template.v2.js","interactive-stage-structured-population-model_files/jquery-1.11.3/jquery.min.js","interactive-stage-structured-population-model_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","interactive-stage-structured-population-model_files/bowser-1.9.3/bowser.min.js","interactive-stage-structured-population-model_files/distill-2.2.21/template.v2.js","interactive-stage-structured-population-model_files/figure-html5/plot-img-1.png","interactive-stage-structured-population-model_files/jquery-1.11.3/jquery.min.js","interactive-stage-structured-population-model_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -65,6 +65,10 @@
   
   .pandoc-table {
     width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
   }
   
   .pandoc-table th:not([align]) {
@@ -81,6 +85,10 @@
   
   .l-screen-inset {
     padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
   }
   
   .shaded {
@@ -190,6 +198,10 @@
   /* Tweak code blocks (note that this CSS is repeated above in an injection
      into the d-code shadow dom) */
   
+  d-code {
+    overflow-x: auto !important;
+  }
+  
   pre.d-code code.d-code {
     padding-left: 10px;
     font-size: 12px;
@@ -220,6 +232,11 @@
   }
   
   @media(min-width: 768px) {
+  
+  d-code {
+    overflow-x: visible !important;
+  }
+  
   pre.d-code code.d-code  {
       padding-left: 18px;
       font-size: 14px;
@@ -848,9 +865,19 @@
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
   
-    // mark figures created by knitr chunks as 100% width
+    // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
-      $(this).find('img, .html-widget').css('width', '100%');
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
     });
   
     // auto-append index.html to post-preview links in file: protocol
@@ -871,6 +898,8 @@
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
   
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
   
     // initialize posts list
     if (window.init_posts_list)
@@ -882,6 +911,7 @@
       $('#disqus_thread').toggleClass('hidden');
       if (!$('#disqus_thread').hasClass('hidden')) {
         var offset = $(this).offset();
+        $(window).resize();
         $('html, body').animate({
           scrollTop: offset.top - 35
         });
@@ -955,7 +985,10 @@
 <p>where <span class="math inline">\(w_1\)</span> and <span class="math inline">\(v_1\)</span> are left and right eigenvectors, respectively, associated with the dominant eigenvalue. Because survival and fecundity are on different scales, sensitivity is often scaled by a factor of <span class="math inline">\(\frac{L_{ij}}{\lambda_1}\)</span> for a measure of elasticity.</p>
 <h3 id="the-shiny-app">The shiny app</h3>
 <p>Files are accessible in <a href="https://github.com/mbjoseph/leslie">this</a> repository. Please feel free to clone for your own use and/or contribute.</p>
-<p><a href="https://mbjoseph.shinyapps.io/leslie/">Here</a> is the resulting graphical user interface for the model.</p>
+<p><a href="https://mbjoseph.shinyapps.io/leslie/">Here</a> is a link to the resulting app.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="interactive-stage-structured-population-model_files/figure-html5/plot-img-1.png" width="672" /></p>
+</div>
 <div id="refs" class="references">
 <div id="ref-leslie1945use">
 <p>Leslie, Patrick H. 1945. “On the Use of Matrices in Certain Population Mathematics.” <em>Biometrika</em>, 183–212. <a href="http://dx.doi.org/10.2307/2332297">http://dx.doi.org/10.2307/2332297</a>.</p>

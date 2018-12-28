@@ -11,6 +11,8 @@ output:
     self_contained: false
 editor_options: 
   chunk_output_type: console
+categories: 
+  - spatial
 ---
 
 ```{r setup, include=FALSE}

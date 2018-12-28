@@ -9,6 +9,8 @@ date: 06-24-2013
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - visualization
 ---
 
 ```{r setup, include=FALSE}
@@ -86,7 +88,7 @@ density plots, but 1) plots a rug rather
 than a quantile box, 2) includes a line for the overall mean or median,
 and 3) makes it easier to change the kernel function.
 
-```{r beanplots}
+```{r beanplots, preview = TRUE}
 beanplot(values ~ group*treatment, ll = 0.04,
          main = "Bean plot", side = "both", xlab="Treatment",
          col = list("purple", c("lightblue", "black")),

@@ -9,12 +9,13 @@ date: 2015-09-08
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - rants
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
 
 I had to read a lot of books in graduate school.
 Some were life-changing, and others were forgettable.
@@ -101,3 +102,10 @@ by Odo Diekmann, Hans Heesterbeek & Tom Britton
 Mathematical epidemiology is a huge topic. This book introduces common models 
 and approaches from first principles, with plenty of problems along the way to 
 make sure you're following along. Read it with a notebook and pencil handy.
+
+
+```{r plot-tape, fig.cap="Credit: Wellcome Library, London. Wellcome Images images@wellcome.ac.uk http://wellcomeimages.org Plague treatise - a full page woodcut representing a man at a table studying a book, he is surrounded by four persons, - one holding a urine glass, Woodcut Darin durch sechs kurtzer Buchlin vil Heimlichkeiten der Natur beschriben werden Albertus Magnus Published: 1551 ", fig.width = 10, fig.height = 12}
+library(imager)
+im <- load.image("https://upload.wikimedia.org/wikipedia/commons/3/3d/A._Magnus%2C_%22Darin_durch_sechs...%22%2C_1551%3B_man_studying_a_book_Wellcome_L0003173.jpg")
+plot(im, axes = FALSE)
+```

@@ -44,12 +44,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Notes on shrinkage and prediction in hierarchical models"]},{"type":"character","attributes":{},"value":["Partial pooling and the best NBA free throw shooters of all time.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2014-12-13"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Notes on shrinkage and prediction in hierarchical models"]},{"type":"character","attributes":{},"value":["Partial pooling and the best NBA free throw shooters of all time.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2014-12-13"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["teaching"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["notes-on-shrinkage-and-prediction-in-hierarchical-models_files/bowser-1.9.3/bowser.min.js","notes-on-shrinkage-and-prediction-in-hierarchical-models_files/distill-2.2.21/template.v2.js","notes-on-shrinkage-and-prediction-in-hierarchical-models_files/jquery-1.11.3/jquery.min.js","notes-on-shrinkage-and-prediction-in-hierarchical-models_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["notes-on-shrinkage-and-prediction-in-hierarchical-models_files/bowser-1.9.3/bowser.min.js","notes-on-shrinkage-and-prediction-in-hierarchical-models_files/distill-2.2.21/template.v2.js","notes-on-shrinkage-and-prediction-in-hierarchical-models_files/figure-html5/plot-tape-1.png","notes-on-shrinkage-and-prediction-in-hierarchical-models_files/jquery-1.11.3/jquery.min.js","notes-on-shrinkage-and-prediction-in-hierarchical-models_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -965,7 +965,16 @@
 <div class="d-article">
 <p>Ecologists increasingly use mixed effects models, where some intercepts or slopes are fixed, and others are random (or varying). Often, confusion exists around whether and when to use fixed vs. random intercepts/slopes, which is understandable given their <a href="http://andrewgelman.com/2005/01/25/why_i_dont_use/">multiple definitions</a>.</p>
 <p>In an attempt to help clarify the utility of varying intercept models (and more generally, hierarchical modeling), specifically in terms of shrinkage and prediction, here is a <a href="https://github.com/mbjoseph/hierarchical_models">GitHub repo</a> with materials and a slideshow from our department’s graduate QDT (quantitative (th)ink tank) group.</p>
-<p>For fun, I’ve included a toy <a href="https://github.com/mbjoseph/hierarchical_models/blob/master/R_examples/nba/nba_freethrows.R">example</a> demonstrating the value of shrinkage when trying to rank NBA players by their free throw shooting ability, a situation with wildly varying amounts of information (free throw attempts) on each player. The example admittedly is not ecological, and sensitive readers may replace free throw attempts with prey capture attempts for topical consistency. Many if not most ecological datasets suffer from similar issues, with varying amounts of information from different sites, species, individuals, etc., so even without considering predation dynamics of NBA players, the example’s relevance should be immediate.</p>
+<p>For fun, I’ve included a toy <a href="https://github.com/mbjoseph/hierarchical_models/blob/master/R_examples/nba/nba_freethrows.R">example</a> demonstrating the value of shrinkage when trying to rank NBA players by their free throw shooting ability, a situation with wildly varying amounts of information (free throw attempts) on each player.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:plot-tape"></span>
+<img src="notes-on-shrinkage-and-prediction-in-hierarchical-models_files/figure-html5/plot-tape-1.png" alt="Kobe_Bryant_7144.jpg: Sgt. Joseph A. Leederivative work: JoeJohnson2 [Public domain], via Wikimedia Commons" width="960" />
+<p class="caption">
+Figure 1: Kobe_Bryant_7144.jpg: Sgt. Joseph A. Leederivative work: JoeJohnson2 [Public domain], via Wikimedia Commons
+</p>
+</div>
+</div>
+<p>The example admittedly is not ecological, and sensitive readers may replace free throw attempts with prey capture attempts for topical consistency. Many if not most ecological datasets suffer from similar issues, with varying amounts of information from different sites, species, individuals, etc., so even without considering predation dynamics of NBA players, the example’s relevance should be immediate.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

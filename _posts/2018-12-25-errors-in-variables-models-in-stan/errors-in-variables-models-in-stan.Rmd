@@ -9,6 +9,8 @@ date: 2013-11-27
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - stan
 ---
 
 ```{r setup, include=FALSE}

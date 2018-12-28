@@ -9,6 +9,8 @@ output:
   radix::radix_article:
     self_contained: false
 bibliography: biblio.bib
+categories: 
+  - jags
 ---
 
 This post is intended to provide a simple example of how to construct and make 

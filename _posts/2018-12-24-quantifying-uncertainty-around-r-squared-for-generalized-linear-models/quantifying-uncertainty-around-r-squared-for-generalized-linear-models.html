@@ -47,7 +47,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Quantifying uncertainty around R-squared for generalized linear models"]},{"type":"character","attributes":{},"value":["How to propage posterior uncertainty to R-squared in R and JAGS.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-22-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["Quantifying uncertainty around R-squared for generalized linear models"]},{"type":"character","attributes":{},"value":["How to propage posterior uncertainty to R-squared in R and JAGS.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-22-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["jags"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1061,26 +1061,24 @@ Formula: Egg ~ 1 + (1 | Population) + (1 | Container) + (1 | Unit)
    Data: DataF
 
      AIC      BIC   logLik deviance df.resid 
-   258.5    266.7   -125.2    250.5       53 
+   242.5    250.2   -117.2    234.5       47 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--1.5165 -0.7099 -0.0290  0.3184  2.4847 
+-1.2809 -0.5422 -0.1251  0.4687  1.5303 
 
 Random effects:
- Groups     Name        Variance  Std.Dev. 
- Unit       (Intercept) 3.509e-02 0.1873297
- Container  (Intercept) 1.190e-09 0.0000345
- Population (Intercept) 2.584e-01 0.5083268
-Number of obs: 57, groups:  Unit, 57; Container, 10; Population, 8
+ Groups     Name        Variance Std.Dev.
+ Unit       (Intercept) 0.07554  0.2749  
+ Container  (Intercept) 0.08560  0.2926  
+ Population (Intercept) 0.31336  0.5598  
+Number of obs: 51, groups:  Unit, 51; Container, 10; Population, 8
 
 Fixed effects:
             Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)   1.2621     0.1974   6.392 1.63e-10 ***
+(Intercept)   1.3114     0.2363   5.549 2.88e-08 ***
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-convergence code: 0
-singular fit</code></pre>
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>
 summary(mF)</code></pre>
 <pre><code>
@@ -1093,33 +1091,31 @@ Egg ~ Treatment + Habitat + (1 | Population) + (1 | Container) +
    Data: DataF
 
      AIC      BIC   logLik deviance df.resid 
-   256.2    268.5   -122.1    244.2       51 
+   241.4    253.0   -114.7    229.4       45 
 
 Scaled residuals: 
-    Min      1Q  Median      3Q     Max 
--1.7335 -0.6259 -0.0880  0.4473  3.3394 
+     Min       1Q   Median       3Q      Max 
+-1.53475 -0.59271 -0.03316  0.36985  1.46419 
 
 Random effects:
- Groups     Name        Variance  Std.Dev. 
- Unit       (Intercept) 6.190e-09 7.867e-05
- Container  (Intercept) 0.000e+00 0.000e+00
- Population (Intercept) 2.812e-01 5.303e-01
-Number of obs: 57, groups:  Unit, 57; Container, 10; Population, 8
+ Groups     Name        Variance Std.Dev.
+ Unit       (Intercept) 0.0389   0.1972  
+ Container  (Intercept) 0.1457   0.3817  
+ Population (Intercept) 0.2307   0.4803  
+Number of obs: 51, groups:  Unit, 51; Container, 10; Population, 8
 
 Fixed effects:
              Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)   1.06322    0.23147   4.593 4.36e-06 ***
-TreatmentExp  0.37496    0.14356   2.612    0.009 ** 
-Habitatwet   -0.01495    0.14257  -0.105    0.917    
+(Intercept)   1.04758    0.27934   3.750 0.000177 ***
+TreatmentExp  0.44755    0.19930   2.246 0.024730 *  
+Habitatwet   -0.04222    0.16588  -0.255 0.799091    
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Correlation of Fixed Effects:
             (Intr) TrtmnE
-TreatmntExp -0.409       
-Habitatwet  -0.296  0.081
-convergence code: 0
-singular fit</code></pre>
+TreatmntExp -0.535       
+Habitatwet  -0.350  0.191</code></pre>
 <pre class="r"><code>
 # Extraction of fitted value for the alternative model fixef() extracts
 # coefficents for fixed effects model.matrix(mF) returns design matrix
@@ -1148,7 +1144,7 @@ R2c &lt;- (VarF + VarCorr(mF)$Container[1] + VarCorr(mF)$Population[1])/
 cbind(R2m, R2c)</code></pre>
 <pre><code>
             R2m       R2c
-[1,] 0.06283296 0.5596841</code></pre>
+[1,] 0.07405109 0.6070757</code></pre>
 </div>
 <p>Having stored our point estimates, we can now turn to Bayesian methods instead, and generate <span class="math inline">\(R^2\)</span> posteriors.</p>
 <h3 id="posterior-uncertainty-in-r2_glmm">Posterior uncertainty in <span class="math inline">\(R^2_{GLMM}\)</span></h3>
@@ -1175,12 +1171,12 @@ str(jags_d)</code></pre>
 <pre><code>
 List of 8
  $ Population: Factor w/ 8 levels &quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,..: 1 1 1 1 1 1 2 2 2 2 ...
- $ Habitat   : num [1:57] 0 1 0 0 0 1 0 0 0 1 ...
- $ Treatment : num [1:57] 0 0 1 0 1 1 0 1 0 0 ...
- $ Egg       : int [1:57] 1 3 3 2 0 3 5 13 8 9 ...
- $ nobs      : int 57
+ $ Habitat   : num [1:51] 1 1 0 1 0 0 1 1 0 0 ...
+ $ Treatment : num [1:51] 1 0 0 0 1 1 1 1 1 0 ...
+ $ Egg       : int [1:51] 6 3 2 3 6 3 4 2 2 1 ...
+ $ nobs      : int 51
  $ npop      : int 8
- $ Container : int [1:57] 1 1 1 1 1 2 2 2 2 2 ...
+ $ Container : int [1:51] 1 1 1 1 1 2 2 2 2 2 ...
  $ ncont     : int 10</code></pre>
 </div>
 <p>Then, fitting the intercept model:</p>
@@ -1231,9 +1227,9 @@ Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
-   Observed stochastic nodes: 57
-   Unobserved stochastic nodes: 79
-   Total graph size: 376
+   Observed stochastic nodes: 51
+   Unobserved stochastic nodes: 73
+   Total graph size: 340
 
 Initializing model</code></pre>
 <pre class="r"><code>
@@ -1288,9 +1284,9 @@ Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
-   Observed stochastic nodes: 57
-   Unobserved stochastic nodes: 81
-   Total graph size: 500
+   Observed stochastic nodes: 51
+   Unobserved stochastic nodes: 75
+   Total graph size: 452
 
 Initializing model</code></pre>
 <pre class="r"><code>

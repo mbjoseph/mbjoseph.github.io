@@ -9,6 +9,9 @@ date: 2015-06-15
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - visualization
+  - spatial
 ---
 
 ```{r setup, include=FALSE}

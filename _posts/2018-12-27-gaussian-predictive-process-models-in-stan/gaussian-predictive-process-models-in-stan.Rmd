@@ -9,6 +9,9 @@ date: 2016-08-14
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - stan
+  - spatial
 ---
 
 ```{r setup, include=FALSE}
@@ -44,7 +47,13 @@ Instead of taking the Cholesky factorization of the $n \times n$ covariance matr
 Knot placement is a non-trivial topic, but for the purpose of illustration let's place knots on a grid over the spatial region of interest.
 Note that here the knots are fixed, but it is possible to model knot locations stochastically as in [Guhaniyogi et al. 2012](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3268014/).
 
-![](https://raw.githubusercontent.com/mbjoseph/gpp-speed-test/master/README_files/figure-html/unnamed-chunk-2-1.png)
+
+```{r plot-img, fig.height = 8, fig.width = 12}
+library(imager)
+im <- load.image("https://raw.githubusercontent.com/mbjoseph/gpp-speed-test/master/README_files/figure-html/unnamed-chunk-2-1.png")
+plot(im, axes = FALSE)
+```
+
 
 Knots are shown as stars and the points are observations.
 
@@ -64,7 +73,12 @@ This approach scales well for larger datasets relative to a full rank GP model.
 Comparing the number of effective samples per unit time for the two approaches across a range of sample sizes, the GPP executes more quickly and is more efficient for larger datasets.
 Code for this simulation is available on GitHub: [https://github.com/mbjoseph/gpp-speed-test](https://github.com/mbjoseph/gpp-speed-test).
 
-![](https://raw.githubusercontent.com/mbjoseph/gpp-speed-test/master/README_files/figure-html/unnamed-chunk-5-1.png)
+
+```{r plot-img2, fig.height = 10, fig.width = 16, preview = TRUE}
+im <- load.image("https://raw.githubusercontent.com/mbjoseph/gpp-speed-test/master/README_files/figure-html/unnamed-chunk-5-1.png")
+plot(im, axes = FALSE)
+```
+
 
 ## Relevant papers
 

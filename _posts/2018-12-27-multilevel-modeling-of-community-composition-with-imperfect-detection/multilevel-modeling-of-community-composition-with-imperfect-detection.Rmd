@@ -10,6 +10,8 @@ output:
   radix::radix_article:
     self_contained: false
 bibliography: biblio.bib
+categories:
+  - jags
 ---
 
 ```{r setup, include=FALSE}
@@ -85,6 +87,9 @@ detection probabilities varied, but were independent of environmental
 covariates.
 
 ```{r simulate-data}
+library(reshape2)
+library(ggplot2)
+
 ################################################
 # Simulate data
 ################################################
@@ -93,6 +98,7 @@ Nsite <- 100
 Ncov <- 3
 Nspecies <- 20
 J <- 4
+set.seed(1234)
 
 # species-specific intercepts:
 alpha <- rnorm(Nspecies, 0, 1)
@@ -111,7 +117,6 @@ Beta <- array(c(rnorm(Nspecies, 0, 2),
 
 # species-specific detection probs
 p0 <- plogis(rnorm(Nspecies, 1, 0.5))
-p0
 
 #### Occupancy states ####
 Yobs <- array(0, dim = c(Nspecies, Nsite)) # Simulated observations
@@ -154,6 +159,20 @@ J <- rep(J, times=Nspecies*Nsite)
 
 # Number of total observations
 Nobs <- Nspecies*Nsite
+```
+
+Each species has a coefficient for each covariate that describes how the 
+probability of occurrence responds. In one case, all species have the same
+response:
+
+```{r plot-coefs}
+beta_df <- melt(Beta, varnames = c('Species', 'Covariate'))
+ggplot(beta_df) + 
+  geom_point(aes(value, Species)) + 
+  facet_wrap(~Covariate, nrow = 1) + 
+  xlab('Coefficient value') + 
+  ggtitle('Species-level coefficients for each covariate (facets)') + 
+  theme_minimal()
 ```
 
 We fit the following model with [JAGS](http://mcmc-jags.sourceforge.net/) with vague priors.
@@ -217,7 +236,7 @@ the third covariate has a fixed effect. This means that composition shifts along
 gradients of covariates 1 and 2. We can visualize the relative contribution of 
 covariate 1 and 2's random effects to composition using ordination, as discussed
 in Jackson et al. (2012). To do this, we compare the linear predictor 
-(i.e. $logit^{-1}(\psi_q)$) of the best model that includes only significant 
+(i.e. $\text{logit}^{-1}(\psi_q)$) of the best model that includes only significant 
 random effects to a model that does not have any random effects.
 
 The code to extract linear predictors and ordinate the community is provided on

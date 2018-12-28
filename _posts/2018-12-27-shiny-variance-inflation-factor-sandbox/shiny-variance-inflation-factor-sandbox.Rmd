@@ -9,6 +9,9 @@ date: 2014-04-03
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - shiny
+  - teaching
 ---
 
 ```{r setup, include=FALSE}
@@ -25,4 +28,9 @@ Code is on GitHub: https://github.com/mbjoseph/vif
 
 Screenshot: 
 
-![](https://raw.githubusercontent.com/mbjoseph/vif/master/tests/test-expected/001.png)
+
+```{r plot-robot, fig.width = 10, fig.height = 7}
+library(imager)
+im <- load.image("https://raw.githubusercontent.com/mbjoseph/vif/master/tests/test-expected/001.png")
+plot(im, axes = FALSE)
+```

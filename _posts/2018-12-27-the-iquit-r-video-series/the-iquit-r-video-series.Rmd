@@ -9,6 +9,8 @@ date: 2015-08-28
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - teaching
 ---
 
 ```{r setup, include=FALSE}
@@ -165,3 +167,8 @@ These short tutorials may be of use elsewhere:
 - given two populations, simulate the null sampling distribution of the difference in means
 - randomly assign individuals to a group using `sample` or some other scheme, then iteratively simulate differences in means with CIs
 
+```{r plot-tape, fig.cap="Toby Hudson [CC BY-SA 2.5 au (https://creativecommons.org/licenses/by-sa/2.5/au/deed.en)], from Wikimedia Commons"}
+library(imager)
+im <- load.image("https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/VHS_cassette_tape_01.JPG/1024px-VHS_cassette_tape_01.JPG")
+plot(im, axes = FALSE)
+```

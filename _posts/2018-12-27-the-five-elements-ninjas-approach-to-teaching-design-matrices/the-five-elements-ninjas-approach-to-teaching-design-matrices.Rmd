@@ -9,6 +9,8 @@ date: 2016-04-25
 output:
   radix::radix_article:
     self_contained: false
+categories: 
+  - teaching
 ---
 
 ```{r setup, include=FALSE}
@@ -105,3 +107,10 @@ Some groups opted for effects parameterizations, while others opted for means pa
 
 This in-class activity was surprisingly well-received, and it seemed to provide the context and practice necessary for the students to understand design matrices on a deeper level.
 Throughout the rest of the semester, model matrices were preferred over other specifications by many of the students - a far cry from the confusion at the beginning of the semester.
+
+
+```{r plot-img, fig.cap="Katsushika Hokusai [Public domain]. Use different perspectives to improve concept delivery.", fig.height = 12, fig.width = 10}
+library(imager)
+im <- load.image("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hokusai_sketches_-_hokusai_manga_vol6.jpg/675px-Hokusai_sketches_-_hokusai_manga_vol6.jpg")
+plot(im, axes = FALSE)
+```

@@ -44,16 +44,15 @@
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Does life history mediate changing disease risk when communities disassemble?;citation_publication_date=2013;citation_publisher=Wiley Online Library;citation_volume=16;citation_author=Maxwell B Joseph;citation_author=Joseph R Mihaljevic;citation_author=Sarah A Orlofske;citation_author=Sara H Paull"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Why I think twice before editing plots in Powerpoint, Illustrator, Inkscape, etc."]},{"type":"character","attributes":{},"value":["TLDR: scripting plots is more reproducible and efficient long term"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2015-02-26"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Why I think twice before editing plots in Powerpoint, Illustrator, Inkscape, etc."]},{"type":"character","attributes":{},"value":["TLDR: scripting plots is more reproducible and efficient long term"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2015-02-26"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["visualization","rants"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","ele12180-fig-0002-m.jpg","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/bowser-1.9.3/bowser.min.js","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/distill-2.2.21/template.v2.js","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/jquery-1.11.3/jquery.min.js","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","ele12180-fig-0002-m.jpg","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/bowser-1.9.3/bowser.min.js","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/distill-2.2.21/template.v2.js","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/figure-html5/plot-tape-1.png","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/jquery-1.11.3/jquery.min.js","why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1301,8 +1300,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <a href="../../index.html" class="title">Maxwell B. Joseph</a>
 </div>
 <div class="nav-right">
-<a href="../../index.html">Home</a>
+<a href="../../index.html">Posts</a>
 <a href="../../about.html">About</a>
+<a href="../../index.xml">
+<i class="fa fa-rss"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1327,9 +1329,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 id="reproducibility">Reproducibility</h3>
 <p>R is nice because results are relatively easy to reproduce. It’s free, and your code serves as a written record of what was done. When figures are edited outside of R, they can be much more difficult to reproduce. Independent of whether I am striving to maximize the reproducibility of my work for others, it behooves me to save time for my future self, ensuring that we (I?) can quickly update my own figures throughout the process of paper writing, submission, rewriting, resubmission, and so on.</p>
 <p>I had to learn this the hard way. The following figure was my issue: initially I created a rough version in R, edited it in Inkscape (~30 minutes invested), and ended up with a <a href="http://www.phdcomics.com/comics/archive.php?comicid=1531">“final”</a> version for submission.</p>
-<figure>
-<img src="ele12180-fig-0002-m.jpg" alt="Figure from Does life history mediate changing disease risk when communities disassemble? (Joseph et al. 2013)" /><figcaption>Figure from Does life history mediate changing disease risk when communities disassemble? <span class="citation" data-cites="joseph2013does">(Joseph et al. <a href="#ref-joseph2013does">2013</a>)</span></figcaption>
-</figure>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:plot-tape"></span>
+<img src="why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/figure-html5/plot-tape-1.png" alt="Figure from Does life history mediate changing disease risk when communities disassemble? [@joseph2013does]" width="1152" />
+<p class="caption">
+Figure 1: Figure from Does life history mediate changing disease risk when communities disassemble? <span class="citation" data-cites="joseph2013does">(Joseph et al. <a href="#ref-joseph2013does">2013</a>)</span>
+</p>
+</div>
+</div>
 <p>Turns out that I had to remake the figure three times throughout the revision process (for the better). Eventually I realized I should to make the plot in R than to process it outside of R.</p>
 <p>In retrospect, two things are clear:</p>
 <ol type="1">
