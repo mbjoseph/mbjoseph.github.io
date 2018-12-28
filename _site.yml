@@ -10,10 +10,15 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - icon: fab fa-github
+      href: https://github.com/mbjoseph
+    - icon: fab fa-twitter
+      href: https://twitter.com/mxwlj
     - icon: fa fa-rss
       href: index.xml
 output:
   radix::radix_article:
     css: styles.css
+repository_url: https://github.com/mbjoseph/mbjoseph.github.io
 creative_commons: CC BY
 exclude: ["DESCRIPTION", "main.R", "README.md"]

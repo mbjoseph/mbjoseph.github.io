@@ -20,7 +20,7 @@
   {
     "path": "posts/2018-12-27-the-five-elements-ninjas-approach-to-teaching-design-matrices/",
     "title": "The five elements ninjas approach to teaching design matrices",
-    "description": "TLDR: you can teach design matrices from multiple perspectives.",
+    "description": "In-class activities to teach design matrices from multiple perspectives.",
     "author": [
       {
         "name": "Maxwell B. Joseph",
@@ -32,7 +32,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-27-the-five-elements-ninjas-approach-to-teaching-design-matrices/the-five-elements-ninjas-approach-to-teaching-design-matrices_files/figure-html5/plot-img-1.png",
-    "last_modified": "2018-12-28T10:33:13-07:00"
+    "last_modified": "2018-12-28T15:12:27-07:00"
   },
   {
     "path": "posts/2018-12-27-first-year-books/",
@@ -119,7 +119,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-27-notes-on-shrinkage-and-prediction-in-hierarchical-models/notes-on-shrinkage-and-prediction-in-hierarchical-models_files/figure-html5/plot-tape-1.png",
-    "last_modified": "2018-12-28T10:31:39-07:00"
+    "last_modified": "2018-12-28T10:31:40-07:00"
   },
   {
     "path": "posts/2018-12-27-dynamic-occupancy-models-in-stan/",
@@ -136,7 +136,7 @@
       "stan"
     ],
     "preview": "posts/2018-12-27-dynamic-occupancy-models-in-stan/dynamic-occupancy-models-in-stan_files/figure-html5/simulate-many-data-sets-1.png",
-    "last_modified": "2018-12-28T10:30:56-07:00"
+    "last_modified": "2018-12-28T10:30:57-07:00"
   },
   {
     "path": "posts/2018-12-27-categorical-spatial-data-extraction-around-buffered-points-in-r/",
@@ -170,7 +170,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-27-multilevel-modeling-of-community-composition-with-imperfect-detection/multilevel-modeling-of-community-composition-with-imperfect-detection_files/figure-html5/plot-coefs-1.png",
-    "last_modified": "2018-12-28T10:31:17-07:00"
+    "last_modified": "2018-12-28T10:31:18-07:00"
   },
   {
     "path": "posts/2018-12-27-shiny-variance-inflation-factor-sandbox/",
@@ -188,7 +188,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-27-shiny-variance-inflation-factor-sandbox/shiny-variance-inflation-factor-sandbox_files/figure-html5/plot-robot-1.png",
-    "last_modified": "2018-12-28T10:32:25-07:00"
+    "last_modified": "2018-12-28T10:32:26-07:00"
   },
   {
     "path": "posts/2018-12-27-stochastic-search-variable-selection-in-jags/",
@@ -256,7 +256,7 @@
       "rants"
     ],
     "preview": "posts/2018-12-25-r-r-markdown-and-my-divorce-from-microsoft-word/r-r-markdown-and-my-divorce-from-microsoft-word_files/figure-html5/plot-robot-1.png",
-    "last_modified": "2018-12-28T10:29:49-07:00"
+    "last_modified": "2018-12-28T10:29:50-07:00"
   },
   {
     "path": "posts/2018-12-25-animating-the-metropolis-algorithm/",
@@ -274,7 +274,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-25-animating-the-metropolis-algorithm/animating-the-metropolis-algorithm_files/figure-html5/create-gif.gif",
-    "last_modified": "2018-12-28T10:26:04-07:00"
+    "last_modified": "2018-12-28T10:26:05-07:00"
   },
   {
     "path": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/",

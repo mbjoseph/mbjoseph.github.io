@@ -1,7 +1,7 @@
 ---
 title: "The five elements ninjas approach to teaching design matrices"
 description: |
-  TLDR: you can teach design matrices from multiple perspectives.
+  In-class activities to teach design matrices from multiple perspectives.
 author:
   - name: Maxwell B. Joseph
     url: {}
