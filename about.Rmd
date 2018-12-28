@@ -2,10 +2,12 @@
 title: "About"
 ---
 
-Max is a data scientist in the Analytics Hub at Earth Lab, and the open science 
-architect of the North Central Climate Adaptation Science Center. 
-This website is a collection of (mostly old) posts/notes to myself on 
-statistics, programming, ecology, teaching, and workflow.
+The author is an Earth data scientist in the Analytics Hub at 
+[Earth Lab](https://www.colorado.edu/earthlab/), and
+the open science architect of the [North Central Climate Adaptation Science 
+Center](https://nccasc.colorado.edu/).
+This website is a collection of (mostly old) posts on 
+statistics, programming, ecology, teaching, and scientific workflows.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
