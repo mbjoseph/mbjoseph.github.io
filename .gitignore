@@ -34,3 +34,8 @@ vignettes/*.pdf
 
 *.Rproj
 *.rds
+*.zip
+*EXTRACTIONS*
+*RAW*
+*.tif
+*tif.aux.xml

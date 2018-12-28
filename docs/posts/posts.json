@@ -15,6 +15,21 @@
     "last_modified": "2018-12-27T14:35:46-07:00"
   },
   {
+    "path": "posts/2018-12-27-categorical-spatial-data-extraction-around-buffered-points-in-r/",
+    "title": "Categorical spatial data extraction around buffered points in R",
+    "description": "Computing the proportion of land cover types using R and the raster package.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2014-11-08",
+    "categories": [],
+    "preview": "posts/2018-12-27-categorical-spatial-data-extraction-around-buffered-points-in-r/categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png",
+    "last_modified": "2018-12-27T18:28:08-07:00"
+  },
+  {
     "path": "posts/2018-12-27-shiny-variance-inflation-factor-sandbox/",
     "title": "Shiny variance inflation factor sandbox",
     "description": "Exploring how correlation among covariates inflates uncertainty in coefficient estmates.",
