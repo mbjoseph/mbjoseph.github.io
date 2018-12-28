@@ -15,6 +15,66 @@
     "last_modified": "2018-12-27T14:35:46-07:00"
   },
   {
+    "path": "posts/2018-12-27-global-sea-ice-time-series-visualization-sandbox-with-r-ggplot-and-plotly/",
+    "title": "Global sea ice time series visualization sandbox with R, ggplot, and plotly",
+    "description": "How to fetch sea ice data and visualize extent over time.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2016-11-22",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-27T22:48:40-07:00"
+  },
+  {
+    "path": "posts/2018-12-27-gaussian-predictive-process-models-in-stan/",
+    "title": "Gaussian predictive process models in Stan",
+    "description": "Gaussian processes that scale to larger data.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2016-08-14",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-27T22:36:05-07:00"
+  },
+  {
+    "path": "posts/2018-12-27-the-five-elements-ninjas-approach-to-teaching-design-matrices/",
+    "title": "The five elements ninjas approach to teaching design matrices",
+    "description": "TLDR: you can teach design matrices from multiple perspectives.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2016-04-25",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-27T22:32:40-07:00"
+  },
+  {
+    "path": "posts/2018-12-27-first-year-books/",
+    "title": "First year books",
+    "description": "10 books I wish I had entering graduate school.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2015-09-08",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-27T22:27:00-07:00"
+  },
+  {
     "path": "posts/2018-12-27-the-iquit-r-video-series/",
     "title": "The IQUIT R video series",
     "description": "A series of introductory R videos.",

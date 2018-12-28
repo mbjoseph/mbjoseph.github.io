@@ -1,0 +1,103 @@
+---
+title: "First year books"
+description: |
+  10 books I wish I had entering graduate school.
+author:
+  - name: Maxwell B. Joseph
+    url: {}
+date: 2015-09-08
+output:
+  radix::radix_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+I had to read a lot of books in graduate school.
+Some were life-changing, and others were forgettable.
+
+If I could bring a reading list back in time for my 'first year' graduate self, it would include the following:
+
+### [Bayesian Data Analysis](https://www.crcpress.com/Bayesian-Data-Analysis-Third-Edition/Gelman-Carlin-Stern-Dunson-Vehtari-Rubin/9781439840955)
+
+Third Edition, by Andrew Gelman, John B. Carlin, Hal S. Stern, David B. Dunson, Aki Vehtari, and Donald B. Rubin
+
+Probably the most useful book I've ever owned. Has staying power - can be used
+as a reference.
+
+### [The Art of R Programming](https://www.nostarch.com/artofr.htm)
+
+by Norman Matloff
+
+This book made me less bad at programming in R early on.
+
+### [Causality](http://www.cambridge.org/us/catalogue/catalogue.asp?isbn=9780521895606)
+
+Second Edition, by Judea Pearl
+
+Ecology is complicated. We often lack replicated controlled experiments with 
+random treatment assignment. This book helped me organize my thinking around
+how to translate mechanistic knowledge to statistical models. 
+
+### [Statistics for Spatio-Temporal Data](http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP002348.html)
+
+by Noel Cressie and Christopher Wikle
+
+A thoughtful treatment of hierarchical modeling in a spatial, temporal, and 
+spatiotemporal context. Has breadth with a healthy dose of outside references
+for depth. My dog ate this one, but it was great to have.
+
+### [Ecological Models and Data in R](http://press.princeton.edu/titles/8709.html)
+
+by Benjamin M. Bolker
+
+Covers fundamental ideas about likelihood and process-oriented modeling while 
+building R proficiency.
+
+### [Bayesian Models: A Statistical Primer for Ecologists](http://press.princeton.edu/titles/10523.html)
+
+by N. Thompson Hobbs & Mevin B. Hooten
+
+An introduction to the process of model building and estimation for 
+non-math/stats oriented readers. Thoughtful treatment of notation, helped me to
+better understand how to communicate models. 
+
+### [Data Analysis Using Regression and Multilevel/Hierarchical Models](http://www.cambridge.org/us/academic/subjects/statistics-probability/statistical-theory-and-methods/data-analysis-using-regression-and-multilevelhierarchical-models)
+
+by Andrew Gelman and Jennifer Hill
+
+A gentle introduction to multilevel modeling, with plenty of graphics and 
+integration with R.
+
+### [Statistical Inference](http://www.amazon.com/Statistical-Inference-George-Casella/dp/0534243126)
+
+Second Edition, by George Casella and Roger L. Berger
+
+Essential for understanding the mathematical and probabilistic foundations of 
+statistics. Read it after brushing up on calculus. Checked this out from the 
+library, and my dog ate it. Had to buy a copy to replace, which was not cheap. 
+But, later found a pdf online. 
+
+### [Linear Algebra](http://store.doverpublications.com/048663518x.html)
+by George Shilov
+
+I wish I had taken a class in linear algebra as an undergraduate, but I instead
+had to catch up in my first year of grad school. This book made it relatively 
+painless. Literally found it on the shelf of the office I moved into on day one.
+
+### [Single and Multivariable Calculus](https://www.whitman.edu/mathematics/calculus_online/)
+by David Guichard and friends
+
+Because I took a few calculus classes in high school and college and didn't know 
+why.
+
+### [Mathematical Tools for Understanding Infectious Disease Dynamics](http://press.princeton.edu/titles/9916.html)
+
+by Odo Diekmann, Hans Heesterbeek & Tom Britton
+
+Mathematical epidemiology is a huge topic. This book introduces common models 
+and approaches from first principles, with plenty of problems along the way to 
+make sure you're following along. Read it with a notebook and pencil handy.
