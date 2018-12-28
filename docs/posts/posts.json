@@ -1,35 +1,5 @@
 [
   {
-    "path": "posts/2018-12-27-multilevel-modeling-of-community-composition-with-imperfect-detection/",
-    "title": "Multilevel modeling of community composition with imperfect detection",
-    "description": "A guest post by Joe Mihaljevic.",
-    "author": [
-      {
-        "name": "Joseph Mihaljevic",
-        "url": {}
-      }
-    ],
-    "date": "2018-12-27",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2018-12-27T14:35:46-07:00"
-  },
-  {
-    "path": "posts/2018-12-27-global-sea-ice-time-series-visualization-sandbox-with-r-ggplot-and-plotly/",
-    "title": "Global sea ice time series visualization sandbox with R, ggplot, and plotly",
-    "description": "How to fetch sea ice data and visualize extent over time.",
-    "author": [
-      {
-        "name": "Maxwell B. Joseph",
-        "url": {}
-      }
-    ],
-    "date": "2016-11-22",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2018-12-27T22:48:40-07:00"
-  },
-  {
     "path": "posts/2018-12-27-gaussian-predictive-process-models-in-stan/",
     "title": "Gaussian predictive process models in Stan",
     "description": "Gaussian processes that scale to larger data.",
@@ -163,6 +133,21 @@
     "categories": [],
     "preview": "posts/2018-12-27-categorical-spatial-data-extraction-around-buffered-points-in-r/categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png",
     "last_modified": "2018-12-27T18:44:36-07:00"
+  },
+  {
+    "path": "posts/2018-12-27-multilevel-modeling-of-community-composition-with-imperfect-detection/",
+    "title": "Multilevel modeling of community composition with imperfect detection",
+    "description": "A guest post by Joe Mihaljevic.",
+    "author": [
+      {
+        "name": "Joseph Mihaljevic",
+        "url": {}
+      }
+    ],
+    "date": "2014-06-19",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-27T23:38:22-07:00"
   },
   {
     "path": "posts/2018-12-27-shiny-variance-inflation-factor-sandbox/",

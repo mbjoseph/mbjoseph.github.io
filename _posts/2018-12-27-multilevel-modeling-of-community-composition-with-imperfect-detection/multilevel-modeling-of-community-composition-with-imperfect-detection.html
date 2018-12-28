@@ -25,8 +25,8 @@
   
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2018-12-27"/>
-  <meta property="article:created" itemprop="dateCreated" content="2018-12-27"/>
+  <meta property="article:published" itemprop="datePublished" content="2014-06-19"/>
+  <meta property="article:created" itemprop="dateCreated" content="2014-06-19"/>
   <meta name="article:author" content="Joseph Mihaljevic"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -46,7 +46,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Multilevel modeling of community composition with imperfect detection"]},{"type":"character","attributes":{},"value":["A guest post by Joe Mihaljevic.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Joseph Mihaljevic"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["12-27-2018"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Multilevel modeling of community composition with imperfect detection"]},{"type":"character","attributes":{},"value":["A guest post by Joe Mihaljevic.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Joseph Mihaljevic"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2014-06-19"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -944,7 +944,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Multilevel modeling of community composition with imperfect detection","description":"A guest post by Joe Mihaljevic.","authors":[{"author":"Joseph Mihaljevic","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2018-12-27T00:00:00.000-07:00","citationText":"Mihaljevic, 2018"}
+{"title":"Multilevel modeling of community composition with imperfect detection","description":"A guest post by Joe Mihaljevic.","authors":[{"author":"Joseph Mihaljevic","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2014-06-19T00:00:00.000-06:00","citationText":"Mihaljevic, 2014"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -961,7 +961,7 @@
 <div class="d-byline">
   Joseph Mihaljevic true 
   
-<br/>12-27-2018
+<br/>2014-06-19
 </div>
 
 <div class="d-article">
@@ -1012,10 +1012,10 @@ Beta &lt;- array(c(rnorm(Nspecies, 0, 2),
 p0 &lt;- plogis(rnorm(Nspecies, 1, 0.5))
 p0</code></pre>
 <pre><code>
- [1] 0.7983728 0.5577897 0.7394227 0.5873349 0.7645618 0.7755706
- [7] 0.7795930 0.7229254 0.7683356 0.7858403 0.7513317 0.7697833
-[13] 0.6070885 0.8378725 0.8661381 0.7307843 0.8385195 0.9169976
-[19] 0.7225583 0.7661722</code></pre>
+ [1] 0.5746262 0.7872669 0.8699238 0.6341024 0.7301916 0.7516208
+ [7] 0.7726425 0.8507619 0.7578738 0.5715837 0.9163711 0.8396573
+[13] 0.7571990 0.7397515 0.9023525 0.6669399 0.7495329 0.8474885
+[19] 0.6058194 0.7810687</code></pre>
 <pre class="r"><code>
 #### Occupancy states ####
 Yobs &lt;- array(0, dim = c(Nspecies, Nsite)) # Simulated observations
