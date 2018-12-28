@@ -22,7 +22,10 @@ before_install:
   - mkdir -p ~/.R/
   - echo "CXX14 = g++-7 -fPIC -flto=2" >> ~/.R/Makevars
   - echo "CXX14FLAGS = -mtune=native -march=native -Wno-unused-variable -Wno-unused-function -Wno-unused-local-typedefs -Wno-ignored-attributes -Wno-deprecated-declarations -Wno-attributes -O3" >> ~/.R/Makevars
-  - sudo apt-get -y install imagemagick jags r-cran-ncdf4 libudunits2-dev
+  - sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable --yes
+  - sudo apt-get --yes --force-yes update -qq
+  - sudo apt-get -y install libproj-dev libgeos-dev libgdal-dev libgdal1-dev libudunits2-dev
+  - sudo apt-get -y install imagemagick jags r-cran-ncdf4
 
 script:
 - Rscript main.R
