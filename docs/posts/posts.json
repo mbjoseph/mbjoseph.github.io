@@ -15,6 +15,21 @@
     "last_modified": "2018-12-27T14:35:46-07:00"
   },
   {
+    "path": "posts/2018-12-27-the-iquit-r-video-series/",
+    "title": "The IQUIT R video series",
+    "description": "A series of introductory R videos.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2015-08-28",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2018-12-27T22:20:45-07:00"
+  },
+  {
     "path": "posts/2018-12-27-plotting-spatial-neighbors-in-ggplot2/",
     "title": "Plotting spatial neighbors in ggplot2",
     "description": "How to visualize spatial neighbors using ggplot2, spdep, and sf.",
