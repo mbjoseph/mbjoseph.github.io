@@ -3,7 +3,7 @@ title: "Maxwell B. Joseph"
 description: |
   Personal site of Maxwell B. Joseph - Earth data science, open science 
   architecture, Bayesian statistics, and spatial analysis.
-output_dir: "docs"
+output_dir: "."
 navbar:
   right:
     - text: "Posts"
