@@ -24,7 +24,6 @@ Imports:
     imager,
     knitr,
     lme4,
-    plotly,
     radix,
     raster,
     reshape2,
