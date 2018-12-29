@@ -14,8 +14,9 @@ addons:
     packages:
       - g++-7
 env:
-  - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
-  - MAKEFLAGS="-j 2"
+  global:
+    - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+    - MAKEFLAGS="-j 2"
 
 before_install:
   - export DISPLAY=:99.0
