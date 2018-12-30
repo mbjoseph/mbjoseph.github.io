@@ -13,9 +13,6 @@ jobs:
             - deps1-
       - run:
           command: |
-            R -e "devtools::install_deps(dependencies = TRUE)"
-      - run:
-          command: |
             Rscript main.R
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "DESCRIPTION" }}-{{ checksum ".circleci/config.yml" }}
