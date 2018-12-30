@@ -12,8 +12,12 @@ RUN apt-get update \
 	  xfonts-base \
 	  xvfb \
   && apt-get clean \
-&& rm -rf /var/lib/apt/lists/
+  && rm -rf /var/lib/apt/lists/
 
+RUN TEMP_DEB="$(mktemp)" \
+  && wget -O "$TEMP_DEB" 'https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb' \
+  && dpkg -i "$TEMP_DEB" \
+  && rm -f "$TEMP_DEB"
 
 # Global site-wide config -- neeeded for building packages
 RUN mkdir -p $HOME/.R/ \
