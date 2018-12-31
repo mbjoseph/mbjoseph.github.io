@@ -1,0 +1,63 @@
+---
+title: "Yes, but does it (still) run?"
+description: |
+  Migrating from Jekyll to radix, with some reflections on the past 6 years.
+author:
+  - name: Maxwell B. Joseph
+    url: {}
+date: 12-30-2018
+output:
+  radix::radix_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I haven't blogged recently.
+It was useful as a PhD student to wrap my head around new 
+methods and track my path from a code-naive field ecologist to a 
+not entirely incompetent R programmer in 2016 when I graduated. 
+But, much has changed in the 5-6 years since I began the blog. 
+I've developed new skills, and the tools around R programming have matured.
+It's easier now to publish content with R markdown
+with tools like [blogdown](https://github.com/rstudio/blogdown) and 
+[radix](https://github.com/rstudio/radix) than it was six years ago. 
+
+My old workflow involved writing posts in R markdown, then generating markdown
+and publishing with a static site generator (first
+[Octopress](https://github.com/imathis/octopress), then
+[Jekyll](https://github.com/jekyll/jekyll)). 
+This is fine, but I ended up losing track of most of the original R markdown
+files that generated the markdown being served on the site.
+
+Looking back on 2018, I've come to better appreciate 
+continuous integration through Travis CI, CircleCI, and AppVeyor.
+It's nice to know when builds break and code stops working. 
+As I was taking stock of the past year, I realized that I did not know whether 
+the code that I had posted years ago still worked, and I didn't have the .Rmd
+files anymore to find out.
+
+```{r plot-img, fig.width=10, fig.height = 7, fig.cap = "An abandoned car that may have been useful in its time, but no longer runs."}
+library(imager)
+im <- load.image("https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Abandoned_Car_%28155561965%29.jpeg/1280px-Abandoned_Car_%28155561965%29.jpeg")
+plot(im, axes = FALSE)
+```
+
+This bothered me. 
+First, I didn't want to be responsible for publishing code that doesn't run. 
+Second, I also realized that years ago, I did not appreciate
+portability as much as I do today, e.g., 
+when I felt comfortable assuming that users would need to manually download
+data from a website and store it in a specific directory on their filesystem 
+to run some code. 
+With time off over the holidays, I figured I would migrate my old site from 
+Jekyll to radix and put the resulting site under continuous integration to 
+be sure that the answer to the question "does it (still) run?" is yes.
+
+The result is this site (as of Dec 2018), and unsurprisingly, not all of the 
+code that I had posted previously still ran. 
+But, now with radix I have 
+[Travis CI building the posts](https://travis-ci.org/mbjoseph/mbjoseph.github.io) 
+regularly, so at least if something breaks in the future, I should know sooner.

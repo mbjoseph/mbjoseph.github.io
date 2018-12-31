@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2018-12-30-yes-but-does-it-still-run/",
+    "title": "Yes, but does it (still) run?",
+    "description": "Migrating from Jekyll to radix, with some reflections on the past 6 years.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2018-12-30",
+    "categories": [],
+    "preview": "posts/2018-12-30-yes-but-does-it-still-run/yes-but-does-it-still-run_files/figure-html5/plot-img-1.png",
+    "last_modified": "2018-12-30T22:01:37-07:00"
+  },
+  {
     "path": "posts/2018-12-27-gaussian-predictive-process-models-in-stan/",
     "title": "Gaussian predictive process models in Stan",
     "description": "Gaussian processes that scale to larger data.",
