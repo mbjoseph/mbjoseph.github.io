@@ -71,7 +71,7 @@ $$y_n = \beta + \epsilon_n$$
 
 ### 4. Graphical interpretation
 
-![](/images/x1.png)
+![](x1.png)
 
 ### 5. Verbal description
 
