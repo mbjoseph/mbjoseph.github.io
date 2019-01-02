@@ -10,6 +10,10 @@ navbar:
       href: index.html
     - icon: fab fa-github
       href: https://github.com/mbjoseph
+    - icon: ai ai-google-scholar
+      href: https://scholar.google.com/citations?user=146E-bUAAAAJ
+    - icon: ai ai-orcid
+      href: https://orcid.org/0000-0002-7745-9990
     - icon: fab fa-twitter
       href: https://twitter.com/mxwlj
     - icon: fa fa-rss
