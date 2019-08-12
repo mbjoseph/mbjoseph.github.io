@@ -1,5 +1,5 @@
 Package: blog
-Title: A blog built with radix
+Title: A blog built with distill
 Version: 0.0.1
 Authors@R: 
     person(given = "Max",
@@ -24,7 +24,7 @@ Imports:
     imager,
     knitr,
     lme4,
-    radix,
+    distill,
     raster,
     reshape2,
     rgdal,
