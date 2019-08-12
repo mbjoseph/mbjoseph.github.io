@@ -7,7 +7,7 @@ author:
     url: {}
 date: 2014-11-14
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 bibliography: biblio.bib
 categories: 
@@ -28,62 +28,5 @@ true occupancy state.
 The Stan [manual](http://mc-stan.org/manual.html) (pg. 96) gives an example of 
 this kind of marginalization for a discrete change-point model.
 
-Here's a Stan implementation of a dynamic (multi-year) occupancy model
-[@mackenzie2003estimating].
-
-First, the model statement:
-
-```{r print-file}
-cat(paste(readLines('model.stan'), "\n", sep = ""), sep = "")
-```
-
-This model can be made faster by storing values for log(psi) and log(1 - psi), 
-as done in [Bob Carpenter's single season example](https://groups.google.com/forum/#!topic/stan-users/ZuLmNl4Q9xc).
-
-Fitting the model:
-
-```{r fit-model, results='hide'}
-library(reshape2)
-library(rstan)
-rstan_options(auto_write = TRUE)
-options(mc.cores = parallel::detectCores())
-
-simulate_data <- function(){
-  nsite <- 100;
-  nrep <- 3;     # repeat surveys
-  nyear <- 10;  # nyears
-  p <- 0.8;
-  gamma <- .2
-  phi <- .4
-  psi1 <- .5
-
-  Z <- array(dim=c(nsite, nyear))
-  Z[, 1] <- rbinom(nsite, 1, psi1)
-  for (t in 2:nyear){
-    Z[, t] <- rbinom(nsite, 1, Z[, t - 1] * phi + (1 - Z[, t - 1]) * gamma)
-  }
-
-  Y <- array(dim=c(nsite, nyear, nrep))
-  for (r in 1:nsite){
-    for (t in 1:nyear){
-      Y[r, t, ] <- rbinom(nrep, 1, Z[r, t] * p)
-    }
-  }
-  return(list(nsite=nsite, nrep=nrep, nyear=nyear,
-              p=p, gamma=gamma, phi=phi,
-              psi1=psi1, Y=Y))
-}
-
-d <- simulate_data()
-
-fit <- stan("model.stan", data = d)
-```
-
-
-```{r simulate-many-data-sets, results='hide'}
-traceplot(fit, pars = c('gamma', 'phi', 'psi1'), ncol = 1)
-```
-
-Based on some initial exploration, this approach seems much much (much?) faster 
-than explicitly modeling the latent occurrence states in JAGS, with better chain 
-mixing and considerably less autocorrelation. 
+For a Stan implementation of a dynamic (multi-year) occupancy model
+[@mackenzie2003estimating], see: https://github.com/stan-dev/example-models/tree/master/BPA/Ch.13

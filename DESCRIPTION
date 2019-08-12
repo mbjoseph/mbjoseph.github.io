@@ -1,4 +1,4 @@
-Package: radix-blog
+Package: blog
 Title: A blog built with radix
 Version: 0.0.1
 Authors@R: 

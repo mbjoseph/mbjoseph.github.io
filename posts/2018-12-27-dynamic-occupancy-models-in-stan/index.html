@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-  <meta name="generator" content="radix" />
+  <meta name="generator" content="distill" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -48,7 +48,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Dynamic occupancy models in Stan"]},{"type":"character","attributes":{},"value":["Dynamic multi-year occupancy models, marginalizing over latent occurrence states."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2014-11-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["stan"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Dynamic occupancy models in Stan"]},{"type":"character","attributes":{},"value":["Dynamic multi-year occupancy models, marginalizing over latent occurrence states."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2014-11-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["stan"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -86,7 +86,7 @@
     });
 
     // responsive menu
-    $('.radix-site-header').each(function(i, val) {
+    $('.distill-site-header').each(function(i, val) {
       var topnav = $(this);
       var toggle = topnav.find('.nav-toggle');
       toggle.on('click', function() {
@@ -113,85 +113,85 @@
 
 /* Theme (user-documented overrideables for nav appearance) */
 
-.radix-site-nav {
+.distill-site-nav {
   color: rgba(255, 255, 255, 0.8);
   background-color: #455a64;
   font-size: 15px;
   font-weight: 300;
 }
 
-.radix-site-nav a {
+.distill-site-nav a {
   color: inherit;
   text-decoration: none;
 }
 
-.radix-site-nav a:hover {
+.distill-site-nav a:hover {
   color: white;
 }
 
 @media print {
-  .radix-site-nav {
+  .distill-site-nav {
     display: none;
   }
 }
 
-.radix-site-header {
+.distill-site-header {
 
 }
 
-.radix-site-footer {
+.distill-site-footer {
 
 }
 
 
 /* Site Header */
 
-.radix-site-header {
+.distill-site-header {
   width: 100%;
   box-sizing: border-box;
   z-index: 3;
 }
 
-.radix-site-header .nav-left {
+.distill-site-header .nav-left {
   display: inline-block;
   margin-left: 8px;
 }
 
 @media screen and (max-width: 768px) {
-  .radix-site-header .nav-left {
+  .distill-site-header .nav-left {
     margin-left: 0;
   }
 }
 
 
-.radix-site-header .nav-right {
+.distill-site-header .nav-right {
   float: right;
   margin-right: 8px;
 }
 
-.radix-site-header a,
-.radix-site-header .title {
+.distill-site-header a,
+.distill-site-header .title {
   display: inline-block;
   text-align: center;
   padding: 14px 10px 14px 10px;
 }
 
-.radix-site-header .title {
+.distill-site-header .title {
   font-size: 18px;
 }
 
-.radix-site-header .logo {
+.distill-site-header .logo {
   padding: 0;
 }
 
-.radix-site-header .logo img {
+.distill-site-header .logo img {
   display: none;
   max-height: 20px;
   width: auto;
   margin-bottom: -4px;
 }
 
-.radix-site-header .nav-image img {
+.distill-site-header .nav-image img {
   max-height: 18px;
   width: auto;
   display: inline-block;
@@ -201,22 +201,22 @@
 
 
 @media screen and (min-width: 1000px) {
-  .radix-site-header .logo img {
+  .distill-site-header .logo img {
     display: inline-block;
   }
-  .radix-site-header .nav-left {
+  .distill-site-header .nav-left {
     margin-left: 20px;
   }
-  .radix-site-header .nav-right {
+  .distill-site-header .nav-right {
     margin-right: 20px;
   }
-  .radix-site-header .title {
+  .distill-site-header .title {
     padding-left: 12px;
   }
 }
 
 
-.radix-site-header .nav-toggle {
+.distill-site-header .nav-toggle {
   display: none;
 }
 
@@ -298,18 +298,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .radix-site-header a, .radix-site-header .nav-dropdown  {display: none;}
-  .radix-site-header a.nav-toggle {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
     float: right;
     display: block;
   }
-  .radix-site-header .title {
+  .distill-site-header .title {
     margin-left: 0;
   }
-  .radix-site-header .nav-right {
+  .distill-site-header .nav-right {
     margin-right: 0;
   }
-  .radix-site-header {
+  .distill-site-header {
     overflow: hidden;
   }
   .nav-right .nav-dropdown-content {
@@ -319,24 +319,24 @@
 
 
 @media screen and (max-width: 768px) {
-  .radix-site-header.responsive {position: relative;}
-  .radix-site-header.responsive a.nav-toggle {
+  .distill-site-header.responsive {position: relative;}
+  .distill-site-header.responsive a.nav-toggle {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .radix-site-header.responsive a,
-  .radix-site-header.responsive .nav-dropdown {
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
     display: block;
     text-align: left;
   }
-  .radix-site-header.responsive .nav-left,
-  .radix-site-header.responsive .nav-right {
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
     width: 100%;
   }
-  .radix-site-header.responsive .nav-dropdown {float: none;}
-  .radix-site-header.responsive .nav-dropdown-content {position: relative;}
-  .radix-site-header.responsive .nav-dropdown .nav-dropbtn {
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
     display: block;
     width: 100%;
     text-align: left;
@@ -345,7 +345,7 @@
 
 /* Site Footer */
 
-.radix-site-footer {
+.distill-site-footer {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
@@ -1228,7 +1228,7 @@ function init_common() {
 
   // get rid of index.html references in header
   if (window.location.protocol !== "file:") {
-    $('.radix-site-header a[href]').each(function(i,val) {
+    $('.distill-site-header a[href]').each(function(i,val) {
       $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
     });
   }
@@ -1298,7 +1298,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
 <header class="header header--fixed" role="banner">
-<nav class="radix-site-nav radix-site-header">
+<nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="../../index.html" class="title">Maxwell B. Joseph</a>
 </div>
@@ -1340,96 +1340,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-article">
 <p>Occupancy modeling is possible in Stan <a href="https://groups.google.com/forum/#!topic/stan-users/ZuLmNl4Q9xc">as shown here</a>, despite the lack of support for integer parameters (without marginalization). In many Bayesian applications of occupancy modeling, the true occupancy states (0 or 1) are directly modeled, but this can be avoided by marginalizing out the true occupancy state. The Stan <a href="http://mc-stan.org/manual.html">manual</a> (pg. 96) gives an example of this kind of marginalization for a discrete change-point model.</p>
-<p>Here’s a Stan implementation of a dynamic (multi-year) occupancy model <span class="citation" data-cites="mackenzie2003estimating">(MacKenzie et al. <a href="#ref-mackenzie2003estimating">2003</a>)</span>.</p>
-<p>First, the model statement:</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-cat(paste(readLines(&#39;model.stan&#39;), &quot;\n&quot;, sep = &quot;&quot;), sep = &quot;&quot;)</code></pre>
-<pre><code>
-data {
-   int&lt;lower = 0&gt; nsite;
-   int&lt;lower = 0&gt; nyear;
-   int&lt;lower = 0&gt; nrep;
-   int&lt;lower = 0, upper = 1&gt; Y[nsite, nyear, nrep];
-}
-parameters {
-   real&lt;lower = 0, upper = 1&gt; p;
-   real&lt;lower = 0, upper = 1&gt; gamma;
-   real&lt;lower = 0, upper = 1&gt; phi;
-   real&lt;lower = 0, upper = 1&gt; psi1;
-}
-transformed parameters {
-   matrix[nsite, nyear] psi;
-   for (r in 1:nsite){
-     for (t in 1:nyear){
-       if (t == 1){
-          psi[r, t] = psi1;
-       } else {
-          psi[r, t] = psi[r, t-1] * phi + (1 - psi[r, t-1]) * gamma;
-       }
-     }
-   }
-}
-model {
-  for (r in 1:nsite){
-    for (t in 1:nyear){
-      if (sum(Y[r, t, ]) &gt; 0){
-        target += log(psi[r, t]) + bernoulli_lpmf(Y[r, t, ] | p);
-      } else {
-        target += log_sum_exp(
-            log(psi[r, t]) + bernoulli_lpmf(Y[r, t, ] | p),
-            log1m(psi[r, t])
-          );
-      }
-    }
-  }
-}</code></pre>
-</div>
-<p>This model can be made faster by storing values for log(psi) and log(1 - psi), as done in <a href="https://groups.google.com/forum/#!topic/stan-users/ZuLmNl4Q9xc">Bob Carpenter’s single season example</a>.</p>
-<p>Fitting the model:</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(reshape2)
-library(rstan)
-rstan_options(auto_write = TRUE)
-options(mc.cores = parallel::detectCores())
-
-simulate_data &lt;- function(){
-  nsite &lt;- 100;
-  nrep &lt;- 3;     # repeat surveys
-  nyear &lt;- 10;  # nyears
-  p &lt;- 0.8;
-  gamma &lt;- .2
-  phi &lt;- .4
-  psi1 &lt;- .5
-
-  Z &lt;- array(dim=c(nsite, nyear))
-  Z[, 1] &lt;- rbinom(nsite, 1, psi1)
-  for (t in 2:nyear){
-    Z[, t] &lt;- rbinom(nsite, 1, Z[, t - 1] * phi + (1 - Z[, t - 1]) * gamma)
-  }
-
-  Y &lt;- array(dim=c(nsite, nyear, nrep))
-  for (r in 1:nsite){
-    for (t in 1:nyear){
-      Y[r, t, ] &lt;- rbinom(nrep, 1, Z[r, t] * p)
-    }
-  }
-  return(list(nsite=nsite, nrep=nrep, nyear=nyear,
-              p=p, gamma=gamma, phi=phi,
-              psi1=psi1, Y=Y))
-}
-
-d &lt;- simulate_data()
-
-fit &lt;- stan(&quot;model.stan&quot;, data = d)</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-traceplot(fit, pars = c(&#39;gamma&#39;, &#39;phi&#39;, &#39;psi1&#39;), ncol = 1)</code></pre>
-<p><img src="dynamic-occupancy-models-in-stan_files/figure-html5/simulate-many-data-sets-1.png" width="624" /></p>
-</div>
-<p>Based on some initial exploration, this approach seems much much (much?) faster than explicitly modeling the latent occurrence states in JAGS, with better chain mixing and considerably less autocorrelation.</p>
+<p>For a Stan implementation of a dynamic (multi-year) occupancy model <span class="citation" data-cites="mackenzie2003estimating">(MacKenzie et al. <a href="#ref-mackenzie2003estimating">2003</a>)</span>, see: <a href="https://github.com/stan-dev/example-models/tree/master/BPA/Ch.13" class="uri">https://github.com/stan-dev/example-models/tree/master/BPA/Ch.13</a></p>
 <div id="refs" class="references">
 <div id="ref-mackenzie2003estimating">
 <p>MacKenzie, Darryl I, James D Nichols, James E Hines, Melinda G Knutson, and Alan B Franklin. 2003. “Estimating Site Occupancy, Colonization, and Local Extinction When a Species Is Detected Imperfectly.” <em>Ecology</em> 84 (8): 2200–2207. <a href="https://doi.org/10.1890/02-3090">https://doi.org/10.1890/02-3090</a>.</p>

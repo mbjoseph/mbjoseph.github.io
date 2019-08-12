@@ -19,7 +19,7 @@ navbar:
     - icon: fa fa-rss
       href: index.xml
 output:
-  radix::radix_article:
+  distill::distill_article:
     css: styles.css
 repository_url: https://github.com/mbjoseph/mbjoseph.github.io
 creative_commons: CC BY

@@ -1,13 +1,13 @@
 ---
 title: "Yes, but does it (still) run?"
 description: |
-  Migrating from Jekyll to radix, with some reflections on the past 6 years.
+  Migrating from Jekyll to distill, with some reflections on the past 6 years.
 author:
   - name: Maxwell B. Joseph
     url: {}
 date: 12-30-2018
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 ---
 
@@ -23,7 +23,7 @@ But, much has changed in the 5-6 years since I began the blog.
 I've developed new skills, and the tools around R programming have matured.
 It's easier now to publish content with R markdown
 with tools like [blogdown](https://github.com/rstudio/blogdown) and 
-[radix](https://github.com/rstudio/radix) than it was six years ago. 
+[distill](https://github.com/rstudio/distill) than it was six years ago. 
 
 My old workflow involved writing posts in R markdown, then generating markdown
 and publishing with a static site generator (first
@@ -53,11 +53,11 @@ when I felt comfortable assuming that users would need to manually download
 data from a website and store it in a specific directory on their filesystem 
 to run some code. 
 With time off over the holidays, I figured I would migrate my old site from 
-Jekyll to radix and put the resulting site under continuous integration to 
+Jekyll to distill and put the resulting site under continuous integration to 
 be sure that the answer to the question "does it (still) run?" is yes.
 
 The result is this site (as of Dec 2018), and unsurprisingly, not all of the 
 code that I had posted previously still ran. 
-But, now with radix I have 
+But, now with distill I have 
 [Travis CI building the posts](https://travis-ci.org/mbjoseph/mbjoseph.github.io) 
 regularly, so at least if something breaks in the future, I should know sooner.

@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-  <meta name="generator" content="radix" />
+  <meta name="generator" content="distill" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -44,7 +44,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Gaussian predictive process models in Stan"]},{"type":"character","attributes":{},"value":["Gaussian processes that scale to larger data.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2016-08-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["stan","spatial"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Gaussian predictive process models in Stan"]},{"type":"character","attributes":{},"value":["Gaussian processes that scale to larger data.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2016-08-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["stan","spatial"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -887,7 +887,7 @@
   
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
-      $('.radix-site-header a[href]').each(function(i,val) {
+      $('.distill-site-header a[href]').each(function(i,val) {
         $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
       });
     }
@@ -984,7 +984,7 @@
 <p>with priors for <span class="math inline">\(\eta\)</span>, <span class="math inline">\(\sigma\)</span>, and <span class="math inline">\(\phi\)</span> completing a Bayesian specification.</p>
 <p>This approach scales well for larger datasets relative to a full rank GP model. Comparing the number of effective samples per unit time for the two approaches across a range of sample sizes, the GPP executes more quickly and is more efficient for larger datasets. Code for this simulation is available on GitHub: <a href="https://github.com/mbjoseph/gpp-speed-test">https://github.com/mbjoseph/gpp-speed-test</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img2-1.png" width="1536" data-radix-preview=1 /></p>
+<p><img src="gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img2-1.png" width="1536" data-distill-preview=1 /></p>
 </div>
 <h2 id="relevant-papers">Relevant papers</h2>
 <p><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2743161/">Finley, Andrew O., et al. “Improving the performance of predictive process modeling for large datasets.” Computational statistics &amp; data analysis 53.8 (2009): 2873-2884.</a></p>

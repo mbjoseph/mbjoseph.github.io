@@ -7,7 +7,7 @@ author:
     url: {}
 date: 05-27-2013
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 categories: 
   - jags

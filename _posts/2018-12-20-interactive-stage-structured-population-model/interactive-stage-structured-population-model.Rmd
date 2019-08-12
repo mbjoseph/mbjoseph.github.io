@@ -6,7 +6,7 @@ author:
   - name: Maxwell B. Joseph
 date: 02-16-2013
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 bibliography: biblio.bib
 categories:

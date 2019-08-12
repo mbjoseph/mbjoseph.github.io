@@ -7,7 +7,7 @@ author:
     url: {}
 date: 2015-09-08
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 categories: 
   - rants

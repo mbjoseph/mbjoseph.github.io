@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-  <meta name="generator" content="radix" />
+  <meta name="generator" content="distill" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Quantifying uncertainty around R-squared for generalized linear models"]},{"type":"character","attributes":{},"value":["How to propage posterior uncertainty to R-squared in R and JAGS."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-22-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["jags"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Quantifying uncertainty around R-squared for generalized linear models"]},{"type":"character","attributes":{},"value":["How to propage posterior uncertainty to R-squared in R and JAGS."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-22-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["jags"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -87,7 +87,7 @@
     });
 
     // responsive menu
-    $('.radix-site-header').each(function(i, val) {
+    $('.distill-site-header').each(function(i, val) {
       var topnav = $(this);
       var toggle = topnav.find('.nav-toggle');
       toggle.on('click', function() {
@@ -114,85 +114,85 @@
 
 /* Theme (user-documented overrideables for nav appearance) */
 
-.radix-site-nav {
+.distill-site-nav {
   color: rgba(255, 255, 255, 0.8);
   background-color: #455a64;
   font-size: 15px;
   font-weight: 300;
 }
 
-.radix-site-nav a {
+.distill-site-nav a {
   color: inherit;
   text-decoration: none;
 }
 
-.radix-site-nav a:hover {
+.distill-site-nav a:hover {
   color: white;
 }
 
 @media print {
-  .radix-site-nav {
+  .distill-site-nav {
     display: none;
   }
 }
 
-.radix-site-header {
+.distill-site-header {
 
 }
 
-.radix-site-footer {
+.distill-site-footer {
 
 }
 
 
 /* Site Header */
 
-.radix-site-header {
+.distill-site-header {
   width: 100%;
   box-sizing: border-box;
   z-index: 3;
 }
 
-.radix-site-header .nav-left {
+.distill-site-header .nav-left {
   display: inline-block;
   margin-left: 8px;
 }
 
 @media screen and (max-width: 768px) {
-  .radix-site-header .nav-left {
+  .distill-site-header .nav-left {
     margin-left: 0;
   }
 }
 
 
-.radix-site-header .nav-right {
+.distill-site-header .nav-right {
   float: right;
   margin-right: 8px;
 }
 
-.radix-site-header a,
-.radix-site-header .title {
+.distill-site-header a,
+.distill-site-header .title {
   display: inline-block;
   text-align: center;
   padding: 14px 10px 14px 10px;
 }
 
-.radix-site-header .title {
+.distill-site-header .title {
   font-size: 18px;
 }
 
-.radix-site-header .logo {
+.distill-site-header .logo {
   padding: 0;
 }
 
-.radix-site-header .logo img {
+.distill-site-header .logo img {
   display: none;
   max-height: 20px;
   width: auto;
   margin-bottom: -4px;
 }
 
-.radix-site-header .nav-image img {
+.distill-site-header .nav-image img {
   max-height: 18px;
   width: auto;
   display: inline-block;
@@ -202,22 +202,22 @@
 
 
 @media screen and (min-width: 1000px) {
-  .radix-site-header .logo img {
+  .distill-site-header .logo img {
     display: inline-block;
   }
-  .radix-site-header .nav-left {
+  .distill-site-header .nav-left {
     margin-left: 20px;
   }
-  .radix-site-header .nav-right {
+  .distill-site-header .nav-right {
     margin-right: 20px;
   }
-  .radix-site-header .title {
+  .distill-site-header .title {
     padding-left: 12px;
   }
 }
 
 
-.radix-site-header .nav-toggle {
+.distill-site-header .nav-toggle {
   display: none;
 }
 
@@ -299,18 +299,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .radix-site-header a, .radix-site-header .nav-dropdown  {display: none;}
-  .radix-site-header a.nav-toggle {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
     float: right;
     display: block;
   }
-  .radix-site-header .title {
+  .distill-site-header .title {
     margin-left: 0;
   }
-  .radix-site-header .nav-right {
+  .distill-site-header .nav-right {
     margin-right: 0;
   }
-  .radix-site-header {
+  .distill-site-header {
     overflow: hidden;
   }
   .nav-right .nav-dropdown-content {
@@ -320,24 +320,24 @@
 
 
 @media screen and (max-width: 768px) {
-  .radix-site-header.responsive {position: relative;}
-  .radix-site-header.responsive a.nav-toggle {
+  .distill-site-header.responsive {position: relative;}
+  .distill-site-header.responsive a.nav-toggle {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .radix-site-header.responsive a,
-  .radix-site-header.responsive .nav-dropdown {
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
     display: block;
     text-align: left;
   }
-  .radix-site-header.responsive .nav-left,
-  .radix-site-header.responsive .nav-right {
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
     width: 100%;
   }
-  .radix-site-header.responsive .nav-dropdown {float: none;}
-  .radix-site-header.responsive .nav-dropdown-content {position: relative;}
-  .radix-site-header.responsive .nav-dropdown .nav-dropbtn {
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
     display: block;
     width: 100%;
     text-align: left;
@@ -346,7 +346,7 @@
 
 /* Site Footer */
 
-.radix-site-footer {
+.distill-site-footer {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
@@ -1229,7 +1229,7 @@ function init_common() {
 
   // get rid of index.html references in header
   if (window.location.protocol !== "file:") {
-    $('.radix-site-header a[href]').each(function(i,val) {
+    $('.distill-site-header a[href]').each(function(i,val) {
       $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
     });
   }
@@ -1299,7 +1299,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
 <header class="header header--fixed" role="banner">
-<nav class="radix-site-nav radix-site-header">
+<nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="../../index.html" class="title">Maxwell B. Joseph</a>
 </div>
@@ -1435,24 +1435,26 @@ Formula: Egg ~ 1 + (1 | Population) + (1 | Container) + (1 | Unit)
    Data: DataF
 
      AIC      BIC   logLik deviance df.resid 
-   242.5    250.2   -117.2    234.5       47 
+   257.7    265.8   -124.9    249.7       51 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--1.2809 -0.5422 -0.1251  0.4687  1.5303 
+-1.5910 -0.5656 -0.3137  0.5858  1.7928 
 
 Random effects:
- Groups     Name        Variance Std.Dev.
- Unit       (Intercept) 0.07554  0.2749  
- Container  (Intercept) 0.08560  0.2926  
- Population (Intercept) 0.31336  0.5598  
-Number of obs: 51, groups:  Unit, 51; Container, 10; Population, 8
+ Groups     Name        Variance  Std.Dev. 
+ Unit       (Intercept) 4.377e-08 0.0002092
+ Container  (Intercept) 5.213e-07 0.0007220
+ Population (Intercept) 4.986e-01 0.7061462
+Number of obs: 55, groups:  Unit, 55; Container, 10; Population, 8
 
 Fixed effects:
             Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)   1.3114     0.2363   5.549 2.88e-08 ***
+(Intercept)   1.5526     0.2604   5.962 2.49e-09 ***
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+convergence code: 0
+Model failed to converge with max|grad| = 0.00622563 (tol = 0.001, component 1)</code></pre>
 <pre class="r"><code>
 summary(mF)</code></pre>
 <pre><code>
@@ -1465,31 +1467,33 @@ Egg ~ Treatment + Habitat + (1 | Population) + (1 | Container) +
    Data: DataF
 
      AIC      BIC   logLik deviance df.resid 
-   241.4    253.0   -114.7    229.4       45 
+   257.9    269.9   -122.9    245.9       49 
 
 Scaled residuals: 
      Min       1Q   Median       3Q      Max 
--1.53475 -0.59271 -0.03316  0.36985  1.46419 
+-1.51389 -0.55034 -0.08826  0.47550  2.07213 
 
 Random effects:
  Groups     Name        Variance Std.Dev.
- Unit       (Intercept) 0.0389   0.1972  
- Container  (Intercept) 0.1457   0.3817  
- Population (Intercept) 0.2307   0.4803  
-Number of obs: 51, groups:  Unit, 51; Container, 10; Population, 8
+ Unit       (Intercept) 0.0000   0.0000  
+ Container  (Intercept) 0.0000   0.0000  
+ Population (Intercept) 0.4939   0.7028  
+Number of obs: 55, groups:  Unit, 55; Container, 10; Population, 8
 
 Fixed effects:
              Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)   1.04758    0.27934   3.750 0.000177 ***
-TreatmentExp  0.44755    0.19930   2.246 0.024730 *  
-Habitatwet   -0.04222    0.16588  -0.255 0.799091    
+(Intercept)   1.42059    0.27659   5.136 2.81e-07 ***
+TreatmentExp  0.23000    0.11652   1.974   0.0484 *  
+Habitatwet    0.05464    0.11964   0.457   0.6479    
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Correlation of Fixed Effects:
             (Intr) TrtmnE
-TreatmntExp -0.535       
-Habitatwet  -0.350  0.191</code></pre>
+TreatmntExp -0.232       
+Habitatwet  -0.292  0.153
+convergence code: 0
+boundary (singular) fit: see ?isSingular</code></pre>
 <pre class="r"><code>
 # Extraction of fitted value for the alternative model fixef() extracts
 # coefficents for fixed effects model.matrix(mF) returns design matrix
@@ -1517,8 +1521,8 @@ R2c &lt;- (VarF + VarCorr(mF)$Container[1] + VarCorr(mF)$Population[1])/
 # Print marginal and conditional R-squared values
 cbind(R2m, R2c)</code></pre>
 <pre><code>
-            R2m       R2c
-[1,] 0.07405109 0.6070757</code></pre>
+           R2m       R2c
+[1,] 0.0181809 0.7251428</code></pre>
 </div>
 <p>Having stored our point estimates, we can now turn to Bayesian methods instead, and generate <span class="math inline">\(R^2\)</span> posteriors.</p>
 <h3 id="posterior-uncertainty-in-r2_glmm">Posterior uncertainty in <span class="math inline">\(R^2_{GLMM}\)</span></h3>
@@ -1545,12 +1549,12 @@ str(jags_d)</code></pre>
 <pre><code>
 List of 8
  $ Population: Factor w/ 8 levels &quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,..: 1 1 1 1 1 1 2 2 2 2 ...
- $ Habitat   : num [1:51] 1 1 0 1 0 0 1 1 0 0 ...
- $ Treatment : num [1:51] 1 0 0 0 1 1 1 1 1 0 ...
- $ Egg       : int [1:51] 6 3 2 3 6 3 4 2 2 1 ...
- $ nobs      : int 51
+ $ Habitat   : num [1:55] 0 0 1 1 1 0 1 1 0 1 ...
+ $ Treatment : num [1:55] 0 0 0 0 1 0 1 0 1 0 ...
+ $ Egg       : int [1:55] 5 5 6 5 7 5 17 9 10 10 ...
+ $ nobs      : int 55
  $ npop      : int 8
- $ Container : int [1:51] 1 1 1 1 1 2 2 2 2 2 ...
+ $ Container : int [1:55] 1 1 1 1 1 2 2 2 2 2 ...
  $ ncont     : int 10</code></pre>
 </div>
 <p>Then, fitting the intercept model:</p>
@@ -1601,15 +1605,222 @@ Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
-   Observed stochastic nodes: 51
-   Unobserved stochastic nodes: 73
-   Total graph size: 340
+   Observed stochastic nodes: 55
+   Unobserved stochastic nodes: 77
+   Total graph size: 364
 
-Initializing model</code></pre>
+Initializing model
+
+
+  |                                                        
+  |                                                  |   0%
+  |                                                        
+  |+                                                 |   2%
+  |                                                        
+  |++                                                |   4%
+  |                                                        
+  |+++                                               |   6%
+  |                                                        
+  |++++                                              |   8%
+  |                                                        
+  |+++++                                             |  10%
+  |                                                        
+  |++++++                                            |  12%
+  |                                                        
+  |+++++++                                           |  14%
+  |                                                        
+  |++++++++                                          |  16%
+  |                                                        
+  |+++++++++                                         |  18%
+  |                                                        
+  |++++++++++                                        |  20%
+  |                                                        
+  |+++++++++++                                       |  22%
+  |                                                        
+  |++++++++++++                                      |  24%
+  |                                                        
+  |+++++++++++++                                     |  26%
+  |                                                        
+  |++++++++++++++                                    |  28%
+  |                                                        
+  |+++++++++++++++                                   |  30%
+  |                                                        
+  |++++++++++++++++                                  |  32%
+  |                                                        
+  |+++++++++++++++++                                 |  34%
+  |                                                        
+  |++++++++++++++++++                                |  36%
+  |                                                        
+  |+++++++++++++++++++                               |  38%
+  |                                                        
+  |++++++++++++++++++++                              |  40%
+  |                                                        
+  |+++++++++++++++++++++                             |  42%
+  |                                                        
+  |++++++++++++++++++++++                            |  44%
+  |                                                        
+  |+++++++++++++++++++++++                           |  46%
+  |                                                        
+  |++++++++++++++++++++++++                          |  48%
+  |                                                        
+  |+++++++++++++++++++++++++                         |  50%
+  |                                                        
+  |++++++++++++++++++++++++++                        |  52%
+  |                                                        
+  |+++++++++++++++++++++++++++                       |  54%
+  |                                                        
+  |++++++++++++++++++++++++++++                      |  56%
+  |                                                        
+  |+++++++++++++++++++++++++++++                     |  58%
+  |                                                        
+  |++++++++++++++++++++++++++++++                    |  60%
+  |                                                        
+  |+++++++++++++++++++++++++++++++                   |  62%
+  |                                                        
+  |++++++++++++++++++++++++++++++++                  |  64%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++                 |  66%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++                |  68%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++               |  70%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++              |  72%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++             |  74%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++            |  76%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++           |  78%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++          |  80%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++         |  82%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++        |  84%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++++       |  86%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++++      |  88%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++++++     |  90%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++++++    |  92%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++++++++   |  94%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++++++++  |  96%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
 <pre class="r"><code>
 vars &lt;- c(&quot;sd.pop&quot;, &quot;sd.cont&quot;, &quot;sd.unit&quot;, &quot;alpha&quot;)
 int_out &lt;- coda.samples(int_mod, n.iter=ni, thin=nthin,
                         variable.names=vars)</code></pre>
+<pre><code>
+  |                                                        
+  |                                                  |   0%
+  |                                                        
+  |*                                                 |   2%
+  |                                                        
+  |**                                                |   4%
+  |                                                        
+  |***                                               |   6%
+  |                                                        
+  |****                                              |   8%
+  |                                                        
+  |*****                                             |  10%
+  |                                                        
+  |******                                            |  12%
+  |                                                        
+  |*******                                           |  14%
+  |                                                        
+  |********                                          |  16%
+  |                                                        
+  |*********                                         |  18%
+  |                                                        
+  |**********                                        |  20%
+  |                                                        
+  |***********                                       |  22%
+  |                                                        
+  |************                                      |  24%
+  |                                                        
+  |*************                                     |  26%
+  |                                                        
+  |**************                                    |  28%
+  |                                                        
+  |***************                                   |  30%
+  |                                                        
+  |****************                                  |  32%
+  |                                                        
+  |*****************                                 |  34%
+  |                                                        
+  |******************                                |  36%
+  |                                                        
+  |*******************                               |  38%
+  |                                                        
+  |********************                              |  40%
+  |                                                        
+  |*********************                             |  42%
+  |                                                        
+  |**********************                            |  44%
+  |                                                        
+  |***********************                           |  46%
+  |                                                        
+  |************************                          |  48%
+  |                                                        
+  |*************************                         |  50%
+  |                                                        
+  |**************************                        |  52%
+  |                                                        
+  |***************************                       |  54%
+  |                                                        
+  |****************************                      |  56%
+  |                                                        
+  |*****************************                     |  58%
+  |                                                        
+  |******************************                    |  60%
+  |                                                        
+  |*******************************                   |  62%
+  |                                                        
+  |********************************                  |  64%
+  |                                                        
+  |*********************************                 |  66%
+  |                                                        
+  |**********************************                |  68%
+  |                                                        
+  |***********************************               |  70%
+  |                                                        
+  |************************************              |  72%
+  |                                                        
+  |*************************************             |  74%
+  |                                                        
+  |**************************************            |  76%
+  |                                                        
+  |***************************************           |  78%
+  |                                                        
+  |****************************************          |  80%
+  |                                                        
+  |*****************************************         |  82%
+  |                                                        
+  |******************************************        |  84%
+  |                                                        
+  |*******************************************       |  86%
+  |                                                        
+  |********************************************      |  88%
+  |                                                        
+  |*********************************************     |  90%
+  |                                                        
+  |**********************************************    |  92%
+  |                                                        
+  |***********************************************   |  94%
+  |                                                        
+  |************************************************  |  96%
+  |                                                        
+  |************************************************* |  98%
+  |                                                        
+  |**************************************************| 100%</code></pre>
 </div>
 <p>Then, fit the full mixed-model with all fixed and random effects:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1658,15 +1869,222 @@ Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
-   Observed stochastic nodes: 51
-   Unobserved stochastic nodes: 75
-   Total graph size: 452
+   Observed stochastic nodes: 55
+   Unobserved stochastic nodes: 79
+   Total graph size: 484
 
-Initializing model</code></pre>
+Initializing model
+
+
+  |                                                        
+  |                                                  |   0%
+  |                                                        
+  |+                                                 |   2%
+  |                                                        
+  |++                                                |   4%
+  |                                                        
+  |+++                                               |   6%
+  |                                                        
+  |++++                                              |   8%
+  |                                                        
+  |+++++                                             |  10%
+  |                                                        
+  |++++++                                            |  12%
+  |                                                        
+  |+++++++                                           |  14%
+  |                                                        
+  |++++++++                                          |  16%
+  |                                                        
+  |+++++++++                                         |  18%
+  |                                                        
+  |++++++++++                                        |  20%
+  |                                                        
+  |+++++++++++                                       |  22%
+  |                                                        
+  |++++++++++++                                      |  24%
+  |                                                        
+  |+++++++++++++                                     |  26%
+  |                                                        
+  |++++++++++++++                                    |  28%
+  |                                                        
+  |+++++++++++++++                                   |  30%
+  |                                                        
+  |++++++++++++++++                                  |  32%
+  |                                                        
+  |+++++++++++++++++                                 |  34%
+  |                                                        
+  |++++++++++++++++++                                |  36%
+  |                                                        
+  |+++++++++++++++++++                               |  38%
+  |                                                        
+  |++++++++++++++++++++                              |  40%
+  |                                                        
+  |+++++++++++++++++++++                             |  42%
+  |                                                        
+  |++++++++++++++++++++++                            |  44%
+  |                                                        
+  |+++++++++++++++++++++++                           |  46%
+  |                                                        
+  |++++++++++++++++++++++++                          |  48%
+  |                                                        
+  |+++++++++++++++++++++++++                         |  50%
+  |                                                        
+  |++++++++++++++++++++++++++                        |  52%
+  |                                                        
+  |+++++++++++++++++++++++++++                       |  54%
+  |                                                        
+  |++++++++++++++++++++++++++++                      |  56%
+  |                                                        
+  |+++++++++++++++++++++++++++++                     |  58%
+  |                                                        
+  |++++++++++++++++++++++++++++++                    |  60%
+  |                                                        
+  |+++++++++++++++++++++++++++++++                   |  62%
+  |                                                        
+  |++++++++++++++++++++++++++++++++                  |  64%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++                 |  66%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++                |  68%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++               |  70%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++              |  72%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++             |  74%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++            |  76%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++           |  78%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++          |  80%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++         |  82%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++        |  84%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++++       |  86%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++++      |  88%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++++++     |  90%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++++++    |  92%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++++++++   |  94%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++++++++  |  96%
+  |                                                        
+  |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
+  |                                                        
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
 <pre class="r"><code>
 vars2 &lt;- c(&quot;sd.pop&quot;, &quot;sd.cont&quot;, &quot;sd.unit&quot;, &quot;alpha&quot;, &quot;beta1&quot;, &quot;beta2&quot;)
 cov_out &lt;- coda.samples(cov_mod, n.iter=ni, thin=nthin,
                         variable.names=vars2)</code></pre>
+<pre><code>
+  |                                                        
+  |                                                  |   0%
+  |                                                        
+  |*                                                 |   2%
+  |                                                        
+  |**                                                |   4%
+  |                                                        
+  |***                                               |   6%
+  |                                                        
+  |****                                              |   8%
+  |                                                        
+  |*****                                             |  10%
+  |                                                        
+  |******                                            |  12%
+  |                                                        
+  |*******                                           |  14%
+  |                                                        
+  |********                                          |  16%
+  |                                                        
+  |*********                                         |  18%
+  |                                                        
+  |**********                                        |  20%
+  |                                                        
+  |***********                                       |  22%
+  |                                                        
+  |************                                      |  24%
+  |                                                        
+  |*************                                     |  26%
+  |                                                        
+  |**************                                    |  28%
+  |                                                        
+  |***************                                   |  30%
+  |                                                        
+  |****************                                  |  32%
+  |                                                        
+  |*****************                                 |  34%
+  |                                                        
+  |******************                                |  36%
+  |                                                        
+  |*******************                               |  38%
+  |                                                        
+  |********************                              |  40%
+  |                                                        
+  |*********************                             |  42%
+  |                                                        
+  |**********************                            |  44%
+  |                                                        
+  |***********************                           |  46%
+  |                                                        
+  |************************                          |  48%
+  |                                                        
+  |*************************                         |  50%
+  |                                                        
+  |**************************                        |  52%
+  |                                                        
+  |***************************                       |  54%
+  |                                                        
+  |****************************                      |  56%
+  |                                                        
+  |*****************************                     |  58%
+  |                                                        
+  |******************************                    |  60%
+  |                                                        
+  |*******************************                   |  62%
+  |                                                        
+  |********************************                  |  64%
+  |                                                        
+  |*********************************                 |  66%
+  |                                                        
+  |**********************************                |  68%
+  |                                                        
+  |***********************************               |  70%
+  |                                                        
+  |************************************              |  72%
+  |                                                        
+  |*************************************             |  74%
+  |                                                        
+  |**************************************            |  76%
+  |                                                        
+  |***************************************           |  78%
+  |                                                        
+  |****************************************          |  80%
+  |                                                        
+  |*****************************************         |  82%
+  |                                                        
+  |******************************************        |  84%
+  |                                                        
+  |*******************************************       |  86%
+  |                                                        
+  |********************************************      |  88%
+  |                                                        
+  |*********************************************     |  90%
+  |                                                        
+  |**********************************************    |  92%
+  |                                                        
+  |***********************************************   |  94%
+  |                                                        
+  |************************************************  |  96%
+  |                                                        
+  |************************************************* |  98%
+  |                                                        
+  |**************************************************| 100%</code></pre>
 </div>
 <p>For every MCMC draw, we can calculate <span class="math inline">\(R^2_{GLMM}\)</span>, generating posteriors for both the marginal and conditional values.</p>
 <div class="layout-chunk" data-layout="l-body">

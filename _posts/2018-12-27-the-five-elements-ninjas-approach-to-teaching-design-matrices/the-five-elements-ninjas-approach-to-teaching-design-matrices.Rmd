@@ -7,7 +7,7 @@ author:
     url: {}
 date: 2016-04-25
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 categories: 
   - teaching

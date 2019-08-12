@@ -7,7 +7,7 @@ author:
     url: {}
 date: 09-08-2013
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 bibliography: biblio.bib
 categories: 

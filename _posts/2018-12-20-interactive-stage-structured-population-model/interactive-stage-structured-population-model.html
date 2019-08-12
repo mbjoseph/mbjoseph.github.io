@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-  <meta name="generator" content="radix" />
+  <meta name="generator" content="distill" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -46,7 +46,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["Interactive stage-structured population model"]},{"type":"character","attributes":{},"value":["Building an interactive stage-structured population model in R with shiny.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]}]}]},{"type":"character","attributes":{},"value":["02-16-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["teaching","shiny"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["Interactive stage-structured population model"]},{"type":"character","attributes":{},"value":["Building an interactive stage-structured population model in R with shiny.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]}]}]},{"type":"character","attributes":{},"value":["02-16-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["teaching","shiny"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -889,7 +889,7 @@
   
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
-      $('.radix-site-header a[href]').each(function(i,val) {
+      $('.distill-site-header a[href]').each(function(i,val) {
         $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
       });
     }
