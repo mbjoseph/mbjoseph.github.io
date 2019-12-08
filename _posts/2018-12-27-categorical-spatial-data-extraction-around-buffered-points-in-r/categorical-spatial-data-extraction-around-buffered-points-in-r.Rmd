@@ -52,7 +52,6 @@ proj4string(midpoint) <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84")
 nlcd_raster <- get_nlcd(site_df, 
                         label = 'categorial-extraction', 
                         year = 2011, 
-                        raw.dir = '.', 
                         extraction.dir = '.')
 
 # reproject midpoint to raster's crs
@@ -81,7 +80,7 @@ Instead, it contains values from the cells within the buffer:
 str(landcover)
 ```
 
-We can get the proportions as follows:
+We can get the proportions of each class within the buffer as follows:
 
 ```{r get-proportions}
 landcover_proportions <- lapply(landcover, function(x) {
@@ -89,32 +88,9 @@ landcover_proportions <- lapply(landcover, function(x) {
   proportions_x <- prop.table(counts_x)
   sort(proportions_x)
   })
-str(landcover_proportions)
+sort(unlist(landcover_proportions))
 ```
 
-To make this data more useful we can add land cover class names, which are 
-stored as data attributes (the data are stored as integers, but we want
-character class names).
-
-```{r}
-# get a data frame to map integer cover values to classes
-nlcd_cover_df <- subset(nlcd_raster@data@attributes[[1]], 
-                        NLCD.2011.Land.Cover.Class != "")
-kable(nlcd_cover_df)
-```
-
-Now we can use this data frame to map the cover type integers in 
-`landcover_proportions` to character descriptions of the cover types. 
-
-```{r}
-lapply(landcover_proportions, function(x) {
-  current_int_names <- names(x)
-  label_indices <- match(current_int_names, as.character(nlcd_cover_df$Value))
-  new_char_names <- nlcd_cover_df$NLCD.2011.Land.Cover.Class[label_indices]
-  names(x) <- new_char_names
-  x
-})
-```
 
 **Resources**
 

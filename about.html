@@ -19,39 +19,367 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Categorical spatial data extraction around buffered points in R</title>
-  
-  <meta property="description" itemprop="description" content="Computing the proportion of land cover types using R and the raster package."/>
+  <title>Maxwell B. Joseph: About</title>
   
   
-  <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2014-11-08"/>
-  <meta property="article:created" itemprop="dateCreated" content="2014-11-08"/>
-  <meta name="article:author" content="Maxwell B. Joseph"/>
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+  
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Categorical spatial data extraction around buffered points in R"/>
+  <meta property="og:title" content="Maxwell B. Joseph: About"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Computing the proportion of land cover types using R and the raster package."/>
   <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="Maxwell B. Joseph"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Categorical spatial data extraction around buffered points in R"/>
-  <meta property="twitter:description" content="Computing the proportion of land cover types using R and the raster package."/>
+  <meta property="twitter:title" content="Maxwell B. Joseph: About"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","editor_options","categories"]}},"value":[{"type":"character","attributes":{},"value":["Categorical spatial data extraction around buffered points in R"]},{"type":"character","attributes":{},"value":["Computing the proportion of land cover types using R and the raster package.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2014-11-08"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]},{"type":"character","attributes":{},"value":["spatial"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["About"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  
-  <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["categorial-extraction_NLCD_2011_landcover.tif","categorial-extraction_NLCD_2011_landcover.tif.aux.xml","categorical-spatial-data-extraction-around-buffered-points-in-r_files/bowser-1.9.3/bowser.min.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/distill-2.2.21/template.v2.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png","categorical-spatial-data-extraction-around-buffered-points-in-r_files/jquery-1.11.3/jquery.min.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/webcomponents-2.0.0/webcomponents.js","NLCD_2011_Land_Cover_L48.tif","NLCD2011_LC_N39W102.zip","NLCD2011_LC_N39W105.zip"]}
-  </script>
   <!--radix_placeholder_navigation_in_header-->
+  
+  <script type="application/javascript">
+  
+    window.headroom_prevent_pin = false;
+  
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+  
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+  
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+  
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+  
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+  
+  <style type="text/css">
+  
+  /* Theme (user-documented overrideables for nav appearance) */
+  
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #455a64;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .distill-site-nav a:hover {
+    color: white;
+  }
+  
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+  
+  .distill-site-header {
+  
+  }
+  
+  .distill-site-footer {
+  
+  }
+  
+  
+  /* Site Header */
+  
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+  
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+  
+  
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+  
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+  
+  .distill-site-header .title {
+    font-size: 18px;
+  }
+  
+  .distill-site-header .logo {
+    padding: 0;
+  }
+  
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+  
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+  
+  
+  
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+  
+  
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+  
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+  
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-dropdown-active {
+    display: block;
+  }
+  
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+  
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+  
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative;}
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
+  /* Site Footer */
+  
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Headroom */
+  
+  d-title {
+    padding-top: 6rem;
+  }
+  
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+  
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+  
+  .headroom--unpinned {
+    top: -100px;
+  }
+  
+  .headroom--pinned {
+    top: 0;
+  }
+  
+  </style>
+  
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
   
@@ -927,13 +1255,25 @@
   </script>
   
   <!--/radix_placeholder_distill-->
-  <script src="categorical-spatial-data-extraction-around-buffered-points-in-r_files/jquery-1.11.3/jquery.min.js"></script>
-  <script src="categorical-spatial-data-extraction-around-buffered-points-in-r_files/bowser-1.9.3/bowser.min.js"></script>
-  <script src="categorical-spatial-data-extraction-around-buffered-points-in-r_files/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="categorical-spatial-data-extraction-around-buffered-points-in-r_files/distill-2.2.21/template.v2.js"></script>
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  @import url("https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css");
+  
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 1);
+    background-color: #4a4a4a;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -942,101 +1282,51 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Categorical spatial data extraction around buffered points in R","description":"Computing the proportion of land cover types using R and the raster package.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2014-11-08T00:00:00.000-07:00","citationText":"Joseph, 2014"}
+{"title":"About","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">Maxwell B. Joseph</a>
+</div>
+<div class="nav-right">
+<a href="index.html">Posts</a>
+<a href="about.html">About</a>
+<a href="https://github.com/mbjoseph">
+<i class="fab fa-github"></i>
+</a>
+<a href="https://scholar.google.com/citations?user=146E-bUAAAAJ">
+<i class="fa ai ai-google-scholar"></i>
+</a>
+<a href="https://orcid.org/0000-0002-7745-9990">
+<i class="fa ai ai-orcid"></i>
+</a>
+<a href="https://twitter.com/mxwlj">
+<i class="fab fa-twitter"></i>
+</a>
+<a href="index.xml">
+<i class="fa fa-rss"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Categorical spatial data extraction around buffered points in R</h1>
-<p>Computing the proportion of land cover types using R and the raster package.</p>
+<h1>About</h1>
+
 </div>
 
-<div class="d-byline">
-  Maxwell B. Joseph true 
-  
-<br/>2014-11-08
-</div>
 
 <div class="d-article">
-<p>Quantifying categorical spatial data (e.g. land cover) around points can be done in a variety of ways, some of which require considerable amounts of patience, clicking around, and/or cash for a license. Here’s a bit of code that I cobbled together to quickly extract land cover data from the <a href="http://www.mrlc.gov/index.php">National Land Cover Database</a> for a buffered point between Denver and Boulder - two cities in the state of Colorado.</p>
-<p>First, get data using the FedData package:</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(knitr)
-library(raster)
-library(FedData)
-library(rgdal)
-
-site_df &lt;- data.frame(city = c(&#39;Denver&#39;, &#39;Boulder&#39;), 
-                      lat = c(39.7392, 40.0150), 
-                      lon = c(-104.9903, -105.2705))
-midpoint &lt;- data.frame(lat = mean(site_df$lat), 
-                       lon = mean(site_df$lon))
-
-# create spatial point data frame
-coordinates(site_df) &lt;- ~lon + lat
-proj4string(site_df) &lt;- CRS(&quot;+proj=longlat +ellps=WGS84 +datum=WGS84&quot;)
-
-coordinates(midpoint) &lt;- ~lon + lat
-proj4string(midpoint) &lt;- CRS(&quot;+proj=longlat +ellps=WGS84 +datum=WGS84&quot;)
-
-nlcd_raster &lt;- get_nlcd(site_df, 
-                        label = &#39;categorial-extraction&#39;, 
-                        year = 2011, 
-                        extraction.dir = &#39;.&#39;)
-
-# reproject midpoint to raster&#39;s crs
-midpoint &lt;- spTransform(midpoint, projection(nlcd_raster))
-
-buffer_distance_meters &lt;- 5000
-
-# visualize buffered point and land cover data
-buff_shp &lt;- buffer(midpoint, buffer_distance_meters)
-plot(buff_shp) # I will plot over this, but it sets the plotting extent
-plot(nlcd_raster, add = TRUE)
-plot(buff_shp, add = TRUE)</code></pre>
-<p><img src="categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png" width="624" /></p>
-</div>
-<p>Now, we can use <code>raster::extract</code> to extract raster data around our point within some buffer, specified in meters.</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-landcover &lt;- extract(nlcd_raster, midpoint, buffer = buffer_distance_meters)</code></pre>
-</div>
-<p>But this object does not immediately provide the proportions of each cover type. Instead, it contains values from the cells within the buffer:</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-str(landcover)</code></pre>
-<pre><code>
-List of 1
- $ : num [1:87263] 21 21 21 21 21 21 21 22 21 21 ...</code></pre>
-</div>
-<p>We can get the proportions of each class within the buffer as follows:</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-landcover_proportions &lt;- lapply(landcover, function(x) {
-  counts_x &lt;- table(x)
-  proportions_x &lt;- prop.table(counts_x)
-  sort(proportions_x)
-  })
-sort(unlist(landcover_proportions))</code></pre>
-<pre><code>
-          41           42           31           81           82 
-0.0001260557 0.0001833538 0.0004125460 0.0066236549 0.0072997720 
-          24           90           95           52           23 
-0.0103480284 0.0119638335 0.0237213939 0.0713589952 0.0745562266 
-          21           11           22           71 
-0.1202456941 0.1244857500 0.1698543483 0.3788203477 </code></pre>
-</div>
-<p><strong>Resources</strong></p>
-<ul>
-<li><a href="http://stackoverflow.com/questions/15824853/large-img-file-processing-in-r-gis">Large .img file processing in R (GIS) on Stack Overflow by Israel Del Toro</a></li>
-<li><a href="http://www.mrlc.gov/index.php">NLCD website</a></li>
-</ul>
+<p>I am a data scientist at Earth Lab, part of the Cooperative Institute for Research in Environmental Science at the University of Colorado Boulder. I am also an open science architect with the North Central Climate Science Adaptation Science Center.</p>
+<p>I develop probabilistic models with applications to ecology, natural hazards, extreme events, and global change. I also contribute to and develop a variety of open source software projects in Python and R, in the interest of fostering open, reproducible, and reliable science.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1048,7 +1338,12 @@ sort(unlist(landcover_proportions))</code></pre>
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/mbjoseph/mbjoseph.github.io/issues/new">create an issue</a> on the source repository.</p>
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/mbjoseph/mbjoseph.github.io">https://github.com/mbjoseph/mbjoseph.github.io</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

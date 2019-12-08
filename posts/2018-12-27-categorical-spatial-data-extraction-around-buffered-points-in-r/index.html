@@ -51,7 +51,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["categorial-extraction_NLCD_2011_landcover.tif","categorial-extraction_NLCD_2011_landcover.tif.aux.xml","categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png","NLCD2011_LC_N39W102.zip","NLCD2011_LC_N39W105.zip"]}
+  {"type":"character","attributes":{},"value":["categorial-extraction_NLCD_2011_landcover.tif","categorial-extraction_NLCD_2011_landcover.tif.aux.xml","categorical-spatial-data-extraction-around-buffered-points-in-r_files/bowser-1.9.3/bowser.min.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/distill-2.2.21/template.v2.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png","categorical-spatial-data-extraction-around-buffered-points-in-r_files/jquery-1.11.3/jquery.min.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/webcomponents-2.0.0/webcomponents.js","NLCD_2011_Land_Cover_L48.tif","NLCD2011_LC_N39W102.zip","NLCD2011_LC_N39W105.zip"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1276,7 +1276,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .distill-site-nav {
   color: rgba(255, 255, 255, 1);
-  background-color: #5694d6;
+  background-color: #4a4a4a;
   font-size: 15px;
   font-weight: 300;
 }
@@ -1304,6 +1304,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div class="nav-right">
 <a href="../../index.html">Posts</a>
+<a href="../../about.html">About</a>
 <a href="https://github.com/mbjoseph">
 <i class="fab fa-github"></i>
 </a>
@@ -1364,7 +1365,6 @@ proj4string(midpoint) &lt;- CRS(&quot;+proj=longlat +ellps=WGS84 +datum=WGS84&qu
 nlcd_raster &lt;- get_nlcd(site_df, 
                         label = &#39;categorial-extraction&#39;, 
                         year = 2011, 
-                        raw.dir = &#39;.&#39;, 
                         extraction.dir = &#39;.&#39;)
 
 # reproject midpoint to raster&#39;s crs
@@ -1390,9 +1390,9 @@ landcover &lt;- extract(nlcd_raster, midpoint, buffer = buffer_distance_meters)<
 str(landcover)</code></pre>
 <pre><code>
 List of 1
- $ : num [1:87274] 22 21 21 21 22 21 21 21 21 21 ...</code></pre>
+ $ : num [1:87263] 21 21 21 21 21 21 21 22 21 21 ...</code></pre>
 </div>
-<p>We can get the proportions as follows:</p>
+<p>We can get the proportions of each class within the buffer as follows:</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 landcover_proportions &lt;- lapply(landcover, function(x) {
@@ -1400,269 +1400,14 @@ landcover_proportions &lt;- lapply(landcover, function(x) {
   proportions_x &lt;- prop.table(counts_x)
   sort(proportions_x)
   })
-str(landcover_proportions)</code></pre>
+sort(unlist(landcover_proportions))</code></pre>
 <pre><code>
-List of 1
- $ : &#39;table&#39; num [1:14(1d)] 0.000493 0.002154 0.003437 0.008044 0.014632 ...
-  ..- attr(*, &quot;dimnames&quot;)=List of 1
-  .. ..$ x: chr [1:14] &quot;42&quot; &quot;41&quot; &quot;31&quot; &quot;95&quot; ...</code></pre>
-</div>
-<p>To make this data more useful we can add land cover class names, which are stored as data attributes (the data are stored as integers, but we want character class names).</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# get a data frame to map integer cover values to classes
-nlcd_cover_df &lt;- subset(nlcd_raster@data@attributes[[1]], 
-                        NLCD.2011.Land.Cover.Class != &quot;&quot;)
-kable(nlcd_cover_df)</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th style="text-align: right;">ID</th>
-<th style="text-align: right;">OID</th>
-<th style="text-align: right;">Value</th>
-<th style="text-align: right;">Count</th>
-<th style="text-align: right;">Red</th>
-<th style="text-align: right;">Green</th>
-<th style="text-align: right;">Blue</th>
-<th style="text-align: left;">NLCD.2011.Land.Cover.Class</th>
-<th style="text-align: right;">Opacity</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">7854240512</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Unclassified</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">469012527</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Open Water</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">1599206</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Perennial Snow/Ice</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td>22</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">292251633</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Developed, Open Space</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td>23</td>
-<td style="text-align: right;">22</td>
-<td style="text-align: right;">22</td>
-<td style="text-align: right;">22</td>
-<td style="text-align: right;">131633826</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Developed, Low Intensity</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td>24</td>
-<td style="text-align: right;">23</td>
-<td style="text-align: right;">23</td>
-<td style="text-align: right;">23</td>
-<td style="text-align: right;">59456652</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Developed, Medium Intensity</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td>25</td>
-<td style="text-align: right;">24</td>
-<td style="text-align: right;">24</td>
-<td style="text-align: right;">24</td>
-<td style="text-align: right;">21426522</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Developed, High Intensity</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td>32</td>
-<td style="text-align: right;">31</td>
-<td style="text-align: right;">31</td>
-<td style="text-align: right;">31</td>
-<td style="text-align: right;">110507264</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Barren Land</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td>42</td>
-<td style="text-align: right;">41</td>
-<td style="text-align: right;">41</td>
-<td style="text-align: right;">41</td>
-<td style="text-align: right;">973617734</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Deciduous Forest</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td>43</td>
-<td style="text-align: right;">42</td>
-<td style="text-align: right;">42</td>
-<td style="text-align: right;">42</td>
-<td style="text-align: right;">1037912310</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Evergreen Forest</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td>44</td>
-<td style="text-align: right;">43</td>
-<td style="text-align: right;">43</td>
-<td style="text-align: right;">43</td>
-<td style="text-align: right;">179845520</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Mixed Forest</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td>53</td>
-<td style="text-align: right;">52</td>
-<td style="text-align: right;">52</td>
-<td style="text-align: right;">52</td>
-<td style="text-align: right;">1940362409</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Shrub/Scrub</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td>72</td>
-<td style="text-align: right;">71</td>
-<td style="text-align: right;">71</td>
-<td style="text-align: right;">71</td>
-<td style="text-align: right;">1306961628</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Herbaceuous</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td>82</td>
-<td style="text-align: right;">81</td>
-<td style="text-align: right;">81</td>
-<td style="text-align: right;">81</td>
-<td style="text-align: right;">597234572</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Hay/Pasture</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td>83</td>
-<td style="text-align: right;">82</td>
-<td style="text-align: right;">82</td>
-<td style="text-align: right;">82</td>
-<td style="text-align: right;">1392218141</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Cultivated Crops</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td>91</td>
-<td style="text-align: right;">90</td>
-<td style="text-align: right;">90</td>
-<td style="text-align: right;">90</td>
-<td style="text-align: right;">347144473</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Woody Wetlands</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td>96</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">116679631</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Emergent Herbaceuous Wetlands</td>
-<td style="text-align: right;">1</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Now we can use this data frame to map the cover type integers in <code>landcover_proportions</code> to character descriptions of the cover types.</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-lapply(landcover_proportions, function(x) {
-  current_int_names &lt;- names(x)
-  label_indices &lt;- match(current_int_names, as.character(nlcd_cover_df$Value))
-  new_char_names &lt;- nlcd_cover_df$NLCD.2011.Land.Cover.Class[label_indices]
-  names(x) &lt;- new_char_names
-  x
-})</code></pre>
-<pre><code>
-[[1]]
-             Evergreen Forest              Deciduous Forest 
-                 0.0004927011                  0.0021541353 
-                  Barren Land Emergent Herbaceuous Wetlands 
-                 0.0034374499                  0.0080436327 
-             Cultivated Crops     Developed, High Intensity 
-                 0.0146320783                  0.0224465477 
-                  Hay/Pasture                Woody Wetlands 
-                 0.0380640282                  0.0394046337 
-                  Shrub/Scrub                    Open Water 
-                 0.0536356761                  0.0760020166 
-  Developed, Medium Intensity         Developed, Open Space 
-                 0.0918372024                  0.1438916516 
-     Developed, Low Intensity                   Herbaceuous 
-                 0.1907211770                  0.3152370695 </code></pre>
+          41           42           31           81           82 
+0.0001260557 0.0001833538 0.0004125460 0.0066236549 0.0072997720 
+          24           90           95           52           23 
+0.0103480284 0.0119638335 0.0237213939 0.0713589952 0.0745562266 
+          21           11           22           71 
+0.1202456941 0.1244857500 0.1698543483 0.3788203477 </code></pre>
 </div>
 <p><strong>Resources</strong></p>
 <ul>

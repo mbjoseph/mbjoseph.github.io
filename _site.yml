@@ -8,6 +8,8 @@ navbar:
   right:
     - text: "Posts"
       href: index.html
+    - text: "About"
+      href: about.html
     - icon: fab fa-github
       href: https://github.com/mbjoseph
     - icon: ai ai-google-scholar
