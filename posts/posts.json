@@ -12,7 +12,7 @@
     "date": "2018-12-30",
     "categories": [],
     "preview": "posts/2018-12-30-yes-but-does-it-still-run/yes-but-does-it-still-run_files/figure-html5/plot-img-1.png",
-    "last_modified": "2019-08-12T14:49:01-06:00"
+    "last_modified": "2019-12-07T16:02:10-07:00"
   },
   {
     "path": "posts/2018-12-27-gaussian-predictive-process-models-in-stan/",
@@ -30,7 +30,7 @@
       "spatial"
     ],
     "preview": "posts/2018-12-27-gaussian-predictive-process-models-in-stan/gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img2-1.png",
-    "last_modified": "2019-08-12T14:48:06-06:00"
+    "last_modified": "2019-12-07T16:01:20-07:00"
   },
   {
     "path": "posts/2018-12-27-the-five-elements-ninjas-approach-to-teaching-design-matrices/",
@@ -47,7 +47,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-27-the-five-elements-ninjas-approach-to-teaching-design-matrices/the-five-elements-ninjas-approach-to-teaching-design-matrices_files/figure-html5/plot-img-1.png",
-    "last_modified": "2019-08-12T14:48:51-06:00"
+    "last_modified": "2019-12-07T16:02:01-07:00"
   },
   {
     "path": "posts/2018-12-27-first-year-books/",
@@ -64,7 +64,7 @@
       "rants"
     ],
     "preview": "posts/2018-12-27-first-year-books/first-year-books_files/figure-html5/plot-tape-1.png",
-    "last_modified": "2019-08-12T14:48:02-06:00"
+    "last_modified": "2019-12-07T16:01:16-07:00"
   },
   {
     "path": "posts/2018-12-27-the-iquit-r-video-series/",
@@ -81,7 +81,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-27-the-iquit-r-video-series/the-iquit-r-video-series_files/figure-html5/plot-tape-1.png",
-    "last_modified": "2019-08-12T14:48:54-06:00"
+    "last_modified": "2019-12-07T16:02:04-07:00"
   },
   {
     "path": "posts/2018-12-27-plotting-spatial-neighbors-in-ggplot2/",
@@ -99,7 +99,7 @@
       "spatial"
     ],
     "preview": "posts/2018-12-27-plotting-spatial-neighbors-in-ggplot2/plotting-spatial-neighbors-in-ggplot2_files/figure-html5/plot-neighbors-1.png",
-    "last_modified": "2019-08-12T14:48:16-06:00"
+    "last_modified": "2019-12-07T16:01:28-07:00"
   },
   {
     "path": "posts/2018-12-27-why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc/",
@@ -117,7 +117,7 @@
       "rants"
     ],
     "preview": "posts/2018-12-27-why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc/why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/figure-html5/plot-tape-1.png",
-    "last_modified": "2019-08-12T14:48:56-06:00"
+    "last_modified": "2019-12-07T16:02:06-07:00"
   },
   {
     "path": "posts/2018-12-27-notes-on-shrinkage-and-prediction-in-hierarchical-models/",
@@ -134,7 +134,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-27-notes-on-shrinkage-and-prediction-in-hierarchical-models/notes-on-shrinkage-and-prediction-in-hierarchical-models_files/figure-html5/plot-tape-1.png",
-    "last_modified": "2019-08-12T14:48:13-06:00"
+    "last_modified": "2019-12-07T16:01:25-07:00"
   },
   {
     "path": "posts/2018-12-27-dynamic-occupancy-models-in-stan/",
@@ -151,7 +151,7 @@
       "stan"
     ],
     "preview": {},
-    "last_modified": "2019-08-12T14:47:58-06:00"
+    "last_modified": "2019-12-07T16:01:12-07:00"
   },
   {
     "path": "posts/2018-12-27-categorical-spatial-data-extraction-around-buffered-points-in-r/",
@@ -168,7 +168,7 @@
       "spatial"
     ],
     "preview": "posts/2018-12-27-categorical-spatial-data-extraction-around-buffered-points-in-r/categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png",
-    "last_modified": "2019-08-12T14:47:57-06:00"
+    "last_modified": "2019-12-07T16:01:11-07:00"
   },
   {
     "path": "posts/2018-12-27-multilevel-modeling-of-community-composition-with-imperfect-detection/",
@@ -185,7 +185,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-27-multilevel-modeling-of-community-composition-with-imperfect-detection/multilevel-modeling-of-community-composition-with-imperfect-detection_files/figure-html5/plot-coefs-1.png",
-    "last_modified": "2019-08-12T14:48:08-06:00"
+    "last_modified": "2019-12-07T16:01:22-07:00"
   },
   {
     "path": "posts/2018-12-27-shiny-variance-inflation-factor-sandbox/",
@@ -203,7 +203,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-27-shiny-variance-inflation-factor-sandbox/shiny-variance-inflation-factor-sandbox_files/figure-html5/plot-robot-1.png",
-    "last_modified": "2019-08-12T14:48:17-06:00"
+    "last_modified": "2019-12-07T16:01:30-07:00"
   },
   {
     "path": "posts/2018-12-27-stochastic-search-variable-selection-in-jags/",
@@ -220,7 +220,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-27-stochastic-search-variable-selection-in-jags/stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png",
-    "last_modified": "2019-08-12T14:48:46-06:00"
+    "last_modified": "2019-12-07T16:01:57-07:00"
   },
   {
     "path": "posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/",
@@ -237,7 +237,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png",
-    "last_modified": "2019-08-12T14:43:30-06:00"
+    "last_modified": "2019-12-07T15:57:20-07:00"
   },
   {
     "path": "posts/2018-12-25-errors-in-variables-models-in-stan/",
@@ -254,7 +254,7 @@
       "stan"
     ],
     "preview": "posts/2018-12-25-errors-in-variables-models-in-stan/errors-in-variables-models-in-stan_files/figure-html5/simulate-data-1.png",
-    "last_modified": "2019-08-12T14:47:28-06:00"
+    "last_modified": "2019-12-07T16:00:48-07:00"
   },
   {
     "path": "posts/2018-12-25-r-r-markdown-and-my-divorce-from-microsoft-word/",
@@ -271,7 +271,7 @@
       "rants"
     ],
     "preview": "posts/2018-12-25-r-r-markdown-and-my-divorce-from-microsoft-word/r-r-markdown-and-my-divorce-from-microsoft-word_files/figure-html5/plot-robot-1.png",
-    "last_modified": "2019-08-12T14:47:33-06:00"
+    "last_modified": "2019-12-07T16:00:52-07:00"
   },
   {
     "path": "posts/2018-12-25-animating-the-metropolis-algorithm/",
@@ -289,7 +289,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-25-animating-the-metropolis-algorithm/animating-the-metropolis-algorithm_files/figure-html5/create-gif.gif",
-    "last_modified": "2019-08-12T14:42:01-06:00"
+    "last_modified": "2019-12-07T15:56:00-07:00"
   },
   {
     "path": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/",
@@ -306,7 +306,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png",
-    "last_modified": "2019-08-12T14:41:43-06:00"
+    "last_modified": "2019-12-07T15:55:36-07:00"
   },
   {
     "path": "posts/2018-12-24-clarifying-vague-interactions/",
@@ -324,7 +324,7 @@
       "rants"
     ],
     "preview": "posts/2018-12-24-clarifying-vague-interactions/clarifying-vague-interactions_files/figure-html5/simulate-data-1.png",
-    "last_modified": "2019-08-12T14:40:56-06:00"
+    "last_modified": "2019-12-07T15:54:49-07:00"
   },
   {
     "path": "posts/2018-12-23-split-violin-plots/",
@@ -341,7 +341,7 @@
       "visualization"
     ],
     "preview": "posts/2018-12-23-split-violin-plots/split-violin-plots_files/figure-html5/beanplots-1.png",
-    "last_modified": "2019-08-12T14:40:51-06:00"
+    "last_modified": "2019-12-07T15:54:46-07:00"
   },
   {
     "path": "posts/2018-12-23-bayesian-model-ii-regression/",
@@ -358,7 +358,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-23-bayesian-model-ii-regression/bayesian-model-ii-regression_files/figure-html5/compare-models-1.png",
-    "last_modified": "2019-08-12T14:40:32-06:00"
+    "last_modified": "2019-12-07T15:54:28-07:00"
   },
   {
     "path": "posts/2018-12-23-modeling-habitat-diversity-and-species-richness/",
@@ -373,7 +373,7 @@
     "date": "2013-04-20",
     "categories": [],
     "preview": "posts/2018-12-23-modeling-habitat-diversity-and-species-richness/modeling-habitat-diversity-and-species-richness_files/figure-html5/run-model-1.png",
-    "last_modified": "2019-08-12T14:40:48-06:00"
+    "last_modified": "2019-12-07T15:54:42-07:00"
   },
   {
     "path": "posts/2018-12-22-interactive-two-host-sir-model/",
@@ -391,7 +391,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-22-interactive-two-host-sir-model/interactive-two-host-sir-model_files/figure-html5/plot-img-1.png",
-    "last_modified": "2019-08-12T14:40:22-06:00"
+    "last_modified": "2019-12-07T15:54:22-07:00"
   },
   {
     "path": "posts/2018-12-20-interactive-stage-structured-population-model/",
@@ -409,7 +409,7 @@
       "shiny"
     ],
     "preview": "posts/2018-12-20-interactive-stage-structured-population-model/interactive-stage-structured-population-model_files/figure-html5/plot-img-1.png",
-    "last_modified": "2019-08-12T14:39:45-06:00"
+    "last_modified": "2019-12-07T15:53:55-07:00"
   },
   {
     "path": "posts/2018-12-22-dynamic-community-occupancy-model-jags/",
@@ -426,6 +426,6 @@
       "jags"
     ],
     "preview": "posts/2018-12-22-dynamic-community-occupancy-model-jags/dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png",
-    "last_modified": "2019-08-12T14:40:20-06:00"
+    "last_modified": "2019-12-07T15:54:20-07:00"
   }
 ]
