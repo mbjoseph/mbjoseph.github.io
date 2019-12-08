@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-  <meta name="generator" content="radix" />
+  <meta name="generator" content="distill" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -48,12 +48,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Dynamic community occupancy modeling with R and JAGS"]},{"type":"character","attributes":{},"value":["Multi-species, multi-timestep occupancy model in R and JAGS"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]}]}]},{"type":"character","attributes":{},"value":["02-04-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["jags"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Dynamic community occupancy modeling with R and JAGS"]},{"type":"character","attributes":{},"value":["Multi-species, multi-timestep occupancy model in R and JAGS"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]}]}]},{"type":"character","attributes":{},"value":["02-04-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["jags"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","com_occ.txt","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","com_occ.txt","dynamic-community-occupancy-model-jags_files/bowser-1.9.3/bowser.min.js","dynamic-community-occupancy-model-jags_files/distill-2.2.21/template.v2.js","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png","dynamic-community-occupancy-model-jags_files/jquery-1.11.3/jquery.min.js","dynamic-community-occupancy-model-jags_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1276,9 +1276,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <style type="text/css">
 @import url("https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css");
 
-.radix-site-nav {
+.distill-site-nav {
   color: rgba(255, 255, 255, 1);
-  background-color: #00869b;
+  background-color: #5694d6;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 </style>
@@ -1726,28 +1728,28 @@ Sample size per chain = 10000
    plus standard error of the mean:
 
            Mean     SD Naive SE Time-series SE
-beta[1]  0.7871 0.3194 0.002258       0.008166
-beta[2]  1.0500 0.5156 0.003646       0.021306
-beta[3]  0.8552 0.3184 0.002252       0.007873
-lp[1]    4.3437 1.0367 0.007331       0.011915
-lp[2]    0.5444 0.2888 0.002042       0.004304
-lp[3]    3.6691 0.7536 0.005329       0.007904
-rho[1]  -1.8609 0.4925 0.003482       0.012486
-rho[2]  -2.4707 0.7102 0.005022       0.024763
-rho[3]  -2.1388 0.5142 0.003636       0.012465
+beta[1]  0.7813 0.3202 0.002264       0.008857
+beta[2]  1.0468 0.4867 0.003441       0.018857
+beta[3]  0.8522 0.3162 0.002236       0.007391
+lp[1]    4.3741 1.0743 0.007597       0.012395
+lp[2]    0.5424 0.2900 0.002051       0.003992
+lp[3]    3.6658 0.7431 0.005254       0.007818
+rho[1]  -1.8498 0.4820 0.003408       0.012032
+rho[2]  -2.4447 0.6907 0.004884       0.023822
+rho[3]  -2.1160 0.5040 0.003564       0.011320
 
 2. Quantiles for each variable:
 
-             2.5%     25%     50%     75%   97.5%
-beta[1]  0.178081  0.5786  0.7806  0.9914  1.4378
-beta[2]  0.306958  0.7286  0.9670  1.2637  2.3410
-beta[3]  0.259510  0.6434  0.8428  1.0561  1.5227
-lp[1]    2.747878  3.6081  4.1964  4.9169  6.7592
-lp[2]   -0.003536  0.3481  0.5373  0.7366  1.1275
-lp[3]    2.404961  3.1413  3.5958  4.1048  5.3543
-rho[1]  -2.840292 -2.1864 -1.8540 -1.5299 -0.9011
-rho[2]  -4.131772 -2.8411 -2.3907 -1.9890 -1.3302
-rho[3]  -3.213371 -2.4627 -2.1198 -1.7854 -1.1796</code></pre>
+            2.5%     25%     50%     75%   97.5%
+beta[1]  0.14747  0.5686  0.7791  1.0012  1.3968
+beta[2]  0.33931  0.7367  0.9735  1.2575  2.1867
+beta[3]  0.26391  0.6370  0.8411  1.0598  1.4899
+lp[1]    2.73335  3.6223  4.2153  4.9444  6.9273
+lp[2]   -0.01054  0.3467  0.5369  0.7349  1.1234
+lp[3]    2.41690  3.1469  3.5894  4.0979  5.3426
+rho[1]  -2.79556 -2.1745 -1.8518 -1.5268 -0.8797
+rho[2]  -4.07422 -2.8239 -2.3514 -1.9686 -1.3375
+rho[3]  -3.17608 -2.4312 -2.1003 -1.7746 -1.1768</code></pre>
 <p><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png" width="768" /></p>
 </div>
 <div id="refs" class="references">

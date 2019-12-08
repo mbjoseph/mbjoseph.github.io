@@ -51,7 +51,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["errors-in-variables-models-in-stan_files/figure-html5/check-hist-1.png","errors-in-variables-models-in-stan_files/figure-html5/compare-truth-1.png","errors-in-variables-models-in-stan_files/figure-html5/plot-results-1.png","errors-in-variables-models-in-stan_files/figure-html5/simulate-data-1.png","latent_x.stan"]}
+  {"type":"character","attributes":{},"value":["errors-in-variables-models-in-stan_files/bowser-1.9.3/bowser.min.js","errors-in-variables-models-in-stan_files/distill-2.2.21/template.v2.js","errors-in-variables-models-in-stan_files/figure-html5/check-hist-1.png","errors-in-variables-models-in-stan_files/figure-html5/compare-truth-1.png","errors-in-variables-models-in-stan_files/figure-html5/plot-results-1.png","errors-in-variables-models-in-stan_files/figure-html5/simulate-data-1.png","errors-in-variables-models-in-stan_files/jquery-1.11.3/jquery.min.js","errors-in-variables-models-in-stan_files/webcomponents-2.0.0/webcomponents.js","latent_x.stan"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1274,9 +1274,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <style type="text/css">
 @import url("https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css");
 
-.radix-site-nav {
+.distill-site-nav {
   color: rgba(255, 255, 255, 1);
-  background-color: #00869b;
+  background-color: #5694d6;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 </style>
@@ -1433,7 +1435,7 @@ mod1 &lt;- stan(file = &quot;latent_x.stan&quot;, data = stan_d,
 <p>How did we do? Let’s compare the true vs. estimated covariate values for each sample unit.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-posteriors &lt;- extract(mod1)
+posteriors &lt;- rstan::extract(mod1)
 
 # highest density interval helper function (thanks to Joe Mihaljevic)
 HDI &lt;- function(values, percent = 0.95) {

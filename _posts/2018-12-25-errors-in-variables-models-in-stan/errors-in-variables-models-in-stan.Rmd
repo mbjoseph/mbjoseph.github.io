@@ -150,7 +150,7 @@ sample unit.
 
 
 ```{r compare-truth}
-posteriors <- extract(mod1)
+posteriors <- rstan::extract(mod1)
 
 # highest density interval helper function (thanks to Joe Mihaljevic)
 HDI <- function(values, percent = 0.95) {

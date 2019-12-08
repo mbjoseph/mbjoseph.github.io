@@ -237,7 +237,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png",
-    "last_modified": "2019-12-07T15:57:20-07:00"
+    "last_modified": "2019-12-07T20:05:08-07:00"
   },
   {
     "path": "posts/2018-12-25-errors-in-variables-models-in-stan/",
@@ -254,7 +254,7 @@
       "stan"
     ],
     "preview": "posts/2018-12-25-errors-in-variables-models-in-stan/errors-in-variables-models-in-stan_files/figure-html5/simulate-data-1.png",
-    "last_modified": "2019-12-07T16:00:48-07:00"
+    "last_modified": "2019-12-07T20:06:28-07:00"
   },
   {
     "path": "posts/2018-12-25-r-r-markdown-and-my-divorce-from-microsoft-word/",
@@ -289,7 +289,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-25-animating-the-metropolis-algorithm/animating-the-metropolis-algorithm_files/figure-html5/create-gif.gif",
-    "last_modified": "2019-12-07T15:56:00-07:00"
+    "last_modified": "2019-12-07T20:03:48-07:00"
   },
   {
     "path": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/",
@@ -306,7 +306,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png",
-    "last_modified": "2019-12-07T15:55:36-07:00"
+    "last_modified": "2019-12-07T20:03:26-07:00"
   },
   {
     "path": "posts/2018-12-24-clarifying-vague-interactions/",
@@ -324,7 +324,7 @@
       "rants"
     ],
     "preview": "posts/2018-12-24-clarifying-vague-interactions/clarifying-vague-interactions_files/figure-html5/simulate-data-1.png",
-    "last_modified": "2019-12-07T15:54:49-07:00"
+    "last_modified": "2019-12-07T20:02:46-07:00"
   },
   {
     "path": "posts/2018-12-23-split-violin-plots/",
@@ -341,7 +341,7 @@
       "visualization"
     ],
     "preview": "posts/2018-12-23-split-violin-plots/split-violin-plots_files/figure-html5/beanplots-1.png",
-    "last_modified": "2019-12-07T15:54:46-07:00"
+    "last_modified": "2019-12-07T20:02:41-07:00"
   },
   {
     "path": "posts/2018-12-23-bayesian-model-ii-regression/",
@@ -358,7 +358,7 @@
       "jags"
     ],
     "preview": "posts/2018-12-23-bayesian-model-ii-regression/bayesian-model-ii-regression_files/figure-html5/compare-models-1.png",
-    "last_modified": "2019-12-07T15:54:28-07:00"
+    "last_modified": "2019-12-07T20:02:18-07:00"
   },
   {
     "path": "posts/2018-12-23-modeling-habitat-diversity-and-species-richness/",
@@ -373,7 +373,7 @@
     "date": "2013-04-20",
     "categories": [],
     "preview": "posts/2018-12-23-modeling-habitat-diversity-and-species-richness/modeling-habitat-diversity-and-species-richness_files/figure-html5/run-model-1.png",
-    "last_modified": "2019-12-07T15:54:42-07:00"
+    "last_modified": "2019-12-07T20:02:38-07:00"
   },
   {
     "path": "posts/2018-12-22-interactive-two-host-sir-model/",
@@ -391,7 +391,7 @@
       "teaching"
     ],
     "preview": "posts/2018-12-22-interactive-two-host-sir-model/interactive-two-host-sir-model_files/figure-html5/plot-img-1.png",
-    "last_modified": "2019-12-07T15:54:22-07:00"
+    "last_modified": "2019-12-07T20:02:10-07:00"
   },
   {
     "path": "posts/2018-12-20-interactive-stage-structured-population-model/",
@@ -409,7 +409,7 @@
       "shiny"
     ],
     "preview": "posts/2018-12-20-interactive-stage-structured-population-model/interactive-stage-structured-population-model_files/figure-html5/plot-img-1.png",
-    "last_modified": "2019-12-07T15:53:55-07:00"
+    "last_modified": "2019-12-07T20:01:39-07:00"
   },
   {
     "path": "posts/2018-12-22-dynamic-community-occupancy-model-jags/",
@@ -426,6 +426,6 @@
       "jags"
     ],
     "preview": "posts/2018-12-22-dynamic-community-occupancy-model-jags/dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png",
-    "last_modified": "2019-12-07T15:54:20-07:00"
+    "last_modified": "2019-12-07T20:02:07-07:00"
   }
 ]
