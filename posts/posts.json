@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2020-01-13-neural-hierarchical-models/",
+    "title": "Behind the paper: Neural hierarchical models of ecological populations",
+    "description": "The blog post.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2020-01-23",
+    "categories": [
+      "papers"
+    ],
+    "preview": {},
+    "last_modified": "2020-01-23T09:27:02-07:00"
+  },
+  {
     "path": "posts/2018-12-30-yes-but-does-it-still-run/",
     "title": "Yes, but does it (still) run?",
     "description": "Migrating from Jekyll to distill, with some reflections on the past 6 years.",
