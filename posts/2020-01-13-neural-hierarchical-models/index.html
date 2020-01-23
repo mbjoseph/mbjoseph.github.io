@@ -45,6 +45,7 @@
 <!--/radix_placeholder_meta_tags-->
   
   <meta name="citation_reference" content="citation_title=N-mixture models for estimating population size from spatially replicated counts;citation_publication_date=2004;citation_publisher=Wiley Online Library;citation_volume=60;citation_author=J Andrew Royle"/>
+  <meta name="citation_reference" content="citation_title=Neural hierarchical models of ecological populations;citation_publication_date=2020;citation_volume=in press;citation_doi=10.1111/ele.13462;citation_author=Maxwell B Joseph"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -53,7 +54,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","neural-hierarchical-models_files/bowser-1.9.3/bowser.min.js","neural-hierarchical-models_files/distill-2.2.21/template.v2.js","neural-hierarchical-models_files/elevate-section-attrs-2.0/elevate-section-attrs.js","neural-hierarchical-models_files/figure-html5/gen_data-1.png","neural-hierarchical-models_files/figure-html5/generate-data-1.png","neural-hierarchical-models_files/figure-html5/generate-data-2.png","neural-hierarchical-models_files/figure-html5/loss-plot-1.png","neural-hierarchical-models_files/figure-html5/p-plot-1.png","neural-hierarchical-models_files/figure-html5/plot-function-1.png","neural-hierarchical-models_files/figure-html5/plot-function-2.png","neural-hierarchical-models_files/figure-html5/sim-abundance-1.png","neural-hierarchical-models_files/figure-html5/train-1.png","neural-hierarchical-models_files/figure-html5/train-2.png","neural-hierarchical-models_files/figure-html5/unnamed-chunk-1-1.png","neural-hierarchical-models_files/jquery-1.11.3/jquery.min.js","neural-hierarchical-models_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","conv_hmm_edited.pdf","conv_hmm_edited.png","neural-hierarchical-models_files/bowser-1.9.3/bowser.min.js","neural-hierarchical-models_files/distill-2.2.21/template.v2.js","neural-hierarchical-models_files/elevate-section-attrs-2.0/elevate-section-attrs.js","neural-hierarchical-models_files/figure-html5/gen_data-1.png","neural-hierarchical-models_files/figure-html5/generate-data-1.png","neural-hierarchical-models_files/figure-html5/generate-data-2.png","neural-hierarchical-models_files/figure-html5/loss-plot-1.png","neural-hierarchical-models_files/figure-html5/p-plot-1.png","neural-hierarchical-models_files/figure-html5/plot-function-1.png","neural-hierarchical-models_files/figure-html5/plot-function-2.png","neural-hierarchical-models_files/figure-html5/sim-abundance-1.png","neural-hierarchical-models_files/figure-html5/train-1.png","neural-hierarchical-models_files/figure-html5/train-2.png","neural-hierarchical-models_files/figure-html5/unnamed-chunk-1-1.png","neural-hierarchical-models_files/jquery-1.11.3/jquery.min.js","neural-hierarchical-models_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1342,6 +1343,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
+<p>This post gives some background and a demo for the paper <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13462">“Neural hierarchical models of ecological populations”</a> out today in Ecology Letters <span class="citation" data-cites="joseph2020">(Joseph <a href="#ref-joseph2020">2020</a>)</span>.</p>
 <p>Deep learning and model-based ecological inference may seem like totally separate pursuits. Yet, if you think about deep learning as a set of tools to approximate functions, it’s not much of a leap to begin seeing opportunities to unite deep learning with some standard ecological modeling approaches.</p>
 <h2 id="hierarchical-models">Hierarchical models</h2>
 <p>Hierarchical models have been around for a while, and are now one of the workhorse methods of modern quantitative ecology (e.g., occupancy models, capture-recapture models, N-mixture models, animal movement models, state-space models, etc.). Hierarchical models combine:</p>
@@ -1359,6 +1361,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>We can parameterize a hierarchical model with a neural network to learn about <span class="math inline">\(z\)</span>. So, for example, if <span class="math inline">\(\theta\)</span> represents the parameters of a neural network, then we can construct a process model <span class="math inline">\([z \mid \theta]\)</span> where our input <span class="math inline">\(x\)</span> is mapped to a process <span class="math inline">\(z\)</span> by way of some neural network:</p>
 <p><span class="math display">\[[z \mid \theta] = f(x, \theta),\]</span></p>
 <p>where <span class="math inline">\(f\)</span> is a neural network that maps <span class="math inline">\(x\)</span> and <span class="math inline">\(\theta\)</span> to some probabilistic model for <span class="math inline">\(z\)</span> (here because <span class="math inline">\(x\)</span> is observed, I’m not going to condition <span class="math inline">\(z\)</span> on it on the left hand side of the equation - <span class="math inline">\(x\)</span> is assumed to be constant and known without error).</p>
+<p>Graphically, you might consider a state-space model where some inputs <span class="math inline">\(x\)</span> are mapped to a state transition matrix (for an example with an animal movement model, see Appendix S2 in the paper):</p>
+<figure>
+<img src="conv_hmm_edited.png" alt="Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model" /><figcaption>Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model</figcaption>
+</figure>
 <h2 id="an-example-a-neural-n-mixture-model">An example: a neural N-mixture model</h2>
 <p>An N-mixture model can be used to estimate latent integer-valued abundance when unmarked populations are repeatedly surveyed and it is assumed that detection of individuals is imperfect <span class="citation" data-cites="royle2004n">(Royle <a href="#ref-royle2004n">2004</a>)</span>. Assume that <span class="math inline">\(J\)</span> spatial locations are each surveyed <span class="math inline">\(K\)</span> times, in a short time interval for which it is reasonable to assume that the number of individuals is constant within locations <span class="math inline">\(j=1, ..., J\)</span>. Each spatial location has some continuous covariate value represented by <span class="math inline">\(x_j\)</span>, that relates to detection probabilities and expected abundance.</p>
 <h3 id="observation-model" class="unnumbered">Observation model</h3>
@@ -1591,6 +1597,9 @@ Figure 3: Training loss over time. Each point corresponds to the loss after a gr
 <li>Rackauckas, Christopher, et al. “Universal Differential Equations for Scientific Machine Learning.” arXiv preprint arXiv:2001.04385 (2020).</li>
 </ul>
 <div id="refs" class="references">
+<div id="ref-joseph2020">
+<p>Joseph, Maxwell B. 2020. “Neural Hierarchical Models of Ecological Populations.” <em>Ecology Letters</em> in press. <a href="https://doi.org/10.1111/ele.13462">https://doi.org/10.1111/ele.13462</a>.</p>
+</div>
 <div id="ref-royle2004n">
 <p>Royle, J Andrew. 2004. “N-Mixture Models for Estimating Population Size from Spatially Replicated Counts.” <em>Biometrics</em> 60 (1): 108–15.</p>
 </div>
@@ -1633,6 +1642,17 @@ Figure 3: Training loss over time. Each point corresponds to the loss after a gr
   year={2004},
   publisher={Wiley Online Library}
 }
+
+
+@article{joseph2020,
+  title={Neural hierarchical models of ecological populations},
+  author={Joseph, Maxwell B},
+  journal={Ecology Letters},
+  volume={in press},
+  url={https://doi.org/10.1111/ele.13462},
+  doi={10.1111/ele.13462},
+  year={2020}
+  }
 </script>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->

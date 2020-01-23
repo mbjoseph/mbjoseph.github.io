@@ -20,6 +20,8 @@ categories:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+This post gives some background and a demo for the paper ["Neural hierarchical models of ecological populations"](https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13462) out today in Ecology Letters [@joseph2020]. 
+
 Deep learning and model-based ecological inference may seem like totally separate pursuits. 
 Yet, if you think about deep learning as a set of tools to approximate functions, it's not much of a leap to begin seeing opportunities to unite deep learning with some standard ecological modeling approaches. 
 
@@ -53,6 +55,10 @@ So, for example, if $\theta$ represents the parameters of a neural network, then
 $$[z \mid \theta] = f(x, \theta),$$
 
 where $f$ is a neural network that maps $x$ and $\theta$ to some probabilistic model for $z$ (here because $x$ is observed, I'm not going to condition $z$ on it on the left hand side of the equation - $x$ is assumed to be constant and known without error).
+
+Graphically, you might consider a state-space model where some inputs $x$ are mapped to a state transition matrix (for an example with an animal movement model, see Appendix S2 in the paper): 
+
+![Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model](conv_hmm_edited.png)
 
 ## An example: a neural N-mixture model
 
