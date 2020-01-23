@@ -1,7 +1,7 @@
 ---
 title: "Behind the paper: Neural hierarchical models of ecological populations"
 description: |
-  The blog post.
+  A high-level overview, an example, and a call to action.
 author:
   - name: Maxwell B. Joseph
     url: {}
@@ -58,7 +58,11 @@ where $f$ is a neural network that maps $x$ and $\theta$ to some probabilistic m
 
 Graphically, you might consider a state-space model where some inputs $x$ are mapped to a state transition matrix (for an example with an animal movement model, see Appendix S2 in the paper): 
 
-![Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model](conv_hmm_edited.png)
+```{r conceptual-figure, fig.cap="Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model"}
+library(imager)
+im <- load.image("conv_hmm_edited.png")
+plot(im, axes = FALSE)
+```
 
 ## An example: a neural N-mixture model
 
@@ -272,7 +276,7 @@ running_loss = []
 
 Finally, train the model, printing loss every 10 epochs. 
 
-```{python train, fig.cap = "Estimated relationships between x and abundance as training progresses. Dark blue lines represent predictions from early training iterations, and green/yellow represent middle/late training iterations."}
+```{python train, fig.cap = "Estimated relationships between x and abundance as training progresses. Dark blue lines represent predictions from early training iterations, and green/yellow represent middle/late training iterations.", preview=TRUE}
 _ = plt.scatter(x, n, c='k')
 _ = plt.xlabel('Covariate value')
 _ = plt.ylabel('Abundance')
@@ -304,6 +308,9 @@ _ = plt.ylabel('N-mixture loss')
 plt.show()
 ```
 
+### More on implementing hierarchical models
+
+If you are interested in digging into the details of how to build these models, check out the companion repository on GitHub, which has all of the code required to reproduce the paper, as well as links to Jupyter Notebooks (thanks Binder!) to play with some toy occupancy, capture-recapture, and N-mixture models: https://github.com/mbjoseph/neuralecology
 
 ## Parting thoughts
 
@@ -314,7 +321,9 @@ But, I worry that **as a community ecologists are thinking about deep learning t
 We can look to hydrology and physics to get a sense for how we can advance science with deep learning. 
 Here are a few key papers that are shaping my thinking around this topic, which might help motivate future work in science-based deep learning for ecology:
 
-- Karpatne, Anuj, et al. "Physics-guided neural networks (pgnn): An application in lake temperature modeling." arXiv preprint arXiv:1710.11431 (2017).
-- Raissi, Maziar. "Deep hidden physics models: Deep learning of nonlinear partial differential equations." The Journal of Machine Learning Research 19.1 (2018): 932-955.
-- Rangapuram, Syama Sundar, et al. "Deep state space models for time series forecasting." Advances in neural information processing systems. 2018.
-- Rackauckas, Christopher, et al. "Universal Differential Equations for Scientific Machine Learning." arXiv preprint arXiv:2001.04385 (2020).
+- Karpatne, Anuj, et al. "Physics-guided neural networks (pgnn): An application in lake temperature modeling." arXiv preprint arXiv:1710.11431 (2017). [link](https://arxiv.org/abs/1710.11431)
+- Raissi, Maziar. "Deep hidden physics models: Deep learning of nonlinear partial differential equations." The Journal of Machine Learning Research 19.1 (2018): 932-955. [link](https://dl.acm.org/doi/10.5555/3291125.3291150)
+- Rangapuram, Syama Sundar, et al. "Deep state space models for time series forecasting." Advances in neural information processing systems. 2018. [link](https://papers.nips.cc/paper/8004-deep-state-space-models-for-time-series-forecasting)
+- Rackauckas, Christopher, et al. "Universal Differential Equations for Scientific Machine Learning." arXiv preprint arXiv:2001.04385 (2020). [link](https://arxiv.org/abs/2001.04385)
+
+
