@@ -25,8 +25,8 @@
   
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2020-01-13"/>
-  <meta property="article:created" itemprop="dateCreated" content="2020-01-13"/>
+  <meta property="article:published" itemprop="datePublished" content="2020-01-23"/>
+  <meta property="article:created" itemprop="dateCreated" content="2020-01-23"/>
   <meta name="article:author" content="Maxwell B. Joseph"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -46,7 +46,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["Behind the paper: Neural hierarchical models of ecological populations"]},{"type":"character","attributes":{},"value":["The blog post.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["01-13-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","editor_options","categories"]}},"value":[{"type":"character","attributes":{},"value":["Behind the paper: Neural hierarchical models of ecological populations"]},{"type":"character","attributes":{},"value":["The blog post.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["01-23-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]},{"type":"character","attributes":{},"value":["papers"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -944,7 +944,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Behind the paper: Neural hierarchical models of ecological populations","description":"The blog post.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2020-01-13T00:00:00.000-07:00","citationText":"Joseph, 2020"}
+{"title":"Behind the paper: Neural hierarchical models of ecological populations","description":"The blog post.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2020-01-23T00:00:00.000-07:00","citationText":"Joseph, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -961,7 +961,7 @@
 <div class="d-byline">
   Maxwell B. Joseph true 
   
-<br/>01-13-2020
+<br/>01-23-2020
 </div>
 
 <div class="d-article">
@@ -1201,22 +1201,6 @@ plt.show()</code></pre>
 <img src="neural-hierarchical-models_files/figure-html5/loss-plot-1.png" alt="Training loss over time. Each point corresponds to the loss after a gradient update." width="624" />
 <p class="caption">
 Figure 3: Training loss over time. Each point corresponds to the loss after a gradient update.
-</p>
-</div>
-</div>
-<p>Recall that the detection probability <span class="math inline">\(p\)</span> was independent of our covariate <span class="math inline">\(x\)</span>. How did the model do at representing this independence?</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-_ = plt.plot(x, p_hat.detach().numpy())
-_ = plt.plot(x, np.repeat(pr_detection, nsite), color=&#39;k&#39;)
-_ = plt.xlabel(&#39;Covariate value&#39;)
-_ = plt.ylabel(&#39;Detection probability&#39;)
-_ = plt.ylim(0, 1)
-plt.show()</code></pre>
-<div class="figure"><span id="fig:p-plot"></span>
-<img src="neural-hierarchical-models_files/figure-html5/p-plot-1.png" alt="Estimated relationship between detection probability and the covariate (blue), and the actual relationship (black)." width="624" />
-<p class="caption">
-Figure 4: Estimated relationship between detection probability and the covariate (blue), and the actual relationship (black).
 </p>
 </div>
 </div>

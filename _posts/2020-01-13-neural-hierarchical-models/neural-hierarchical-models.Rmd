@@ -5,13 +5,15 @@ description: |
 author:
   - name: Maxwell B. Joseph
     url: {}
-date: 01-13-2020
+date: 01-23-2020
 output:
   distill::distill_article:
     self_contained: false
 bibliography: biblio.bib
 editor_options: 
   chunk_output_type: console
+categories:
+  - papers
 ---
 
 ```{r setup, include=FALSE}
@@ -296,17 +298,6 @@ _ = plt.ylabel('N-mixture loss')
 plt.show()
 ```
 
-Recall that the detection probability $p$ was independent of our covariate $x$. 
-How did the model do at representing this independence?
-
-```{python p-plot, fig.cap="Estimated relationship between detection probability and the covariate (blue), and the actual relationship (black)."}
-_ = plt.plot(x, p_hat.detach().numpy())
-_ = plt.plot(x, np.repeat(pr_detection, nsite), color='k')
-_ = plt.xlabel('Covariate value')
-_ = plt.ylabel('Detection probability')
-_ = plt.ylim(0, 1)
-plt.show()
-```
 
 ## Parting thoughts
 

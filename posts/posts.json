@@ -9,10 +9,12 @@
         "url": {}
       }
     ],
-    "date": "2020-01-13",
-    "categories": [],
+    "date": "2020-01-23",
+    "categories": [
+      "papers"
+    ],
     "preview": {},
-    "last_modified": "2020-01-23T09:14:18-07:00"
+    "last_modified": "2020-01-23T09:27:02-07:00"
   },
   {
     "path": "posts/2018-12-30-yes-but-does-it-still-run/",
