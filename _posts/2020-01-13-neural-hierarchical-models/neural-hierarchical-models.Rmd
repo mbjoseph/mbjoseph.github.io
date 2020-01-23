@@ -58,7 +58,7 @@ where $f$ is a neural network that maps $x$ and $\theta$ to some probabilistic m
 
 Graphically, you might consider a state-space model where some inputs $x$ are mapped to a state transition matrix (for an example with an animal movement model, see Appendix S2 in the paper): 
 
-```{r conceptual-figure, fig.cap="Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model"}
+```{r conceptual-figure, fig.cap="Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model", echo=FALSE}
 library(imager)
 im <- load.image("conv_hmm_edited.png")
 plot(im, axes = FALSE)

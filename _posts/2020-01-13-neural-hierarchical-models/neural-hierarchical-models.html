@@ -986,10 +986,6 @@
 <p>where <span class="math inline">\(f\)</span> is a neural network that maps <span class="math inline">\(x\)</span> and <span class="math inline">\(\theta\)</span> to some probabilistic model for <span class="math inline">\(z\)</span> (here because <span class="math inline">\(x\)</span> is observed, I’m not going to condition <span class="math inline">\(z\)</span> on it on the left hand side of the equation - <span class="math inline">\(x\)</span> is assumed to be constant and known without error).</p>
 <p>Graphically, you might consider a state-space model where some inputs <span class="math inline">\(x\)</span> are mapped to a state transition matrix (for an example with an animal movement model, see Appendix S2 in the paper):</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(imager)
-im &lt;- load.image(&quot;conv_hmm_edited.png&quot;)
-plot(im, axes = FALSE)</code></pre>
 <div class="figure"><span id="fig:conceptual-figure"></span>
 <img src="neural-hierarchical-models_files/figure-html5/conceptual-figure-1.png" alt="Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model" width="624" />
 <p class="caption">
