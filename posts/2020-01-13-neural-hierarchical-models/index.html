@@ -1548,7 +1548,7 @@ optimizer = torch.optim.Adam(net.parameters(), lr=0.01, weight_decay=1e-6)
 running_loss = []</code></pre>
 </div>
 <h3 id="training-the-model">Training the model</h3>
-<p>Finally, train the model, printing loss every 10 epochs.</p>
+<p>Finally, train the model, visualizing the estimated relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(N\)</span> after every gradient update.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="python"><code>
 _ = plt.scatter(x, n, c=&#39;k&#39;)
@@ -1595,7 +1595,7 @@ Figure 4: Training loss over time. Each point corresponds to the loss after a gr
 <h3 id="more-on-implementing-hierarchical-models">More on implementing hierarchical models</h3>
 <p>If you are interested in digging into the details of how to build these models, check out the companion repository on GitHub, which has all of the code required to reproduce the paper, as well as links to Jupyter Notebooks (thanks Binder!) to play with some toy occupancy, capture-recapture, and N-mixture models: <a href="https://github.com/mbjoseph/neuralecology" class="uri">https://github.com/mbjoseph/neuralecology</a></p>
 <h2 id="parting-thoughts">Parting thoughts</h2>
-<p>Deep learning is somewhat of a mystery to many ecologists. Those who are currently applying it have done some amazing things (like counting plants and animals in imagery). But, I worry that <strong>as a community ecologists are thinking about deep learning too narrowly</strong>.</p>
+<p>Deep learning is somewhat of a mystery to many ecologists. Those who are currently applying it have done some amazing things (like counting plants and animals in imagery). But, I worry that <strong>as a community, ecologists are thinking about deep learning too narrowly</strong>.</p>
 <p>We can look to hydrology and physics to get a sense for how we can advance science with deep learning. Here are a few key papers that are shaping my thinking around this topic, which might help motivate future work in science-based deep learning for ecology:</p>
 <ul>
 <li>Karpatne, Anuj, et al. “Physics-guided neural networks (pgnn): An application in lake temperature modeling.” arXiv preprint arXiv:1710.11431 (2017). <a href="https://arxiv.org/abs/1710.11431">link</a></li>
