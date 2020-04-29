@@ -395,6 +395,7 @@ This general approach applies to a variety of models, but occupancy models provi
 ## More resources
 
 - The Stan documentation has some great content on marginalization of discrete parameters: https://mc-stan.org/docs/2_18/stan-users-guide/latent-discrete-parameterization.html
+- Bob Carpenter put together a great case study for multi-species occupancy models in Stan, which provides a step up in complexity from this single-species model: https://mc-stan.org/users/documentation/case-studies/dorazio-royle-occupancy.html
 - There are a ton of ecological models with discrete parameters that Hiroki Itô has translated to Stan from the book "Bayesian Population Analysis using WinBUGS --- A Hierarchical Perspective" (2012) by Marc Kéry and Michael Schaub [@kery2011bayesian]: https://github.com/stan-dev/example-models/tree/master/BPA
 - Most of the example spatial capture-recapture models from the 2013 book [Spatial Capture-Recapture](https://www.elsevier.com/books/spatial-capture-recapture/royle/978-0-12-405939-9) by Royle, Chandler, Gardner, and Sollmann [@royle2013spatial] have also been translated to Stan: https://github.com/mbjoseph/scr-stan
 - This post demonstrated how to marginalize symbolically (or "on paper" I guess), but there is another great blog post by Jacob Socolar that focuses on JAGS to Stan code translation (and includes a marginal model implementation in JAGS): https://github.com/jsocolar/occupancyModels
