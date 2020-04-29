@@ -264,7 +264,7 @@ $$\log [y_i \mid p, \psi] = \begin{cases}
         \log \big( \psi \text{Binomial}(y_i \mid p) + 1 - \psi \big), & \text{for } y_i = 0
         \end{cases}$$
 
-First, let's do write the case where $y_i=0$ as: 
+First, let's write the case where $y_i=0$ as: 
 
 $$\log [y_i \mid p, \psi] = \begin{cases}
         \log \psi + \text{binomial_lpmf}(y_i \mid p), & \text{for } y_i > 0\\

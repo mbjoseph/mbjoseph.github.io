@@ -1478,7 +1478,7 @@ Replace <span class="math inline">\([z_i=0 \mid \psi]\)</span> with <span class=
         \log \psi + \text{binomial_lpmf}(y_i \mid p), &amp; \text{for } y_i &gt; 0\\
         \log \big( \psi \text{Binomial}(y_i \mid p) + 1 - \psi \big), &amp; \text{for } y_i = 0
         \end{cases}\]</span></p>
-<p>First, let’s do write the case where <span class="math inline">\(y_i=0\)</span> as:</p>
+<p>First, let’s write the case where <span class="math inline">\(y_i=0\)</span> as:</p>
 <p><span class="math display">\[\log [y_i \mid p, \psi] = \begin{cases}
         \log \psi + \text{binomial_lpmf}(y_i \mid p), &amp; \text{for } y_i &gt; 0\\
         \log \big( e^{\log(\psi \text{Binomial}(y_i \mid p))} + e^{\log(1 - \psi)} \big), &amp; \text{for } y_i = 0
