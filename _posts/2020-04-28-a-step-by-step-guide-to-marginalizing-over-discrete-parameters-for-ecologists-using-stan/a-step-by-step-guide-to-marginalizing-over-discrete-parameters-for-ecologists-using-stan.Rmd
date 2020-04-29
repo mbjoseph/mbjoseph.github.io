@@ -275,7 +275,7 @@ $$\log [y_i \mid p, \psi] = \begin{cases}
 It may seem silly to do this, but trust me it will be useful.
 </aside>
 
-This is true because $e^{\log(x)=x}$.
+This is true because $e^{\log(x)}=x$.
 
 Then, apply the rule about $\log(ab) = \log a + \log b$ again:
 
