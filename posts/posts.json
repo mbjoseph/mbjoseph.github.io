@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2020-04-28-a-step-by-step-guide-to-marginalizing-over-discrete-parameters-for-ecologists-using-stan/",
+    "title": "A step-by-step guide to marginalizing over discrete parameters for ecologists using Stan",
+    "description": "Everything you might have been afraid to ask about implementing models with \ndiscrete parameters in Stan. Written for ecologists that know BUGS, JAGS, or NIMBLE, and want to use Stan. Provides an example by marginalizing\nover partly observed presence/absence states in a simple occupancy model.",
+    "author": [
+      {
+        "name": "Maxwell B. Joseph",
+        "url": {}
+      }
+    ],
+    "date": "2020-04-28",
+    "categories": [],
+    "preview": "posts/2020-04-28-a-step-by-step-guide-to-marginalizing-over-discrete-parameters-for-ecologists-using-stan/dag.png",
+    "last_modified": "2020-04-28T19:39:17-06:00"
+  },
+  {
     "path": "posts/2020-01-13-neural-hierarchical-models/",
     "title": "Behind the paper: Neural hierarchical models of ecological populations",
     "description": "A high-level overview, an example, and a call to action.",
