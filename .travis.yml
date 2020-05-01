@@ -1,6 +1,7 @@
 language: r
 sudo: true
 cache: packages
+dist: bionic
 
 r:
   - release
