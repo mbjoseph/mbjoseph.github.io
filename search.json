@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About",
+      "author": [],
+      "contents": "\nI am a data scientist at NCX working on\nforest carbon, formerly an academic.\nI develop probabilistic models with applications to forest carbon,\necology, natural hazards, extreme events, and global change. I also\ncontribute to and develop a variety of open source software projects in\nPython and R, in the interest of fostering open, reproducible, and\nreliable science.\n\n\n\n",
+      "last_modified": "2022-07-27T14:45:34-06:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Posts",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-06-14T20:48:53-06:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

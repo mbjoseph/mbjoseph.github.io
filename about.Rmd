@@ -2,8 +2,7 @@
 title: "About"
 ---
 
-I am a data scientist at Earth Lab, part of the Cooperative Institute for Research in Environmental Science at the University of Colorado Boulder. 
-I am also an open science architect with the North Central Climate Science Adaptation Science Center. 
+I am a data scientist at [NCX](https://ncx.com) working on forest carbon, formerly an academic. 
 
-I develop probabilistic models with applications to ecology, natural hazards, extreme events, and global change. 
+I develop probabilistic models with applications to forest carbon, ecology, natural hazards, extreme events, and global change. 
 I also contribute to and develop a variety of open source software projects in Python and R, in the interest of fostering open, reproducible, and reliable science. 
