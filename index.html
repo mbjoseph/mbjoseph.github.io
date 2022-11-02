@@ -1319,209 +1319,6 @@
 <!--/radix_placeholder_site_before_body-->
 <!--radix_placeholder_article_listing-->
 
-<style type="text/css">
-
-/* Styles for listing layout (hide title) */
-.layout-listing d-title, .layout-listing .d-title {
-  display: none;
-}
-
-/* Styles for posts lists (not auto-injected) */
-
-
-.posts-with-sidebar {
-  padding-left: 45px;
-  padding-right: 45px;
-}
-
-.posts-list .description h2,
-.posts-list .description p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
-.posts-list .description h2 {
-  font-weight: 700;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.posts-list h2.post-tag {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 12px;
-}
-.posts-list {
-  margin-top: 60px;
-  margin-bottom: 24px;
-}
-
-.posts-list .post-preview {
-  text-decoration: none;
-  overflow: hidden;
-  display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 24px 0;
-}
-
-.post-preview-last {
-  border-bottom: none !important;
-}
-
-.posts-list .posts-list-caption {
-  grid-column: screen;
-  font-weight: 400;
-}
-
-.posts-list .post-preview h2 {
-  margin: 0 0 6px 0;
-  line-height: 1.2em;
-  font-style: normal;
-  font-size: 24px;
-}
-
-.posts-list .post-preview p {
-  margin: 0 0 12px 0;
-  line-height: 1.4em;
-  font-size: 16px;
-}
-
-.posts-list .post-preview .thumbnail {
-  box-sizing: border-box;
-  margin-bottom: 24px;
-  position: relative;
-  max-width: 500px;
-}
-.posts-list .post-preview img {
-  width: 100%;
-  display: block;
-}
-
-.posts-list .metadata {
-  font-size: 12px;
-  line-height: 1.4em;
-  margin-bottom: 18px;
-}
-
-.posts-list .metadata > * {
-  display: inline-block;
-}
-
-.posts-list .metadata .publishedDate {
-  margin-right: 1em;
-}
-
-.posts-list .metadata .tags {
-  margin-top: 1em;
-}
-
-.posts-list .tags .tag {
-  color: rgba(0,0,0,0.67);
-  padding: 0.3em 0.5em;
-  margin: 0;
-  font-size: 80%;
-  border: 1px solid rgba(0,0,0,0.4);
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.posts-list img {
-  opacity: 1;
-}
-
-.posts-list img[data-src] {
-  opacity: 0;
-}
-
-.posts-more {
-  clear: both;
-}
-
-
-.posts-sidebar {
-  font-size: 16px;
-}
-
-.posts-sidebar h3 {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.sidebar-section {
-  margin-bottom: 30px;
-}
-
-.categories ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.categories li {
-  color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 0;
-}
-
-.categories li>a {
-  border-bottom: none;
-}
-
-.categories li>a:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.categories .active {
-  font-weight: 600;
-}
-
-.categories .category-count {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-@media(min-width: 768px) {
-  .posts-list .post-preview h2 {
-    font-size: 26px;
-  }
-  .posts-list .post-preview .thumbnail {
-    float: right;
-    width: 35%;
-    margin-bottom: 0;
-  }
-  .posts-list .post-preview .description {
-    float: left;
-    width: 45%;
-  }
-  .posts-list .post-preview .metadata {
-    float: left;
-    width: 15%;
-    margin-top: 8px;
-  }
-  .posts-list .post-preview p {
-    margin: 0 0 12px 0;
-    line-height: 1.5em;
-    font-size: 16px;
-  }
-  .posts-with-sidebar .posts-list {
-    float: left;
-    width: 72%;
-  }
-  .posts-with-sidebar .posts-sidebar {
-    float: right;
-    width: 20%;
-    margin-top: 60px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
-.downlevel .posts-list .post-preview {
-  color: inherit;
-}
-
-</style>
 
 <script type="application/javascript">
 
@@ -1531,7 +1328,7 @@ function init_posts_list() {
     var src = $(img).attr('data-src');
     if (src) {
       $(img).attr('src', src);
-      $(img).load(function() {
+      $(img).on("load", function() {
         img.removeAttribute('data-src');
       });
     }
@@ -1573,16 +1370,17 @@ function init_posts_list() {
     set_posts_visible($('.posts-list').children('a'), false);
 
     // if we have a hash filter
-    if (window.location.hash) {
+    if (window.location.hash && window.location.hash.startsWith("#category:")) {
 
       // mark posts that match the category visible
-      var page_category = window.location.hash.replace("#", "");
+      var page_category = window.location.hash.replace(/^#category:/, "");
+      page_category = decodeURIComponent(page_category)
       var posts = $('.post-metadata').map(function(idx, script) {
         var metadata = $.parseJSON($(script).html());
         var post = null;
         $.each(metadata.categories, function(idx, category) {
           category = category.replace(/ /g,"_");
-          if (category == page_category) {
+          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
             post = $(script).parent().get();
             return false;
           }
@@ -1592,12 +1390,24 @@ function init_posts_list() {
       set_posts_visible(posts, true);
 
       // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
+      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
+
+      // update the list_caption
+      var list_caption = $('.posts-list-caption');
+      var caption = (page_category || '').toLowerCase() === "articles"
+        ? list_caption.attr('data-caption')
+        : ('Category: ' + page_category.replace(/_/g," "));
+      list_caption.text(caption);
 
     } else {
 
       // no hash filter, make all posts visible (subject to max display)
       set_posts_visible($('.posts-list').children(), true);
+
+      // reset list caption
+      var list_caption = $('.posts-list-caption');
+      list_caption.text(list_caption.attr('data-caption'));
+
 
     }
   }
@@ -1612,6 +1422,12 @@ function init_posts_list() {
       $('.posts-more a').addClass('hidden');
     }
   }
+
+  // click handling for tags
+  $('.dt-tag').click(function(ev) {
+    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
+    return false;
+  })
 
   // hash filter handling
   apply_hash_filter();
@@ -1636,17 +1452,21 @@ function init_posts_list() {
 
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
-<h1 class="posts-list-caption">Posts</h1>
+<h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
 <a href="posts/2020-04-28-a-step-by-step-guide-to-marginalizing-over-discrete-parameters-for-ecologists-using-stan/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
 <div class="publishedDate">April 28, 2020</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
-<img data-src="posts/2020-04-28-a-step-by-step-guide-to-marginalizing-over-discrete-parameters-for-ecologists-using-stan/dag.png"/>
+<img src="posts/2020-04-28-a-step-by-step-guide-to-marginalizing-over-discrete-parameters-for-ecologists-using-stan/dag.png"/>
 </div>
 <div class="description">
 <h2>A step-by-step guide to marginalizing over discrete parameters for ecologists using Stan</h2>
+<div class="dt-tags"></div>
 <p>Everything you might have been afraid to ask about implementing models with 
 discrete parameters in Stan. Written for ecologists that know BUGS, JAGS, or NIMBLE, and want to use Stan. Provides an example by marginalizing
 over partly observed presence/absence states in a simple occupancy model.</p>
@@ -1656,12 +1476,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["papers"]}</script>
 <div class="metadata">
 <div class="publishedDate">Jan. 23, 2020</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
-<img data-src="posts/2020-01-13-neural-hierarchical-models/neural-hierarchical-models_files/figure-html5/train-1.png"/>
+<img src="posts/2020-01-13-neural-hierarchical-models/neural-hierarchical-models_files/figure-html5/train-1.png"/>
 </div>
 <div class="description">
 <h2>Behind the paper: Neural hierarchical models of ecological populations</h2>
+<div class="dt-tags">
+<div class="dt-tag">papers</div>
+</div>
 <p>A high-level overview, an example, and a call to action.</p>
 </div>
 </a>
@@ -1669,12 +1495,16 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
 <div class="publishedDate">Dec. 30, 2018</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
-<img data-src="posts/2018-12-30-yes-but-does-it-still-run/yes-but-does-it-still-run_files/figure-html5/plot-img-1.png"/>
+<img src="posts/2018-12-30-yes-but-does-it-still-run/yes-but-does-it-still-run_files/figure-html5/plot-img-1.png"/>
 </div>
 <div class="description">
 <h2>Yes, but does it (still) run?</h2>
+<div class="dt-tags"></div>
 <p>Migrating from Jekyll to distill, with some reflections on the past 6 years.</p>
 </div>
 </a>
@@ -1682,12 +1512,19 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["stan","spatial"]}</script>
 <div class="metadata">
 <div class="publishedDate">Aug. 14, 2016</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
-<img data-src="posts/2018-12-27-gaussian-predictive-process-models-in-stan/gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img2-1.png"/>
+<img src="posts/2018-12-27-gaussian-predictive-process-models-in-stan/gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img2-1.png"/>
 </div>
 <div class="description">
 <h2>Gaussian predictive process models in Stan</h2>
+<div class="dt-tags">
+<div class="dt-tag">stan</div>
+<div class="dt-tag">spatial</div>
+</div>
 <p>Gaussian processes that scale to larger data.</p>
 </div>
 </a>
@@ -1695,12 +1532,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["teaching"]}</script>
 <div class="metadata">
 <div class="publishedDate">April 25, 2016</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
-<img data-src="posts/2018-12-27-the-five-elements-ninjas-approach-to-teaching-design-matrices/the-five-elements-ninjas-approach-to-teaching-design-matrices_files/figure-html5/plot-img-1.png"/>
+<img src="posts/2018-12-27-the-five-elements-ninjas-approach-to-teaching-design-matrices/the-five-elements-ninjas-approach-to-teaching-design-matrices_files/figure-html5/plot-img-1.png"/>
 </div>
 <div class="description">
 <h2>The five elements ninjas approach to teaching design matrices</h2>
+<div class="dt-tags">
+<div class="dt-tag">teaching</div>
+</div>
 <p>In-class activities to teach design matrices from multiple perspectives.</p>
 </div>
 </a>
@@ -1708,12 +1551,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["rants"]}</script>
 <div class="metadata">
 <div class="publishedDate">Sept. 8, 2015</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-first-year-books/first-year-books_files/figure-html5/plot-tape-1.png"/>
 </div>
 <div class="description">
 <h2>First year books</h2>
+<div class="dt-tags">
+<div class="dt-tag">rants</div>
+</div>
 <p>10 books I wish I had entering graduate school.</p>
 </div>
 </a>
@@ -1721,12 +1570,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["teaching"]}</script>
 <div class="metadata">
 <div class="publishedDate">Aug. 28, 2015</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-the-iquit-r-video-series/the-iquit-r-video-series_files/figure-html5/plot-tape-1.png"/>
 </div>
 <div class="description">
 <h2>The IQUIT R video series</h2>
+<div class="dt-tags">
+<div class="dt-tag">teaching</div>
+</div>
 <p>A series of introductory R videos.</p>
 </div>
 </a>
@@ -1734,12 +1589,19 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["visualization","spatial"]}</script>
 <div class="metadata">
 <div class="publishedDate">June 15, 2015</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-plotting-spatial-neighbors-in-ggplot2/plotting-spatial-neighbors-in-ggplot2_files/figure-html5/plot-neighbors-1.png"/>
 </div>
 <div class="description">
 <h2>Plotting spatial neighbors in ggplot2</h2>
+<div class="dt-tags">
+<div class="dt-tag">visualization</div>
+<div class="dt-tag">spatial</div>
+</div>
 <p>How to visualize spatial neighbors using ggplot2, spdep, and sf.</p>
 </div>
 </a>
@@ -1747,12 +1609,19 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["visualization","rants"]}</script>
 <div class="metadata">
 <div class="publishedDate">Feb. 26, 2015</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc/why-i-think-twice-before-editing-plots-in-powerpoint-illustrator-inkscape-etc_files/figure-html5/plot-tape-1.png"/>
 </div>
 <div class="description">
 <h2>Why I think twice before editing plots in Powerpoint, Illustrator, Inkscape, etc.</h2>
+<div class="dt-tags">
+<div class="dt-tag">visualization</div>
+<div class="dt-tag">rants</div>
+</div>
 <p>TLDR: scripting plots is more reproducible and efficient long term</p>
 </div>
 </a>
@@ -1760,12 +1629,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["teaching"]}</script>
 <div class="metadata">
 <div class="publishedDate">Dec. 13, 2014</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-notes-on-shrinkage-and-prediction-in-hierarchical-models/notes-on-shrinkage-and-prediction-in-hierarchical-models_files/figure-html5/plot-tape-1.png"/>
 </div>
 <div class="description">
 <h2>Notes on shrinkage and prediction in hierarchical models</h2>
+<div class="dt-tags">
+<div class="dt-tag">teaching</div>
+</div>
 <p>Partial pooling and the best NBA free throw shooters of all time.</p>
 </div>
 </a>
@@ -1773,12 +1648,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["stan"]}</script>
 <div class="metadata">
 <div class="publishedDate">Nov. 14, 2014</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img/>
 </div>
 <div class="description">
 <h2>Dynamic occupancy models in Stan</h2>
+<div class="dt-tags">
+<div class="dt-tag">stan</div>
+</div>
 <p>Dynamic multi-year occupancy models, marginalizing over latent occurrence states.</p>
 </div>
 </a>
@@ -1786,12 +1667,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["spatial"]}</script>
 <div class="metadata">
 <div class="publishedDate">Nov. 8, 2014</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-categorical-spatial-data-extraction-around-buffered-points-in-r/categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png"/>
 </div>
 <div class="description">
 <h2>Categorical spatial data extraction around buffered points in R</h2>
+<div class="dt-tags">
+<div class="dt-tag">spatial</div>
+</div>
 <p>Computing the proportion of land cover types using R and the raster package.</p>
 </div>
 </a>
@@ -1799,12 +1686,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["jags"]}</script>
 <div class="metadata">
 <div class="publishedDate">June 19, 2014</div>
+<div class="dt-authors">
+<div class="dt-author">Joseph Mihaljevic</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-multilevel-modeling-of-community-composition-with-imperfect-detection/multilevel-modeling-of-community-composition-with-imperfect-detection_files/figure-html5/plot-coefs-1.png"/>
 </div>
 <div class="description">
 <h2>Multilevel modeling of community composition with imperfect detection</h2>
+<div class="dt-tags">
+<div class="dt-tag">jags</div>
+</div>
 <p>A guest post by Joe Mihaljevic.</p>
 </div>
 </a>
@@ -1812,12 +1705,19 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["shiny","teaching"]}</script>
 <div class="metadata">
 <div class="publishedDate">April 3, 2014</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-shiny-variance-inflation-factor-sandbox/shiny-variance-inflation-factor-sandbox_files/figure-html5/plot-robot-1.png"/>
 </div>
 <div class="description">
 <h2>Shiny variance inflation factor sandbox</h2>
+<div class="dt-tags">
+<div class="dt-tag">shiny</div>
+<div class="dt-tag">teaching</div>
+</div>
 <p>Exploring how correlation among covariates inflates uncertainty in coefficient estmates.</p>
 </div>
 </a>
@@ -1825,12 +1725,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["jags"]}</script>
 <div class="metadata">
 <div class="publishedDate">March 22, 2014</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-27-stochastic-search-variable-selection-in-jags/stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png"/>
 </div>
 <div class="description">
 <h2>Stochastic search variable selection in JAGS</h2>
+<div class="dt-tags">
+<div class="dt-tag">jags</div>
+</div>
 <p>Using spike and slab priors to shrink coefficients toward zero.</p>
 </div>
 </a>
@@ -1838,12 +1744,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["jags"]}</script>
 <div class="metadata">
 <div class="publishedDate">Feb. 6, 2014</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-25-better-living-through-zero-one-inflated-beta-regression/better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png"/>
 </div>
 <div class="description">
 <h2>Better living through zero-one inflated beta regression</h2>
+<div class="dt-tags">
+<div class="dt-tag">jags</div>
+</div>
 <p>Fitting a Bayesian ZOIB regression model in JAGS.</p>
 </div>
 </a>
@@ -1851,12 +1763,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["stan"]}</script>
 <div class="metadata">
 <div class="publishedDate">Nov. 27, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-25-errors-in-variables-models-in-stan/errors-in-variables-models-in-stan_files/figure-html5/simulate-data-1.png"/>
 </div>
 <div class="description">
 <h2>Errors-in-variables models in stan</h2>
+<div class="dt-tags">
+<div class="dt-tag">stan</div>
+</div>
 <p>Fitting a Bayesian regression with covariate uncertainty.</p>
 </div>
 </a>
@@ -1864,12 +1782,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["rants"]}</script>
 <div class="metadata">
 <div class="publishedDate">Oct. 30, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-25-r-r-markdown-and-my-divorce-from-microsoft-word/r-r-markdown-and-my-divorce-from-microsoft-word_files/figure-html5/plot-robot-1.png"/>
 </div>
 <div class="description">
 <h2>R Markdown and my divorce from Microsoft Word</h2>
+<div class="dt-tags">
+<div class="dt-tag">rants</div>
+</div>
 <p>A short description of the post.</p>
 </div>
 </a>
@@ -1877,12 +1801,19 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["visualization","teaching"]}</script>
 <div class="metadata">
 <div class="publishedDate">Sept. 8, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-25-animating-the-metropolis-algorithm/animating-the-metropolis-algorithm_files/figure-html5/create-gif.gif"/>
 </div>
 <div class="description">
 <h2>Animating the Metropolis algorithm</h2>
+<div class="dt-tags">
+<div class="dt-tag">visualization</div>
+<div class="dt-tag">teaching</div>
+</div>
 <p>A homemade Metropolis algorithm animation using R and the animation package.</p>
 </div>
 </a>
@@ -1890,12 +1821,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["jags"]}</script>
 <div class="metadata">
 <div class="publishedDate">Aug. 22, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-24-quantifying-uncertainty-around-r-squared-for-generalized-linear-models/quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png"/>
 </div>
 <div class="description">
 <h2>Quantifying uncertainty around R-squared for generalized linear models</h2>
+<div class="dt-tags">
+<div class="dt-tag">jags</div>
+</div>
 <p>How to propage posterior uncertainty to R-squared in R and JAGS.</p>
 </div>
 </a>
@@ -1903,12 +1840,19 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["visualization","rants"]}</script>
 <div class="metadata">
 <div class="publishedDate">Aug. 18, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-24-clarifying-vague-interactions/clarifying-vague-interactions_files/figure-html5/simulate-data-1.png"/>
 </div>
 <div class="description">
 <h2>Clarifying vague interactions</h2>
+<div class="dt-tags">
+<div class="dt-tag">visualization</div>
+<div class="dt-tag">rants</div>
+</div>
 <p>One quick way to improve reporting of interaction effects in linear models.</p>
 </div>
 </a>
@@ -1916,12 +1860,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["visualization"]}</script>
 <div class="metadata">
 <div class="publishedDate">June 24, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-23-split-violin-plots/split-violin-plots_files/figure-html5/beanplots-1.png"/>
 </div>
 <div class="description">
 <h2>Split violin plots</h2>
+<div class="dt-tags">
+<div class="dt-tag">visualization</div>
+</div>
 <p>Comparing distributions with split violin plots in R.</p>
 </div>
 </a>
@@ -1929,12 +1879,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["jags"]}</script>
 <div class="metadata">
 <div class="publishedDate">May 27, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-23-bayesian-model-ii-regression/bayesian-model-ii-regression_files/figure-html5/compare-models-1.png"/>
 </div>
 <div class="description">
 <h2>Bayesian model II regression in JAGS</h2>
+<div class="dt-tags">
+<div class="dt-tag">jags</div>
+</div>
 <p>Fitting a regression model with uncertainty in the explanatory variable.</p>
 </div>
 </a>
@@ -1942,12 +1898,16 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
 <div class="publishedDate">April 20, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-23-modeling-habitat-diversity-and-species-richness/modeling-habitat-diversity-and-species-richness_files/figure-html5/run-model-1.png"/>
 </div>
 <div class="description">
 <h2>Modeling habitat diversity and species richness</h2>
+<div class="dt-tags"></div>
 <p>Experimenting with an agent based model of habitat diversity and species richness in R.</p>
 </div>
 </a>
@@ -1955,12 +1915,19 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["shiny","teaching"]}</script>
 <div class="metadata">
 <div class="publishedDate">Feb. 20, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-22-interactive-two-host-sir-model/interactive-two-host-sir-model_files/figure-html5/plot-img-1.png"/>
 </div>
 <div class="description">
 <h2>Interactive two host SIR model</h2>
+<div class="dt-tags">
+<div class="dt-tag">shiny</div>
+<div class="dt-tag">teaching</div>
+</div>
 <p>Creating an interactive two host SIR model in R and shiny.</p>
 </div>
 </a>
@@ -1968,12 +1935,19 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["teaching","shiny"]}</script>
 <div class="metadata">
 <div class="publishedDate">Feb. 16, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-20-interactive-stage-structured-population-model/interactive-stage-structured-population-model_files/figure-html5/plot-img-1.png"/>
 </div>
 <div class="description">
 <h2>Interactive stage-structured population model</h2>
+<div class="dt-tags">
+<div class="dt-tag">teaching</div>
+<div class="dt-tag">shiny</div>
+</div>
 <p>Building an interactive stage-structured population model in R with shiny.</p>
 </div>
 </a>
@@ -1981,12 +1955,18 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <script class="post-metadata" type="text/json">{"categories":["jags"]}</script>
 <div class="metadata">
 <div class="publishedDate">Feb. 4, 2013</div>
+<div class="dt-authors">
+<div class="dt-author">Maxwell B. Joseph</div>
+</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2018-12-22-dynamic-community-occupancy-model-jags/dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png"/>
 </div>
 <div class="description">
 <h2>Dynamic community occupancy modeling with R and JAGS</h2>
+<div class="dt-tags">
+<div class="dt-tag">jags</div>
+</div>
 <p>Multi-species, multi-timestep occupancy model in R and JAGS</p>
 </div>
 </a>
@@ -1996,35 +1976,39 @@ over partly observed presence/absence states in a simple occupancy model.</p>
 <h3>Categories</h3>
 <ul>
 <li>
-<a href="#jags">jags</a>
+<a href="#category:articles">articles</a>
+<span class="category-count">(27)</span>
+</li>
+<li>
+<a href="#category:jags">jags</a>
 <span class="category-count">(6)</span>
 </li>
 <li>
-<a href="#papers">papers</a>
+<a href="#category:papers">papers</a>
 <span class="category-count">(1)</span>
 </li>
 <li>
-<a href="#rants">rants</a>
+<a href="#category:rants">rants</a>
 <span class="category-count">(4)</span>
 </li>
 <li>
-<a href="#shiny">shiny</a>
+<a href="#category:shiny">shiny</a>
 <span class="category-count">(3)</span>
 </li>
 <li>
-<a href="#spatial">spatial</a>
+<a href="#category:spatial">spatial</a>
 <span class="category-count">(3)</span>
 </li>
 <li>
-<a href="#stan">stan</a>
+<a href="#category:stan">stan</a>
 <span class="category-count">(3)</span>
 </li>
 <li>
-<a href="#teaching">teaching</a>
+<a href="#category:teaching">teaching</a>
 <span class="category-count">(7)</span>
 </li>
 <li>
-<a href="#visualization">visualization</a>
+<a href="#category:visualization">visualization</a>
 <span class="category-count">(5)</span>
 </li>
 </ul>
