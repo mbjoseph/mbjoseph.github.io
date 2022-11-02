@@ -18,6 +18,96 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Stochastic search variable selection in JAGS</title>
 
@@ -44,7 +134,7 @@
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Variable selection via gibbs sampling;citation_publication_date=1993;citation_publisher=Taylor &amp; Francis;citation_volume=88;citation_author=Edward I George;citation_author=Robert E McCulloch"/>
+  <meta name="citation_reference" content="citation_title=Variable selection via gibbs sampling;citation_publisher=Taylor &amp; Francis;citation_volume=88;citation_author=Edward I George;citation_author=Robert E McCulloch"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -53,7 +143,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","ssvs.txt","stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","ssvs.txt","stochastic-search-variable-selection-in-jags_files/bowser-1.9.3/bowser.min.js","stochastic-search-variable-selection-in-jags_files/distill-2.2.21/template.v2.js","stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png","stochastic-search-variable-selection-in-jags_files/jquery-1.11.3/jquery.min.js","stochastic-search-variable-selection-in-jags_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2016,7 +2106,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2081,7 +2177,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Stochastic search variable selection in JAGS</h1>
-<p>Using spike and slab priors to shrink coefficients toward zero.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:jags" class="dt-tag">jags</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Using spike and slab priors to shrink coefficients toward zero.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2091,11 +2192,16 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Stochastic search variable selection (SSVS) identifies promising subsets of multiple regression covariates via Gibbs sampling <span class="citation" data-cites="george1993variable">(George and McCulloch <a href="#ref-george1993variable">1993</a>)</span>. Here’s a short SSVS demo with <a href="http://mcmc-jags.sourceforge.net/">JAGS</a> and <a href="http://www.r-project.org/">R</a>.</p>
+<p>Stochastic search variable selection (SSVS) identifies promising subsets of
+multiple regression covariates via Gibbs sampling <span class="citation" data-cites="george1993variable">(<a href="#ref-george1993variable" role="doc-biblioref">George and McCulloch 1993</a>)</span>. Here’s
+a short SSVS demo with <a href="http://mcmc-jags.sourceforge.net/">JAGS</a> and
+<a href="http://www.r-project.org/">R</a>.</p>
 <p>Assume we have a multiple regression problem:</p>
 <p><span class="math display">\[\boldsymbol{Y} \sim N_n(\boldsymbol{X \beta}, \sigma^2 \boldsymbol{I})\]</span></p>
-<p>We suspect only a subset of the elements of <span class="math inline">\(\boldsymbol{\beta}\)</span> are non-zero, i.e. some of the covariates have no effect.</p>
-<p>Assume <span class="math inline">\(\boldsymbol{\beta}\)</span> arises from one of two normal mixture components, depending on a latent variable <span class="math inline">\(\gamma_i\)</span>:</p>
+<p>We suspect only a subset of the elements of <span class="math inline">\(\boldsymbol{\beta}\)</span> are non-zero,
+i.e. some of the covariates have no effect.</p>
+<p>Assume <span class="math inline">\(\boldsymbol{\beta}\)</span> arises from one of two normal mixture components,
+depending on a latent variable <span class="math inline">\(\gamma_i\)</span>:</p>
 <p><span class="math display">\[
 \beta_i \mid \gamma_i  \sim \left\{
   \begin{array}{lr}
@@ -2104,79 +2210,85 @@ document.addEventListener('DOMContentLoaded', function() {
   \end{array}
 \right.
 \]</span></p>
-<p><span class="math inline">\(\tau_i\)</span> is positive but small s.t. <span class="math inline">\(\beta_i\)</span> is close to zero when <span class="math inline">\(\gamma_i = 0\)</span>. <span class="math inline">\(c_i\)</span> is large enough to allow reasonable deviations from zero when <span class="math inline">\(\gamma_i = 1\)</span>. The prior probability that covariate <span class="math inline">\(i\)</span> has a nonzero effect is <span class="math inline">\(Pr(\gamma_i = 1) = p_i\)</span>.</p>
-<p>Let’s simulate a dataset in which some covariates have strong effects on the linear predictor, and other don’t.</p>
+<p><span class="math inline">\(\tau_i\)</span> is positive but small s.t. <span class="math inline">\(\beta_i\)</span> is close to zero when
+<span class="math inline">\(\gamma_i = 0\)</span>. <span class="math inline">\(c_i\)</span> is large enough to allow reasonable deviations from zero
+when <span class="math inline">\(\gamma_i = 1\)</span>. The prior probability that covariate <span class="math inline">\(i\)</span> has a nonzero
+effect is <span class="math inline">\(Pr(\gamma_i = 1) = p_i\)</span>.</p>
+<p>Let’s simulate a dataset in which some covariates have strong effects on the
+linear predictor, and other don’t.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(gridExtra)
-library(runjags)
-library(ggmcmc)
-library(coda)
-library(knitr)
-
-ncov &lt;- 20
-nobs &lt;- 60
-var_beta &lt;- .004
-c &lt;- 1000
-p_inclusion &lt;- .5
-sigma_y &lt;- 1
-
-# generate covariates
-X &lt;- array(dim=c(nobs, ncov))
-for (i in 1:ncov){
-  X[, i] &lt;- rnorm(nobs, 0, 1)
-}
-
-included &lt;- rbinom(ncov, 1, p_inclusion)
-coefs &lt;- rnorm(n=ncov,
-               mean=0,
-               sd=ifelse(included==1,
-                         sqrt(var_beta * c),
-                         sqrt(var_beta)
-                         )
-               )
-coefs &lt;- sort(coefs)
-Y &lt;- rnorm(nobs, mean=X %*% coefs, sd=sigma_y)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>gridExtra</span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/ku-awdc/runjags'>runjags</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://xavier-fim.net/packages/ggmcmc/'>ggmcmc</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>coda</span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://yihui.org/knitr/'>knitr</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>ncov</span> <span class='op'>&lt;-</span> <span class='fl'>20</span></span>
+<span><span class='va'>nobs</span> <span class='op'>&lt;-</span> <span class='fl'>60</span></span>
+<span><span class='va'>var_beta</span> <span class='op'>&lt;-</span> <span class='fl'>.004</span></span>
+<span><span class='va'>c</span> <span class='op'>&lt;-</span> <span class='fl'>1000</span></span>
+<span><span class='va'>p_inclusion</span> <span class='op'>&lt;-</span> <span class='fl'>.5</span></span>
+<span><span class='va'>sigma_y</span> <span class='op'>&lt;-</span> <span class='fl'>1</span></span>
+<span></span>
+<span><span class='co'># generate covariates</span></span>
+<span><span class='va'>X</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nobs</span>, <span class='va'>ncov</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>ncov</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>X</span><span class='op'>[</span>, <span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>nobs</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>included</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='va'>ncov</span>, <span class='fl'>1</span>, <span class='va'>p_inclusion</span><span class='op'>)</span></span>
+<span><span class='va'>coefs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n<span class='op'>=</span><span class='va'>ncov</span>,</span>
+<span>               mean<span class='op'>=</span><span class='fl'>0</span>,</span>
+<span>               sd<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>included</span><span class='op'>==</span><span class='fl'>1</span>,</span>
+<span>                         <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>var_beta</span> <span class='op'>*</span> <span class='va'>c</span><span class='op'>)</span>,</span>
+<span>                         <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>var_beta</span><span class='op'>)</span></span>
+<span>                         <span class='op'>)</span></span>
+<span>               <span class='op'>)</span></span>
+<span><span class='va'>coefs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='va'>coefs</span><span class='op'>)</span></span>
+<span><span class='va'>Y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>nobs</span>, mean<span class='op'>=</span><span class='va'>X</span> <span class='op'><a href='https://rdrr.io/r/base/matmult.html'>%*%</a></span> <span class='va'>coefs</span>, sd<span class='op'>=</span><span class='va'>sigma_y</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Specifying the model:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-cat(&quot;model{
-  alpha ~ dnorm(0, 1)
-  sd_y ~ dunif(0, 10)
-  tau_y &lt;- pow(sd_y, -2)
-
-  # ssvs priors
-  sd_bet ~ dunif(0, 10)
-  tau_in &lt;- pow(sd_bet, -2)
-  tau[1] &lt;- tau_in            # coef effectively zero
-  tau[2] &lt;- tau_in / 1000     # nonzero coef
-  p_ind[1] &lt;- 1/2
-  p_ind[2] &lt;- 1 - p_ind[1]
-
-  for (j in 1:ncov){
-    indA[j] ~ dcat(p_ind[]) # returns 1 or 2
-    gamma[j] &lt;- indA[j] - 1   # returns 0 or 1
-    beta[j] ~ dnorm(0, tau[indA[j]])
-  }
-
-  # likelihood
-  for (i in 1:nobs){
-    Y[i] ~ dnorm(alpha + X[i ,] %*% beta[], tau_y)
-  }
-}
-    &quot;
-    , file=&quot;ssvs.txt&quot;)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"model{</span></span>
+<span><span class='st'>  alpha ~ dnorm(0, 1)</span></span>
+<span><span class='st'>  sd_y ~ dunif(0, 10)</span></span>
+<span><span class='st'>  tau_y &lt;- pow(sd_y, -2)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # ssvs priors</span></span>
+<span><span class='st'>  sd_bet ~ dunif(0, 10)</span></span>
+<span><span class='st'>  tau_in &lt;- pow(sd_bet, -2)</span></span>
+<span><span class='st'>  tau[1] &lt;- tau_in            # coef effectively zero</span></span>
+<span><span class='st'>  tau[2] &lt;- tau_in / 1000     # nonzero coef</span></span>
+<span><span class='st'>  p_ind[1] &lt;- 1/2</span></span>
+<span><span class='st'>  p_ind[2] &lt;- 1 - p_ind[1]</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  for (j in 1:ncov){</span></span>
+<span><span class='st'>    indA[j] ~ dcat(p_ind[]) # returns 1 or 2</span></span>
+<span><span class='st'>    gamma[j] &lt;- indA[j] - 1   # returns 0 or 1</span></span>
+<span><span class='st'>    beta[j] ~ dnorm(0, tau[indA[j]])</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood</span></span>
+<span><span class='st'>  for (i in 1:nobs){</span></span>
+<span><span class='st'>    Y[i] ~ dnorm(alpha + X[i ,] %*% beta[], tau_y)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>}</span></span>
+<span><span class='st'>    "</span></span>
+<span>    , file<span class='op'>=</span><span class='st'>"ssvs.txt"</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Fitting the model:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-dat &lt;- list(Y=Y, X=X, nobs=nobs, ncov=ncov)
-vars &lt;- c(&quot;alpha&quot;, &quot;sd_bet&quot;, &quot;gamma&quot;, &quot;beta&quot;, &quot;tau_in&quot;, &quot;sd_y&quot;)
-out &lt;- run.jags(&quot;ssvs.txt&quot;, vars, data=dat, n.chains=3,
-                adapt=10000, burnin=10000)</code></pre>
-<pre><code>
-Compiling rjags model...
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>Y<span class='op'>=</span><span class='va'>Y</span>, X<span class='op'>=</span><span class='va'>X</span>, nobs<span class='op'>=</span><span class='va'>nobs</span>, ncov<span class='op'>=</span><span class='va'>ncov</span><span class='op'>)</span></span>
+<span><span class='va'>vars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"alpha"</span>, <span class='st'>"sd_bet"</span>, <span class='st'>"gamma"</span>, <span class='st'>"beta"</span>, <span class='st'>"tau_in"</span>, <span class='st'>"sd_y"</span><span class='op'>)</span></span>
+<span><span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/runjags/man/run.jags.html'>run.jags</a></span><span class='op'>(</span><span class='st'>"ssvs.txt"</span>, <span class='va'>vars</span>, data<span class='op'>=</span><span class='va'>dat</span>, n.chains<span class='op'>=</span><span class='fl'>3</span>,</span>
+<span>                adapt<span class='op'>=</span><span class='fl'>10000</span>, burnin<span class='op'>=</span><span class='fl'>10000</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling rjags model...
 Calling the simulation using the rjags method...
 Adapting the model for 10000 iterations...
 
@@ -2801,45 +2913,51 @@ stochastic in one chain but non-stochastic in another chain;
 it will not be included in the convergence diagnostic
 Calculating the Gelman-Rubin statistic for 44 variables....
 Finished running the simulation</code></pre>
-<pre class="r"><code>
-outdf &lt;- ggs(as.mcmc.list(out))
-out_summary &lt;- summary(out)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>outdf</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs.html'>ggs</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/coda/man/mcmc.list.html'>as.mcmc.list</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>out_summary</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Now, let’s visualize the inclusion probabilities.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-gamma_rows &lt;- grepl(rownames(out_summary), pattern = &quot;^gamma\\[&quot;)
-probs &lt;- out_summary[gamma_rows, &quot;Mean&quot;]
-
-labels &lt;- rep(NA, ncov)
-for (i in 1:ncov){
-  labels[i] &lt;- paste(&quot;beta[&quot;, i, &quot;]&quot;, sep=&quot;&quot;)
-}
-xdf &lt;- data.frame(Parameter = labels, value = 1:ncov)
-p1 &lt;- ggs_caterpillar(outdf, &quot;beta&quot;, X=xdf) +
-  theme_classic() +
-  geom_vline(xintercept = 0, linetype = &quot;longdash&quot;) +
-  geom_point(data=data.frame(coefs, pos = 1:ncov),
-              aes(x=coefs, y=pos), size=5, col=&quot;green4&quot;, alpha=.7) +
-  xlab(&quot;Value&quot;) +
-  ylab(&quot;Coefficient&quot;) +
-  geom_hline(yintercept = 1:ncov, alpha=.05) +
-  scale_y_continuous(breaks=seq(0, ncov, 1))
-
-df &lt;- data.frame(probs=probs, coefs = coefs)
-p2 &lt;- ggplot(df, aes(x=abs(coefs), y=probs)) +
-  geom_point(size=5, alpha=.7) +
-  theme_classic() +
-  xlab(&quot;Absolute value of true coefficient&quot;) +
-  ylab(&quot;Posterior probability of non-zeroness&quot;)
-
-grid.arrange(p1, p2, ncol=2)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>gamma_rows</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>out_summary</span><span class='op'>)</span>, pattern <span class='op'>=</span> <span class='st'>"^gamma\\["</span><span class='op'>)</span></span>
+<span><span class='va'>probs</span> <span class='op'>&lt;-</span> <span class='va'>out_summary</span><span class='op'>[</span><span class='va'>gamma_rows</span>, <span class='st'>"Mean"</span><span class='op'>]</span></span>
+<span></span>
+<span><span class='va'>labels</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='va'>ncov</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>ncov</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>labels</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"beta["</span>, <span class='va'>i</span>, <span class='st'>"]"</span>, sep<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='va'>xdf</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>Parameter <span class='op'>=</span> <span class='va'>labels</span>, value <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>ncov</span><span class='op'>)</span></span>
+<span><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs_caterpillar.html'>ggs_caterpillar</a></span><span class='op'>(</span><span class='va'>outdf</span>, <span class='st'>"beta"</span>, X<span class='op'>=</span><span class='va'>xdf</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_classic</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_vline</a></span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fl'>0</span>, linetype <span class='op'>=</span> <span class='st'>"longdash"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>data<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>coefs</span>, pos <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>ncov</span><span class='op'>)</span>,</span>
+<span>              <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>coefs</span>, y<span class='op'>=</span><span class='va'>pos</span><span class='op'>)</span>, size<span class='op'>=</span><span class='fl'>5</span>, col<span class='op'>=</span><span class='st'>"green4"</span>, alpha<span class='op'>=</span><span class='fl'>.7</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='st'>"Value"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ylab</a></span><span class='op'>(</span><span class='st'>"Coefficient"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_hline</a></span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>ncov</span>, alpha<span class='op'>=</span><span class='fl'>.05</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_y_continuous</a></span><span class='op'>(</span>breaks<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='va'>ncov</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>probs<span class='op'>=</span><span class='va'>probs</span>, coefs <span class='op'>=</span> <span class='va'>coefs</span><span class='op'>)</span></span>
+<span><span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>df</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>abs</a></span><span class='op'>(</span><span class='va'>coefs</span><span class='op'>)</span>, y<span class='op'>=</span><span class='va'>probs</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size<span class='op'>=</span><span class='fl'>5</span>, alpha<span class='op'>=</span><span class='fl'>.7</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_classic</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='st'>"Absolute value of true coefficient"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ylab</a></span><span class='op'>(</span><span class='st'>"Posterior probability of non-zeroness"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/gridExtra/man/arrangeGrob.html'>grid.arrange</a></span><span class='op'>(</span><span class='va'>p1</span>, <span class='va'>p2</span>, ncol<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="stochastic-search-variable-selection-in-jags_files/figure-html5/visualize-inclusion-probs-1.png" width="624" /></p>
 </div>
-<p>On the left, green points indicate true coefficient values, with black posterior credible intervals. The right plot shows the relationship between the true magnitude of the effect and the posterior probability that the coefficient was non-zero, <span class="math inline">\(E(\gamma_i \mid \boldsymbol{Y})\)</span>.</p>
-<div id="refs" class="references">
-<div id="ref-george1993variable">
-<p>George, Edward I, and Robert E McCulloch. 1993. “Variable Selection via Gibbs Sampling.” <em>Journal of the American Statistical Association</em> 88 (423): 881–89. <a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476353">https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476353</a>.</p>
+<p>On the left, green points indicate true coefficient values, with black posterior
+credible intervals. The right plot shows the relationship between the true
+magnitude of the effect and the posterior probability that the coefficient was
+non-zero, <span class="math inline">\(E(\gamma_i \mid \boldsymbol{Y})\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-george1993variable" class="csl-entry" role="doc-biblioentry">
+George, Edward I, and Robert E McCulloch. 1993. <span>“Variable Selection via Gibbs Sampling.”</span> <em>Journal of the American Statistical Association</em> 88 (423): 881–89. <a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476353">https://www.tandfonline.com/doi/abs/10.1080/01621459.1993.10476353</a>.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->

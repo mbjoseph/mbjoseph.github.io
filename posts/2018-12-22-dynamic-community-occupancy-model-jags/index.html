@@ -18,6 +18,96 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Dynamic community occupancy modeling with R and JAGS</title>
 
@@ -44,7 +134,11 @@
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Hierarchical modeling and inference in ecology: The analysis of data from populations, metapopulations and communities;citation_publication_date=2008;citation_publisher=Elsevier;citation_author=J Andrew Royle;citation_author=Robert M Dorazio"/>
+  <meta name="citation_reference" content="citation_title=Estimating site occupancy rates when detection probabilities are less than one;citation_publisher=Wiley Online Library;citation_volume=83;citation_author=Darryl I MacKenzie;citation_author=James D Nichols;citation_author=Gideon B Lachman;citation_author=Sam Droege;citation_author=J Andrew Royle;citation_author=Catherine A Langtimm"/>
+  <meta name="citation_reference" content="citation_title=A bayesian state-space formulation of dynamic occupancy models;citation_publisher=Wiley Online Library;citation_volume=88;citation_author=J Andrew Royle;citation_author=Marc Kéry"/>
+  <meta name="citation_reference" content="citation_title=Hierarchical bayes estimation of species richness and occupancy in spatially replicated surveys;citation_publisher=Wiley Online Library;citation_volume=45;citation_author=M Kéry;citation_author=J Andrew Royle"/>
+  <meta name="citation_reference" content="citation_title=Models for inference in dynamic metacommunity systems;citation_publisher=Wiley Online Library;citation_volume=91;citation_author=Robert M Dorazio;citation_author=Marc Kery;citation_author=J Andrew Royle;citation_author=Matthias Plattner"/>
+  <meta name="citation_reference" content="citation_title=Hierarchical modeling and inference in ecology: The analysis of data from populations, metapopulations and communities;citation_publisher=Elsevier;citation_author=J Andrew Royle;citation_author=Robert M Dorazio"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -53,7 +147,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","com_occ.txt","dynamic-community-occupancy-model-jags_files/bowser-1.9.3/bowser.min.js","dynamic-community-occupancy-model-jags_files/distill-2.2.21/template.v2.js","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png","dynamic-community-occupancy-model-jags_files/jquery-1.11.3/jquery.min.js","dynamic-community-occupancy-model-jags_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","com_occ.txt","dynamic-community-occupancy-model-jags_files/anchor-4.2.2/anchor.min.js","dynamic-community-occupancy-model-jags_files/bowser-1.9.3/bowser.min.js","dynamic-community-occupancy-model-jags_files/distill-2.2.21/template.v2.js","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png","dynamic-community-occupancy-model-jags_files/header-attrs-2.16/header-attrs.js","dynamic-community-occupancy-model-jags_files/jquery-1.11.3/jquery.min.js","dynamic-community-occupancy-model-jags_files/jquery-3.6.0/jquery-3.6.0.js","dynamic-community-occupancy-model-jags_files/jquery-3.6.0/jquery-3.6.0.min.js","dynamic-community-occupancy-model-jags_files/jquery-3.6.0/jquery-3.6.0.min.map","dynamic-community-occupancy-model-jags_files/popper-2.6.0/popper.min.js","dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy-bundle.umd.min.js","dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy-light-border.css","dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy.css","dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy.umd.min.js","dynamic-community-occupancy-model-jags_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2016,7 +2110,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2081,7 +2181,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Dynamic community occupancy modeling with R and JAGS</h1>
-<p>Multi-species, multi-timestep occupancy model in R and JAGS</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:jags" class="dt-tag">jags</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Multi-species, multi-timestep occupancy model in R and JAGS</p></p>
 </div>
 
 <div class="d-byline">
@@ -2091,21 +2196,61 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>This post is intended to provide a simple example of how to construct and make inferences on a multi-species multi-year occupancy model using R, JAGS, and the ‘rjags’ package. This is not intended to be a standalone tutorial on dynamic community occupancy modeling <span class="citation" data-cites="mackenzie2002estimating royle2007bayesian kery2008hierarchical dorazio2010models">(MacKenzie et al. <a href="#ref-mackenzie2002estimating">2002</a>; Royle and Kéry <a href="#ref-royle2007bayesian">2007</a>; Kéry and Royle <a href="#ref-kery2008hierarchical">2008</a>; Dorazio et al. <a href="#ref-dorazio2010models">2010</a>)</span>. Royle and Dorazio’s Hierarchichal Modeling and Inference in Ecology also provides a clear explanation of simple one species occupancy models, multispecies occupancy models, and dynamic (multiyear) occupancy models, among other things <span class="citation" data-cites="royle2008hierarchical">(Royle and Dorazio <a href="#ref-royle2008hierarchical">2008</a>)</span>. There’s also a wealth of code provided <a href="http://www.mbr-pwrc.usgs.gov/site/communitymodeling/home/">here</a> by Elise Zipkin, J. Andrew Royle, and others.</p>
+<p>This post is intended to provide a simple example of how to construct and make
+inferences on a multi-species multi-year occupancy model using R, JAGS, and the
+‘rjags’ package. This is not intended to be a standalone tutorial on dynamic
+community occupancy modeling <span class="citation" data-cites="mackenzie2002estimating royle2007bayesian kery2008hierarchical dorazio2010models">(<a href="#ref-mackenzie2002estimating" role="doc-biblioref">MacKenzie et al. 2002</a>; <a href="#ref-royle2007bayesian" role="doc-biblioref">Royle and Kéry 2007</a>; <a href="#ref-kery2008hierarchical" role="doc-biblioref">Kéry and Royle 2008</a>; <a href="#ref-dorazio2010models" role="doc-biblioref">Dorazio et al. 2010</a>)</span>.
+Royle and Dorazio’s
+Hierarchichal Modeling and Inference in Ecology also provides a clear
+explanation of simple one species occupancy models, multispecies occupancy
+models, and dynamic (multiyear) occupancy models, among other things <span class="citation" data-cites="royle2008hierarchical">(<a href="#ref-royle2008hierarchical" role="doc-biblioref">Royle and Dorazio 2008</a>)</span>.
+There’s also a wealth of code provided
+<a href="http://www.mbr-pwrc.usgs.gov/site/communitymodeling/home/">here</a> by Elise Zipkin,
+J. Andrew Royle, and others.</p>
 <p>Before getting started, we can define two convenience functions:</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mcmc-jags.sourceforge.io'>rjags</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>logit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='va'>x</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>antilogit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span></code></pre>
 </div>
-<p>Then, initializing the number of sites, species, years, and repeat surveys (i.e. surveys within years, where the occupancy status of a site is assumed to be constant),</p>
+</div>
+<p>Then, initializing the number of sites, species, years, and repeat surveys
+(i.e. surveys within years, where the occupancy status of a site is assumed to
+be constant),</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>nsite</span> <span class='op'>&lt;-</span> <span class='fl'>20</span></span>
+<span><span class='va'>nspec</span> <span class='op'>&lt;-</span> <span class='fl'>3</span></span>
+<span><span class='va'>nyear</span> <span class='op'>&lt;-</span> <span class='fl'>4</span></span>
+<span><span class='va'>nrep</span> <span class='op'>&lt;-</span> <span class='fl'>2</span></span></code></pre>
 </div>
-<p>we can begin to consider occupancy. We’re interested in making inferences about the rates of colonization and population persistence for each species in a community, while estimating and accounting for imperfect detection.</p>
-<p>Occupancy status at site <span class="math inline">\(j\)</span>, by species <span class="math inline">\(i\)</span>, in year <span class="math inline">\(t\)</span> is represented by <span class="math inline">\(z(j,i,t)\)</span>. For occupied sites <span class="math inline">\(z=1\)</span>; for unoccupied sites <span class="math inline">\(z=0\)</span>. However, <span class="math inline">\(Z\)</span> is incompletely observed: it is possible that a species <span class="math inline">\(i\)</span> is present at a site <span class="math inline">\(j\)</span> in some year <span class="math inline">\(t\)</span> (<span class="math inline">\(z(j,i,t)=1\)</span>) but species <span class="math inline">\(i\)</span> was never seen at at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> across all <span class="math inline">\(k\)</span> repeat surveys because of imperfect detection. These observations are represented by <span class="math inline">\(x(j,i,t,k)\)</span>. Here we assume that there are no “false positive” observations. In other words, if <span class="math inline">\(\sum_{1}^{k}x(j,i,t,k)&gt;0\)</span> , then <span class="math inline">\(z(j,i,t)=1\)</span>. If a site is occupied, the probability that <span class="math inline">\(x(j,i,t,k)=1\)</span> is represented as a Bernoulli trial with probability of detection <span class="math inline">\(p(j,i,t,k)\)</span>, such that</p>
+</div>
+<p>we can begin to consider occupancy. We’re interested in making inferences about
+the rates of colonization and population persistence for each species in a
+community, while estimating and accounting for imperfect detection.</p>
+<p>Occupancy status at site <span class="math inline">\(j\)</span>, by species <span class="math inline">\(i\)</span>, in year <span class="math inline">\(t\)</span> is represented by
+<span class="math inline">\(z(j,i,t)\)</span>. For occupied sites <span class="math inline">\(z=1\)</span>; for unoccupied sites <span class="math inline">\(z=0\)</span>.
+However, <span class="math inline">\(Z\)</span> is incompletely observed: it is possible that a species <span class="math inline">\(i\)</span> is
+present at a site <span class="math inline">\(j\)</span> in some year <span class="math inline">\(t\)</span> (<span class="math inline">\(z(j,i,t)=1\)</span>) but species <span class="math inline">\(i\)</span> was never
+seen at at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> across all <span class="math inline">\(k\)</span> repeat surveys because of
+imperfect detection. These observations are represented by <span class="math inline">\(x(j,i,t,k)\)</span>.
+Here we assume that there are no “false positive” observations.
+In other words, if <span class="math inline">\(\sum_{1}^{k}x(j,i,t,k)&gt;0\)</span> , then <span class="math inline">\(z(j,i,t)=1\)</span>.
+If a site is occupied, the probability that <span class="math inline">\(x(j,i,t,k)=1\)</span> is represented as a
+Bernoulli trial with probability of detection <span class="math inline">\(p(j,i,t,k)\)</span>, such that</p>
 <p><span class="math display">\[
 x(j,i,t,k) \sim \text{Bernoulli}(z(j,i,t)p(j,i,t,k))
 \]</span></p>
-<p>The occupancy status <span class="math inline">\(z\)</span> of species <span class="math inline">\(i\)</span> at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> is modeled as a Markov Bernoulli trial. In other words whether a species is present at a site in year <span class="math inline">\(t\)</span> is influenced by whether it was present at year <span class="math inline">\(t−1\)</span>.</p>
+<p>The occupancy status <span class="math inline">\(z\)</span> of species <span class="math inline">\(i\)</span> at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> is modeled as a
+Markov Bernoulli trial. In other words whether a species is present at a site
+in year <span class="math inline">\(t\)</span> is influenced by whether it was present at year <span class="math inline">\(t−1\)</span>.</p>
 <p><span class="math display">\[
 z(j,i,t) \sim \text{Bernoulli}(\psi(j,i,t))
 \]</span></p>
@@ -2117,39 +2262,201 @@ z(j,i,t) \sim \text{Bernoulli}(\psi(j,i,t))
 <p><span class="math display">\[
 \text{logit}(\psi_{j,i,1})=\beta_i + \rho_i z_0(i, j)
 \]</span></p>
-<p>where the occupancy status in year 0, <span class="math inline">\(z_0(i,j) \sim \text{Bernoulli}(\rho_{0i})\)</span>, and <span class="math inline">\(\rho_{0i} \sim \text{Uniform}(0,1)\)</span>. <span class="math inline">\(\beta_i\)</span> and <span class="math inline">\(\rho_i\)</span> are parameters that control the probabilities of colonization and persistence. If a site was unoccupied by species <span class="math inline">\(i\)</span> in a previous year <span class="math inline">\(z(i,j,t−1)=0\)</span>, then the probability of colonization is given by the antilogit of <span class="math inline">\(\beta_i\)</span>. If a site was previously occupied <span class="math inline">\(z(i,j,t−1)=1\)</span>, the probability of population persistence is given by the anitlogit of <span class="math inline">\(\beta_i + \rho_i\)</span>. We assume that the distributions of species specific parameters are defined by community level hyperparameters such that <span class="math inline">\(\beta_i \sim \text{Normal}(\mu_\beta, \sigma_\beta)\)</span> and <span class="math inline">\(rho_i \sim \text{Normal}(\mu_\rho, \sigma_\rho)\)</span>. We can generate occupancy data as follows:</p>
+<p>where the occupancy status in year 0, <span class="math inline">\(z_0(i,j) \sim \text{Bernoulli}(\rho_{0i})\)</span>, and
+<span class="math inline">\(\rho_{0i} \sim \text{Uniform}(0,1)\)</span>. <span class="math inline">\(\beta_i\)</span> and <span class="math inline">\(\rho_i\)</span> are parameters that
+control the probabilities of colonization and persistence.
+If a site was unoccupied by species <span class="math inline">\(i\)</span> in a previous year <span class="math inline">\(z(i,j,t−1)=0\)</span>, then
+the probability of colonization is given by the antilogit of <span class="math inline">\(\beta_i\)</span>.
+If a site was previously occupied <span class="math inline">\(z(i,j,t−1)=1\)</span>, the probability of population
+persistence is given by the anitlogit of <span class="math inline">\(\beta_i + \rho_i\)</span>. We assume that
+the distributions of species specific parameters are defined by community level
+hyperparameters such that <span class="math inline">\(\beta_i \sim \text{Normal}(\mu_\beta, \sigma_\beta)\)</span> and
+<span class="math inline">\(rho_i \sim \text{Normal}(\mu_\rho, \sigma_\rho)\)</span>. We can generate occupancy data as
+follows:</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># community level hyperparameters</span></span>
+<span><span class='va'>mubeta</span> <span class='op'>&lt;-</span> <span class='fl'>1</span></span>
+<span><span class='va'>sdbeta</span> <span class='op'>&lt;-</span> <span class='fl'>0.2</span></span>
+<span></span>
+<span><span class='va'>murho</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>2</span></span>
+<span><span class='va'>sdrho</span> <span class='op'>&lt;-</span> <span class='fl'>.1</span></span>
+<span></span>
+<span><span class='co'># species specific random effects</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>  <span class='co'># for reproducibility</span></span>
+<span><span class='va'>beta</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>nspec</span>, <span class='va'>mubeta</span>, <span class='va'>sdbeta</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1008</span><span class='op'>)</span></span>
+<span><span class='va'>rho</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>nspec</span>, <span class='va'>murho</span>, <span class='va'>sdrho</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># initial occupancy states</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>237</span><span class='op'>)</span></span>
+<span><span class='va'>rho0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='va'>nspec</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>z0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nspec</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='va'>z0</span><span class='op'>[</span>, <span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='fl'>1</span>, <span class='va'>rho0</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='co'># subsequent occupancy</span></span>
+<span><span class='va'>z</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>lpsi</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>psi</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nsite</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nspec</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>        <span class='kw'>for</span> <span class='op'>(</span><span class='va'>t</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nyear</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>            <span class='kw'>if</span> <span class='op'>(</span><span class='va'>t</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>                <span class='va'>lpsi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>beta</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>rho</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>*</span> <span class='va'>z0</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span><span class='op'>]</span></span>
+<span>                <span class='va'>psi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>lpsi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>                <span class='va'>z</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>psi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>            <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span></span>
+<span>                <span class='va'>lpsi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>beta</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>rho</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>*</span> <span class='va'>z</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span> <span class='op'>-</span> <span class='fl'>1</span><span class='op'>]</span></span>
+<span>                <span class='va'>psi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>lpsi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>                <span class='va'>z</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>psi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>            <span class='op'>}</span></span>
+<span>        <span class='op'>}</span></span>
+<span>    <span class='op'>}</span></span>
+<span><span class='op'>}</span></span></code></pre>
 </div>
-<p>For simplicity, we’ll assume that there are no differences in species detectability among sites, years, or repeat surveys, but that detectability varies among species. We’ll again use hyperparameters to specify a distribution of detection probabilities in our community, such that <span class="math inline">\(\text{logit}(p_i) \sim \text{Normal}(\mu_p, \sigma_p)\)</span>.</p>
-<div class="layout-chunk" data-layout="l-body">
-
 </div>
-<p>We can now generate our observations based on occupancy states and detection probabilities. Although this could be vectorized for speed, let’s stick with nested for loops in the interest of clarity.</p>
+<p>For simplicity, we’ll assume that there are no differences in species
+detectability among sites, years, or repeat surveys, but that detectability
+varies among species. We’ll again use hyperparameters to specify a distribution
+of detection probabilities in our community, such that
+<span class="math inline">\(\text{logit}(p_i) \sim \text{Normal}(\mu_p, \sigma_p)\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p_p</span> <span class='op'>&lt;-</span> <span class='fl'>0.7</span></span>
+<span><span class='va'>mup</span> <span class='op'>&lt;-</span> <span class='fu'>logit</span><span class='op'>(</span><span class='va'>p_p</span><span class='op'>)</span></span>
+<span><span class='va'>sdp</span> <span class='op'>&lt;-</span> <span class='fl'>1.5</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>222</span><span class='op'>)</span></span>
+<span><span class='va'>lp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>nspec</span>, <span class='va'>mup</span>, <span class='va'>sdp</span><span class='op'>)</span></span>
+<span><span class='va'>p</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>lp</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>We can now generate our observations based on occupancy states and detection
+probabilities. Although this could be vectorized for speed, let’s stick with
+nested for loops in the interest of clarity.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span>, <span class='va'>nrep</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nsite</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nspec</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>        <span class='kw'>for</span> <span class='op'>(</span><span class='va'>t</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nyear</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>            <span class='kw'>for</span> <span class='op'>(</span><span class='va'>k</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nrep</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>                <span class='va'>x</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span>, <span class='va'>k</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>p</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>*</span> <span class='va'>z</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>            <span class='op'>}</span></span>
+<span>        <span class='op'>}</span></span>
+<span>    <span class='op'>}</span></span>
+<span><span class='op'>}</span></span></code></pre>
+</div>
 </div>
 <p>Now that we’ve collected some data, we can specify our model:</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"</span></span>
+<span><span class='st'>model{</span></span>
+<span><span class='st'>  #### priors</span></span>
+<span><span class='st'>  # beta hyperparameters</span></span>
+<span><span class='st'>  p_beta ~ dbeta(1, 1)</span></span>
+<span><span class='st'>  mubeta &lt;- log(p_beta / (1 - p_beta))</span></span>
+<span><span class='st'>  sigmabeta ~ dunif(0, 10)</span></span>
+<span><span class='st'>  taubeta &lt;- (1 / (sigmabeta * sigmabeta))</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # rho hyperparameters</span></span>
+<span><span class='st'>  p_rho ~ dbeta(1, 1)</span></span>
+<span><span class='st'>  murho &lt;- log(p_rho / (1 - p_rho))</span></span>
+<span><span class='st'>  sigmarho~dunif(0,10)</span></span>
+<span><span class='st'>  taurho&lt;-1/(sigmarho*sigmarho)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # p hyperparameters</span></span>
+<span><span class='st'>  p_p ~ dbeta(1, 1)</span></span>
+<span><span class='st'>  mup &lt;- log(p_p / (1 - p_p))</span></span>
+<span><span class='st'>  sigmap ~ dunif(0,10)</span></span>
+<span><span class='st'>  taup &lt;- (1 / (sigmap * sigmap))</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  #### occupancy model</span></span>
+<span><span class='st'>  # species specific random effects</span></span>
+<span><span class='st'>  for (i in 1:(nspec)) {</span></span>
+<span><span class='st'>    rho0[i] ~ dbeta(1, 1)</span></span>
+<span><span class='st'>    beta[i] ~ dnorm(mubeta, taubeta)</span></span>
+<span><span class='st'>    rho[i] ~ dnorm(murho, taurho)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # occupancy states</span></span>
+<span><span class='st'>  for (j in 1:nsite) {</span></span>
+<span><span class='st'>    for (i in 1:nspec) {</span></span>
+<span><span class='st'>      z0[j, i] ~ dbern(rho0[i])</span></span>
+<span><span class='st'>      logit(psi[j, i, 1]) &lt;- beta[i] + rho[i] * z0[j, i]</span></span>
+<span><span class='st'>      z[j, i, 1] ~ dbern(psi[j, i, 1])</span></span>
+<span><span class='st'>      for (t in 2:nyear) {</span></span>
+<span><span class='st'>        logit(psi[j, i, t]) &lt;- beta[i] + rho[i] * z[j, i, t-1]</span></span>
+<span><span class='st'>        z[j, i, t] ~ dbern(psi[j, i, t])</span></span>
+<span><span class='st'>      }</span></span>
+<span><span class='st'>    }</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  #### detection model</span></span>
+<span><span class='st'>  for(i in 1:nspec){</span></span>
+<span><span class='st'>    lp[i] ~ dnorm(mup, taup)</span></span>
+<span><span class='st'>    p[i] &lt;- (exp(lp[i])) / (1 + exp(lp[i]))</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  #### observation model</span></span>
+<span><span class='st'>  for (j in 1:nsite){</span></span>
+<span><span class='st'>    for (i in 1:nspec){</span></span>
+<span><span class='st'>      for (t in 1:nyear){</span></span>
+<span><span class='st'>        mu[j, i, t] &lt;- z[j, i, t] * p[i]</span></span>
+<span><span class='st'>        for (k in 1:nrep){</span></span>
+<span><span class='st'>          x[j, i, t, k] ~ dbern(mu[j, i, t])</span></span>
+<span><span class='st'>        }</span></span>
+<span><span class='st'>      }</span></span>
+<span><span class='st'>    }</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>}</span></span>
+<span><span class='st'>"</span>, fill<span class='op'>=</span><span class='cn'>TRUE</span>, file<span class='op'>=</span><span class='st'>"com_occ.txt"</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Next, bundle up the data.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>x</span>, nrep <span class='op'>=</span> <span class='va'>nrep</span>, nsite <span class='op'>=</span> <span class='va'>nsite</span>, nspec <span class='op'>=</span> <span class='va'>nspec</span>, nyear <span class='op'>=</span> <span class='va'>nyear</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Provide initial values.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>zinit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nsite</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nspec</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>        <span class='kw'>for</span> <span class='op'>(</span><span class='va'>t</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nyear</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>            <span class='va'>zinit</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span>, <span class='op'>]</span><span class='op'>)</span></span>
+<span>        <span class='op'>}</span></span>
+<span>    <span class='op'>}</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>inits</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>p_beta <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span>, p_rho <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span>, sigmarho <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>,</span>
+<span>        <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span>, sigmap <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>10</span><span class='op'>)</span>, sigmabeta <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>10</span><span class='op'>)</span>, z <span class='op'>=</span> <span class='va'>zinit</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span></code></pre>
 </div>
-<p>As a side note, it is helpful in JAGS to provide initial values for the incompletely observed occupancy state <span class="math inline">\(z\)</span> that are consistent with observed presences, as provided in this example with <code>zinit</code>. In other words if <span class="math inline">\(x(j,i,t,k)=1\)</span>, provide an intial value of 1 for <span class="math inline">\(z(j,i,t)\)</span>. Unlike WinBUGS and OpenBUGS, if you do not do this, you’ll often (but not always) encounter an error message such as:</p>
-<pre><code>
-# Error in jags.model(file = &#39;com_occ.txt&#39;, data = data, n.chains = 3) :
+</div>
+<p>As a side note, it is helpful in JAGS to provide initial values for the
+incompletely observed occupancy state <span class="math inline">\(z\)</span> that are consistent with observed
+presences, as provided in this example with <code>zinit</code>. In other words if
+<span class="math inline">\(x(j,i,t,k)=1\)</span>, provide an intial value of 1 for <span class="math inline">\(z(j,i,t)\)</span>. Unlike WinBUGS and
+OpenBUGS, if you do not do this, you’ll often (but not always) encounter an
+error message such as:</p>
+<pre><code># Error in jags.model(file = &#39;com_occ.txt&#39;, data = data, n.chains = 3) :
 # Error in node x[1,1,2,3] Observed node inconsistent with unobserved
 # parents at initialization</code></pre>
-<p>Now we’re ready to monitor and make inferences about some parameters of interest using JAGS.</p>
+<p>Now we’re ready to monitor and make inferences about some parameters of
+interest using JAGS.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>
-Compiling model graph
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>params</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"lp"</span>, <span class='st'>"beta"</span>, <span class='st'>"rho"</span><span class='op'>)</span></span>
+<span><span class='va'>ocmod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='st'>"com_occ.txt"</span>, inits <span class='op'>=</span> <span class='va'>inits</span>, data <span class='op'>=</span> <span class='va'>data</span>, </span>
+<span>                    n.chains <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
@@ -2262,6 +2569,10 @@ Initializing model
   |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
   |                                                        
   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>nburn</span> <span class='op'>&lt;-</span> <span class='fl'>10000</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>ocmod</span>, n.iter <span class='op'>=</span> <span class='va'>nburn</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -2365,6 +2676,9 @@ Initializing model
   |************************************************* |  98%
   |                                                        
   |**************************************************| 100%</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>ocmod</span>, n.iter <span class='op'>=</span> <span class='fl'>10000</span>, variable.names <span class='op'>=</span> <span class='va'>params</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -2468,6 +2782,9 @@ Initializing model
   |************************************************* |  98%
   |                                                        
   |**************************************************| 100%</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
 Iterations = 11001:21000
 Thinning interval = 1 
@@ -2478,45 +2795,49 @@ Sample size per chain = 10000
    plus standard error of the mean:
 
            Mean     SD Naive SE Time-series SE
-beta[1]  0.7813 0.3202 0.002264       0.008857
-beta[2]  1.0468 0.4867 0.003441       0.018857
-beta[3]  0.8522 0.3162 0.002236       0.007391
-lp[1]    4.3741 1.0743 0.007597       0.012395
-lp[2]    0.5424 0.2900 0.002051       0.003992
-lp[3]    3.6658 0.7431 0.005254       0.007818
-rho[1]  -1.8498 0.4820 0.003408       0.012032
-rho[2]  -2.4447 0.6907 0.004884       0.023822
-rho[3]  -2.1160 0.5040 0.003564       0.011320
+beta[1]  0.7679 0.3173 0.002244       0.007803
+beta[2]  1.0692 0.5820 0.004115       0.025065
+beta[3]  0.8474 0.3079 0.002177       0.006865
+lp[1]    4.3725 1.0684 0.007555       0.012143
+lp[2]    0.5402 0.2887 0.002041       0.004442
+lp[3]    3.6732 0.7496 0.005301       0.007816
+rho[1]  -1.8426 0.4896 0.003462       0.011560
+rho[2]  -2.4753 0.7493 0.005298       0.025575
+rho[3]  -2.1264 0.4960 0.003507       0.010948
 
 2. Quantiles for each variable:
 
             2.5%     25%     50%     75%   97.5%
-beta[1]  0.14747  0.5686  0.7791  1.0012  1.3968
-beta[2]  0.33931  0.7367  0.9735  1.2575  2.1867
-beta[3]  0.26391  0.6370  0.8411  1.0598  1.4899
-lp[1]    2.73335  3.6223  4.2153  4.9444  6.9273
-lp[2]   -0.01054  0.3467  0.5369  0.7349  1.1234
-lp[3]    2.41690  3.1469  3.5894  4.0979  5.3426
-rho[1]  -2.79556 -2.1745 -1.8518 -1.5268 -0.8797
-rho[2]  -4.07422 -2.8239 -2.3514 -1.9686 -1.3375
-rho[3]  -3.17608 -2.4312 -2.1003 -1.7746 -1.1768</code></pre>
+beta[1]  0.13043  0.5613  0.7683  0.9823  1.3799
+beta[2]  0.32801  0.7354  0.9671  1.2474  2.5356
+beta[3]  0.25697  0.6404  0.8386  1.0473  1.4730
+lp[1]    2.72967  3.6221  4.2195  4.9523  6.8553
+lp[2]   -0.01461  0.3429  0.5351  0.7323  1.1189
+lp[3]    2.41727  3.1468  3.5942  4.1151  5.3536
+rho[1]  -2.78718 -2.1701 -1.8526 -1.5200 -0.8629
+rho[2]  -4.23507 -2.8309 -2.3688 -1.9814 -1.3360
+rho[3]  -3.14440 -2.4444 -2.1116 -1.7889 -1.2037</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png" width="768" /></p>
 </div>
-<div id="refs" class="references">
-<div id="ref-dorazio2010models">
-<p>Dorazio, Robert M, Marc Kery, J Andrew Royle, and Matthias Plattner. 2010. “Models for Inference in Dynamic Metacommunity Systems.” <em>Ecology</em> 91 (8): 2466–75. <a href="https://doi.org/10.1890/09-1033.1">https://doi.org/10.1890/09-1033.1</a>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-dorazio2010models" class="csl-entry" role="doc-biblioentry">
+Dorazio, Robert M, Marc Kery, J Andrew Royle, and Matthias Plattner. 2010. <span>“Models for Inference in Dynamic Metacommunity Systems.”</span> <em>Ecology</em> 91 (8): 2466–75. <a href="https://doi.org/10.1890/09-1033.1">https://doi.org/10.1890/09-1033.1</a>.
 </div>
-<div id="ref-kery2008hierarchical">
-<p>Kéry, M, and J Andrew Royle. 2008. “Hierarchical Bayes Estimation of Species Richness and Occupancy in Spatially Replicated Surveys.” <em>Journal of Applied Ecology</em> 45 (2): 589–98. <a href="https://doi.org/10.1111/j.1365-2664.2007.01441.x">https://doi.org/10.1111/j.1365-2664.2007.01441.x</a>.</p>
+<div id="ref-kery2008hierarchical" class="csl-entry" role="doc-biblioentry">
+Kéry, M, and J Andrew Royle. 2008. <span>“Hierarchical Bayes Estimation of Species Richness and Occupancy in Spatially Replicated Surveys.”</span> <em>Journal of Applied Ecology</em> 45 (2): 589–98. <a href="https://doi.org/10.1111/j.1365-2664.2007.01441.x">https://doi.org/10.1111/j.1365-2664.2007.01441.x</a>.
 </div>
-<div id="ref-mackenzie2002estimating">
-<p>MacKenzie, Darryl I, James D Nichols, Gideon B Lachman, Sam Droege, J Andrew Royle, and Catherine A Langtimm. 2002. “Estimating Site Occupancy Rates When Detection Probabilities Are Less Than One.” <em>Ecology</em> 83 (8): 2248–55. <a href="https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2">https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2</a>.</p>
+<div id="ref-mackenzie2002estimating" class="csl-entry" role="doc-biblioentry">
+MacKenzie, Darryl I, James D Nichols, Gideon B Lachman, Sam Droege, J Andrew Royle, and Catherine A Langtimm. 2002. <span>“Estimating Site Occupancy Rates When Detection Probabilities Are Less Than One.”</span> <em>Ecology</em> 83 (8): 2248–55. <a href="https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2">https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2</a>.
 </div>
-<div id="ref-royle2008hierarchical">
-<p>Royle, J Andrew, and Robert M Dorazio. 2008. <em>Hierarchical Modeling and Inference in Ecology: The Analysis of Data from Populations, Metapopulations and Communities</em>. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-374097-7.50001-5">https://doi.org/10.1016/B978-0-12-374097-7.50001-5</a>.</p>
+<div id="ref-royle2008hierarchical" class="csl-entry" role="doc-biblioentry">
+Royle, J Andrew, and Robert M Dorazio. 2008. <em>Hierarchical Modeling and Inference in Ecology: The Analysis of Data from Populations, Metapopulations and Communities</em>. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-374097-7.50001-5">https://doi.org/10.1016/B978-0-12-374097-7.50001-5</a>.
 </div>
-<div id="ref-royle2007bayesian">
-<p>Royle, J Andrew, and Marc Kéry. 2007. “A Bayesian State-Space Formulation of Dynamic Occupancy Models.” <em>Ecology</em> 88 (7): 1813–23. <a href="https://doi.org/10.1890/06-0669.1">https://doi.org/10.1890/06-0669.1</a>.</p>
+<div id="ref-royle2007bayesian" class="csl-entry" role="doc-biblioentry">
+Royle, J Andrew, and Marc Kéry. 2007. <span>“A Bayesian State-Space Formulation of Dynamic Occupancy Models.”</span> <em>Ecology</em> 88 (7): 1813–23. <a href="https://doi.org/10.1890/06-0669.1">https://doi.org/10.1890/06-0669.1</a>.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->

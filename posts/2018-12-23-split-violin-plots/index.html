@@ -18,6 +18,75 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Split violin plots</title>
 
@@ -51,7 +120,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["split-violin-plots_files/bowser-1.9.3/bowser.min.js","split-violin-plots_files/distill-2.2.21/template.v2.js","split-violin-plots_files/figure-html5/beanplots-1.png","split-violin-plots_files/figure-html5/make-boxplot-1.png","split-violin-plots_files/figure-html5/violin-plot-1.png","split-violin-plots_files/jquery-1.11.3/jquery.min.js","split-violin-plots_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["split-violin-plots_files/anchor-4.2.2/anchor.min.js","split-violin-plots_files/bowser-1.9.3/bowser.min.js","split-violin-plots_files/distill-2.2.21/template.v2.js","split-violin-plots_files/figure-html5/beanplots-1.png","split-violin-plots_files/figure-html5/make-boxplot-1.png","split-violin-plots_files/figure-html5/violin-plot-1.png","split-violin-plots_files/header-attrs-2.16/header-attrs.js","split-violin-plots_files/jquery-1.11.3/jquery.min.js","split-violin-plots_files/jquery-3.6.0/jquery-3.6.0.js","split-violin-plots_files/jquery-3.6.0/jquery-3.6.0.min.js","split-violin-plots_files/jquery-3.6.0/jquery-3.6.0.min.map","split-violin-plots_files/popper-2.6.0/popper.min.js","split-violin-plots_files/tippy-6.2.7/tippy-bundle.umd.min.js","split-violin-plots_files/tippy-6.2.7/tippy-light-border.css","split-violin-plots_files/tippy-6.2.7/tippy.css","split-violin-plots_files/tippy-6.2.7/tippy.umd.min.js","split-violin-plots_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2014,7 +2083,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2079,7 +2154,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Split violin plots</h1>
-<p>Comparing distributions with split violin plots in R.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:visualization" class="dt-tag">visualization</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Comparing distributions with split violin plots in R.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2089,7 +2169,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Violin plots are useful for comparing distributions. When data are grouped by a factor with two levels (e.g. males and females), you can split the violins in half to see the difference between groups. Consider a 2 x 2 factorial experiment: treatments A and B are crossed with groups 1 and 2, with N=1000.</p>
+<p>Violin plots are useful for comparing distributions. When data are
+grouped by a factor with two levels (e.g. males and females), you can
+split the violins in half to see the difference between groups. Consider
+a 2 x 2 factorial experiment: treatments A and B are crossed with groups
+1 and 2, with N=1000.</p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
@@ -2097,16 +2181,37 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="split-violin-plots_files/figure-html5/make-boxplot-1.png" width="624" /></p>
 </div>
-<p>This gives us a rough comparison of the distribution in each group, but sometimes it’s nice to visualize the kernel density estimates instead.</p>
-<p>I recently ran into this issue and tweaked the vioplot() function from the <a href="http://cran.r-project.org/web/packages/vioplot/index.html">vioplot</a> package by Daniel Adler to make split violin plots. With <a href="https://gist.github.com/mbjoseph/5852613">vioplot2()</a>, the <code>side</code> argument specifies whether to plot the density on “both”, the “left”, or the “right” side.</p>
+<p>This gives us a rough comparison of the distribution in each group,
+but sometimes it’s nice to visualize the kernel density estimates instead.</p>
+<p>I recently ran into this issue and tweaked the vioplot() function from
+the <a href="http://cran.r-project.org/web/packages/vioplot/index.html">vioplot</a>
+package by Daniel Adler to make split violin plots.
+With <a href="https://gist.github.com/mbjoseph/5852613">vioplot2()</a>, the <code>side</code>
+argument specifies whether to plot the density on “both”, the “left”, or
+the “right” side.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="split-violin-plots_files/figure-html5/violin-plot-1.png" width="624" /></p>
 </div>
-<p>Last but not least, Peter Kampstra’s <a href="http://cran.r-project.org/web/packages/beanplot/index.html">beanplot</a> package uses beanplot() to make split density plots, but 1) plots a rug rather than a quantile box, 2) includes a line for the overall mean or median, and 3) makes it easier to change the kernel function.</p>
+<p>Last but not least, Peter Kampstra’s
+<a href="http://cran.r-project.org/web/packages/beanplot/index.html">beanplot</a>
+package uses beanplot() to make split
+density plots, but 1) plots a rug rather
+than a quantile box, 2) includes a line for the overall mean or median,
+and 3) makes it easier to change the kernel function.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="split-violin-plots_files/figure-html5/beanplots-1.png" width="624" data-distill-preview=1 /></p>
 </div>
-<p>There are <a href="http://thebiobucket.blogspot.com/2011/08/comparing-two-distributions.html">more</a> <a href="http://www.nicebread.de/comparing-all-quantiles-of-two-distributions-simultaneously/">ways</a> <a href="http://flowingdata.com/2012/05/15/how-to-visualize-and-compare-distributions/">than</a> <a href="http://heuristically.wordpress.com/2012/06/13/comparing-continuous-distributions-with-r/">one</a> <a href="http://www.stats4stem.org/r-dotplots-and-stripcharts.html">to</a> <a href="http://influentialpoints.com/Critiques/displaying_distributions_using_R.htm">skin</a> <a href="http://blog.earlh.com/index.php/2009/07/visualizing-and-comparing-distributions-part-8-of-a-series/">a</a> <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Spielendes_K%C3%A4tzchen.JPG/640px-Spielendes_K%C3%A4tzchen.JPG">cat</a>, and what one uses will probably come to personal preference.</p>
+<p>There are
+<a href="http://thebiobucket.blogspot.com/2011/08/comparing-two-distributions.html">more</a>
+<a href="http://www.nicebread.de/comparing-all-quantiles-of-two-distributions-simultaneously/">ways</a>
+<a href="http://flowingdata.com/2012/05/15/how-to-visualize-and-compare-distributions/">than</a>
+<a href="http://heuristically.wordpress.com/2012/06/13/comparing-continuous-distributions-with-r/">one</a>
+<a href="http://www.stats4stem.org/r-dotplots-and-stripcharts.html">to</a>
+<a href="http://influentialpoints.com/Critiques/displaying_distributions_using_R.htm">skin</a>
+<a href="http://blog.earlh.com/index.php/2009/07/visualizing-and-comparing-distributions-part-8-of-a-series/">a</a>
+<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Spielendes_K%C3%A4tzchen.JPG/640px-Spielendes_K%C3%A4tzchen.JPG">cat</a>,
+and what one uses will probably come to personal preference.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

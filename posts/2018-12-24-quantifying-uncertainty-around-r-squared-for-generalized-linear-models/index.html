@@ -18,6 +18,96 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Quantifying uncertainty around R-squared for generalized linear models</title>
 
@@ -44,8 +134,8 @@
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=A general and simple method for obtaining r2 from generalized linear mixed-effects models;citation_publication_date=2013;citation_publisher=Wiley Online Library;citation_volume=4;citation_author=Shinichi Nakagawa;citation_author=Holger Schielzeth"/>
-  <meta name="citation_reference" content="citation_title=Repeatability for gaussian and non-gaussian data: A practical guide for biologists;citation_publication_date=2010;citation_publisher=Wiley Online Library;citation_volume=85;citation_author=Shinichi Nakagawa;citation_author=Holger Schielzeth"/>
+  <meta name="citation_reference" content="citation_title=A general and simple method for obtaining R2 from generalized linear mixed-effects models;citation_publisher=Wiley Online Library;citation_volume=4;citation_author=Shinichi Nakagawa;citation_author=Holger Schielzeth"/>
+  <meta name="citation_reference" content="citation_title=Repeatability for gaussian and non-gaussian data: A practical guide for biologists;citation_publisher=Wiley Online Library;citation_volume=85;citation_author=Shinichi Nakagawa;citation_author=Holger Schielzeth"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -54,7 +144,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","pois_cov.txt","pois_intercept.txt","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/bowser-1.9.3/bowser.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/distill-2.2.21/template.v2.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/jquery-1.11.3/jquery.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","pois_cov.txt","pois_intercept.txt","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/anchor-4.2.2/anchor.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/bowser-1.9.3/bowser.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/distill-2.2.21/template.v2.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/header-attrs-2.16/header-attrs.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/jquery-1.11.3/jquery.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/jquery-3.6.0/jquery-3.6.0.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/jquery-3.6.0/jquery-3.6.0.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/jquery-3.6.0/jquery-3.6.0.min.map","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/popper-2.6.0/popper.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/tippy-6.2.7/tippy-bundle.umd.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/tippy-6.2.7/tippy-light-border.css","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/tippy-6.2.7/tippy.css","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/tippy-6.2.7/tippy.umd.min.js","quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2017,7 +2107,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2082,7 +2178,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Quantifying uncertainty around R-squared for generalized linear models</h1>
-<p>How to propage posterior uncertainty to R-squared in R and JAGS.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:jags" class="dt-tag">jags</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>How to propage posterior uncertainty to R-squared in R and JAGS.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2092,95 +2193,118 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>People love <span class="math inline">\(R^2\)</span>. As such, when Nakagawa and Schielzeth published A general and simple method for obtaining <span class="math inline">\(R^2\)</span> from generalized linear mixed-effects models in <em>Methods in Ecology and Evolution</em> earlier this year <span class="citation" data-cites="nakagawa2013general">(Nakagawa and Schielzeth <a href="#ref-nakagawa2013general">2013</a>)</span>, ecologists (amid increasing use of generalized linear mixed models (GLMMs)) <a href="http://ecologyforacrowdedplanet.wordpress.com/2013/02/26/r-squared-for-mixed-models/">rejoiced</a>. Now there’s <a href="http://jslefche.wordpress.com/2013/03/13/r2-for-linear-mixed-effects-models/">an R function</a> that automates <span class="math inline">\(R^2\)</span> calculations for GLMMs fit with the <code>lme4</code> package.</p>
-<p><span class="math inline">\(R^2\)</span> is usually reported as a point estimate of the variance explained by a model, using the maximum likelihood estimates of the model parameters and ignoring uncertainty around these estimates. Nakagawa and Schielzeth (2013) noted that it may be desirable to quantify the uncertainty around <span class="math inline">\(R^2\)</span> using MCMC sampling. So, here we are.</p>
+<p>People love <span class="math inline">\(R^2\)</span>. As such, when Nakagawa and Schielzeth published
+A general and simple method for obtaining <span class="math inline">\(R^2\)</span> from generalized linear
+mixed-effects models in <em>Methods in Ecology and Evolution</em> earlier this year
+<span class="citation" data-cites="nakagawa2013general">(<a href="#ref-nakagawa2013general" role="doc-biblioref">Nakagawa and Schielzeth 2013</a>)</span>,
+ecologists (amid increasing use of generalized linear mixed models (GLMMs))
+<a href="http://ecologyforacrowdedplanet.wordpress.com/2013/02/26/r-squared-for-mixed-models/">rejoiced</a>. Now there’s
+<a href="http://jslefche.wordpress.com/2013/03/13/r2-for-linear-mixed-effects-models/">an R function</a> that automates <span class="math inline">\(R^2\)</span> calculations for GLMMs fit with the <code>lme4</code> package.</p>
+<p><span class="math inline">\(R^2\)</span> is usually reported as a point estimate of the variance explained by a
+model, using the maximum likelihood estimates of the model parameters and
+ignoring uncertainty around these estimates. Nakagawa and Schielzeth (2013)
+noted that it may be desirable to quantify the uncertainty around <span class="math inline">\(R^2\)</span> using
+MCMC sampling. So, here we are.</p>
 <h3 id="background">Background</h3>
-<p><span class="math inline">\(R^2\)</span> quantifies the proportion of observed variance explained by a statistical model. When it is large (near 1), much of the variance in the data is explained by the model.</p>
-<p>Nakagawa and Schielzeth (2013) present two <span class="math inline">\(R^2\)</span> statistics for generalized linear mixed models:</p>
+<p><span class="math inline">\(R^2\)</span> quantifies the proportion of observed variance explained by a statistical
+model. When it is large (near 1), much of the variance in the data is explained
+by the model.</p>
+<p>Nakagawa and Schielzeth (2013) present two <span class="math inline">\(R^2\)</span> statistics for generalized
+linear mixed models:</p>
 <ol type="1">
-<li>Marginal <span class="math inline">\(R^2_{GLMM(m)}\)</span>, which represents the proportion of variance explained by fixed effects:</li>
+<li>Marginal <span class="math inline">\(R^2_{GLMM(m)}\)</span>, which represents the proportion of variance
+explained by fixed effects:</li>
 </ol>
 <p><span class="math display">\[R^2_{GLMM(m)} = \frac{\sigma^2_f}{\sigma^2_f + \sum_{l=1}^{u}\sigma^2_l + \sigma^2_d + \sigma^2_e}\]</span></p>
-<p>where <span class="math inline">\(\sigma^2_f\)</span> represents the variance in the fitted values (on a link scale) based on the fixed effects:</p>
+<p>where <span class="math inline">\(\sigma^2_f\)</span> represents the variance in the fitted values (on a link
+scale) based on the fixed effects:</p>
 <p><span class="math display">\[ \sigma^2_f = var(\boldsymbol{X \beta}) \]</span></p>
-<p><span class="math inline">\(\boldsymbol{X}\)</span> is the design matrix of the fixed effects, and <span class="math inline">\(\boldsymbol{\beta}\)</span> is the vector of fixed effects estimates.</p>
-<p><span class="math inline">\(\sum_{l=1}^{u}\sigma^2_l\)</span> represents the sum the variance components for all of <span class="math inline">\(u\)</span> random effects. <span class="math inline">\(\sigma^2_d\)</span> is the distribution-specific variance <span class="citation" data-cites="nakagawa2010repeatability">(Nakagawa and Schielzeth <a href="#ref-nakagawa2010repeatability">2010</a>)</span>, and <span class="math inline">\(\sigma^2_e\)</span> represents added dispersion.</p>
+<p><span class="math inline">\(\boldsymbol{X}\)</span> is the design matrix of the fixed effects, and
+<span class="math inline">\(\boldsymbol{\beta}\)</span> is the vector of fixed effects estimates.</p>
+<p><span class="math inline">\(\sum_{l=1}^{u}\sigma^2_l\)</span> represents the sum the variance components for all
+of <span class="math inline">\(u\)</span> random effects. <span class="math inline">\(\sigma^2_d\)</span> is the distribution-specific variance
+<span class="citation" data-cites="nakagawa2010repeatability">(<a href="#ref-nakagawa2010repeatability" role="doc-biblioref">Nakagawa and Schielzeth 2010</a>)</span>, and <span class="math inline">\(\sigma^2_e\)</span> represents added dispersion.</p>
 <ol start="2" type="1">
-<li>Conditional <span class="math inline">\(R^2_{GLMM(c)}\)</span> represents the proportion of variance explained by the fixed and random effects combined:</li>
+<li>Conditional <span class="math inline">\(R^2_{GLMM(c)}\)</span> represents the proportion of variance explained
+by the fixed and random effects combined:</li>
 </ol>
 <p><span class="math display">\[ R^2_{GLMM(c)} = \frac{\sigma^2_f + \sum_{l=1}^{u}\sigma^2_l}{\sigma^2_f + \sum_{l=1}^{u}\sigma^2_l + \sigma^2_d + \sigma^2_e} \]</span></p>
 <h3 id="point-estimation-of-r2_glmm">Point-estimation of <span class="math inline">\(R^2_{GLMM}\)</span></h3>
-<p>Here, I’ll follow the example of an overdispersed Poisson GLMM provided in the supplement to Nakagawa &amp; Schielzeth <span class="citation" data-cites="nakagawa2013general">(Nakagawa and Schielzeth <a href="#ref-nakagawa2013general">2013</a>)</span>. This is their most complicated example, and the simpler ones ought to be relatively straightforward for those that are interested in normal or binomial GLMMs.</p>
+<p>Here, I’ll follow the example of an overdispersed Poisson GLMM provided in the
+supplement to Nakagawa &amp; Schielzeth <span class="citation" data-cites="nakagawa2013general">(<a href="#ref-nakagawa2013general" role="doc-biblioref">Nakagawa and Schielzeth 2013</a>)</span>. This is their most
+complicated example, and the simpler ones ought to be relatively straightforward
+for those that are interested in normal or binomial GLMMs.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(arm)
-library(ggmcmc)
-library(lme4)
-library(rjags)
-
-# First, simulate data (code adapted from Nakagawa &amp; Schielzeth 2013):
-n_population &lt;- 8
-n &lt;- 100
-Population &lt;- gl(n_population, k = n / n_population, n)
-
-n_container &lt;- 10
-Container &lt;- gl(n_container, n / n_container, n)
-
-# Sex of the individuals. Uni-sex within each container (individuals are
-# sorted at the pupa stage)
-Sex &lt;- factor(sample(c(&quot;Female&quot;, &quot;Male&quot;), n, replace = TRUE))
-
-# Habitat at the collection site: dry or wet soil (four indiviudal from
-# each Habitat in each container)
-Habitat &lt;- factor(sample(c(&quot;dry&quot;, &quot;wet&quot;), n, replace = TRUE))
-
-# Food treatment at the larval stage: special food (&#39;Exp&#39;) or standard
-# food (&#39;Cont&#39;)
-Treatment &lt;- factor(sample(c(&quot;Cont&quot;, &quot;Exp&quot;), n, replace = TRUE))
-
-# Data combined in a dataframe
-Data &lt;- data.frame(Population = Population,
-    Container = Container, Sex = Sex,
-    Habitat = Habitat, Treatment = Treatment)
-
-# Subset the design matrix (only females express colour morphs)
-DataF &lt;- Data[Data$Sex == &quot;Female&quot;, ]
-
-# random effects
-PopulationE &lt;- rnorm(n_population, 0, sqrt(0.4))
-ContainerE &lt;- rnorm(n_container, 0, sqrt(0.05))
-
-# generation of response values on link scale (!) based on fixed effects,
-# random effects and residual errors
-EggLink &lt;- with(DataF,
-                  1.1 +
-                  0.5 * (as.numeric(Treatment) - 1) +
-                  0.1 * (as.numeric(Habitat) - 1) +
-                  PopulationE[Population] +
-                  ContainerE[Container])
-
-# data generation (on data scale!) based on Poisson distribution
-DataF$Egg &lt;- rpois(length(EggLink), exp(EggLink))</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://CRAN.R-project.org/package=arm'>arm</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://xavier-fim.net/packages/ggmcmc/'>ggmcmc</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/lme4/lme4/'>lme4</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mcmc-jags.sourceforge.io'>rjags</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># First, simulate data (code adapted from Nakagawa &amp; Schielzeth 2013):</span></span>
+<span><span class='va'>n_population</span> <span class='op'>&lt;-</span> <span class='fl'>8</span></span>
+<span><span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fl'>100</span></span>
+<span><span class='va'>Population</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/gl.html'>gl</a></span><span class='op'>(</span><span class='va'>n_population</span>, k <span class='op'>=</span> <span class='va'>n</span> <span class='op'>/</span> <span class='va'>n_population</span>, <span class='va'>n</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>n_container</span> <span class='op'>&lt;-</span> <span class='fl'>10</span></span>
+<span><span class='va'>Container</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/gl.html'>gl</a></span><span class='op'>(</span><span class='va'>n_container</span>, <span class='va'>n</span> <span class='op'>/</span> <span class='va'>n_container</span>, <span class='va'>n</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Sex of the individuals. Uni-sex within each container (individuals are</span></span>
+<span><span class='co'># sorted at the pupa stage)</span></span>
+<span><span class='va'>Sex</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Female"</span>, <span class='st'>"Male"</span><span class='op'>)</span>, <span class='va'>n</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Habitat at the collection site: dry or wet soil (four indiviudal from</span></span>
+<span><span class='co'># each Habitat in each container)</span></span>
+<span><span class='va'>Habitat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"dry"</span>, <span class='st'>"wet"</span><span class='op'>)</span>, <span class='va'>n</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Food treatment at the larval stage: special food ('Exp') or standard</span></span>
+<span><span class='co'># food ('Cont')</span></span>
+<span><span class='va'>Treatment</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Cont"</span>, <span class='st'>"Exp"</span><span class='op'>)</span>, <span class='va'>n</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Data combined in a dataframe</span></span>
+<span><span class='va'>Data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>Population <span class='op'>=</span> <span class='va'>Population</span>,</span>
+<span>    Container <span class='op'>=</span> <span class='va'>Container</span>, Sex <span class='op'>=</span> <span class='va'>Sex</span>,</span>
+<span>    Habitat <span class='op'>=</span> <span class='va'>Habitat</span>, Treatment <span class='op'>=</span> <span class='va'>Treatment</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Subset the design matrix (only females express colour morphs)</span></span>
+<span><span class='va'>DataF</span> <span class='op'>&lt;-</span> <span class='va'>Data</span><span class='op'>[</span><span class='va'>Data</span><span class='op'>$</span><span class='va'>Sex</span> <span class='op'>==</span> <span class='st'>"Female"</span>, <span class='op'>]</span></span>
+<span></span>
+<span><span class='co'># random effects</span></span>
+<span><span class='va'>PopulationE</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>n_population</span>, <span class='fl'>0</span>, <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='fl'>0.4</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>ContainerE</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>n_container</span>, <span class='fl'>0</span>, <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='fl'>0.05</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># generation of response values on link scale (!) based on fixed effects,</span></span>
+<span><span class='co'># random effects and residual errors</span></span>
+<span><span class='va'>EggLink</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>DataF</span>,</span>
+<span>                  <span class='fl'>1.1</span> <span class='op'>+</span></span>
+<span>                  <span class='fl'>0.5</span> <span class='op'>*</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>Treatment</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>                  <span class='fl'>0.1</span> <span class='op'>*</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>Habitat</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>                  <span class='va'>PopulationE</span><span class='op'>[</span><span class='va'>Population</span><span class='op'>]</span> <span class='op'>+</span></span>
+<span>                  <span class='va'>ContainerE</span><span class='op'>[</span><span class='va'>Container</span><span class='op'>]</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># data generation (on data scale!) based on Poisson distribution</span></span>
+<span><span class='va'>DataF</span><span class='op'>$</span><span class='va'>Egg</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>EggLink</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>EggLink</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Having simulated a dataset, calculate the <span class="math inline">\(R^2\)</span> point-estimates, using the <code>lme4</code> package to fit the model.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# Creating a dummy variable that allows estimating additive dispersion in
-# glmer This triggers a warning message when fitting the model
-Unit &lt;- factor(1:length(DataF$Egg))
-
-# Fit null model without fixed effects (but including all random effects)
-m0 &lt;- glmer(Egg ~ 1 + (1 | Population) + (1 | Container) + (1 | Unit),
-    family = &quot;poisson&quot;, data = DataF)
-
-# Fit alternative model including fixed and all random effects
-mF &lt;- glmer(Egg ~ Treatment + Habitat + (1 | Population) + (1 | Container) +
-    (1 | Unit), family = &quot;poisson&quot;, data = DataF)
-
-# View model fits for both models
-summary(m0)</code></pre>
-<pre><code>
-Generalized linear mixed model fit by maximum likelihood (Laplace
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Creating a dummy variable that allows estimating additive dispersion in</span></span>
+<span><span class='co'># glmer This triggers a warning message when fitting the model</span></span>
+<span><span class='va'>Unit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>DataF</span><span class='op'>$</span><span class='va'>Egg</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Fit null model without fixed effects (but including all random effects)</span></span>
+<span><span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lme4/man/glmer.html'>glmer</a></span><span class='op'>(</span><span class='va'>Egg</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>|</span> <span class='va'>Population</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>|</span> <span class='va'>Container</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>|</span> <span class='va'>Unit</span><span class='op'>)</span>,</span>
+<span>    family <span class='op'>=</span> <span class='st'>"poisson"</span>, data <span class='op'>=</span> <span class='va'>DataF</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Fit alternative model including fixed and all random effects</span></span>
+<span><span class='va'>mF</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lme4/man/glmer.html'>glmer</a></span><span class='op'>(</span><span class='va'>Egg</span> <span class='op'>~</span> <span class='va'>Treatment</span> <span class='op'>+</span> <span class='va'>Habitat</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>|</span> <span class='va'>Population</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>|</span> <span class='va'>Container</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>    <span class='op'>(</span><span class='fl'>1</span> <span class='op'>|</span> <span class='va'>Unit</span><span class='op'>)</span>, family <span class='op'>=</span> <span class='st'>"poisson"</span>, data <span class='op'>=</span> <span class='va'>DataF</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># View model fits for both models</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
 Formula: Egg ~ 1 + (1 | Population) + (1 | Container) + (1 | Unit)
@@ -2205,12 +2329,12 @@ Fixed effects:
 (Intercept)   1.5526     0.2604   5.962 2.49e-09 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-convergence code: 0
-Model failed to converge with max|grad| = 0.00622563 (tol = 0.001, component 1)</code></pre>
-<pre class="r"><code>
-summary(mF)</code></pre>
-<pre><code>
-Generalized linear mixed model fit by maximum likelihood (Laplace
+optimizer (Nelder_Mead) convergence code: 0 (OK)
+Model failed to converge with max|grad| = 0.00622563 (tol = 0.002, component 1)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
  Family: poisson  ( log )
 Formula: 
@@ -2244,36 +2368,36 @@ Correlation of Fixed Effects:
             (Intr) TrtmnE
 TreatmntExp -0.232       
 Habitatwet  -0.292  0.153
-convergence code: 0
-boundary (singular) fit: see ?isSingular</code></pre>
-<pre class="r"><code>
-# Extraction of fitted value for the alternative model fixef() extracts
-# coefficents for fixed effects model.matrix(mF) returns design matrix
-Fixed &lt;- fixef(mF)[2] * model.matrix(mF)[, 2] + fixef(mF)[3] * model.matrix(mF)[, 3]
-
-# Calculation of the variance in fitted values
-VarF &lt;- var(Fixed)
-
-# An alternative way for getting the same result
-VarF &lt;- var(as.vector(fixef(mF) %*% t(model.matrix(mF))))
-
-# R2GLMM(m) - marginal R2GLMM see Equ. 29 and 30 and Table 2 fixef(m0)
-# returns the estimate for the intercept of null model
-R2m &lt;- VarF/(VarF + VarCorr(mF)$Container[1] +
-               VarCorr(mF)$Population[1] + VarCorr(mF)$Unit[1] +
-                log(1 + 1/exp(as.numeric(fixef(m0))))
-            )
-
-# R2GLMM(c) - conditional R2GLMM for full model Equ. XXX, XXX
-R2c &lt;- (VarF + VarCorr(mF)$Container[1] + VarCorr(mF)$Population[1])/
-         (VarF + VarCorr(mF)$Container[1] + VarCorr(mF)$Population[1] +
-           VarCorr(mF)$Unit[1] + log(1 + 1/exp(as.numeric(fixef(m0))))
-         )
-
-# Print marginal and conditional R-squared values
-cbind(R2m, R2c)</code></pre>
-<pre><code>
-           R2m       R2c
+optimizer (Nelder_Mead) convergence code: 0 (OK)
+boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Extraction of fitted value for the alternative model fixef() extracts</span></span>
+<span><span class='co'># coefficents for fixed effects model.matrix(mF) returns design matrix</span></span>
+<span><span class='va'>Fixed</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/fixed.effects.html'>fixef</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/stats/model.matrix.html'>model.matrix</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>]</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/fixed.effects.html'>fixef</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/stats/model.matrix.html'>model.matrix</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>[</span>, <span class='fl'>3</span><span class='op'>]</span></span>
+<span></span>
+<span><span class='co'># Calculation of the variance in fitted values</span></span>
+<span><span class='va'>VarF</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>Fixed</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># An alternative way for getting the same result</span></span>
+<span><span class='va'>VarF</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/nlme/man/fixed.effects.html'>fixef</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/r/base/matmult.html'>%*%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/model.matrix.html'>model.matrix</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># R2GLMM(m) - marginal R2GLMM see Equ. 29 and 30 and Table 2 fixef(m0)</span></span>
+<span><span class='co'># returns the estimate for the intercept of null model</span></span>
+<span><span class='va'>R2m</span> <span class='op'>&lt;-</span> <span class='va'>VarF</span><span class='op'>/</span><span class='op'>(</span><span class='va'>VarF</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>$</span><span class='va'>Container</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span></span>
+<span>               <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>$</span><span class='va'>Unit</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span></span>
+<span>                <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='fl'>1</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/nlme/man/fixed.effects.html'>fixef</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>            <span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># R2GLMM(c) - conditional R2GLMM for full model Equ. XXX, XXX</span></span>
+<span><span class='va'>R2c</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>VarF</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>$</span><span class='va'>Container</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span><span class='op'>/</span></span>
+<span>         <span class='op'>(</span><span class='va'>VarF</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>$</span><span class='va'>Container</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span></span>
+<span>           <span class='fu'><a href='https://rdrr.io/pkg/nlme/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>mF</span><span class='op'>)</span><span class='op'>$</span><span class='va'>Unit</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='fl'>1</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/nlme/man/fixed.effects.html'>fixef</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>         <span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Print marginal and conditional R-squared values</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>R2m</span>, <span class='va'>R2c</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>           R2m       R2c
 [1,] 0.0181809 0.7251428</code></pre>
 </div>
 <p>Having stored our point estimates, we can now turn to Bayesian methods instead, and generate <span class="math inline">\(R^2\)</span> posteriors.</p>
@@ -2281,25 +2405,25 @@ cbind(R2m, R2c)</code></pre>
 <p>We need to fit two models in order to get the needed parameters for <span class="math inline">\(R^2_{GLMM}\)</span>. First, a model that includes all random effects, but only an intercept fixed effect is fit to estimate the distribution specific variance <span class="math inline">\(\sigma^2_d\)</span>. Second, we fit a model that includes all random and all fixed effects to estimate the remaining variance components.</p>
 <p>First I’ll clean up the data that we’ll feed to <a href="http://mcmc-jags.sourceforge.net/">JAGS</a>:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# Prepare the data
-jags_d &lt;- as.list(DataF)[-c(2, 3)]  # redefine container, don&#39;t need sex
-jags_d$nobs &lt;- nrow(DataF)
-jags_d$npop &lt;- length(unique(jags_d$Population))
-
-# renumber containers from 1:ncontainer for ease of indexing
-jags_d$Container &lt;- rep(NA, nrow(DataF))
-for (i in 1:nrow(DataF)) {
-  jags_d$Container[i] &lt;- which(unique(DataF$Container) == DataF$Container[i])
-}
-jags_d$ncont &lt;- length(unique(jags_d$Container))
-
-# Convert binary factors to 0&#39;s and 1&#39;s
-jags_d$Habitat &lt;- ifelse(jags_d$Habitat == &quot;dry&quot;, 0, 1)
-jags_d$Treatment &lt;- ifelse(jags_d$Treatment == &quot;Cont&quot;, 0, 1)
-str(jags_d)</code></pre>
-<pre><code>
-List of 8
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Prepare the data</span></span>
+<span><span class='va'>jags_d</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>as.list</a></span><span class='op'>(</span><span class='va'>DataF</span><span class='op'>)</span><span class='op'>[</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>]</span>  <span class='co'># redefine container, don't need sex</span></span>
+<span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>nobs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>DataF</span><span class='op'>)</span></span>
+<span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>npop</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># renumber containers from 1:ncontainer for ease of indexing</span></span>
+<span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Container</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>DataF</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>DataF</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Container</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>DataF</span><span class='op'>$</span><span class='va'>Container</span><span class='op'>)</span> <span class='op'>==</span> <span class='va'>DataF</span><span class='op'>$</span><span class='va'>Container</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>ncont</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Container</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Convert binary factors to 0's and 1's</span></span>
+<span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Habitat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Habitat</span> <span class='op'>==</span> <span class='st'>"dry"</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Treatment</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Treatment</span> <span class='op'>==</span> <span class='st'>"Cont"</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>jags_d</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>List of 8
  $ Population: Factor w/ 8 levels &quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,..: 1 1 1 1 1 1 2 2 2 2 ...
  $ Habitat   : num [1:55] 0 0 1 1 1 0 1 1 0 1 ...
  $ Treatment : num [1:55] 0 0 0 0 1 0 1 0 1 0 ...
@@ -2311,49 +2435,49 @@ List of 8
 </div>
 <p>Then, fitting the intercept model:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# intercept model statement:
-cat(&quot;
-model{
-  # priors on precisions (inverse variances)
-  tau.pop ~ dgamma(0.01, 0.01)
-  sd.pop &lt;- sqrt(1/tau.pop)
-  tau.cont ~ dgamma(0.01, 0.01)
-  sd.cont &lt;- sqrt(1/tau.cont)
-  tau.unit ~ dgamma(0.01, 0.01)
-  sd.unit &lt;- sqrt(1/tau.unit)
-  # prior on intercept
-  alpha ~ dnorm(0, 0.01)
-
-  # random effect of container
-  for (i in 1:ncont){
-    cont[i] ~ dnorm(0, tau.cont)
-  }
-
-  # random effect of population
-  for (i in 1:npop){
-    pop[i] ~ dnorm(0, tau.pop)
-  }
-
-  # likelihood
-  for (i in 1:nobs){
-    Egg[i] ~ dpois(mu[i])
-    log(mu[i]) &lt;- cont[Container[i]] + pop[Population[i]] + unit[i]
-    unit[i] ~ dnorm(alpha, tau.unit)
-  }
-}
-    &quot;, fill=T, file=&quot;pois_intercept.txt&quot;)
-
-nstore &lt;- 2000
-nthin &lt;- 20
-ni &lt;- nstore*nthin
-
-int_mod &lt;- jags.model(&quot;pois_intercept.txt&quot;,
-                      data=jags_d[-c(2, 3)], # exclude unused data
-                      n.chains=3,
-                      n.adapt=5000)</code></pre>
-<pre><code>
-Compiling model graph
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># intercept model statement:</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"</span></span>
+<span><span class='st'>model{</span></span>
+<span><span class='st'>  # priors on precisions (inverse variances)</span></span>
+<span><span class='st'>  tau.pop ~ dgamma(0.01, 0.01)</span></span>
+<span><span class='st'>  sd.pop &lt;- sqrt(1/tau.pop)</span></span>
+<span><span class='st'>  tau.cont ~ dgamma(0.01, 0.01)</span></span>
+<span><span class='st'>  sd.cont &lt;- sqrt(1/tau.cont)</span></span>
+<span><span class='st'>  tau.unit ~ dgamma(0.01, 0.01)</span></span>
+<span><span class='st'>  sd.unit &lt;- sqrt(1/tau.unit)</span></span>
+<span><span class='st'>  # prior on intercept</span></span>
+<span><span class='st'>  alpha ~ dnorm(0, 0.01)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # random effect of container</span></span>
+<span><span class='st'>  for (i in 1:ncont){</span></span>
+<span><span class='st'>    cont[i] ~ dnorm(0, tau.cont)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # random effect of population</span></span>
+<span><span class='st'>  for (i in 1:npop){</span></span>
+<span><span class='st'>    pop[i] ~ dnorm(0, tau.pop)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood</span></span>
+<span><span class='st'>  for (i in 1:nobs){</span></span>
+<span><span class='st'>    Egg[i] ~ dpois(mu[i])</span></span>
+<span><span class='st'>    log(mu[i]) &lt;- cont[Container[i]] + pop[Population[i]] + unit[i]</span></span>
+<span><span class='st'>    unit[i] ~ dnorm(alpha, tau.unit)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>}</span></span>
+<span><span class='st'>    "</span>, fill<span class='op'>=</span><span class='cn'>T</span>, file<span class='op'>=</span><span class='st'>"pois_intercept.txt"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>nstore</span> <span class='op'>&lt;-</span> <span class='fl'>2000</span></span>
+<span><span class='va'>nthin</span> <span class='op'>&lt;-</span> <span class='fl'>20</span></span>
+<span><span class='va'>ni</span> <span class='op'>&lt;-</span> <span class='va'>nstore</span><span class='op'>*</span><span class='va'>nthin</span></span>
+<span></span>
+<span><span class='va'>int_mod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span><span class='st'>"pois_intercept.txt"</span>,</span>
+<span>                      data<span class='op'>=</span><span class='va'>jags_d</span><span class='op'>[</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>]</span>, <span class='co'># exclude unused data</span></span>
+<span>                      n.chains<span class='op'>=</span><span class='fl'>3</span>,</span>
+<span>                      n.adapt<span class='op'>=</span><span class='fl'>5000</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
@@ -2466,10 +2590,11 @@ Initializing model
   |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
   |                                                        
   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
-<pre class="r"><code>
-vars &lt;- c(&quot;sd.pop&quot;, &quot;sd.cont&quot;, &quot;sd.unit&quot;, &quot;alpha&quot;)
-int_out &lt;- coda.samples(int_mod, n.iter=ni, thin=nthin,
-                        variable.names=vars)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>vars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"sd.pop"</span>, <span class='st'>"sd.cont"</span>, <span class='st'>"sd.unit"</span>, <span class='st'>"alpha"</span><span class='op'>)</span></span>
+<span><span class='va'>int_out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>int_mod</span>, n.iter<span class='op'>=</span><span class='va'>ni</span>, thin<span class='op'>=</span><span class='va'>nthin</span>,</span>
+<span>                        variable.names<span class='op'>=</span><span class='va'>vars</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -2576,48 +2701,48 @@ int_out &lt;- coda.samples(int_mod, n.iter=ni, thin=nthin,
 </div>
 <p>Then, fit the full mixed-model with all fixed and random effects:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# covariate model statement:
-cat(&quot;
-model{
-  # priors on precisions (inverse variances)
-  tau.pop ~ dgamma(0.01, 0.01)
-  sd.pop &lt;- sqrt(1/tau.pop)
-  tau.cont ~ dgamma(0.01, 0.01)
-  sd.cont &lt;- sqrt(1/tau.cont)
-  tau.unit ~ dgamma(0.01, 0.01)
-  sd.unit &lt;- sqrt(1/tau.unit)
-  # priors on coefficients
-  alpha ~ dnorm(0, 0.01)
-  beta1 ~ dnorm(0, 0.01)
-  beta2 ~ dnorm(0, 0.01)
-
-  # random effect of container
-  for (i in 1:ncont){
-    cont[i] ~ dnorm(0, tau.cont)
-  }
-
-  # random effect of population
-  for (i in 1:npop){
-    pop[i] ~ dnorm(0, tau.pop)
-  }
-
-  # likelihood
-  for (i in 1:nobs){
-    Egg[i] ~ dpois(mu[i])
-    log(mu[i]) &lt;- cont[Container[i]] + pop[Population[i]] + unit[i]
-    mu_f[i] &lt;- alpha + beta1 * Treatment[i] + beta2 * Habitat[i]
-    unit[i] ~ dnorm(mu_f[i], tau.unit)
-  }
-}
-    &quot;, fill=T, file=&quot;pois_cov.txt&quot;)
-
-cov_mod &lt;- jags.model(&quot;pois_cov.txt&quot;,
-                      data=jags_d,
-                      n.chains=3,
-                      n.adapt=5000)</code></pre>
-<pre><code>
-Compiling model graph
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># covariate model statement:</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"</span></span>
+<span><span class='st'>model{</span></span>
+<span><span class='st'>  # priors on precisions (inverse variances)</span></span>
+<span><span class='st'>  tau.pop ~ dgamma(0.01, 0.01)</span></span>
+<span><span class='st'>  sd.pop &lt;- sqrt(1/tau.pop)</span></span>
+<span><span class='st'>  tau.cont ~ dgamma(0.01, 0.01)</span></span>
+<span><span class='st'>  sd.cont &lt;- sqrt(1/tau.cont)</span></span>
+<span><span class='st'>  tau.unit ~ dgamma(0.01, 0.01)</span></span>
+<span><span class='st'>  sd.unit &lt;- sqrt(1/tau.unit)</span></span>
+<span><span class='st'>  # priors on coefficients</span></span>
+<span><span class='st'>  alpha ~ dnorm(0, 0.01)</span></span>
+<span><span class='st'>  beta1 ~ dnorm(0, 0.01)</span></span>
+<span><span class='st'>  beta2 ~ dnorm(0, 0.01)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # random effect of container</span></span>
+<span><span class='st'>  for (i in 1:ncont){</span></span>
+<span><span class='st'>    cont[i] ~ dnorm(0, tau.cont)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # random effect of population</span></span>
+<span><span class='st'>  for (i in 1:npop){</span></span>
+<span><span class='st'>    pop[i] ~ dnorm(0, tau.pop)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood</span></span>
+<span><span class='st'>  for (i in 1:nobs){</span></span>
+<span><span class='st'>    Egg[i] ~ dpois(mu[i])</span></span>
+<span><span class='st'>    log(mu[i]) &lt;- cont[Container[i]] + pop[Population[i]] + unit[i]</span></span>
+<span><span class='st'>    mu_f[i] &lt;- alpha + beta1 * Treatment[i] + beta2 * Habitat[i]</span></span>
+<span><span class='st'>    unit[i] ~ dnorm(mu_f[i], tau.unit)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>}</span></span>
+<span><span class='st'>    "</span>, fill<span class='op'>=</span><span class='cn'>T</span>, file<span class='op'>=</span><span class='st'>"pois_cov.txt"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>cov_mod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span><span class='st'>"pois_cov.txt"</span>,</span>
+<span>                      data<span class='op'>=</span><span class='va'>jags_d</span>,</span>
+<span>                      n.chains<span class='op'>=</span><span class='fl'>3</span>,</span>
+<span>                      n.adapt<span class='op'>=</span><span class='fl'>5000</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
@@ -2730,10 +2855,11 @@ Initializing model
   |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
   |                                                        
   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
-<pre class="r"><code>
-vars2 &lt;- c(&quot;sd.pop&quot;, &quot;sd.cont&quot;, &quot;sd.unit&quot;, &quot;alpha&quot;, &quot;beta1&quot;, &quot;beta2&quot;)
-cov_out &lt;- coda.samples(cov_mod, n.iter=ni, thin=nthin,
-                        variable.names=vars2)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>vars2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"sd.pop"</span>, <span class='st'>"sd.cont"</span>, <span class='st'>"sd.unit"</span>, <span class='st'>"alpha"</span>, <span class='st'>"beta1"</span>, <span class='st'>"beta2"</span><span class='op'>)</span></span>
+<span><span class='va'>cov_out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>cov_mod</span>, n.iter<span class='op'>=</span><span class='va'>ni</span>, thin<span class='op'>=</span><span class='va'>nthin</span>,</span>
+<span>                        variable.names<span class='op'>=</span><span class='va'>vars2</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -2840,62 +2966,72 @@ cov_out &lt;- coda.samples(cov_mod, n.iter=ni, thin=nthin,
 </div>
 <p>For every MCMC draw, we can calculate <span class="math inline">\(R^2_{GLMM}\)</span>, generating posteriors for both the marginal and conditional values.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# Step 1: variance in expected values (using fixed effects only)
-d_int &lt;- ggs(int_out)
-d_cov &lt;- ggs(cov_out)
-
-alpha_cov &lt;- subset(d_cov, Parameter == &quot;alpha&quot;)$value
-alpha_int &lt;- subset(d_int, Parameter == &quot;alpha&quot;)$value
-b1_cov &lt;- subset(d_cov, Parameter == &quot;beta1&quot;)$value
-b2_cov &lt;- subset(d_cov, Parameter == &quot;beta2&quot;)$value
-
-Xmat &lt;- cbind(rep(1, jags_d$nobs), jags_d$Treatment, jags_d$Habitat)
-beta_mat &lt;- cbind(alpha_cov, b1_cov, b2_cov)
-
-fixed_expect &lt;- array(dim = c(nstore, jags_d$nobs))
-varF &lt;- rep(NA, nstore)
-for (i in 1:nstore) {
-    fixed_expect[i, ] &lt;- beta_mat[i, ] %*% t(Xmat)
-    varF[i] &lt;- var(fixed_expect[i, ])
-}
-
-# Step 2: calculate remaining variance components
-# among container variance
-varCont &lt;- subset(d_cov, Parameter == &quot;sd.cont&quot;)$value^2
-# among population variance
-varPop &lt;- subset(d_cov, Parameter == &quot;sd.pop&quot;)$value^2
-# overdispersion variance
-varUnit &lt;- subset(d_cov, Parameter == &quot;sd.unit&quot;)$value^2
-# distribution variance (Table 2, Nakagawa &amp; Schielzeth 2013)
-varDist &lt;- log(1/exp(alpha_int) + 1)
-
-# Finally, calculate posterior R-squared values
-# marginal
-postR2m &lt;- varF/(varF + varCont + varPop + varUnit + varDist)
-# conditional
-postR2c &lt;- (varF + varCont + varPop)/
-             (varF + varCont + varPop + varUnit + varDist)
-
-# compare posterior R-squared values to point estimates
-par(mfrow = c(1, 2))
-hist(postR2m, main = &quot;Marginal R-squared&quot;,
-        ylab = &quot;Posterior density&quot;,
-        xlab = NULL, breaks = 20)
-abline(v = R2m, col = &quot;blue&quot;, lwd = 4)
-hist(postR2c, main = &quot;Conditional R-squared&quot;,
-        ylab = &quot;Posterior density&quot;,
-        xlab = NULL, breaks = 25)
-abline(v = R2c, col = &quot;blue&quot;, lwd = 4)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Step 1: variance in expected values (using fixed effects only)</span></span>
+<span><span class='va'>d_int</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs.html'>ggs</a></span><span class='op'>(</span><span class='va'>int_out</span><span class='op'>)</span></span>
+<span><span class='va'>d_cov</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs.html'>ggs</a></span><span class='op'>(</span><span class='va'>cov_out</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>alpha_cov</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>d_cov</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"alpha"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>alpha_int</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>d_int</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"alpha"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>b1_cov</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>d_cov</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"beta1"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>b2_cov</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>d_cov</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"beta2"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span></span>
+<span><span class='va'>Xmat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>jags_d</span><span class='op'>$</span><span class='va'>nobs</span><span class='op'>)</span>, <span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Treatment</span>, <span class='va'>jags_d</span><span class='op'>$</span><span class='va'>Habitat</span><span class='op'>)</span></span>
+<span><span class='va'>beta_mat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>alpha_cov</span>, <span class='va'>b1_cov</span>, <span class='va'>b2_cov</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>fixed_expect</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nstore</span>, <span class='va'>jags_d</span><span class='op'>$</span><span class='va'>nobs</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>varF</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='va'>nstore</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nstore</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='va'>fixed_expect</span><span class='op'>[</span><span class='va'>i</span>, <span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>beta_mat</span><span class='op'>[</span><span class='va'>i</span>, <span class='op'>]</span> <span class='op'><a href='https://rdrr.io/r/base/matmult.html'>%*%</a></span> <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>Xmat</span><span class='op'>)</span></span>
+<span>    <span class='va'>varF</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>fixed_expect</span><span class='op'>[</span><span class='va'>i</span>, <span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='co'># Step 2: calculate remaining variance components</span></span>
+<span><span class='co'># among container variance</span></span>
+<span><span class='va'>varCont</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>d_cov</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"sd.cont"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span><span class='op'>^</span><span class='fl'>2</span></span>
+<span><span class='co'># among population variance</span></span>
+<span><span class='va'>varPop</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>d_cov</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"sd.pop"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span><span class='op'>^</span><span class='fl'>2</span></span>
+<span><span class='co'># overdispersion variance</span></span>
+<span><span class='va'>varUnit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>d_cov</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"sd.unit"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span><span class='op'>^</span><span class='fl'>2</span></span>
+<span><span class='co'># distribution variance (Table 2, Nakagawa &amp; Schielzeth 2013)</span></span>
+<span><span class='va'>varDist</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>alpha_int</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Finally, calculate posterior R-squared values</span></span>
+<span><span class='co'># marginal</span></span>
+<span><span class='va'>postR2m</span> <span class='op'>&lt;-</span> <span class='va'>varF</span><span class='op'>/</span><span class='op'>(</span><span class='va'>varF</span> <span class='op'>+</span> <span class='va'>varCont</span> <span class='op'>+</span> <span class='va'>varPop</span> <span class='op'>+</span> <span class='va'>varUnit</span> <span class='op'>+</span> <span class='va'>varDist</span><span class='op'>)</span></span>
+<span><span class='co'># conditional</span></span>
+<span><span class='va'>postR2c</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>varF</span> <span class='op'>+</span> <span class='va'>varCont</span> <span class='op'>+</span> <span class='va'>varPop</span><span class='op'>)</span><span class='op'>/</span></span>
+<span>             <span class='op'>(</span><span class='va'>varF</span> <span class='op'>+</span> <span class='va'>varCont</span> <span class='op'>+</span> <span class='va'>varPop</span> <span class='op'>+</span> <span class='va'>varUnit</span> <span class='op'>+</span> <span class='va'>varDist</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># compare posterior R-squared values to point estimates</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>postR2m</span>, main <span class='op'>=</span> <span class='st'>"Marginal R-squared"</span>,</span>
+<span>        ylab <span class='op'>=</span> <span class='st'>"Posterior density"</span>,</span>
+<span>        xlab <span class='op'>=</span> <span class='cn'>NULL</span>, breaks <span class='op'>=</span> <span class='fl'>20</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>v <span class='op'>=</span> <span class='va'>R2m</span>, col <span class='op'>=</span> <span class='st'>"blue"</span>, lwd <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>postR2c</span>, main <span class='op'>=</span> <span class='st'>"Conditional R-squared"</span>,</span>
+<span>        ylab <span class='op'>=</span> <span class='st'>"Posterior density"</span>,</span>
+<span>        xlab <span class='op'>=</span> <span class='cn'>NULL</span>, breaks <span class='op'>=</span> <span class='fl'>25</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>v <span class='op'>=</span> <span class='va'>R2c</span>, col <span class='op'>=</span> <span class='st'>"blue"</span>, lwd <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="quantifying-uncertainty-around-r-squared-for-generalized-linear-models_files/figure-html5/process-posterior-draws-1.png" width="624" /></p>
 </div>
-<p>This plot shows the posterior <span class="math inline">\(R^2_{GLMM}\)</span> distributions for both the marginal and conditional cases, with the point estimates generated with <code>glmer</code> shown as vertical blue lines. Personally, I find it to be a bit more informative and intuitive to think of <span class="math inline">\(R^2\)</span> as a probability distribution that integrates uncertainty in its component parameters. That said, it is unconventional to represent <span class="math inline">\(R^2\)</span> in this way, which could compromise the ease with which this handy statistic can be explained to the uninitiated (e.g. first year biology undergraduates). But, being a derived parameter, those wishing to generate a posterior can do so relatively easily.</p>
-<div id="refs" class="references">
-<div id="ref-nakagawa2010repeatability">
-<p>Nakagawa, Shinichi, and Holger Schielzeth. 2010. “Repeatability for Gaussian and Non-Gaussian Data: A Practical Guide for Biologists.” <em>Biological Reviews</em> 85 (4): 935–56. <a href="https://doi.org/10.1111/j.1469-185X.2010.00141.x">https://doi.org/10.1111/j.1469-185X.2010.00141.x</a>.</p>
+<p>This plot shows the posterior <span class="math inline">\(R^2_{GLMM}\)</span> distributions for both the marginal
+and conditional cases, with the point estimates generated with <code>glmer</code> shown as
+vertical blue lines. Personally, I find it to be a bit more informative and
+intuitive to think of <span class="math inline">\(R^2\)</span> as a probability distribution that integrates
+uncertainty in its component parameters. That said, it is unconventional to
+represent <span class="math inline">\(R^2\)</span> in this way, which could compromise the ease with which this
+handy statistic can be explained to the uninitiated (e.g. first year biology
+undergraduates). But, being a derived parameter, those wishing to generate a
+posterior can do so relatively easily.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-nakagawa2010repeatability" class="csl-entry" role="doc-biblioentry">
+Nakagawa, Shinichi, and Holger Schielzeth. 2010. <span>“Repeatability for Gaussian and Non-Gaussian Data: A Practical Guide for Biologists.”</span> <em>Biological Reviews</em> 85 (4): 935–56. <a href="https://doi.org/10.1111/j.1469-185X.2010.00141.x">https://doi.org/10.1111/j.1469-185X.2010.00141.x</a>.
 </div>
-<div id="ref-nakagawa2013general">
-<p>———. 2013. “A General and Simple Method for Obtaining R2 from Generalized Linear Mixed-Effects Models.” <em>Methods in Ecology and Evolution</em> 4 (2): 133–42. <a href="https://doi.org/10.1111/j.2041-210x.2012.00261.x">https://doi.org/10.1111/j.2041-210x.2012.00261.x</a>.</p>
+<div id="ref-nakagawa2013general" class="csl-entry" role="doc-biblioentry">
+———. 2013. <span>“A General and Simple Method for Obtaining R2 from Generalized Linear Mixed-Effects Models.”</span> <em>Methods in Ecology and Evolution</em> 4 (2): 133–42. <a href="https://doi.org/10.1111/j.2041-210x.2012.00261.x">https://doi.org/10.1111/j.2041-210x.2012.00261.x</a>.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->

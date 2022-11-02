@@ -18,6 +18,75 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Categorical spatial data extraction around buffered points in R</title>
 
@@ -51,7 +120,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["categorial-extraction_NLCD_2011_landcover.tif","categorial-extraction_NLCD_2011_landcover.tif.aux.xml","categorical-spatial-data-extraction-around-buffered-points-in-r_files/bowser-1.9.3/bowser.min.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/distill-2.2.21/template.v2.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png","categorical-spatial-data-extraction-around-buffered-points-in-r_files/jquery-1.11.3/jquery.min.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/webcomponents-2.0.0/webcomponents.js","NLCD_2011_Land_Cover_L48.tif","NLCD2011_LC_N39W102.zip","NLCD2011_LC_N39W105.zip"]}
+  {"type":"character","attributes":{},"value":["categorial-extraction_NLCD_2011_Land_Cover_L48_nlcd.tif","categorial-extraction_NLCD_Land_Cover_2011.tif","categorical-spatial-data-extraction-around-buffered-points-in-r_files/bowser-1.9.3/bowser.min.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/distill-2.2.21/template.v2.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png","categorical-spatial-data-extraction-around-buffered-points-in-r_files/jquery-1.11.3/jquery.min.js","categorical-spatial-data-extraction-around-buffered-points-in-r_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2014,7 +2083,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2079,7 +2154,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Categorical spatial data extraction around buffered points in R</h1>
-<p>Computing the proportion of land cover types using R and the raster package.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:spatial" class="dt-tag">spatial</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Computing the proportion of land cover types using R and the raster package.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2089,80 +2169,91 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Quantifying categorical spatial data (e.g. land cover) around points can be done in a variety of ways, some of which require considerable amounts of patience, clicking around, and/or cash for a license. Here’s a bit of code that I cobbled together to quickly extract land cover data from the <a href="http://www.mrlc.gov/index.php">National Land Cover Database</a> for a buffered point between Denver and Boulder - two cities in the state of Colorado.</p>
+<p>Quantifying categorical spatial data (e.g. land cover) around points can be done
+in a variety of ways, some of which require considerable amounts of patience,
+clicking around, and/or cash for a license.
+Here’s a bit of code that I cobbled together to quickly extract land cover data
+from the <a href="http://www.mrlc.gov/index.php">National Land Cover Database</a> for
+a buffered point between Denver and Boulder - two cities in the state of
+Colorado.</p>
 <p>First, get data using the FedData package:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(knitr)
-library(raster)
-library(FedData)
-library(rgdal)
-
-site_df &lt;- data.frame(city = c(&#39;Denver&#39;, &#39;Boulder&#39;), 
-                      lat = c(39.7392, 40.0150), 
-                      lon = c(-104.9903, -105.2705))
-midpoint &lt;- data.frame(lat = mean(site_df$lat), 
-                       lon = mean(site_df$lon))
-
-# create spatial point data frame
-coordinates(site_df) &lt;- ~lon + lat
-proj4string(site_df) &lt;- CRS(&quot;+proj=longlat +ellps=WGS84 +datum=WGS84&quot;)
-
-coordinates(midpoint) &lt;- ~lon + lat
-proj4string(midpoint) &lt;- CRS(&quot;+proj=longlat +ellps=WGS84 +datum=WGS84&quot;)
-
-nlcd_raster &lt;- get_nlcd(site_df, 
-                        label = &#39;categorial-extraction&#39;, 
-                        year = 2011, 
-                        extraction.dir = &#39;.&#39;)
-
-# reproject midpoint to raster&#39;s crs
-midpoint &lt;- spTransform(midpoint, projection(nlcd_raster))
-
-buffer_distance_meters &lt;- 5000
-
-# visualize buffered point and land cover data
-buff_shp &lt;- buffer(midpoint, buffer_distance_meters)
-plot(buff_shp) # I will plot over this, but it sets the plotting extent
-plot(nlcd_raster, add = TRUE)
-plot(buff_shp, add = TRUE)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://yihui.org/knitr/'>knitr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://rspatial.org/raster'>raster</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://docs.ropensci.org/FedData/'>FedData</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://rgdal.r-forge.r-project.org'>rgdal</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>site_df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>city <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Denver'</span>, <span class='st'>'Boulder'</span><span class='op'>)</span>, </span>
+<span>                      lat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>39.7392</span>, <span class='fl'>40.0150</span><span class='op'>)</span>, </span>
+<span>                      lon <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>104.9903</span>, <span class='op'>-</span><span class='fl'>105.2705</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>midpoint</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>lat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>site_df</span><span class='op'>$</span><span class='va'>lat</span><span class='op'>)</span>, </span>
+<span>                       lon <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>site_df</span><span class='op'>$</span><span class='va'>lon</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># create spatial point data frame</span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/sp/man/coordinates.html'>coordinates</a></span><span class='op'>(</span><span class='va'>site_df</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='op'>~</span><span class='va'>lon</span> <span class='op'>+</span> <span class='va'>lat</span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/sp/man/is.projected.html'>proj4string</a></span><span class='op'>(</span><span class='va'>site_df</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/sp/man/CRS-class.html'>CRS</a></span><span class='op'>(</span><span class='st'>"+proj=longlat +ellps=WGS84 +datum=WGS84"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/sp/man/coordinates.html'>coordinates</a></span><span class='op'>(</span><span class='va'>midpoint</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='op'>~</span><span class='va'>lon</span> <span class='op'>+</span> <span class='va'>lat</span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/sp/man/is.projected.html'>proj4string</a></span><span class='op'>(</span><span class='va'>midpoint</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/sp/man/CRS-class.html'>CRS</a></span><span class='op'>(</span><span class='st'>"+proj=longlat +ellps=WGS84 +datum=WGS84"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>nlcd_raster</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://docs.ropensci.org/FedData/reference/get_nlcd.html'>get_nlcd</a></span><span class='op'>(</span><span class='va'>site_df</span>, </span>
+<span>                        label <span class='op'>=</span> <span class='st'>'categorial-extraction'</span>, </span>
+<span>                        year <span class='op'>=</span> <span class='fl'>2011</span>, </span>
+<span>                        extraction.dir <span class='op'>=</span> <span class='st'>'.'</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># reproject midpoint to raster's crs</span></span>
+<span><span class='va'>midpoint</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/sp/man/spTransform.html'>spTransform</a></span><span class='op'>(</span><span class='va'>midpoint</span>, <span class='fu'><a href='https://rdrr.io/pkg/raster/man/projection.html'>projection</a></span><span class='op'>(</span><span class='va'>nlcd_raster</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>buffer_distance_meters</span> <span class='op'>&lt;-</span> <span class='fl'>5000</span></span>
+<span></span>
+<span><span class='co'># visualize buffered point and land cover data</span></span>
+<span><span class='va'>buff_shp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/terra/man/buffer.html'>buffer</a></span><span class='op'>(</span><span class='va'>midpoint</span>, <span class='va'>buffer_distance_meters</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>buff_shp</span><span class='op'>)</span> <span class='co'># I will plot over this, but it sets the plotting extent</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>nlcd_raster</span>, add <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>buff_shp</span>, add <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="categorical-spatial-data-extraction-around-buffered-points-in-r_files/figure-html5/get-data-1.png" width="624" /></p>
 </div>
-<p>Now, we can use <code>raster::extract</code> to extract raster data around our point within some buffer, specified in meters.</p>
+<p>Now, we can use <code>raster::extract</code> to extract raster data around our point
+within some buffer, specified in meters.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-landcover &lt;- extract(nlcd_raster, midpoint, buffer = buffer_distance_meters)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>landcover</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/terra/man/extract.html'>extract</a></span><span class='op'>(</span><span class='va'>nlcd_raster</span>, <span class='va'>midpoint</span>, buffer <span class='op'>=</span> <span class='va'>buffer_distance_meters</span><span class='op'>)</span></span></code></pre>
 </div>
-<p>But this object does not immediately provide the proportions of each cover type. Instead, it contains values from the cells within the buffer:</p>
+</div>
+<p>But this object does not immediately provide the proportions of each cover type.
+Instead, it contains values from the cells within the buffer:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-str(landcover)</code></pre>
-<pre><code>
-List of 1
- $ : num [1:87263] 21 21 21 21 21 21 21 22 21 21 ...</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>landcover</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>List of 1
+ $ : num [1:87274] 22 21 21 21 22 22 21 21 21 21 ...</code></pre>
 </div>
 <p>We can get the proportions of each class within the buffer as follows:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-landcover_proportions &lt;- lapply(landcover, function(x) {
-  counts_x &lt;- table(x)
-  proportions_x &lt;- prop.table(counts_x)
-  sort(proportions_x)
-  })
-sort(unlist(landcover_proportions))</code></pre>
-<pre><code>
-          41           42           31           81           82 
-0.0001260557 0.0001833538 0.0004125460 0.0066236549 0.0072997720 
-          24           90           95           52           23 
-0.0103480284 0.0119638335 0.0237213939 0.0713589952 0.0745562266 
-          21           11           22           71 
-0.1202456941 0.1244857500 0.1698543483 0.3788203477 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>landcover_proportions</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='va'>landcover</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='va'>counts_x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></span>
+<span>  <span class='va'>proportions_x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/proportions.html'>prop.table</a></span><span class='op'>(</span><span class='va'>counts_x</span><span class='op'>)</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='va'>proportions_x</span><span class='op'>)</span></span>
+<span>  <span class='op'>}</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/unlist.html'>unlist</a></span><span class='op'>(</span><span class='va'>landcover_proportions</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>          43           42           41           31           82 
+8.020716e-05 1.604143e-04 1.294773e-03 2.406215e-03 3.781195e-03 
+          81           90           95           24           52 
+5.202007e-03 1.184774e-02 1.911222e-02 3.251828e-02 6.305429e-02 
+          11           21           23           22           71 
+8.288837e-02 1.150056e-01 1.328804e-01 1.734766e-01 3.562917e-01 </code></pre>
 </div>
 <p><strong>Resources</strong></p>
 <ul>
 <li><a href="http://stackoverflow.com/questions/15824853/large-img-file-processing-in-r-gis">Large .img file processing in R (GIS) on Stack Overflow by Israel Del Toro</a></li>
 <li><a href="http://www.mrlc.gov/index.php">NLCD website</a></li>
 </ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

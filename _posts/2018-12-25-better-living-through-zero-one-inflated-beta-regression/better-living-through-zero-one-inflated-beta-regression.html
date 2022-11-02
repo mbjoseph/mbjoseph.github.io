@@ -18,78 +18,193 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
   <!--radix_placeholder_meta_tags-->
   <title>Better living through zero-one inflated beta regression</title>
-  
+
   <meta property="description" itemprop="description" content="Fitting a Bayesian ZOIB regression model in JAGS."/>
-  
-  
+
+
   <!--  https://schema.org/Article -->
   <meta property="article:published" itemprop="datePublished" content="2014-02-06"/>
   <meta property="article:created" itemprop="dateCreated" content="2014-02-06"/>
   <meta name="article:author" content="Maxwell B. Joseph"/>
-  
+
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Better living through zero-one inflated beta regression"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="Fitting a Bayesian ZOIB regression model in JAGS."/>
   <meta property="og:locale" content="en_US"/>
-  
+
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Better living through zero-one inflated beta regression"/>
   <meta property="twitter:description" content="Fitting a Bayesian ZOIB regression model in JAGS."/>
-  
+
   <!--/radix_placeholder_meta_tags-->
   
   <!--radix_placeholder_rmarkdown_metadata-->
-  
+
   <script type="text/json" id="radix-rmarkdown-metadata">
   {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["Better living through zero-one inflated beta regression"]},{"type":"character","attributes":{},"value":["Fitting a Bayesian ZOIB regression model in JAGS.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2014-02-06"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["jags"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["beinf.txt","better-living-through-zero-one-inflated-beta-regression_files/bowser-1.9.3/bowser.min.js","better-living-through-zero-one-inflated-beta-regression_files/distill-2.2.21/template.v2.js","better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png","better-living-through-zero-one-inflated-beta-regression_files/jquery-1.11.3/jquery.min.js","better-living-through-zero-one-inflated-beta-regression_files/webcomponents-2.0.0/webcomponents.js","biblio.bib"]}
+  {"type":"character","attributes":{},"value":["beinf.txt","better-living-through-zero-one-inflated-beta-regression_files/anchor-4.2.2/anchor.min.js","better-living-through-zero-one-inflated-beta-regression_files/bowser-1.9.3/bowser.min.js","better-living-through-zero-one-inflated-beta-regression_files/distill-2.2.21/template.v2.js","better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png","better-living-through-zero-one-inflated-beta-regression_files/header-attrs-2.16/header-attrs.js","better-living-through-zero-one-inflated-beta-regression_files/jquery-1.11.3/jquery.min.js","better-living-through-zero-one-inflated-beta-regression_files/jquery-3.6.0/jquery-3.6.0.js","better-living-through-zero-one-inflated-beta-regression_files/jquery-3.6.0/jquery-3.6.0.min.js","better-living-through-zero-one-inflated-beta-regression_files/jquery-3.6.0/jquery-3.6.0.min.map","better-living-through-zero-one-inflated-beta-regression_files/popper-2.6.0/popper.min.js","better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy-bundle.umd.min.js","better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy-light-border.css","better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy.css","better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy.umd.min.js","better-living-through-zero-one-inflated-beta-regression_files/webcomponents-2.0.0/webcomponents.js","biblio.bib"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
-  
+
   <style type="text/css">
-  
+
   body {
     background-color: white;
   }
-  
+
   .pandoc-table {
     width: 100%;
   }
-  
+
   .pandoc-table>caption {
     margin-bottom: 10px;
   }
-  
+
   .pandoc-table th:not([align]) {
     text-align: left;
   }
-  
+
   .pagedtable-footer {
     font-size: 15px;
   }
-  
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
   .html-widget {
     margin-bottom: 2.0em;
   }
-  
+
   .l-screen-inset {
     padding-right: 16px;
   }
-  
+
   .l-screen .caption {
     margin-left: 10px;
   }
-  
+
   .shaded {
     background: rgb(247, 247, 247);
     padding-top: 20px;
@@ -97,43 +212,130 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .html-widget {
     margin-bottom: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .shaded-content {
     background: white;
   }
-  
+
   .text-output {
     margin-top: 0;
     line-height: 1.5em;
   }
-  
+
   .hidden {
     display: none !important;
   }
-  
+
   d-article {
+    padding-top: 2.5rem;
     padding-bottom: 30px;
   }
-  
+
   d-appendix {
     padding-top: 30px;
   }
-  
+
   d-article>p>img {
     width: 100%;
   }
-  
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
   d-article iframe {
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 2.0em;
     width: 100%;
   }
-  
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
   figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -141,128 +343,103 @@
     padding: 18px;
     box-sizing: border-box;
   }
-  
-  /* CSS for table of contents */
-  
-  .d-toc {
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
     color: rgba(0,0,0,0.8);
-    font-size: 0.8em;
-    line-height: 1em;
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
   }
-  
-  .d-toc-header {
-    font-size: 0.6rem;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
     margin-top: 0;
-    margin-bottom: 1.3em;
+    margin-bottom: 1em;
   }
-  
-  .d-toc a {
-    border-bottom: none;
+
+  .d-contents li {
+    list-style-type: none
   }
-  
-  .d-toc ul {
+
+  .d-contents nav > ul {
     padding-left: 0;
   }
-  
-  .d-toc li>ul {
-    padding-top: 0.8em;
-    padding-left: 16px;
-    margin-bottom: 0.6em;
+
+  .d-contents ul {
+    padding-left: 1em
   }
-  
-  .d-toc ul,
-  .d-toc li {
-    list-style-type: none;
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
   }
-  
-  .d-toc li {
-    margin-bottom: 0.9em;
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
   }
-  
-  .d-toc-separator {
-    margin-top: 20px;
-    margin-bottom: 2em;
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
   }
-  
-  .d-article-with-toc {
-    border-top: none;
-    padding-top: 0;
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
   }
-  
-  
-  
-  /* Tweak code blocks (note that this CSS is repeated above in an injection
-     into the d-code shadow dom) */
-  
-  d-code {
-    overflow-x: auto !important;
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
   }
-  
-  pre.d-code code.d-code {
-    padding-left: 10px;
-    font-size: 12px;
-    border-left: 2px solid rgba(0,0,0,0.1);
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
   }
-  
-  pre.text-output {
-  
-    font-size: 12px;
-    color: black;
-    background: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-  
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-  
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
   }
-  
-  @media(min-width: 768px) {
-  
-  d-code {
-    overflow-x: visible !important;
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
   }
-  
-  pre.d-code code.d-code  {
-      padding-left: 18px;
-      font-size: 14px;
-  }
-  pre.text-output {
-    font-size: 14px;
-  }
-  }
-  
+
+
   /* Figure */
-  
+
   .figure {
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
   }
-  
-  .figure img {
-    width: 100%;
-  }
-  
+
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
     line-height: 1.5em;
   }
-  
+
   .figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -270,21 +447,42 @@
     padding: 18px;
     box-sizing: border-box;
   }
-  
+
   .figure .caption a {
     color: rgba(0, 0, 0, 0.6);
   }
-  
+
   .figure .caption b,
   .figure .caption strong, {
     font-weight: 600;
     color: rgba(0, 0, 0, 1.0);
   }
-  
-  
-  
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
   /* Tweak 1000px media break to show more text */
-  
+
   @media(min-width: 1000px) {
     .base-grid,
     distill-header,
@@ -300,11 +498,11 @@
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 16px;
     }
-  
+
     .grid {
       grid-column-gap: 16px;
     }
-  
+
     d-article {
       font-size: 1.06rem;
       line-height: 1.7em;
@@ -313,7 +511,7 @@
       font-size: 13px;
     }
   }
-  
+
   @media(min-width: 1180px) {
     .base-grid,
     distill-header,
@@ -329,16 +527,16 @@
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 32px;
     }
-  
+
     .grid {
       grid-column-gap: 32px;
     }
   }
-  
-  
+
+
   /* Get the citation styles for the appendix (not auto-injected on render since
      we do our own rendering of the citation appendix) */
-  
+
   d-appendix .citation-appendix,
   .d-appendix .citation-appendix {
     font-size: 11px;
@@ -355,101 +553,401 @@
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-  
-  
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
   /* Social footer */
-  
+
   .social_footer {
     margin-top: 30px;
     margin-bottom: 0;
     color: rgba(0,0,0,0.67);
   }
-  
+
   .disqus-comments {
     margin-right: 30px;
   }
-  
+
   .disqus-comment-count {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
-  
+
   #disqus_thread {
     margin-top: 30px;
   }
-  
+
   .article-sharing a {
     border-bottom: none;
     margin-right: 8px;
   }
-  
+
   .article-sharing a:hover {
     border-bottom: none;
   }
-  
+
   .sidebar-section.subscribe {
     font-size: 12px;
     line-height: 1.6em;
   }
-  
+
   .subscribe p {
     margin-bottom: 0.5em;
   }
-  
-  
+
+
   .article-footer .subscribe {
     font-size: 15px;
     margin-top: 45px;
   }
-  
-  
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
   /* Improve display for browsers without grid (IE/Edge <= 15) */
-  
+
   .downlevel {
     line-height: 1.6em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-  
+
   .downlevel .d-title {
     padding-top: 6rem;
     padding-bottom: 1.5rem;
   }
-  
+
   .downlevel .d-title h1 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.1em;
     margin: 0 0 0.5rem;
   }
-  
+
   .downlevel .d-title p {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.55em;
     margin-top: 0;
   }
-  
+
   .downlevel .d-byline {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     font-size: 0.8rem;
     line-height: 1.8em;
   }
-  
+
   .downlevel .section-separator {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .downlevel .d-article {
     font-size: 1.06rem;
     line-height: 1.7em;
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
-  
-  
+
+
   .downlevel .d-appendix {
     padding-left: 0;
     padding-right: 0;
@@ -461,11 +959,11 @@
     padding-top: 40px;
     padding-bottom: 48px;
   }
-  
+
   .downlevel .footnotes ol {
     padding-left: 13px;
   }
-  
+
   .downlevel .base-grid,
   .downlevel .distill-header,
   .downlevel .d-title,
@@ -482,7 +980,7 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-  
+
   @media(min-width: 768px) {
     .downlevel .base-grid,
     .downlevel .distill-header,
@@ -502,14 +1000,14 @@
     max-width: 900px;
   }
   }
-  
+
   .downlevel pre code {
     display: block;
     border-left: 2px solid rgba(0, 0, 0, .1);
     padding: 0 0 0 20px;
     font-size: 14px;
   }
-  
+
   .downlevel code, .downlevel pre {
     color: black;
     background: none;
@@ -520,21 +1018,27 @@
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-  
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-  
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-  
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
   </style>
-  
+
   <script type="application/javascript">
-  
+
   function is_downlevel_browser() {
     if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
                                    window.navigator.userAgent)) {
@@ -543,13 +1047,20 @@
       return window.load_distill_framework === undefined;
     }
   }
-  
+
   // show body when load is complete
   function on_load_complete() {
-  
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
     // set body to visible
     document.body.style.visibility = 'visible';
-  
+
     // force redraw for leaflet widgets
     if (window.HTMLWidgets) {
       var maps = window.HTMLWidgets.findAll(".leaflet");
@@ -562,54 +1073,39 @@
         });
       });
     }
-  
+
     // trigger 'shown' so htmlwidgets resize
     $('d-article').trigger('shown');
   }
-  
+
   function init_distill() {
-  
+
     init_common();
-  
+
     // create front matter
     var front_matter = $('<d-front-matter></d-front-matter>');
     $('#distill-front-matter').wrap(front_matter);
-  
+
     // create d-title
     $('.d-title').changeElementType('d-title');
-  
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
-  
+
     // create d-article
     var article = $('<d-article></d-article>');
     $('.d-article').wrap(article).children().unwrap();
-  
+
     // move posts container into article
     $('.posts-container').appendTo($('d-article'));
-  
+
     // create d-appendix
     $('.d-appendix').changeElementType('d-appendix');
-  
-    // create d-bibliography
-    var bibliography = $('<d-bibliography></d-bibliography>');
-    $('#distill-bibliography').wrap(bibliography);
-  
+
     // flag indicating that we have appendix items
     var appendix = $('.appendix-bottom').children('h3').length > 0;
-  
-    // replace citations with <d-cite>
-    $('.citation').each(function(i, val) {
-      appendix = true;
-      var cites = $(this).attr('data-cites').split(" ");
-      var dt_cite = $('<d-cite></d-cite>');
-      dt_cite.attr('key', cites.join());
-      $(this).replaceWith(dt_cite);
-    });
-    // remove refs
-    $('#refs').remove();
-  
+
     // replace footnotes with <d-footnote>
     $('.footnote-ref').each(function(i, val) {
       appendix = true;
@@ -625,49 +1121,31 @@
     });
     // remove footnotes
     $('.footnotes').remove();
-  
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
     });
     $('h3.appendix').each(function(i, val) {
       var id = $(this).attr('id');
-      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
       appendix = true;
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
     });
-  
+
     // show d-appendix if we have appendix content
     $("d-appendix").css('display', appendix ? 'grid' : 'none');
-  
-    // replace code blocks with d-code
-    $('pre>code').each(function(i, val) {
-      var code = $(this);
-      var pre = code.parent();
-      var clz = "";
-      var language = pre.attr('class');
-      if (language) {
-        // map unknown languages to "clike" (without this they just dissapear)
-        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
-                                 "javascript", "js", "julia", "lua", "markdown",
-                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
-          language = "clike";
-        language = ' language="' + language + '"';
-        var dt_code = $('<d-code block' + language + clz + '></d-code>');
-        dt_code.text(code.text());
-        pre.replaceWith(dt_code);
-      } else {
-        code.addClass('text-output').unwrap().changeElementType('pre');
-      }
-    });
-  
+
     // localize layout chunks to just output
     $('.layout-chunk').each(function(i, val) {
-  
+
       // capture layout
       var layout = $(this).attr('data-layout');
-  
+
       // apply layout to markdown level block elements
-      var elements = $(this).children().not('d-code, pre.text-output, script');
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
       elements.each(function(i, el) {
         var layout_div = $('<div class="' + layout + '"></div>');
         if (layout_div.hasClass('shaded')) {
@@ -678,39 +1156,60 @@
           $(this).wrap(layout_div);
         }
       });
-  
-  
+
+
       // unwrap the layout-chunk div
       $(this).children().unwrap();
     });
-  
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
     // load distill framework
     load_distill_framework();
-  
+
     // wait for window.distillRunlevel == 4 to do post processing
     function distill_post_process() {
-  
+
       if (!window.distillRunlevel || window.distillRunlevel < 4)
         return;
-  
+
       // hide author/affiliations entirely if we have no authors
       var front_matter = JSON.parse($("#distill-front-matter").html());
       var have_authors = front_matter.authors && front_matter.authors.length > 0;
       if (!have_authors)
         $('d-byline').addClass('hidden');
-  
-      // table of contents
-      if (have_authors) // adjust border if we are in authors
-        $('.d-toc').parent().addClass('d-article-with-toc');
-  
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
       // strip links that point to #
       $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
-  
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
       // hide elements of author/affiliations grid that have no value
       function hide_byline_column(caption) {
         $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
       }
-  
+
       // affiliations
       var have_affiliations = false;
       for (var i = 0; i<front_matter.authors.length; ++i) {
@@ -722,11 +1221,11 @@
       }
       if (!have_affiliations)
         $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
-  
+
       // published date
       if (!front_matter.publishedDate)
         hide_byline_column("Published");
-  
+
       // document object identifier
       var doi = $('d-byline').find('h3:contains("DOI")');
       var doi_p = doi.next().empty();
@@ -746,61 +1245,108 @@
            .html(front_matter.doi)
            .appendTo(doi_p);
       }
-  
+
        // change plural form of authors/affiliations
       if (front_matter.authors.length === 1) {
         var grid = $('.authors-affiliations');
         grid.children('h3:contains("Authors")').text('Author');
         grid.children('h3:contains("Affiliations")').text('Affiliation');
       }
-  
-      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
-      $('d-code').each(function(i, val) {
-        var style = document.createElement('style');
-        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
-                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
-        if (this.shadowRoot)
-          this.shadowRoot.appendChild(style);
-      });
-  
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
       // move appendix-bottom entries to the bottom
       $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
       $('.appendix-bottom').remove();
-  
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
       // clear polling timer
       clearInterval(tid);
-  
+
       // show body now that everything is ready
       on_load_complete();
     }
-  
+
     var tid = setInterval(distill_post_process, 50);
     distill_post_process();
-  
+
   }
-  
+
   function init_downlevel() {
-  
+
     init_common();
-  
+
      // insert hr after d-title
     $('.d-title').after($('<hr class="section-separator"/>'));
-  
+
     // check if we have authors
     var front_matter = JSON.parse($("#distill-front-matter").html());
     var have_authors = front_matter.authors && front_matter.authors.length > 0;
-  
+
     // manage byline/border
     if (!have_authors)
       $('.d-byline').remove();
     $('.d-byline').after($('<hr class="section-separator"/>'));
     $('.d-byline a').remove();
-  
+
     // remove toc
-    $('.d-toc-header').remove();
-    $('.d-toc').remove();
-    $('.d-toc-separator').remove();
-  
+    $('.d-contents').remove();
+
     // move appendix elements
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
@@ -808,65 +1354,67 @@
     $('h3.appendix').each(function(i, val) {
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
     });
-  
-  
+
+
     // inject headers into references and footnotes
     var refs_header = $('<h3></h3>');
     refs_header.text('References');
     $('#refs').prepend(refs_header);
-  
+
     var footnotes_header = $('<h3></h3');
     footnotes_header.text('Footnotes');
     $('.footnotes').children('hr').first().replaceWith(footnotes_header);
-  
+
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
-  
+
     // remove appendix if it's empty
     if ($('.d-appendix').children().length === 0)
       $('.d-appendix').remove();
-  
+
     // prepend separator above appendix
     $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
-  
+
     // trim code
     $('pre>code').each(function(i, val) {
       $(this).html($.trim($(this).html()));
     });
-  
+
     // move posts-container right before article
     $('.posts-container').insertBefore($('.d-article'));
-  
+
     $('body').addClass('downlevel');
-  
+
     on_load_complete();
   }
-  
-  
+
+
   function init_common() {
-  
+
     // jquery plugin to change element types
     (function($) {
       $.fn.changeElementType = function(newType) {
         var attrs = {};
-  
+
         $.each(this[0].attributes, function(idx, attr) {
           attrs[attr.nodeName] = attr.nodeValue;
         });
-  
+
         this.replaceWith(function() {
           return $("<" + newType + "/>", attrs).append($(this).contents());
         });
       };
     })(jQuery);
-  
+
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
-  
+
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -875,35 +1423,35 @@
           var fig = $(this);
           fig.css('width', fig.attr('width') + 'px');
         });
-  
+
       }
     });
-  
+
     // auto-append index.html to post-preview links in file: protocol
     // and in rstudio ide preview
     $('.post-preview').each(function(i, val) {
       if (window.location.protocol === "file:")
         $(this).attr('href', $(this).attr('href') + "index.html");
     });
-  
+
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
-  
+
     // add class to pandoc style tables
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
-  
+
     // add figcaption style to table captions
     $('caption').parent('table').addClass("figcaption");
-  
+
     // initialize posts list
     if (window.init_posts_list)
       window.init_posts_list();
-  
+
     // implmement disqus comment link
     $('.disqus-comment-count').click(function() {
       window.headroom_prevent_pin = true;
@@ -917,18 +1465,24 @@
       }
     });
   }
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     if (is_downlevel_browser())
       init_downlevel();
     else
       window.addEventListener('WebComponentsReady', init_distill);
   });
-  
+
   </script>
-  
+
   <!--/radix_placeholder_distill-->
-  <script src="better-living-through-zero-one-inflated-beta-regression_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="better-living-through-zero-one-inflated-beta-regression_files/header-attrs-2.16/header-attrs.js"></script>
+  <script src="better-living-through-zero-one-inflated-beta-regression_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="better-living-through-zero-one-inflated-beta-regression_files/popper-2.6.0/popper.min.js"></script>
+  <link href="better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="better-living-through-zero-one-inflated-beta-regression_files/anchor-4.2.2/anchor.min.js"></script>
   <script src="better-living-through-zero-one-inflated-beta-regression_files/bowser-1.9.3/bowser.min.js"></script>
   <script src="better-living-through-zero-one-inflated-beta-regression_files/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="better-living-through-zero-one-inflated-beta-regression_files/distill-2.2.21/template.v2.js"></script>
@@ -943,7 +1497,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Better living through zero-one inflated beta regression","description":"Fitting a Bayesian ZOIB regression model in JAGS.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2014-02-06T00:00:00.000-07:00","citationText":"Joseph, 2014"}
+{"title":"Better living through zero-one inflated beta regression","description":"Fitting a Bayesian ZOIB regression model in JAGS.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2014-02-06T00:00:00.000-07:00","citationText":"Joseph, 2014"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -954,7 +1508,12 @@
 
 <div class="d-title">
 <h1>Better living through zero-one inflated beta regression</h1>
-<p>Fitting a Bayesian ZOIB regression model in JAGS.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">jags</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Fitting a Bayesian ZOIB regression model in JAGS.</p></p>
 </div>
 
 <div class="d-byline">
@@ -964,8 +1523,18 @@
 </div>
 
 <div class="d-article">
-<p>Dealing with proportion data on the interval <span class="math inline">\([0, 1]\)</span> is tricky. I realized this while trying to explain variation in vegetation cover. Unfortunately this is a true proportion, and can’t be made into a binary response. Further, true 0’s and 1’s rule out beta regression. You could arcsine square root transform the data (but shouldn’t; Warton and Hui 2011). Enter zero-and-one inflated beta regression.</p>
-<p>The zero-and-one-inflated beta distribution facilitates modeling fractional or proportional data that contains both 0’s and 1’s (Ospina and Ferrari 2010 - highly recommended). The general idea is to model the response variable (call it <span class="math inline">\(y\)</span>) as a mixture of Bernoulli and beta distributions, from which the true 0’s and 1’s, and the values between 0 and 1 are generated, respectively. The probability density function is</p>
+<p>Dealing with proportion data on the interval <span class="math inline">\([0, 1]\)</span> is tricky. I realized this
+while trying to explain variation in vegetation cover. Unfortunately this is a
+true proportion, and can’t be made into a binary response. Further, true 0’s and
+1’s rule out beta regression. You could arcsine square root transform the data
+(but shouldn’t; Warton and Hui 2011). Enter zero-and-one inflated beta
+regression.</p>
+<p>The zero-and-one-inflated beta distribution facilitates modeling fractional or
+proportional data that contains both 0’s and 1’s (Ospina and Ferrari 2010 -
+highly recommended). The general idea is to model the response variable (call it
+<span class="math inline">\(y\)</span>) as a mixture of Bernoulli and beta distributions, from which the true 0’s
+and 1’s, and the values between 0 and 1 are generated, respectively. The
+probability density function is</p>
 <p><span class="math display">\[
 f_{\text{ZOIB}}(y; \alpha, \gamma, \mu, \phi) = \left\{
   \begin{array}{lr}
@@ -975,103 +1544,120 @@ f_{\text{ZOIB}}(y; \alpha, \gamma, \mu, \phi) = \left\{
   \end{array}
 \right.
 \]</span></p>
-<p>where <span class="math inline">\(0 &lt; \alpha, \gamma, \mu &lt; 1\)</span>, and <span class="math inline">\(\phi&gt;0\)</span>. <span class="math inline">\(f(y; \mu, \phi)\)</span> is the probability density function for the beta distribution, parameterized in terms of its mean <span class="math inline">\(\mu\)</span> and precision <span class="math inline">\(\phi\)</span>:</p>
+<p>where <span class="math inline">\(0 &lt; \alpha, \gamma, \mu &lt; 1\)</span>, and <span class="math inline">\(\phi&gt;0\)</span>. <span class="math inline">\(f(y; \mu, \phi)\)</span> is the
+probability density function for the beta distribution, parameterized in terms
+of its mean <span class="math inline">\(\mu\)</span> and precision <span class="math inline">\(\phi\)</span>:</p>
 <p><span class="math display">\[f_{\text{beta}}(y; \mu, \phi) = \dfrac{\Gamma(\phi)}{\Gamma(\mu \phi) \Gamma((1 - \mu)\phi)} y^{\mu \phi - 1} (1 - y)^{(1 - \mu)\phi - 1}\]</span></p>
-<p><span class="math inline">\(\alpha\)</span> is a mixture parameter that determines the extent to which the Bernoulli or beta component dominates the pdf. <span class="math inline">\(\gamma\)</span> determines the probability that <span class="math inline">\(y=1\)</span> if it comes from the Bernoulli component. <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\phi\)</span> are the expected value and the precision for the beta component, which is usually parameterized in terms of <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> (Ferrari and Cribari-Neto 2004). <span class="math inline">\(\mu = \frac{p}{p + q}\)</span>, and <span class="math inline">\(\phi=p+q\)</span>.</p>
-<p>Although ecologists often deal with proportion data, I haven’t found any examples of 0 &amp; 1 inflated beta regression in the ecological literature. Closest thing I’ve found was Nishii and Tanaka (2012) who take a different approach, where values between 0 and 1 are modeled as logit-normal.</p>
-<p>Here’s a quick demo in JAGS with simulated data. For simplicity, I’ll assume 1) there is one covariate that increases the expected value at the same rate for both the Bernoulli and beta components s.t. <span class="math inline">\(\mu = \gamma\)</span>, and 2) the Bernoulli component dominates extreme values of the covariate, where the expected value is near 0 or 1.</p>
+<p><span class="math inline">\(\alpha\)</span> is a mixture parameter that determines the extent to which the
+Bernoulli or beta component dominates the pdf. <span class="math inline">\(\gamma\)</span> determines the
+probability that <span class="math inline">\(y=1\)</span> if it comes from the Bernoulli component. <span class="math inline">\(\mu\)</span> and
+<span class="math inline">\(\phi\)</span> are the expected value and the precision for the beta component, which is
+usually parameterized in terms of <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> (Ferrari and Cribari-Neto 2004).
+<span class="math inline">\(\mu = \frac{p}{p + q}\)</span>, and <span class="math inline">\(\phi=p+q\)</span>.</p>
+<p>Although ecologists often deal with proportion data, I haven’t found any
+examples of 0 &amp; 1 inflated beta regression in the ecological literature.
+Closest thing I’ve found was Nishii and Tanaka (2012) who take a different
+approach, where values between 0 and 1 are modeled as logit-normal.</p>
+<p>Here’s a quick demo in JAGS with simulated data. For simplicity, I’ll assume 1)
+there is one covariate that increases the expected value at the same rate for
+both the Bernoulli and beta components s.t. <span class="math inline">\(\mu = \gamma\)</span>, and 2) the Bernoulli
+component dominates extreme values of the covariate, where the expected value is
+near 0 or 1.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(rjags)
-library(ggmcmc)
-library(reshape2)
-
-set.seed(1234)
-n &lt;- 60
-x &lt;- runif(n, -3, 3)
-a0 &lt;- -3
-a1 &lt;- 0
-a2 &lt;- 1
-antilogit &lt;- function(x){
-  exp(x) / (1 + exp(x))
-}
-alpha &lt;- antilogit(a0 + a1 * x + a2 * x^2)
-
-b0 &lt;- 0
-b1 &lt;- 2
-mu &lt;- antilogit(b0 + b1 * x)
-phi &lt;- 5
-p &lt;- mu * phi
-q &lt;- phi - mu * phi
-
-y.discrete &lt;- rbinom(n, 1, alpha)
-y &lt;- rep(NA, n)
-for (i in 1:n){
-  if (y.discrete[i] == 1){
-    y[i] &lt;- rbinom(1, 1, mu[i])
-  } else {
-    y[i] &lt;- rbeta(1, p[i], q[i])
-  }
-}
-
-# split the data into discrete and continuous components
-y.d &lt;- ifelse(y == 1 | y == 0, y, NA)
-y.discrete &lt;- ifelse(is.na(y.d), 0, 1)
-y.d &lt;- y.d[!is.na(y.d)]
-x.d &lt;- x[y.discrete == 1]
-n.discrete &lt;- length(y.d)
-
-which.cont &lt;- which(y &lt; 1 &amp; y &gt; 0)
-y.c &lt;- ifelse(y &lt; 1 &amp; y &gt; 0, y, NA)
-y.c &lt;- y.c[!is.na(y.c)]
-n.cont &lt;- length(y.c)
-x.c &lt;- x[which.cont]</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mcmc-jags.sourceforge.io'>rjags</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://xavier-fim.net/packages/ggmcmc/'>ggmcmc</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/hadley/reshape'>reshape2</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1234</span><span class='op'>)</span></span>
+<span><span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fl'>60</span></span>
+<span><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='va'>n</span>, <span class='op'>-</span><span class='fl'>3</span>, <span class='fl'>3</span><span class='op'>)</span></span>
+<span><span class='va'>a0</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>3</span></span>
+<span><span class='va'>a1</span> <span class='op'>&lt;-</span> <span class='fl'>0</span></span>
+<span><span class='va'>a2</span> <span class='op'>&lt;-</span> <span class='fl'>1</span></span>
+<span><span class='va'>antilogit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='va'>alpha</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>a0</span> <span class='op'>+</span> <span class='va'>a1</span> <span class='op'>*</span> <span class='va'>x</span> <span class='op'>+</span> <span class='va'>a2</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>b0</span> <span class='op'>&lt;-</span> <span class='fl'>0</span></span>
+<span><span class='va'>b1</span> <span class='op'>&lt;-</span> <span class='fl'>2</span></span>
+<span><span class='va'>mu</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>b0</span> <span class='op'>+</span> <span class='va'>b1</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>)</span></span>
+<span><span class='va'>phi</span> <span class='op'>&lt;-</span> <span class='fl'>5</span></span>
+<span><span class='va'>p</span> <span class='op'>&lt;-</span> <span class='va'>mu</span> <span class='op'>*</span> <span class='va'>phi</span></span>
+<span><span class='va'>q</span> <span class='op'>&lt;-</span> <span class='va'>phi</span> <span class='op'>-</span> <span class='va'>mu</span> <span class='op'>*</span> <span class='va'>phi</span></span>
+<span></span>
+<span><span class='va'>y.discrete</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='va'>n</span>, <span class='fl'>1</span>, <span class='va'>alpha</span><span class='op'>)</span></span>
+<span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='va'>n</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>n</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='kw'>if</span> <span class='op'>(</span><span class='va'>y.discrete</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>    <span class='va'>y</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>mu</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>  <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span></span>
+<span>    <span class='va'>y</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Beta.html'>rbeta</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>p</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>, <span class='va'>q</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>  <span class='op'>}</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='co'># split the data into discrete and continuous components</span></span>
+<span><span class='va'>y.d</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>==</span> <span class='fl'>1</span> <span class='op'>|</span> <span class='va'>y</span> <span class='op'>==</span> <span class='fl'>0</span>, <span class='va'>y</span>, <span class='cn'>NA</span><span class='op'>)</span></span>
+<span><span class='va'>y.discrete</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>y.d</span><span class='op'>)</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>y.d</span> <span class='op'>&lt;-</span> <span class='va'>y.d</span><span class='op'>[</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>y.d</span><span class='op'>)</span><span class='op'>]</span></span>
+<span><span class='va'>x.d</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>y.discrete</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>]</span></span>
+<span><span class='va'>n.discrete</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>y.d</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>which.cont</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>&lt;</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>y</span> <span class='op'>&gt;</span> <span class='fl'>0</span><span class='op'>)</span></span>
+<span><span class='va'>y.c</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>&lt;</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>y</span> <span class='op'>&gt;</span> <span class='fl'>0</span>, <span class='va'>y</span>, <span class='cn'>NA</span><span class='op'>)</span></span>
+<span><span class='va'>y.c</span> <span class='op'>&lt;-</span> <span class='va'>y.c</span><span class='op'>[</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>y.c</span><span class='op'>)</span><span class='op'>]</span></span>
+<span><span class='va'>n.cont</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>y.c</span><span class='op'>)</span></span>
+<span><span class='va'>x.c</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>which.cont</span><span class='op'>]</span></span></code></pre>
 </div>
-<p>Now we can specify our model in JAGS, following the factorization of the likelihood given by Ospina and Ferrari (2010), estimate our parameters, and see how well the model performs.</p>
+</div>
+<p>Now we can specify our model in JAGS, following the factorization of the
+likelihood given by Ospina and Ferrari (2010), estimate our parameters, and see
+how well the model performs.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# write model
-cat(
-  &quot;
-  model{
-  # priors
-  a0 ~ dnorm(0, .001)
-  a1 ~ dnorm(0, .001)
-  a2 ~ dnorm(0, .001)
-  b0 ~ dnorm(0, .001)
-  b1 ~ dnorm(0, .001)
-  t0 ~ dnorm(0, .01)
-  tau &lt;- exp(t0)
-
-  # likelihood for alpha
-  for (i in 1:n){
-    logit(alpha[i]) &lt;- a0 + a1 * x[i] + a2 * x[i] ^ 2
-    y.discrete[i] ~ dbern(alpha[i])
-  }
-
-  # likelihood for gamma
-  for (i in 1:n.discrete){
-    y.d[i] ~ dbern(mu[i])
-    logit(mu[i]) &lt;- b0 + b1 * x.d[i]
-  }
-
-  # likelihood for mu and tau
-  for (i in 1:n.cont){
-    y.c[i] ~ dbeta(p[i], q[i])
-    p[i] &lt;- mu2[i] * tau
-    q[i] &lt;- (1 - mu2[i]) * tau
-    logit(mu2[i]) &lt;- b0 + b1 * x.c[i]
-  }
-  }  
-  &quot;, file=&quot;beinf.txt&quot;
-)
-
-jd &lt;- list(x=x, y.d=y.d, y.c=y.c, y.discrete = y.discrete,
-           n.discrete=n.discrete, n.cont = n.cont,
-           x.d = x.d, x.c=x.c, n=n)
-mod &lt;- jags.model(&quot;beinf.txt&quot;, data= jd, n.chains=3, n.adapt=1000)</code></pre>
-<pre><code>
-Compiling model graph
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># write model</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span></span>
+<span>  <span class='st'>"</span></span>
+<span><span class='st'>  model{</span></span>
+<span><span class='st'>  # priors</span></span>
+<span><span class='st'>  a0 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  a1 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  a2 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  b0 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  b1 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  t0 ~ dnorm(0, .01)</span></span>
+<span><span class='st'>  tau &lt;- exp(t0)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood for alpha</span></span>
+<span><span class='st'>  for (i in 1:n){</span></span>
+<span><span class='st'>    logit(alpha[i]) &lt;- a0 + a1 * x[i] + a2 * x[i] ^ 2</span></span>
+<span><span class='st'>    y.discrete[i] ~ dbern(alpha[i])</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood for gamma</span></span>
+<span><span class='st'>  for (i in 1:n.discrete){</span></span>
+<span><span class='st'>    y.d[i] ~ dbern(mu[i])</span></span>
+<span><span class='st'>    logit(mu[i]) &lt;- b0 + b1 * x.d[i]</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood for mu and tau</span></span>
+<span><span class='st'>  for (i in 1:n.cont){</span></span>
+<span><span class='st'>    y.c[i] ~ dbeta(p[i], q[i])</span></span>
+<span><span class='st'>    p[i] &lt;- mu2[i] * tau</span></span>
+<span><span class='st'>    q[i] &lt;- (1 - mu2[i]) * tau</span></span>
+<span><span class='st'>    logit(mu2[i]) &lt;- b0 + b1 * x.c[i]</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>  }  </span></span>
+<span><span class='st'>  "</span>, file<span class='op'>=</span><span class='st'>"beinf.txt"</span></span>
+<span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>jd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y.d<span class='op'>=</span><span class='va'>y.d</span>, y.c<span class='op'>=</span><span class='va'>y.c</span>, y.discrete <span class='op'>=</span> <span class='va'>y.discrete</span>,</span>
+<span>           n.discrete<span class='op'>=</span><span class='va'>n.discrete</span>, n.cont <span class='op'>=</span> <span class='va'>n.cont</span>,</span>
+<span>           x.d <span class='op'>=</span> <span class='va'>x.d</span>, x.c<span class='op'>=</span><span class='va'>x.c</span>, n<span class='op'>=</span><span class='va'>n</span><span class='op'>)</span></span>
+<span><span class='va'>mod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span><span class='st'>"beinf.txt"</span>, data<span class='op'>=</span> <span class='va'>jd</span>, n.chains<span class='op'>=</span><span class='fl'>3</span>, n.adapt<span class='op'>=</span><span class='fl'>1000</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
@@ -1184,9 +1770,10 @@ Initializing model
   |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
   |                                                        
   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
-<pre class="r"><code>
-out &lt;- coda.samples(mod, c(&quot;a0&quot;, &quot;a1&quot;, &quot;a2&quot;, &quot;b0&quot;, &quot;b1&quot;, &quot;tau&quot;),
-                    n.iter=6000)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>mod</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a0"</span>, <span class='st'>"a1"</span>, <span class='st'>"a2"</span>, <span class='st'>"b0"</span>, <span class='st'>"b1"</span>, <span class='st'>"tau"</span><span class='op'>)</span>,</span>
+<span>                    n.iter<span class='op'>=</span><span class='fl'>6000</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -1290,48 +1877,56 @@ out &lt;- coda.samples(mod, c(&quot;a0&quot;, &quot;a1&quot;, &quot;a2&quot;, &q
   |************************************************* |  98%
   |                                                        
   |**************************************************| 100%</code></pre>
-<pre class="r"><code>
-ggd &lt;- ggs(out)
-a0.post &lt;- subset(ggd, Parameter == &quot;a0&quot;)$value
-a1.post &lt;- subset(ggd, Parameter == &quot;a1&quot;)$value
-a2.post &lt;- subset(ggd, Parameter == &quot;a2&quot;)$value
-n.stored &lt;- length(a2.post)
-P.discrete &lt;- array(dim=c(n.stored, n))
-for (i in 1:n){
-  P.discrete[, i] &lt;- antilogit(a0.post + a1.post * x[i] + a2.post * x[i] ^ 2)
-}
-pdd &lt;- melt(P.discrete, varnames = c(&quot;iteration&quot;, &quot;site&quot;), 
-            value.name = &quot;Pr.discrete&quot;)
-pdd$x &lt;- x[pdd$site]
-b0.post &lt;- subset(ggd, Parameter == &quot;b0&quot;)$value
-b1.post &lt;- subset(ggd, Parameter == &quot;b1&quot;)$value
-expect &lt;- array(dim=c(n.stored, n))
-for (i in 1:n){
-  expect[, i] &lt;- antilogit(b0.post + b1.post * x[i])
-}
-exd &lt;- melt(expect, varnames=c(&quot;iteration&quot;, &quot;site&quot;), value.name = &quot;Expectation&quot;)
-exd$x &lt;- x[exd$site]
-obsd &lt;- data.frame(x=x, y=y,
-                   component = factor(ifelse(y &lt; 1 &amp; y &gt; 0, 
-                                             &quot;Continuous&quot;, &quot;Discrete&quot;)))
-trued &lt;- data.frame(x=x, mu=mu)
-
-ggplot(pdd) +
-  geom_line(aes(x=x, y=Pr.discrete, group=iteration), 
-            alpha=0.05, color=&quot;grey&quot;) +
-  geom_line(aes(x=x, y=Expectation, group=iteration), 
-            data=exd, color=&quot;blue&quot;, alpha=0.05) +
-  geom_point(aes(x=x, y=y, fill=component), 
-             data=obsd, size=3, color=&quot;black&quot;,
-             position = position_jitter(width=0, height=.01), pch=21) +
-  scale_fill_manual(values = c(&quot;red&quot;, &quot;white&quot;), &quot;Component&quot;) +
-  ylab(&quot;y&quot;) +
-  geom_line(aes(x=x, y=mu), 
-            data=trued, color=&quot;green&quot;, linetype=&quot;dashed&quot;) +
-  theme_bw()</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>ggd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs.html'>ggs</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span>
+<span><span class='va'>a0.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"a0"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>a1.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"a1"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>a2.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"a2"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>n.stored</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>a2.post</span><span class='op'>)</span></span>
+<span><span class='va'>P.discrete</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>n.stored</span>, <span class='va'>n</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>n</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>P.discrete</span><span class='op'>[</span>, <span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>a0.post</span> <span class='op'>+</span> <span class='va'>a1.post</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>a2.post</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>^</span> <span class='fl'>2</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='va'>pdd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>P.discrete</span>, varnames <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"iteration"</span>, <span class='st'>"site"</span><span class='op'>)</span>, </span>
+<span>            value.name <span class='op'>=</span> <span class='st'>"Pr.discrete"</span><span class='op'>)</span></span>
+<span><span class='va'>pdd</span><span class='op'>$</span><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>pdd</span><span class='op'>$</span><span class='va'>site</span><span class='op'>]</span></span>
+<span><span class='va'>b0.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"b0"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>b1.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"b1"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>expect</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>n.stored</span>, <span class='va'>n</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>n</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>expect</span><span class='op'>[</span>, <span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>b0.post</span> <span class='op'>+</span> <span class='va'>b1.post</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='va'>exd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>expect</span>, varnames<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"iteration"</span>, <span class='st'>"site"</span><span class='op'>)</span>, value.name <span class='op'>=</span> <span class='st'>"Expectation"</span><span class='op'>)</span></span>
+<span><span class='va'>exd</span><span class='op'>$</span><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>exd</span><span class='op'>$</span><span class='va'>site</span><span class='op'>]</span></span>
+<span><span class='va'>obsd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>y</span>,</span>
+<span>                   component <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>&lt;</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>y</span> <span class='op'>&gt;</span> <span class='fl'>0</span>, </span>
+<span>                                             <span class='st'>"Continuous"</span>, <span class='st'>"Discrete"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>trued</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, mu<span class='op'>=</span><span class='va'>mu</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>pdd</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>Pr.discrete</span>, group<span class='op'>=</span><span class='va'>iteration</span><span class='op'>)</span>, </span>
+<span>            alpha<span class='op'>=</span><span class='fl'>0.05</span>, color<span class='op'>=</span><span class='st'>"grey"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>Expectation</span>, group<span class='op'>=</span><span class='va'>iteration</span><span class='op'>)</span>, </span>
+<span>            data<span class='op'>=</span><span class='va'>exd</span>, color<span class='op'>=</span><span class='st'>"blue"</span>, alpha<span class='op'>=</span><span class='fl'>0.05</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>y</span>, fill<span class='op'>=</span><span class='va'>component</span><span class='op'>)</span>, </span>
+<span>             data<span class='op'>=</span><span class='va'>obsd</span>, size<span class='op'>=</span><span class='fl'>3</span>, color<span class='op'>=</span><span class='st'>"black"</span>,</span>
+<span>             position <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/position_jitter.html'>position_jitter</a></span><span class='op'>(</span>width<span class='op'>=</span><span class='fl'>0</span>, height<span class='op'>=</span><span class='fl'>.01</span><span class='op'>)</span>, pch<span class='op'>=</span><span class='fl'>21</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_fill_manual</a></span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"red"</span>, <span class='st'>"white"</span><span class='op'>)</span>, <span class='st'>"Component"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ylab</a></span><span class='op'>(</span><span class='st'>"y"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>mu</span><span class='op'>)</span>, </span>
+<span>            data<span class='op'>=</span><span class='va'>trued</span>, color<span class='op'>=</span><span class='st'>"green"</span>, linetype<span class='op'>=</span><span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png" width="624" /></p>
 </div>
-<p>Here the posterior probability that <span class="math inline">\(y\)</span> comes from the discrete Bernoulli component is shown in grey, and the posterior expected value for both the Bernoulli and beta components across values of the covariate are shown in blue. The dashed green line shows the true expected value that was used to generate the data. Finally, the observed data are shown as jittered points, color coded as being derived from the continuous beta component, or the discrete Bernoulli component.</p>
+<p>Here the posterior probability that <span class="math inline">\(y\)</span> comes from the discrete Bernoulli
+component is shown in grey, and the posterior expected value for both the
+Bernoulli and beta components across values of the covariate are shown in blue.
+The dashed green line shows the true expected value that was used to generate
+the data. Finally, the observed data are shown as jittered points, color coded
+as being derived from the continuous beta component, or the discrete Bernoulli
+component.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1352,20 +1947,10 @@ ggplot(pdd) +
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
-<script id="distill-bibliography" type="text/bibtex">
-@article{warton2011arcsine,
-  title={The arcsine is asinine: the analysis of proportions in ecology},
-  author={Warton, David I and Hui, Francis KC},
-  journal={Ecology},
-  volume={92},
-  number={1},
-  pages={3--10},
-  year={2011},
-  publisher={Wiley Online Library}, 
-  url={https://doi.org/10.1890/10-0340.1}
-}
-</script>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

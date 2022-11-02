@@ -18,6 +18,75 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Better living through zero-one inflated beta regression</title>
 
@@ -52,7 +121,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["beinf.txt","better-living-through-zero-one-inflated-beta-regression_files/bowser-1.9.3/bowser.min.js","better-living-through-zero-one-inflated-beta-regression_files/distill-2.2.21/template.v2.js","better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png","better-living-through-zero-one-inflated-beta-regression_files/jquery-1.11.3/jquery.min.js","better-living-through-zero-one-inflated-beta-regression_files/webcomponents-2.0.0/webcomponents.js","biblio.bib"]}
+  {"type":"character","attributes":{},"value":["beinf.txt","better-living-through-zero-one-inflated-beta-regression_files/anchor-4.2.2/anchor.min.js","better-living-through-zero-one-inflated-beta-regression_files/bowser-1.9.3/bowser.min.js","better-living-through-zero-one-inflated-beta-regression_files/distill-2.2.21/template.v2.js","better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png","better-living-through-zero-one-inflated-beta-regression_files/header-attrs-2.16/header-attrs.js","better-living-through-zero-one-inflated-beta-regression_files/jquery-1.11.3/jquery.min.js","better-living-through-zero-one-inflated-beta-regression_files/jquery-3.6.0/jquery-3.6.0.js","better-living-through-zero-one-inflated-beta-regression_files/jquery-3.6.0/jquery-3.6.0.min.js","better-living-through-zero-one-inflated-beta-regression_files/jquery-3.6.0/jquery-3.6.0.min.map","better-living-through-zero-one-inflated-beta-regression_files/popper-2.6.0/popper.min.js","better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy-bundle.umd.min.js","better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy-light-border.css","better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy.css","better-living-through-zero-one-inflated-beta-regression_files/tippy-6.2.7/tippy.umd.min.js","better-living-through-zero-one-inflated-beta-regression_files/webcomponents-2.0.0/webcomponents.js","biblio.bib"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2015,7 +2084,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2080,7 +2155,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Better living through zero-one inflated beta regression</h1>
-<p>Fitting a Bayesian ZOIB regression model in JAGS.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:jags" class="dt-tag">jags</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Fitting a Bayesian ZOIB regression model in JAGS.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2090,8 +2170,18 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Dealing with proportion data on the interval <span class="math inline">\([0, 1]\)</span> is tricky. I realized this while trying to explain variation in vegetation cover. Unfortunately this is a true proportion, and can’t be made into a binary response. Further, true 0’s and 1’s rule out beta regression. You could arcsine square root transform the data (but shouldn’t; Warton and Hui 2011). Enter zero-and-one inflated beta regression.</p>
-<p>The zero-and-one-inflated beta distribution facilitates modeling fractional or proportional data that contains both 0’s and 1’s (Ospina and Ferrari 2010 - highly recommended). The general idea is to model the response variable (call it <span class="math inline">\(y\)</span>) as a mixture of Bernoulli and beta distributions, from which the true 0’s and 1’s, and the values between 0 and 1 are generated, respectively. The probability density function is</p>
+<p>Dealing with proportion data on the interval <span class="math inline">\([0, 1]\)</span> is tricky. I realized this
+while trying to explain variation in vegetation cover. Unfortunately this is a
+true proportion, and can’t be made into a binary response. Further, true 0’s and
+1’s rule out beta regression. You could arcsine square root transform the data
+(but shouldn’t; Warton and Hui 2011). Enter zero-and-one inflated beta
+regression.</p>
+<p>The zero-and-one-inflated beta distribution facilitates modeling fractional or
+proportional data that contains both 0’s and 1’s (Ospina and Ferrari 2010 -
+highly recommended). The general idea is to model the response variable (call it
+<span class="math inline">\(y\)</span>) as a mixture of Bernoulli and beta distributions, from which the true 0’s
+and 1’s, and the values between 0 and 1 are generated, respectively. The
+probability density function is</p>
 <p><span class="math display">\[
 f_{\text{ZOIB}}(y; \alpha, \gamma, \mu, \phi) = \left\{
   \begin{array}{lr}
@@ -2101,103 +2191,120 @@ f_{\text{ZOIB}}(y; \alpha, \gamma, \mu, \phi) = \left\{
   \end{array}
 \right.
 \]</span></p>
-<p>where <span class="math inline">\(0 &lt; \alpha, \gamma, \mu &lt; 1\)</span>, and <span class="math inline">\(\phi&gt;0\)</span>. <span class="math inline">\(f(y; \mu, \phi)\)</span> is the probability density function for the beta distribution, parameterized in terms of its mean <span class="math inline">\(\mu\)</span> and precision <span class="math inline">\(\phi\)</span>:</p>
+<p>where <span class="math inline">\(0 &lt; \alpha, \gamma, \mu &lt; 1\)</span>, and <span class="math inline">\(\phi&gt;0\)</span>. <span class="math inline">\(f(y; \mu, \phi)\)</span> is the
+probability density function for the beta distribution, parameterized in terms
+of its mean <span class="math inline">\(\mu\)</span> and precision <span class="math inline">\(\phi\)</span>:</p>
 <p><span class="math display">\[f_{\text{beta}}(y; \mu, \phi) = \dfrac{\Gamma(\phi)}{\Gamma(\mu \phi) \Gamma((1 - \mu)\phi)} y^{\mu \phi - 1} (1 - y)^{(1 - \mu)\phi - 1}\]</span></p>
-<p><span class="math inline">\(\alpha\)</span> is a mixture parameter that determines the extent to which the Bernoulli or beta component dominates the pdf. <span class="math inline">\(\gamma\)</span> determines the probability that <span class="math inline">\(y=1\)</span> if it comes from the Bernoulli component. <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\phi\)</span> are the expected value and the precision for the beta component, which is usually parameterized in terms of <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> (Ferrari and Cribari-Neto 2004). <span class="math inline">\(\mu = \frac{p}{p + q}\)</span>, and <span class="math inline">\(\phi=p+q\)</span>.</p>
-<p>Although ecologists often deal with proportion data, I haven’t found any examples of 0 &amp; 1 inflated beta regression in the ecological literature. Closest thing I’ve found was Nishii and Tanaka (2012) who take a different approach, where values between 0 and 1 are modeled as logit-normal.</p>
-<p>Here’s a quick demo in JAGS with simulated data. For simplicity, I’ll assume 1) there is one covariate that increases the expected value at the same rate for both the Bernoulli and beta components s.t. <span class="math inline">\(\mu = \gamma\)</span>, and 2) the Bernoulli component dominates extreme values of the covariate, where the expected value is near 0 or 1.</p>
+<p><span class="math inline">\(\alpha\)</span> is a mixture parameter that determines the extent to which the
+Bernoulli or beta component dominates the pdf. <span class="math inline">\(\gamma\)</span> determines the
+probability that <span class="math inline">\(y=1\)</span> if it comes from the Bernoulli component. <span class="math inline">\(\mu\)</span> and
+<span class="math inline">\(\phi\)</span> are the expected value and the precision for the beta component, which is
+usually parameterized in terms of <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> (Ferrari and Cribari-Neto 2004).
+<span class="math inline">\(\mu = \frac{p}{p + q}\)</span>, and <span class="math inline">\(\phi=p+q\)</span>.</p>
+<p>Although ecologists often deal with proportion data, I haven’t found any
+examples of 0 &amp; 1 inflated beta regression in the ecological literature.
+Closest thing I’ve found was Nishii and Tanaka (2012) who take a different
+approach, where values between 0 and 1 are modeled as logit-normal.</p>
+<p>Here’s a quick demo in JAGS with simulated data. For simplicity, I’ll assume 1)
+there is one covariate that increases the expected value at the same rate for
+both the Bernoulli and beta components s.t. <span class="math inline">\(\mu = \gamma\)</span>, and 2) the Bernoulli
+component dominates extreme values of the covariate, where the expected value is
+near 0 or 1.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(rjags)
-library(ggmcmc)
-library(reshape2)
-
-set.seed(1234)
-n &lt;- 60
-x &lt;- runif(n, -3, 3)
-a0 &lt;- -3
-a1 &lt;- 0
-a2 &lt;- 1
-antilogit &lt;- function(x){
-  exp(x) / (1 + exp(x))
-}
-alpha &lt;- antilogit(a0 + a1 * x + a2 * x^2)
-
-b0 &lt;- 0
-b1 &lt;- 2
-mu &lt;- antilogit(b0 + b1 * x)
-phi &lt;- 5
-p &lt;- mu * phi
-q &lt;- phi - mu * phi
-
-y.discrete &lt;- rbinom(n, 1, alpha)
-y &lt;- rep(NA, n)
-for (i in 1:n){
-  if (y.discrete[i] == 1){
-    y[i] &lt;- rbinom(1, 1, mu[i])
-  } else {
-    y[i] &lt;- rbeta(1, p[i], q[i])
-  }
-}
-
-# split the data into discrete and continuous components
-y.d &lt;- ifelse(y == 1 | y == 0, y, NA)
-y.discrete &lt;- ifelse(is.na(y.d), 0, 1)
-y.d &lt;- y.d[!is.na(y.d)]
-x.d &lt;- x[y.discrete == 1]
-n.discrete &lt;- length(y.d)
-
-which.cont &lt;- which(y &lt; 1 &amp; y &gt; 0)
-y.c &lt;- ifelse(y &lt; 1 &amp; y &gt; 0, y, NA)
-y.c &lt;- y.c[!is.na(y.c)]
-n.cont &lt;- length(y.c)
-x.c &lt;- x[which.cont]</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mcmc-jags.sourceforge.io'>rjags</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://xavier-fim.net/packages/ggmcmc/'>ggmcmc</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/hadley/reshape'>reshape2</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1234</span><span class='op'>)</span></span>
+<span><span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fl'>60</span></span>
+<span><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='va'>n</span>, <span class='op'>-</span><span class='fl'>3</span>, <span class='fl'>3</span><span class='op'>)</span></span>
+<span><span class='va'>a0</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>3</span></span>
+<span><span class='va'>a1</span> <span class='op'>&lt;-</span> <span class='fl'>0</span></span>
+<span><span class='va'>a2</span> <span class='op'>&lt;-</span> <span class='fl'>1</span></span>
+<span><span class='va'>antilogit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='va'>alpha</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>a0</span> <span class='op'>+</span> <span class='va'>a1</span> <span class='op'>*</span> <span class='va'>x</span> <span class='op'>+</span> <span class='va'>a2</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>b0</span> <span class='op'>&lt;-</span> <span class='fl'>0</span></span>
+<span><span class='va'>b1</span> <span class='op'>&lt;-</span> <span class='fl'>2</span></span>
+<span><span class='va'>mu</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>b0</span> <span class='op'>+</span> <span class='va'>b1</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>)</span></span>
+<span><span class='va'>phi</span> <span class='op'>&lt;-</span> <span class='fl'>5</span></span>
+<span><span class='va'>p</span> <span class='op'>&lt;-</span> <span class='va'>mu</span> <span class='op'>*</span> <span class='va'>phi</span></span>
+<span><span class='va'>q</span> <span class='op'>&lt;-</span> <span class='va'>phi</span> <span class='op'>-</span> <span class='va'>mu</span> <span class='op'>*</span> <span class='va'>phi</span></span>
+<span></span>
+<span><span class='va'>y.discrete</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='va'>n</span>, <span class='fl'>1</span>, <span class='va'>alpha</span><span class='op'>)</span></span>
+<span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='va'>n</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>n</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='kw'>if</span> <span class='op'>(</span><span class='va'>y.discrete</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>    <span class='va'>y</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>mu</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>  <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span></span>
+<span>    <span class='va'>y</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Beta.html'>rbeta</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>p</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>, <span class='va'>q</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>  <span class='op'>}</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='co'># split the data into discrete and continuous components</span></span>
+<span><span class='va'>y.d</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>==</span> <span class='fl'>1</span> <span class='op'>|</span> <span class='va'>y</span> <span class='op'>==</span> <span class='fl'>0</span>, <span class='va'>y</span>, <span class='cn'>NA</span><span class='op'>)</span></span>
+<span><span class='va'>y.discrete</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>y.d</span><span class='op'>)</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>y.d</span> <span class='op'>&lt;-</span> <span class='va'>y.d</span><span class='op'>[</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>y.d</span><span class='op'>)</span><span class='op'>]</span></span>
+<span><span class='va'>x.d</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>y.discrete</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>]</span></span>
+<span><span class='va'>n.discrete</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>y.d</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>which.cont</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>&lt;</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>y</span> <span class='op'>&gt;</span> <span class='fl'>0</span><span class='op'>)</span></span>
+<span><span class='va'>y.c</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>&lt;</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>y</span> <span class='op'>&gt;</span> <span class='fl'>0</span>, <span class='va'>y</span>, <span class='cn'>NA</span><span class='op'>)</span></span>
+<span><span class='va'>y.c</span> <span class='op'>&lt;-</span> <span class='va'>y.c</span><span class='op'>[</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>y.c</span><span class='op'>)</span><span class='op'>]</span></span>
+<span><span class='va'>n.cont</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>y.c</span><span class='op'>)</span></span>
+<span><span class='va'>x.c</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>which.cont</span><span class='op'>]</span></span></code></pre>
 </div>
-<p>Now we can specify our model in JAGS, following the factorization of the likelihood given by Ospina and Ferrari (2010), estimate our parameters, and see how well the model performs.</p>
+</div>
+<p>Now we can specify our model in JAGS, following the factorization of the
+likelihood given by Ospina and Ferrari (2010), estimate our parameters, and see
+how well the model performs.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# write model
-cat(
-  &quot;
-  model{
-  # priors
-  a0 ~ dnorm(0, .001)
-  a1 ~ dnorm(0, .001)
-  a2 ~ dnorm(0, .001)
-  b0 ~ dnorm(0, .001)
-  b1 ~ dnorm(0, .001)
-  t0 ~ dnorm(0, .01)
-  tau &lt;- exp(t0)
-
-  # likelihood for alpha
-  for (i in 1:n){
-    logit(alpha[i]) &lt;- a0 + a1 * x[i] + a2 * x[i] ^ 2
-    y.discrete[i] ~ dbern(alpha[i])
-  }
-
-  # likelihood for gamma
-  for (i in 1:n.discrete){
-    y.d[i] ~ dbern(mu[i])
-    logit(mu[i]) &lt;- b0 + b1 * x.d[i]
-  }
-
-  # likelihood for mu and tau
-  for (i in 1:n.cont){
-    y.c[i] ~ dbeta(p[i], q[i])
-    p[i] &lt;- mu2[i] * tau
-    q[i] &lt;- (1 - mu2[i]) * tau
-    logit(mu2[i]) &lt;- b0 + b1 * x.c[i]
-  }
-  }  
-  &quot;, file=&quot;beinf.txt&quot;
-)
-
-jd &lt;- list(x=x, y.d=y.d, y.c=y.c, y.discrete = y.discrete,
-           n.discrete=n.discrete, n.cont = n.cont,
-           x.d = x.d, x.c=x.c, n=n)
-mod &lt;- jags.model(&quot;beinf.txt&quot;, data= jd, n.chains=3, n.adapt=1000)</code></pre>
-<pre><code>
-Compiling model graph
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># write model</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span></span>
+<span>  <span class='st'>"</span></span>
+<span><span class='st'>  model{</span></span>
+<span><span class='st'>  # priors</span></span>
+<span><span class='st'>  a0 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  a1 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  a2 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  b0 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  b1 ~ dnorm(0, .001)</span></span>
+<span><span class='st'>  t0 ~ dnorm(0, .01)</span></span>
+<span><span class='st'>  tau &lt;- exp(t0)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood for alpha</span></span>
+<span><span class='st'>  for (i in 1:n){</span></span>
+<span><span class='st'>    logit(alpha[i]) &lt;- a0 + a1 * x[i] + a2 * x[i] ^ 2</span></span>
+<span><span class='st'>    y.discrete[i] ~ dbern(alpha[i])</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood for gamma</span></span>
+<span><span class='st'>  for (i in 1:n.discrete){</span></span>
+<span><span class='st'>    y.d[i] ~ dbern(mu[i])</span></span>
+<span><span class='st'>    logit(mu[i]) &lt;- b0 + b1 * x.d[i]</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # likelihood for mu and tau</span></span>
+<span><span class='st'>  for (i in 1:n.cont){</span></span>
+<span><span class='st'>    y.c[i] ~ dbeta(p[i], q[i])</span></span>
+<span><span class='st'>    p[i] &lt;- mu2[i] * tau</span></span>
+<span><span class='st'>    q[i] &lt;- (1 - mu2[i]) * tau</span></span>
+<span><span class='st'>    logit(mu2[i]) &lt;- b0 + b1 * x.c[i]</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>  }  </span></span>
+<span><span class='st'>  "</span>, file<span class='op'>=</span><span class='st'>"beinf.txt"</span></span>
+<span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>jd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y.d<span class='op'>=</span><span class='va'>y.d</span>, y.c<span class='op'>=</span><span class='va'>y.c</span>, y.discrete <span class='op'>=</span> <span class='va'>y.discrete</span>,</span>
+<span>           n.discrete<span class='op'>=</span><span class='va'>n.discrete</span>, n.cont <span class='op'>=</span> <span class='va'>n.cont</span>,</span>
+<span>           x.d <span class='op'>=</span> <span class='va'>x.d</span>, x.c<span class='op'>=</span><span class='va'>x.c</span>, n<span class='op'>=</span><span class='va'>n</span><span class='op'>)</span></span>
+<span><span class='va'>mod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span><span class='st'>"beinf.txt"</span>, data<span class='op'>=</span> <span class='va'>jd</span>, n.chains<span class='op'>=</span><span class='fl'>3</span>, n.adapt<span class='op'>=</span><span class='fl'>1000</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
@@ -2310,9 +2417,10 @@ Initializing model
   |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
   |                                                        
   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
-<pre class="r"><code>
-out &lt;- coda.samples(mod, c(&quot;a0&quot;, &quot;a1&quot;, &quot;a2&quot;, &quot;b0&quot;, &quot;b1&quot;, &quot;tau&quot;),
-                    n.iter=6000)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>mod</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a0"</span>, <span class='st'>"a1"</span>, <span class='st'>"a2"</span>, <span class='st'>"b0"</span>, <span class='st'>"b1"</span>, <span class='st'>"tau"</span><span class='op'>)</span>,</span>
+<span>                    n.iter<span class='op'>=</span><span class='fl'>6000</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -2416,48 +2524,56 @@ out &lt;- coda.samples(mod, c(&quot;a0&quot;, &quot;a1&quot;, &quot;a2&quot;, &q
   |************************************************* |  98%
   |                                                        
   |**************************************************| 100%</code></pre>
-<pre class="r"><code>
-ggd &lt;- ggs(out)
-a0.post &lt;- subset(ggd, Parameter == &quot;a0&quot;)$value
-a1.post &lt;- subset(ggd, Parameter == &quot;a1&quot;)$value
-a2.post &lt;- subset(ggd, Parameter == &quot;a2&quot;)$value
-n.stored &lt;- length(a2.post)
-P.discrete &lt;- array(dim=c(n.stored, n))
-for (i in 1:n){
-  P.discrete[, i] &lt;- antilogit(a0.post + a1.post * x[i] + a2.post * x[i] ^ 2)
-}
-pdd &lt;- melt(P.discrete, varnames = c(&quot;iteration&quot;, &quot;site&quot;), 
-            value.name = &quot;Pr.discrete&quot;)
-pdd$x &lt;- x[pdd$site]
-b0.post &lt;- subset(ggd, Parameter == &quot;b0&quot;)$value
-b1.post &lt;- subset(ggd, Parameter == &quot;b1&quot;)$value
-expect &lt;- array(dim=c(n.stored, n))
-for (i in 1:n){
-  expect[, i] &lt;- antilogit(b0.post + b1.post * x[i])
-}
-exd &lt;- melt(expect, varnames=c(&quot;iteration&quot;, &quot;site&quot;), value.name = &quot;Expectation&quot;)
-exd$x &lt;- x[exd$site]
-obsd &lt;- data.frame(x=x, y=y,
-                   component = factor(ifelse(y &lt; 1 &amp; y &gt; 0, 
-                                             &quot;Continuous&quot;, &quot;Discrete&quot;)))
-trued &lt;- data.frame(x=x, mu=mu)
-
-ggplot(pdd) +
-  geom_line(aes(x=x, y=Pr.discrete, group=iteration), 
-            alpha=0.05, color=&quot;grey&quot;) +
-  geom_line(aes(x=x, y=Expectation, group=iteration), 
-            data=exd, color=&quot;blue&quot;, alpha=0.05) +
-  geom_point(aes(x=x, y=y, fill=component), 
-             data=obsd, size=3, color=&quot;black&quot;,
-             position = position_jitter(width=0, height=.01), pch=21) +
-  scale_fill_manual(values = c(&quot;red&quot;, &quot;white&quot;), &quot;Component&quot;) +
-  ylab(&quot;y&quot;) +
-  geom_line(aes(x=x, y=mu), 
-            data=trued, color=&quot;green&quot;, linetype=&quot;dashed&quot;) +
-  theme_bw()</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>ggd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs.html'>ggs</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span>
+<span><span class='va'>a0.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"a0"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>a1.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"a1"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>a2.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"a2"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>n.stored</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>a2.post</span><span class='op'>)</span></span>
+<span><span class='va'>P.discrete</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>n.stored</span>, <span class='va'>n</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>n</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>P.discrete</span><span class='op'>[</span>, <span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>a0.post</span> <span class='op'>+</span> <span class='va'>a1.post</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>a2.post</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>^</span> <span class='fl'>2</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='va'>pdd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>P.discrete</span>, varnames <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"iteration"</span>, <span class='st'>"site"</span><span class='op'>)</span>, </span>
+<span>            value.name <span class='op'>=</span> <span class='st'>"Pr.discrete"</span><span class='op'>)</span></span>
+<span><span class='va'>pdd</span><span class='op'>$</span><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>pdd</span><span class='op'>$</span><span class='va'>site</span><span class='op'>]</span></span>
+<span><span class='va'>b0.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"b0"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>b1.post</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>ggd</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"b1"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>expect</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>n.stored</span>, <span class='va'>n</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>n</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>expect</span><span class='op'>[</span>, <span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>b0.post</span> <span class='op'>+</span> <span class='va'>b1.post</span> <span class='op'>*</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span><span class='va'>exd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>expect</span>, varnames<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"iteration"</span>, <span class='st'>"site"</span><span class='op'>)</span>, value.name <span class='op'>=</span> <span class='st'>"Expectation"</span><span class='op'>)</span></span>
+<span><span class='va'>exd</span><span class='op'>$</span><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>exd</span><span class='op'>$</span><span class='va'>site</span><span class='op'>]</span></span>
+<span><span class='va'>obsd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>y</span>,</span>
+<span>                   component <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>&lt;</span> <span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>y</span> <span class='op'>&gt;</span> <span class='fl'>0</span>, </span>
+<span>                                             <span class='st'>"Continuous"</span>, <span class='st'>"Discrete"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>trued</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, mu<span class='op'>=</span><span class='va'>mu</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>pdd</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>Pr.discrete</span>, group<span class='op'>=</span><span class='va'>iteration</span><span class='op'>)</span>, </span>
+<span>            alpha<span class='op'>=</span><span class='fl'>0.05</span>, color<span class='op'>=</span><span class='st'>"grey"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>Expectation</span>, group<span class='op'>=</span><span class='va'>iteration</span><span class='op'>)</span>, </span>
+<span>            data<span class='op'>=</span><span class='va'>exd</span>, color<span class='op'>=</span><span class='st'>"blue"</span>, alpha<span class='op'>=</span><span class='fl'>0.05</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>y</span>, fill<span class='op'>=</span><span class='va'>component</span><span class='op'>)</span>, </span>
+<span>             data<span class='op'>=</span><span class='va'>obsd</span>, size<span class='op'>=</span><span class='fl'>3</span>, color<span class='op'>=</span><span class='st'>"black"</span>,</span>
+<span>             position <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/position_jitter.html'>position_jitter</a></span><span class='op'>(</span>width<span class='op'>=</span><span class='fl'>0</span>, height<span class='op'>=</span><span class='fl'>.01</span><span class='op'>)</span>, pch<span class='op'>=</span><span class='fl'>21</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_fill_manual</a></span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"red"</span>, <span class='st'>"white"</span><span class='op'>)</span>, <span class='st'>"Component"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ylab</a></span><span class='op'>(</span><span class='st'>"y"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>mu</span><span class='op'>)</span>, </span>
+<span>            data<span class='op'>=</span><span class='va'>trued</span>, color<span class='op'>=</span><span class='st'>"green"</span>, linetype<span class='op'>=</span><span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="better-living-through-zero-one-inflated-beta-regression_files/figure-html5/write-model-1.png" width="624" /></p>
 </div>
-<p>Here the posterior probability that <span class="math inline">\(y\)</span> comes from the discrete Bernoulli component is shown in grey, and the posterior expected value for both the Bernoulli and beta components across values of the covariate are shown in blue. The dashed green line shows the true expected value that was used to generate the data. Finally, the observed data are shown as jittered points, color coded as being derived from the continuous beta component, or the discrete Bernoulli component.</p>
+<p>Here the posterior probability that <span class="math inline">\(y\)</span> comes from the discrete Bernoulli
+component is shown in grey, and the posterior expected value for both the
+Bernoulli and beta components across values of the covariate are shown in blue.
+The dashed green line shows the true expected value that was used to generate
+the data. Finally, the observed data are shown as jittered points, color coded
+as being derived from the continuous beta component, or the discrete Bernoulli
+component.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

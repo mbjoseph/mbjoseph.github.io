@@ -18,6 +18,96 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Multilevel modeling of community composition with imperfect detection</title>
 
@@ -44,7 +134,7 @@
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Seeing the forest and the trees: Multilevel models reveal both species and community patterns;citation_publication_date=2012;citation_publisher=Wiley Online Library;citation_volume=3;citation_author=Michelle M Jackson;citation_author=Monica G Turner;citation_author=Scott M Pearson;citation_author=Anthony R Ives"/>
+  <meta name="citation_reference" content="citation_title=Seeing the forest and the trees: Multilevel models reveal both species and community patterns;citation_publisher=Wiley Online Library;citation_volume=3;citation_author=Michelle M Jackson;citation_author=Monica G Turner;citation_author=Scott M Pearson;citation_author=Anthony R Ives"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -53,7 +143,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","multilevel-modeling-of-community-composition-with-imperfect-detection_files/figure-html5/plot-coefs-1.png"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","multilevel-modeling-of-community-composition-with-imperfect-detection_files/bowser-1.9.3/bowser.min.js","multilevel-modeling-of-community-composition-with-imperfect-detection_files/distill-2.2.21/template.v2.js","multilevel-modeling-of-community-composition-with-imperfect-detection_files/figure-html5/plot-coefs-1.png","multilevel-modeling-of-community-composition-with-imperfect-detection_files/jquery-1.11.3/jquery.min.js","multilevel-modeling-of-community-composition-with-imperfect-detection_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2016,7 +2106,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2081,7 +2177,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Multilevel modeling of community composition with imperfect detection</h1>
-<p>A guest post by Joe Mihaljevic.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:jags" class="dt-tag">jags</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>A guest post by Joe Mihaljevic.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2092,155 +2193,209 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-article">
 <p><em>This is a guest post generously provided by <a href="https://sites.google.com/site/jrmihaljevic/home">Joe Mihaljevic</a>.</em></p>
-<p>A common goal of community ecology is to understand how and why species composition shifts across space. Common techniques to determine which environmental covariates might lead to such shifts typically rely on ordination of community data to reduce the amount of data. These techniques include redundancy analysis (RDA), canonical correspondence analysis (CCA), and nonmetric multi-dimensional scaling (NMDS), each paired with permutation tests. However, these ordination techniques do not discern species-level covariate effects, making it difficult to attribute community-level pattern shifts to species-level changes <span class="citation" data-cites="jackson2012seeing">(Jackson et al. <a href="#ref-jackson2012seeing">2012</a>)</span>. Jackson et al. (2012) propose a hierarchical modeling framework as an alternative, which we extend in this post to correct for imperfect detection.</p>
-<p>Multilevel models can estimate species-level random and fixed covariate effects to determine the relative contribution of environmental covariates to changing composition across space (Jackson et al. 2012). For presence/absence data, such models are often formulated as:</p>
+<p>A common goal of community ecology is to understand how and why species
+composition shifts across space. Common techniques to determine which
+environmental covariates might lead to such shifts typically rely on ordination
+of community data to reduce the amount of data. These techniques include
+redundancy analysis (RDA), canonical correspondence analysis (CCA), and
+nonmetric multi-dimensional scaling (NMDS), each paired with permutation tests.
+However, these ordination techniques do not discern species-level covariate
+effects, making it difficult to attribute community-level pattern shifts to
+species-level changes <span class="citation" data-cites="jackson2012seeing">(<a href="#ref-jackson2012seeing" role="doc-biblioref">Jackson et al. 2012</a>)</span>. Jackson et al. (2012) propose a
+hierarchical modeling framework as an alternative, which we extend in this post
+to correct for imperfect detection.</p>
+<p>Multilevel models can estimate species-level random and fixed covariate effects
+to determine the relative contribution of environmental covariates to changing
+composition across space (Jackson et al. 2012). For presence/absence data, such
+models are often formulated as:</p>
 <p><span class="math display">\[y_{q} \sim \text{Bernoulli}(\psi_{q})\]</span></p>
 <p><span class="math display">\[\psi_{q} = logit^{-1}(\alpha_{spp[q]} + b_{spp[q]}  x_{site[q]})\]</span></p>
 <p><span class="math display">\[\alpha_{spp[q]} \sim N(\mu_{\alpha}, \sigma_{intercept}^2)\]</span></p>
 <p><span class="math display">\[b_{spp[q]} \sim N(\mu_{b}, \sigma_{slope}^2)\]</span></p>
-<p>Here <span class="math inline">\(y_q\)</span> is a vector of presences/absence of each species at each site (<span class="math inline">\(q=1, ... , nm,\)</span> where <span class="math inline">\(n\)</span> is the number of species and <span class="math inline">\(m\)</span> the number of sites). This model can be extended to incorporate multiple covariates.</p>
-<p>We are interested in whether species respond differently to environmental gradients (e.g. elevation, temperature, precipitation). If this is the case, then we expect community composition changes along such gradients. Concretely, we are interested in whether <span class="math inline">\(\sigma_{slope}^2\)</span> for any covariate differs from zero.</p>
-<p>Jackson et al. (2012) provide code for a maximum likelihood implementation of their model with data from Southern Appalachian understory herbs using the <a href="http://www.R-project.org/">R</a> package <a href="cran.r-project.org/package=lme4">lme4</a>. Here we present a simple extension of Jackson and colleague’s work, correcting for detection error with repeat surveys (i.e. multi-species occupancy modeling). Specifically, the above model could be changed slightly to:</p>
+<p>Here <span class="math inline">\(y_q\)</span> is a vector of presences/absence of each species at each site
+(<span class="math inline">\(q=1, ... , nm,\)</span> where <span class="math inline">\(n\)</span> is the number of species and <span class="math inline">\(m\)</span> the number of
+sites). This model can be extended to incorporate multiple covariates.</p>
+<p>We are interested in whether species respond differently to environmental
+gradients (e.g. elevation, temperature, precipitation). If this is the case,
+then we expect community composition changes along such gradients. Concretely,
+we are interested in whether <span class="math inline">\(\sigma_{slope}^2\)</span> for any covariate differs from
+zero.</p>
+<p>Jackson et al. (2012) provide code for a maximum likelihood implementation of
+their model with data from Southern Appalachian understory herbs using the
+<a href="http://www.R-project.org/">R</a> package <a href="cran.r-project.org/package=lme4">lme4</a>.
+Here we present a simple extension of Jackson and colleague’s work, correcting
+for detection error with repeat surveys (i.e. multi-species occupancy modeling).
+Specifically, the above model could be changed slightly to:</p>
 <p><span class="math display">\[y_{q} \sim \text{Binomial}(z_q p_{spp[q]}, j_q)\]</span></p>
 <p><span class="math display">\[z_q \sim \text{Bernoulli}(\psi_q)\]</span></p>
 <p><span class="math display">\[\psi_{q} = logit^{-1}(\alpha_{spp[q]} + b_{spp[q]}  x_{site[q]})\]</span></p>
 <p><span class="math display">\[\alpha_{spp[q]} \sim N(\mu_{\alpha}, \sigma_{intercept}^2)\]</span></p>
 <p><span class="math display">\[b_{spp[q]} \sim N(\mu_{b}, \sigma_{slope}^2)\]</span></p>
-<p>Now <span class="math inline">\(y_q\)</span> is the number of times each species is observed at each site over <span class="math inline">\(j\)</span> surveys. <span class="math inline">\(p_{spp[q]}\)</span> represents the species-specific probability of detection when the species is present, and <span class="math inline">\(z_q\)</span> represents the ‘true’ occurence of the species, a Bernoulli random variable with probability, <span class="math inline">\(\psi_q\)</span>.</p>
-<p>To demonstrate the method, we simulate data for a 20 species community across 100 sites with 4 repeat surveys. We assume that three site-level environmental covariates were measured, two of which have variable affects on occurrence probabilities (i.e. random effects), and one of which has consistent effects for all species (i.e. a fixed effect). We also assumed that species-specific detection probabilities varied, but were independent of environmental covariates.</p>
+<p>Now <span class="math inline">\(y_q\)</span> is the number of times each species is observed at each site over <span class="math inline">\(j\)</span>
+surveys. <span class="math inline">\(p_{spp[q]}\)</span> represents the species-specific probability of detection
+when the species is present, and <span class="math inline">\(z_q\)</span> represents the ‘true’ occurence of the
+species, a Bernoulli random variable with probability, <span class="math inline">\(\psi_q\)</span>.</p>
+<p>To demonstrate the method, we simulate data for a 20 species community across
+100 sites with 4 repeat surveys. We assume that three site-level environmental
+covariates were measured, two of which have variable affects on occurrence
+probabilities (i.e. random effects), and one of which has consistent effects for
+all species (i.e. a fixed effect). We also assumed that species-specific
+detection probabilities varied, but were independent of environmental
+covariates.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(reshape2)
-library(ggplot2)
-
-################################################
-# Simulate data
-################################################
-
-Nsite &lt;- 100
-Ncov &lt;- 3
-Nspecies &lt;- 20
-J &lt;- 4
-set.seed(1234)
-
-# species-specific intercepts:
-alpha &lt;- rnorm(Nspecies, 0, 1)
-
-# covariate values
-Xcov &lt;- matrix(rnorm(Nsite*Ncov, 0, 2),
-               nrow=Nsite, ncol=Ncov)
-
-# I&#39;ll assume 2 of the 3 covariates have effects that vary among species
-Beta &lt;- array(c(rnorm(Nspecies, 0, 2),
-                rnorm(Nspecies, -1, 1),
-                rep(1, Nspecies)
-                ),
-              dim=c(Nspecies, Ncov)
-              )
-
-# species-specific detection probs
-p0 &lt;- plogis(rnorm(Nspecies, 1, 0.5))
-
-#### Occupancy states ####
-Yobs &lt;- array(0, dim = c(Nspecies, Nsite)) # Simulated observations
-
-for(n in 1:Nspecies){
-  for(k in 1:Nsite){
-    lpsi &lt;- alpha[n] + Beta[n, ] %*% Xcov[k, ] # Covariate effects on occurrence
-    psi &lt;- 1/(1+exp(-lpsi)) #anti-logit
-
-    z &lt;- rbinom(1, 1, psi) # True Occupancy
-    Yobs[n, k] &lt;- rbinom(1, J, p0[n] * z) # Observed Occupancy
-  }
-}
-
-################################################
-# Format data for model
-################################################
-# X needs to have repeated covariates for each species, long form
-X &lt;- array(0, dim=c(Nsite*Nspecies, Ncov))
-t &lt;- 1; i &lt;- 1
-TT &lt;- Nsite
-while(i &lt;= Nspecies){
-  X[t:TT, ] &lt;- Xcov
-  t &lt;- t+Nsite
-  TT &lt;- TT + Nsite
-  i &lt;- i+1
-}
-
-# Species
-Species &lt;- rep(c(1:Nspecies), each=Nsite)
-
-# Observations/data:
-Y &lt;- NULL
-for(i in 1:Nspecies){
-  Y &lt;- c(Y, Yobs[i, ])
-}
-
-# All sites surveyed same # times:
-J &lt;- rep(J, times=Nspecies*Nsite)
-
-# Number of total observations
-Nobs &lt;- Nspecies*Nsite</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/hadley/reshape'>reshape2</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'>################################################</span></span>
+<span><span class='co'># Simulate data</span></span>
+<span><span class='co'>################################################</span></span>
+<span></span>
+<span><span class='va'>Nsite</span> <span class='op'>&lt;-</span> <span class='fl'>100</span></span>
+<span><span class='va'>Ncov</span> <span class='op'>&lt;-</span> <span class='fl'>3</span></span>
+<span><span class='va'>Nspecies</span> <span class='op'>&lt;-</span> <span class='fl'>20</span></span>
+<span><span class='va'>J</span> <span class='op'>&lt;-</span> <span class='fl'>4</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1234</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># species-specific intercepts:</span></span>
+<span><span class='va'>alpha</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>Nspecies</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># covariate values</span></span>
+<span><span class='va'>Xcov</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>Nsite</span><span class='op'>*</span><span class='va'>Ncov</span>, <span class='fl'>0</span>, <span class='fl'>2</span><span class='op'>)</span>,</span>
+<span>               nrow<span class='op'>=</span><span class='va'>Nsite</span>, ncol<span class='op'>=</span><span class='va'>Ncov</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># I'll assume 2 of the 3 covariates have effects that vary among species</span></span>
+<span><span class='va'>Beta</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>Nspecies</span>, <span class='fl'>0</span>, <span class='fl'>2</span><span class='op'>)</span>,</span>
+<span>                <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>Nspecies</span>, <span class='op'>-</span><span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span>,</span>
+<span>                <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>Nspecies</span><span class='op'>)</span></span>
+<span>                <span class='op'>)</span>,</span>
+<span>              dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>Nspecies</span>, <span class='va'>Ncov</span><span class='op'>)</span></span>
+<span>              <span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># species-specific detection probs</span></span>
+<span><span class='va'>p0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Logistic.html'>plogis</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>Nspecies</span>, <span class='fl'>1</span>, <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'>#### Occupancy states ####</span></span>
+<span><span class='va'>Yobs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='fl'>0</span>, dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>Nspecies</span>, <span class='va'>Nsite</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Simulated observations</span></span>
+<span></span>
+<span><span class='kw'>for</span><span class='op'>(</span><span class='va'>n</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>Nspecies</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='kw'>for</span><span class='op'>(</span><span class='va'>k</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>Nsite</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>    <span class='va'>lpsi</span> <span class='op'>&lt;-</span> <span class='va'>alpha</span><span class='op'>[</span><span class='va'>n</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>Beta</span><span class='op'>[</span><span class='va'>n</span>, <span class='op'>]</span> <span class='op'><a href='https://rdrr.io/r/base/matmult.html'>%*%</a></span> <span class='va'>Xcov</span><span class='op'>[</span><span class='va'>k</span>, <span class='op'>]</span> <span class='co'># Covariate effects on occurrence</span></span>
+<span>    <span class='va'>psi</span> <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>lpsi</span><span class='op'>)</span><span class='op'>)</span> <span class='co'>#anti-logit</span></span>
+<span></span>
+<span>    <span class='va'>z</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>psi</span><span class='op'>)</span> <span class='co'># True Occupancy</span></span>
+<span>    <span class='va'>Yobs</span><span class='op'>[</span><span class='va'>n</span>, <span class='va'>k</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>J</span>, <span class='va'>p0</span><span class='op'>[</span><span class='va'>n</span><span class='op'>]</span> <span class='op'>*</span> <span class='va'>z</span><span class='op'>)</span> <span class='co'># Observed Occupancy</span></span>
+<span>  <span class='op'>}</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='co'>################################################</span></span>
+<span><span class='co'># Format data for model</span></span>
+<span><span class='co'>################################################</span></span>
+<span><span class='co'># X needs to have repeated covariates for each species, long form</span></span>
+<span><span class='va'>X</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='fl'>0</span>, dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>Nsite</span><span class='op'>*</span><span class='va'>Nspecies</span>, <span class='va'>Ncov</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>t</span> <span class='op'>&lt;-</span> <span class='fl'>1</span>; <span class='va'>i</span> <span class='op'>&lt;-</span> <span class='fl'>1</span></span>
+<span><span class='va'>TT</span> <span class='op'>&lt;-</span> <span class='va'>Nsite</span></span>
+<span><span class='kw'>while</span><span class='op'>(</span><span class='va'>i</span> <span class='op'>&lt;=</span> <span class='va'>Nspecies</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>X</span><span class='op'>[</span><span class='va'>t</span><span class='op'>:</span><span class='va'>TT</span>, <span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>Xcov</span></span>
+<span>  <span class='va'>t</span> <span class='op'>&lt;-</span> <span class='va'>t</span><span class='op'>+</span><span class='va'>Nsite</span></span>
+<span>  <span class='va'>TT</span> <span class='op'>&lt;-</span> <span class='va'>TT</span> <span class='op'>+</span> <span class='va'>Nsite</span></span>
+<span>  <span class='va'>i</span> <span class='op'>&lt;-</span> <span class='va'>i</span><span class='op'>+</span><span class='fl'>1</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='co'># Species</span></span>
+<span><span class='va'>Species</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='va'>Nspecies</span><span class='op'>)</span>, each<span class='op'>=</span><span class='va'>Nsite</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Observations/data:</span></span>
+<span><span class='va'>Y</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span></span>
+<span><span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>Nspecies</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>Y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>Y</span>, <span class='va'>Yobs</span><span class='op'>[</span><span class='va'>i</span>, <span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='co'># All sites surveyed same # times:</span></span>
+<span><span class='va'>J</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='va'>J</span>, times<span class='op'>=</span><span class='va'>Nspecies</span><span class='op'>*</span><span class='va'>Nsite</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Number of total observations</span></span>
+<span><span class='va'>Nobs</span> <span class='op'>&lt;-</span> <span class='va'>Nspecies</span><span class='op'>*</span><span class='va'>Nsite</span></span></code></pre>
 </div>
-<p>Each species has a coefficient for each covariate that describes how the probability of occurrence responds. In one case, all species have the same response:</p>
+</div>
+<p>Each species has a coefficient for each covariate that describes how the
+probability of occurrence responds. In one case, all species have the same
+response:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-beta_df &lt;- melt(Beta, varnames = c(&#39;Species&#39;, &#39;Covariate&#39;))
-ggplot(beta_df) + 
-  geom_point(aes(value, Species)) + 
-  facet_wrap(~Covariate, nrow = 1) + 
-  xlab(&#39;Coefficient value&#39;) + 
-  ggtitle(&#39;Species-level coefficients for each covariate (facets)&#39;) + 
-  theme_minimal()</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>beta_df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>Beta</span>, varnames <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Species'</span>, <span class='st'>'Covariate'</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>beta_df</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>value</span>, <span class='va'>Species</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_wrap.html'>facet_wrap</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>Covariate</span>, nrow <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='st'>'Coefficient value'</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span><span class='op'>(</span><span class='st'>'Species-level coefficients for each covariate (facets)'</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="multilevel-modeling-of-community-composition-with-imperfect-detection_files/figure-html5/plot-coefs-1.png" width="624" /></p>
 </div>
 <p>We fit the following model with <a href="http://mcmc-jags.sourceforge.net/">JAGS</a> with vague priors.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-model {
-  # Priors
-  psi.mean ~ dbeta(1,1)
-  p.detect.mean ~ dbeta(1,1)
-
-  sd.psi ~ dunif(0,10)
-  psi.tau &lt;- pow(sd.psi, -2)
-
-  sd.p.detect ~ dunif(0,10)
-  p.detect.tau &lt;- pow(sd.p.detect, -2)
-
-  for(i in 1:Nspecies){
-    alpha[i] ~ dnorm(logit(psi.mean), psi.tau)T(-12,12)
-    lp.detect[i] ~ dnorm(logit(p.detect.mean), p.detect.tau)T(-12,12)
-    p.detect[i] &lt;- exp(lp.detect[i]) / (1 + exp(lp.detect[i]))
-  }
-
-  for(j in 1:Ncov){
-    mean.beta[j] ~ dnorm(0, 0.01)
-    sd.beta[j] ~ dunif(0, 10)
-    tau.beta[j] &lt;- pow(sd.beta[j]+0.001, -2)
-    for(i in 1:Nspecies){
-      betas[i,j] ~ dnorm(mean.beta[j], tau.beta[j])
-    }
-  }
-
-  # Likelihood
-  for(i in 1:Nobs){
-    logit(psi[i]) &lt;- alpha[Species[i]] + inprod(betas[Species[i],], X[i, ])
-    z[i] ~ dbern(psi[i])
-    Y[i] ~ dbinom(z[i] * p.detect[Species[i]], J[i])
-  }
-}</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Priors</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  psi.mean <span class="sc">~</span> <span class="fu">dbeta</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  p.detect.mean <span class="sc">~</span> <span class="fu">dbeta</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  sd.psi <span class="sc">~</span> <span class="fu">dunif</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  psi.tau <span class="ot">&lt;-</span> <span class="fu">pow</span>(sd.psi, <span class="sc">-</span><span class="dv">2</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  sd.p.detect <span class="sc">~</span> <span class="fu">dunif</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  p.detect.tau <span class="ot">&lt;-</span> <span class="fu">pow</span>(sd.p.detect, <span class="sc">-</span><span class="dv">2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>Nspecies){</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    alpha[i] <span class="sc">~</span> <span class="fu">dnorm</span>(<span class="fu">logit</span>(psi.mean), psi.tau)<span class="fu">T</span>(<span class="sc">-</span><span class="dv">12</span>,<span class="dv">12</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    lp.detect[i] <span class="sc">~</span> <span class="fu">dnorm</span>(<span class="fu">logit</span>(p.detect.mean), p.detect.tau)<span class="fu">T</span>(<span class="sc">-</span><span class="dv">12</span>,<span class="dv">12</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    p.detect[i] <span class="ot">&lt;-</span> <span class="fu">exp</span>(lp.detect[i]) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(lp.detect[i]))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>Ncov){</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    mean.beta[j] <span class="sc">~</span> <span class="fu">dnorm</span>(<span class="dv">0</span>, <span class="fl">0.01</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    sd.beta[j] <span class="sc">~</span> <span class="fu">dunif</span>(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    tau.beta[j] <span class="ot">&lt;-</span> <span class="fu">pow</span>(sd.beta[j]<span class="sc">+</span><span class="fl">0.001</span>, <span class="sc">-</span><span class="dv">2</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>Nspecies){</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      betas[i,j] <span class="sc">~</span> <span class="fu">dnorm</span>(mean.beta[j], tau.beta[j])</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Likelihood</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>Nobs){</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">logit</span>(psi[i]) <span class="ot">&lt;-</span> alpha[Species[i]] <span class="sc">+</span> <span class="fu">inprod</span>(betas[Species[i],], X[i, ])</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    z[i] <span class="sc">~</span> <span class="fu">dbern</span>(psi[i])</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    Y[i] <span class="sc">~</span> <span class="fu">dbinom</span>(z[i] <span class="sc">*</span> p.detect[Species[i]], J[i])</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
-<p>Using information theory, specifically Watanabe-Akaike information criteria (<a href="http://www.stat.columbia.edu/~gelman/research/published/waic_understand3.pdf">WAIC</a>), we compared this model, which assumes all covariates have random effects, to all combination of models varying whether each covariate has fixed or random effects. See <a href="https://github.com/mbjoseph/MLM_EcologyInSilico">this GitHub repository</a> for all model statements and code.</p>
-<p>A model that assumes all covariates have random effects, and the data-generating model, in which only covariates 1 and 2 have random effects, performed the best, but were indistinguishable from one another:</p>
-<p>This result makes sense because the model with all random effects is able to recover species-specific responses to site-level covariates very well:</p>
-<p>However, this model estimates that the 95% HDI of <span class="math inline">\(\sigma_{slope}\)</span> of covariate 3 includes zero, indicating that this covariate effectively has a fixed, rather than random effect among species.</p>
-<p>Thus, we could conclude that the first two covariates have random effects, while the third covariate has a fixed effect. This means that composition shifts along gradients of covariates 1 and 2. We can visualize the relative contribution of covariate 1 and 2’s random effects to composition using ordination, as discussed in Jackson et al. (2012). To do this, we compare the linear predictor (i.e. <span class="math inline">\(\text{logit}^{-1}(\psi_q)\)</span>) of the best model that includes only significant random effects to a model that does not have any random effects.</p>
-<p>The code to extract linear predictors and ordinate the community is provided on <a href="https://github.com/mbjoseph/MLM_EcologyInSilico">GitHub</a>.</p>
-<div id="refs" class="references">
-<div id="ref-jackson2012seeing">
-<p>Jackson, Michelle M, Monica G Turner, Scott M Pearson, and Anthony R Ives. 2012. “Seeing the Forest and the Trees: Multilevel Models Reveal Both Species and Community Patterns.” <em>Ecosphere</em> 3 (9): 1–16. <a href="https://doi.org/10.1890/ES12-00116.1">https://doi.org/10.1890/ES12-00116.1</a>.</p>
+<p>Using information theory, specifically Watanabe-Akaike information criteria
+(<a href="http://www.stat.columbia.edu/~gelman/research/published/waic_understand3.pdf">WAIC</a>),
+we compared this model, which assumes all covariates have random effects, to
+all combination of models varying whether each covariate has fixed or random
+effects. See
+<a href="https://github.com/mbjoseph/MLM_EcologyInSilico">this GitHub repository</a> for
+all model statements and code.</p>
+<p>A model that assumes all covariates have random effects, and the data-generating
+model, in which only covariates 1 and 2 have random effects, performed the best, but were indistinguishable from one another:</p>
+<p>This result makes sense because the model with all random effects is able to
+recover species-specific responses to site-level covariates very well:</p>
+<p>However, this model estimates that the 95% HDI of <span class="math inline">\(\sigma_{slope}\)</span> of covariate
+3 includes zero, indicating that this covariate effectively has a fixed, rather
+than random effect among species.</p>
+<p>Thus, we could conclude that the first two covariates have random effects, while
+the third covariate has a fixed effect. This means that composition shifts along
+gradients of covariates 1 and 2. We can visualize the relative contribution of
+covariate 1 and 2’s random effects to composition using ordination, as discussed
+in Jackson et al. (2012). To do this, we compare the linear predictor
+(i.e. <span class="math inline">\(\text{logit}^{-1}(\psi_q)\)</span>) of the best model that includes only significant
+random effects to a model that does not have any random effects.</p>
+<p>The code to extract linear predictors and ordinate the community is provided on
+<a href="https://github.com/mbjoseph/MLM_EcologyInSilico">GitHub</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-jackson2012seeing" class="csl-entry" role="doc-biblioentry">
+Jackson, Michelle M, Monica G Turner, Scott M Pearson, and Anthony R Ives. 2012. <span>“Seeing the Forest and the Trees: Multilevel Models Reveal Both Species and Community Patterns.”</span> <em>Ecosphere</em> 3 (9): 1–16. <a href="https://doi.org/10.1890/ES12-00116.1">https://doi.org/10.1890/ES12-00116.1</a>.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->

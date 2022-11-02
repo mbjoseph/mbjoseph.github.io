@@ -18,6 +18,75 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Gaussian predictive process models in Stan</title>
 
@@ -51,7 +120,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img-1.png","gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img2-1.png"]}
+  {"type":"character","attributes":{},"value":["gaussian-predictive-process-models-in-stan_files/bowser-1.9.3/bowser.min.js","gaussian-predictive-process-models-in-stan_files/distill-2.2.21/template.v2.js","gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img-1.png","gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img2-1.png","gaussian-predictive-process-models-in-stan_files/jquery-1.11.3/jquery.min.js","gaussian-predictive-process-models-in-stan_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2014,7 +2083,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2079,7 +2154,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Gaussian predictive process models in Stan</h1>
-<p>Gaussian processes that scale to larger data.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:stan" class="dt-tag">stan</a>
+  <a href="../../index.html#category:spatial" class="dt-tag">spatial</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Gaussian processes that scale to larger data.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2089,26 +2170,36 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Gaussian process (GP) models are computationally demanding for large datasets. Much work has been done to avoid expensive matrix operations that arise in parameter estimation with larger datasets via sparse and/or reduced rank covariance matrices (<a href="http://arxiv.org/pdf/1406.7343.pdf">Datta et al. 2016</a> provide a nice review). What follows is an implementation of a spatial Gaussian predictive process Poisson GLM in <a href="http://mc-stan.org/">Stan</a>, following <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2743161/">Finley et al. 2009</a>: <em>Improving the performance of predictive process modeling for large datasets</em>, with a comparison to a full rank GP model in terms of execution time and MCMC efficiency.</p>
+<p>Gaussian process (GP) models are computationally demanding for large datasets.
+Much work has been done to avoid expensive matrix operations that arise in parameter estimation with larger datasets via sparse and/or reduced rank covariance matrices (<a href="http://arxiv.org/pdf/1406.7343.pdf">Datta et al. 2016</a> provide a nice review).
+What follows is an implementation of a spatial Gaussian predictive process Poisson GLM in <a href="http://mc-stan.org/">Stan</a>, following <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2743161/">Finley et al. 2009</a>: <em>Improving the performance of predictive process modeling for large datasets</em>, with a comparison to a full rank GP model in terms of execution time and MCMC efficiency.</p>
 <h2 id="generative-model">Generative model</h2>
 <p>Assume we have <span class="math inline">\(n\)</span> spatially referenced counts <span class="math inline">\(y(s)\)</span> made at spatial locations <span class="math inline">\(s_1, s_2, ..., s_n\)</span>, which depend on a latent mean zero Gaussian process with an isotropic stationary exponential covariance function:</p>
 <p><span class="math display">\[y(s) \sim \text{Poisson}(\text{exp}(X^T(s) \beta + w(s)))\]</span></p>
 <p><span class="math display">\[w(s) \sim GP(0, C(d))\]</span></p>
 <p><span class="math display">\[[C(d)]_{i, j} = \eta^2 \text{exp}(- d_{ij} \phi)) + I(i = j) \sigma^2\]</span></p>
-<p>where <span class="math inline">\(y(s)\)</span> is the response at location <span class="math inline">\(s\)</span>, <span class="math inline">\(X\)</span> is an <span class="math inline">\(n \times p\)</span> design matrix, <span class="math inline">\(\beta\)</span> is a length <span class="math inline">\(p\)</span> parameter vector, <span class="math inline">\(\sigma^2\)</span> is a “nugget” parameter, <span class="math inline">\(\eta^2\)</span> is the variance parameter of the Gaussian process, <span class="math inline">\(d_{ij}\)</span> is a spatial distance between locations <span class="math inline">\(s_i\)</span> and <span class="math inline">\(s_j\)</span>, and <span class="math inline">\(\phi\)</span> determines how quickly the correlation in <span class="math inline">\(w\)</span> decays as distance increases. For simplicity, the point locations are uniformly distributed in a 2d unit square spatial region.</p>
+<p>where <span class="math inline">\(y(s)\)</span> is the response at location <span class="math inline">\(s\)</span>, <span class="math inline">\(X\)</span> is an <span class="math inline">\(n \times p\)</span> design matrix, <span class="math inline">\(\beta\)</span> is a length <span class="math inline">\(p\)</span> parameter vector, <span class="math inline">\(\sigma^2\)</span> is a “nugget” parameter, <span class="math inline">\(\eta^2\)</span> is the variance parameter of the Gaussian process, <span class="math inline">\(d_{ij}\)</span> is a spatial distance between locations <span class="math inline">\(s_i\)</span> and <span class="math inline">\(s_j\)</span>, and <span class="math inline">\(\phi\)</span> determines how quickly the correlation in <span class="math inline">\(w\)</span> decays as distance increases.
+For simplicity, the point locations are uniformly distributed in a 2d unit square spatial region.</p>
 <p>To estimate this model in a Bayesian context, we might be faced with taking a Cholesky decomposition of the <span class="math inline">\(n \times n\)</span> matrix <span class="math inline">\(C(d)\)</span> at every iteration in an MCMC algorithm, a costly operation for large <span class="math inline">\(n\)</span>.</p>
 <h2 id="gaussian-predictive-process-representation">Gaussian predictive process representation</h2>
-<p>Computational benefits of Gaussian predictive process models arise from the estimation of the latent Gaussian process at <span class="math inline">\(m &lt;&lt; n\)</span> locations (knots). Instead of taking the Cholesky factorization of the <span class="math inline">\(n \times n\)</span> covariance matrix, we instead factorize the <span class="math inline">\(m \times m\)</span> covariance matrix corresponding to the covariance in the latent spatial process among knots. Knot placement is a non-trivial topic, but for the purpose of illustration let’s place knots on a grid over the spatial region of interest. Note that here the knots are fixed, but it is possible to model knot locations stochastically as in <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3268014/">Guhaniyogi et al. 2012</a>.</p>
+<p>Computational benefits of Gaussian predictive process models arise from the estimation of the latent Gaussian process at <span class="math inline">\(m &lt;&lt; n\)</span> locations (knots).
+Instead of taking the Cholesky factorization of the <span class="math inline">\(n \times n\)</span> covariance matrix, we instead factorize the <span class="math inline">\(m \times m\)</span> covariance matrix corresponding to the covariance in the latent spatial process among knots.
+Knot placement is a non-trivial topic, but for the purpose of illustration let’s place knots on a grid over the spatial region of interest.
+Note that here the knots are fixed, but it is possible to model knot locations stochastically as in <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3268014/">Guhaniyogi et al. 2012</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img-1.png" width="1152" /></p>
 </div>
 <p>Knots are shown as stars and the points are observations.</p>
-<p>We will replace <span class="math inline">\(w\)</span> above with an estimate of <span class="math inline">\(w\)</span> that is derived from a reduced rank representation of the latent spatial process. Below, the vector <span class="math inline">\(\tilde{\boldsymbol{\epsilon}}\)</span> corrects for bias (underestimation of <span class="math inline">\(\eta\)</span> and overestimation of <span class="math inline">\(\sigma\)</span>) as an extension of Banerjee et al. 2008, and <span class="math inline">\(\mathcal{C}^T(\theta) \mathcal{C}^{*-1}(\theta)\)</span> relates <span class="math inline">\(w\)</span> at desired point locations to the value of the latent GP at the knot locations, where <span class="math inline">\(\mathcal{C}^T(\theta)\)</span> is an <span class="math inline">\(n \times m\)</span> matrix that gets multiplied by the inverse of the <span class="math inline">\(m \times m\)</span> covariance matrix for the latent spatial process at the knots. For a complete and general description see Finley et al. 2009, but here is the jist of the univariate model:</p>
+<p>We will replace <span class="math inline">\(w\)</span> above with an estimate of <span class="math inline">\(w\)</span> that is derived from a reduced rank representation of the latent spatial process.
+Below, the vector <span class="math inline">\(\tilde{\boldsymbol{\epsilon}}\)</span> corrects for bias (underestimation of <span class="math inline">\(\eta\)</span> and overestimation of <span class="math inline">\(\sigma\)</span>) as an extension of Banerjee et al. 2008, and <span class="math inline">\(\mathcal{C}^T(\theta) \mathcal{C}^{*-1}(\theta)\)</span> relates <span class="math inline">\(w\)</span> at desired point locations to the value of the latent GP at the knot locations, where <span class="math inline">\(\mathcal{C}^T(\theta)\)</span> is an <span class="math inline">\(n \times m\)</span> matrix that gets multiplied by the inverse of the <span class="math inline">\(m \times m\)</span> covariance matrix for the latent spatial process at the knots.
+For a complete and general description see Finley et al. 2009, but here is the jist of the univariate model:</p>
 <p><span class="math display">\[\boldsymbol{Y} \sim \text{Poisson}(\boldsymbol{X} \beta + \mathcal{C}^T(\theta) \mathcal{C}^{*-1}(\theta)\boldsymbol{w^*} + \tilde{\boldsymbol{\epsilon}})\]</span></p>
 <p><span class="math display">\[\boldsymbol{w^*} \sim GP(0, \mathcal{C}^*(\theta))\]</span></p>
 <p><span class="math display">\[\tilde{\epsilon}(s) \stackrel{indep}{\sim} N(0, C(s, s) - \mathcal{c}^T(\theta) \mathcal{C}^{*-1}(\theta))\mathcal{c}(\theta)\]</span></p>
 <p>with priors for <span class="math inline">\(\eta\)</span>, <span class="math inline">\(\sigma\)</span>, and <span class="math inline">\(\phi\)</span> completing a Bayesian specification.</p>
-<p>This approach scales well for larger datasets relative to a full rank GP model. Comparing the number of effective samples per unit time for the two approaches across a range of sample sizes, the GPP executes more quickly and is more efficient for larger datasets. Code for this simulation is available on GitHub: <a href="https://github.com/mbjoseph/gpp-speed-test">https://github.com/mbjoseph/gpp-speed-test</a>.</p>
+<p>This approach scales well for larger datasets relative to a full rank GP model.
+Comparing the number of effective samples per unit time for the two approaches across a range of sample sizes, the GPP executes more quickly and is more efficient for larger datasets.
+Code for this simulation is available on GitHub: <a href="https://github.com/mbjoseph/gpp-speed-test">https://github.com/mbjoseph/gpp-speed-test</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="gaussian-predictive-process-models-in-stan_files/figure-html5/plot-img2-1.png" width="1536" data-distill-preview=1 /></p>
 </div>
@@ -2117,6 +2208,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741335/">Banerjee, Sudipto, et al. “Gaussian predictive process models for large spatial data sets.” Journal of the Royal Statistical Society: Series B (Statistical Methodology) 70.4 (2008): 825-848.</a></p>
 <p><a href="http://arxiv.org/pdf/1406.7343.pdf">Datta, Abhirup, et al. “Hierarchical nearest-neighbor Gaussian process models for large geostatistical datasets.” Journal of the American Statistical Association. Accepted (2015).</a></p>
 <p><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3268014/">Guhaniyogi, Rajarshi, et al. “Adaptive Gaussian predictive process models for large spatial datasets.” Environmetrics 22.8 (2011): 997-1007.</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

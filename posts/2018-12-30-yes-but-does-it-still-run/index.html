@@ -18,6 +18,75 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Yes, but does it (still) run?</title>
 
@@ -51,7 +120,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["yes-but-does-it-still-run_files/figure-html5/plot-img-1.png"]}
+  {"type":"character","attributes":{},"value":["yes-but-does-it-still-run_files/bowser-1.9.3/bowser.min.js","yes-but-does-it-still-run_files/distill-2.2.21/template.v2.js","yes-but-does-it-still-run_files/figure-html5/plot-img-1.png","yes-but-does-it-still-run_files/jquery-1.11.3/jquery.min.js","yes-but-does-it-still-run_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2014,7 +2083,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2079,7 +2154,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Yes, but does it (still) run?</h1>
-<p>Migrating from Jekyll to distill, with some reflections on the past 6 years.</p>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>Migrating from Jekyll to distill, with some reflections on the past 6 years.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2089,19 +2166,51 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>I haven’t blogged recently. It was useful as a PhD student to wrap my head around new methods and track my path from a code-naive field ecologist to a not entirely incompetent R programmer in 2016 when I graduated. But, much has changed in the 5-6 years since I began the blog. I’ve developed new skills, and the tools around R programming have matured. It’s easier now to publish content with R markdown with tools like <a href="https://github.com/rstudio/blogdown">blogdown</a> and <a href="https://github.com/rstudio/distill">distill</a> than it was six years ago.</p>
-<p>My old workflow involved writing posts in R markdown, then generating markdown and publishing with a static site generator (first <a href="https://github.com/imathis/octopress">Octopress</a>, then <a href="https://github.com/jekyll/jekyll">Jekyll</a>). This is fine, but I ended up losing track of most of the original R markdown files that generated the markdown being served on the site.</p>
-<p>Looking back on 2018, I’ve come to better appreciate continuous integration through Travis CI, CircleCI, and AppVeyor. It’s nice to know when builds break and code stops working. As I was taking stock of the past year, I realized that I did not know whether the code that I had posted years ago still worked, and I didn’t have the .Rmd files anymore to find out.</p>
+<p>I haven’t blogged recently.
+It was useful as a PhD student to wrap my head around new
+methods and track my path from a code-naive field ecologist to a
+not entirely incompetent R programmer in 2016 when I graduated.
+But, much has changed in the 5-6 years since I began the blog.
+I’ve developed new skills, and the tools around R programming have matured.
+It’s easier now to publish content with R markdown
+with tools like <a href="https://github.com/rstudio/blogdown">blogdown</a> and
+<a href="https://github.com/rstudio/distill">distill</a> than it was six years ago.</p>
+<p>My old workflow involved writing posts in R markdown, then generating markdown
+and publishing with a static site generator (first
+<a href="https://github.com/imathis/octopress">Octopress</a>, then
+<a href="https://github.com/jekyll/jekyll">Jekyll</a>).
+This is fine, but I ended up losing track of most of the original R markdown
+files that generated the markdown being served on the site.</p>
+<p>Looking back on 2018, I’ve come to better appreciate
+continuous integration through Travis CI, CircleCI, and AppVeyor.
+It’s nice to know when builds break and code stops working.
+As I was taking stock of the past year, I realized that I did not know whether
+the code that I had posted years ago still worked, and I didn’t have the .Rmd
+files anymore to find out.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure"><span id="fig:plot-img"></span>
+<div class="figure"><span style="display:block;" id="fig:plot-img"></span>
 <img src="yes-but-does-it-still-run_files/figure-html5/plot-img-1.png" alt="An abandoned car that may have been useful in its time, but no longer runs." width="960" />
 <p class="caption">
 Figure 1: An abandoned car that may have been useful in its time, but no longer runs.
 </p>
 </div>
 </div>
-<p>This bothered me. First, I didn’t want to be responsible for publishing code that doesn’t run. Second, I also realized that years ago, I did not appreciate portability as much as I do today, e.g., when I felt comfortable assuming that users would need to manually download data from a website and store it in a specific directory on their filesystem to run some code. With time off over the holidays, I figured I would migrate my old site from Jekyll to distill and put the resulting site under continuous integration to be sure that the answer to the question “does it (still) run?” is yes.</p>
-<p>The result is this site (as of Dec 2018), and unsurprisingly, not all of the code that I had posted previously still ran. But, now with distill I have <a href="https://travis-ci.org/mbjoseph/mbjoseph.github.io">Travis CI building the posts</a> regularly, so at least if something breaks in the future, I should know sooner.</p>
+<p>This bothered me.
+First, I didn’t want to be responsible for publishing code that doesn’t run.
+Second, I also realized that years ago, I did not appreciate
+portability as much as I do today, e.g.,
+when I felt comfortable assuming that users would need to manually download
+data from a website and store it in a specific directory on their filesystem
+to run some code.
+With time off over the holidays, I figured I would migrate my old site from
+Jekyll to distill and put the resulting site under continuous integration to
+be sure that the answer to the question “does it (still) run?” is yes.</p>
+<p>The result is this site (as of Dec 2018), and unsurprisingly, not all of the
+code that I had posted previously still ran.
+But, now with distill I have
+<a href="https://travis-ci.org/mbjoseph/mbjoseph.github.io">Travis CI building the posts</a>
+regularly, so at least if something breaks in the future, I should know sooner.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

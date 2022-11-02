@@ -175,7 +175,7 @@ For simplicity, assume that the probability of detection is constant across all 
 pr_detection = np.array([0.5])
 y = np.random.binomial(n=n, 
                        p=pr_detection, 
-                       size=(nsite, nrep)).astype(np.float32)
+                       size=(nsite, nrep))
 
 plt.plot(x, lam)
 for i in range(nrep):
@@ -230,7 +230,7 @@ def nmix_loss(y_obs, lambda_hat, p_hat, n_max):
     """
     batch_size, n_rep = y_obs.shape
     
-    possible_n_vals = torch.arange(n_max).unsqueeze(0).float()
+    possible_n_vals = torch.arange(n_max).unsqueeze(0)
     n_logprob = Poisson(lambda_hat).log_prob(possible_n_vals)
     assert n_logprob.shape == (batch_size, n_max)
     
@@ -257,7 +257,7 @@ net
 Create a data loader.
 
 ```{python make-dataloader}
-dataset = TensorDataset(torch.tensor(x).float(), torch.tensor(y).float())
+dataset = TensorDataset(torch.tensor(x).float(), torch.tensor(y))
 dataloader = DataLoader(dataset, 
                         batch_size=16,
                         shuffle=True, 

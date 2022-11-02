@@ -18,6 +18,75 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
   <!--radix_placeholder_meta_tags-->
 <title>Maxwell B. Joseph: Bayesian model II regression in JAGS</title>
 
@@ -51,7 +120,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bayesian-model-ii-regression_files/bowser-1.9.3/bowser.min.js","bayesian-model-ii-regression_files/distill-2.2.21/template.v2.js","bayesian-model-ii-regression_files/figure-html5/compare-models-1.png","bayesian-model-ii-regression_files/jquery-1.11.3/jquery.min.js","bayesian-model-ii-regression_files/webcomponents-2.0.0/webcomponents.js","xyerror.txt","yerror.txt"]}
+  {"type":"character","attributes":{},"value":["bayesian-model-ii-regression_files/anchor-4.2.2/anchor.min.js","bayesian-model-ii-regression_files/bowser-1.9.3/bowser.min.js","bayesian-model-ii-regression_files/distill-2.2.21/template.v2.js","bayesian-model-ii-regression_files/figure-html5/compare-models-1.png","bayesian-model-ii-regression_files/header-attrs-2.16/header-attrs.js","bayesian-model-ii-regression_files/jquery-1.11.3/jquery.min.js","bayesian-model-ii-regression_files/jquery-3.6.0/jquery-3.6.0.js","bayesian-model-ii-regression_files/jquery-3.6.0/jquery-3.6.0.min.js","bayesian-model-ii-regression_files/jquery-3.6.0/jquery-3.6.0.min.map","bayesian-model-ii-regression_files/popper-2.6.0/popper.min.js","bayesian-model-ii-regression_files/tippy-6.2.7/tippy-bundle.umd.min.js","bayesian-model-ii-regression_files/tippy-6.2.7/tippy-light-border.css","bayesian-model-ii-regression_files/tippy-6.2.7/tippy.css","bayesian-model-ii-regression_files/tippy-6.2.7/tippy.umd.min.js","bayesian-model-ii-regression_files/webcomponents-2.0.0/webcomponents.js","xyerror.txt","yerror.txt"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2014,7 +2083,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2079,7 +2154,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Bayesian model II regression in JAGS</h1>
-<p>Fitting a regression model with uncertainty in the explanatory variable.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:jags" class="dt-tag">jags</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Fitting a regression model with uncertainty in the explanatory variable.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2089,60 +2169,71 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Regression is a mainstay of ecological and evolutionary data analysis. For example, a disease ecologist may use body size (e.g. a weight from a scale with measurement error) to predict infection. Classical linear regression assumes no error in covariates; they are known exactly. This is rarely the case in ecology, and ignoring error in covariates can bias regression coefficient estimates. This is where model II (aka errors-in variables and measurement errors) regression models come in handy. Here I’ll demonstrate how to construct such a model in a Bayesian framework, where substantive prior knowledge of covariate error facilitates less-biased parameter estimates.</p>
-<p>Here’s a quick illustration of the problem: I’ll generate data from a known simple linear regression model, and fit models that ignore or incorporate error in the covariate.</p>
+<p>Regression is a mainstay of ecological and evolutionary data analysis. For
+example, a disease ecologist may use body size (e.g. a weight from a scale with
+measurement error) to predict infection. Classical linear regression assumes no
+error in covariates; they are known exactly. This is rarely the case in ecology,
+and ignoring error in covariates can bias regression coefficient estimates. This
+is where model II (aka errors-in variables and measurement errors) regression
+models come in handy. Here I’ll demonstrate how to construct such a model in a
+Bayesian framework, where substantive prior knowledge of covariate error
+facilitates less-biased parameter estimates.</p>
+<p>Here’s a quick illustration of the problem: I’ll generate data from a known
+simple linear regression model, and fit models that ignore or incorporate error
+in the covariate.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(rjags)
-library(ggmcmc)
-
-# simulate covariate data
-n &lt;- 40
-sdx &lt;- 6
-sdobs &lt;- 5
-taux &lt;- 1 / (sdobs * sdobs)
-truex &lt;- rnorm(n, 0, sdx)
-errorx &lt;- rnorm(n, 0, sdobs)
-obsx &lt;- truex + errorx
-
-# simulate response data
-alpha &lt;- 0
-beta &lt;- 10
-sdy &lt;- 20
-errory &lt;- rnorm(n, 0, sdy)
-obsy &lt;- alpha + beta*truex + errory
-observed_data &lt;- data.frame(obsx = obsx, obsy = obsy)
-parms &lt;- data.frame(alpha, beta)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mcmc-jags.sourceforge.io'>rjags</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://xavier-fim.net/packages/ggmcmc/'>ggmcmc</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># simulate covariate data</span></span>
+<span><span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fl'>40</span></span>
+<span><span class='va'>sdx</span> <span class='op'>&lt;-</span> <span class='fl'>6</span></span>
+<span><span class='va'>sdobs</span> <span class='op'>&lt;-</span> <span class='fl'>5</span></span>
+<span><span class='va'>taux</span> <span class='op'>&lt;-</span> <span class='fl'>1</span> <span class='op'>/</span> <span class='op'>(</span><span class='va'>sdobs</span> <span class='op'>*</span> <span class='va'>sdobs</span><span class='op'>)</span></span>
+<span><span class='va'>truex</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>n</span>, <span class='fl'>0</span>, <span class='va'>sdx</span><span class='op'>)</span></span>
+<span><span class='va'>errorx</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>n</span>, <span class='fl'>0</span>, <span class='va'>sdobs</span><span class='op'>)</span></span>
+<span><span class='va'>obsx</span> <span class='op'>&lt;-</span> <span class='va'>truex</span> <span class='op'>+</span> <span class='va'>errorx</span></span>
+<span></span>
+<span><span class='co'># simulate response data</span></span>
+<span><span class='va'>alpha</span> <span class='op'>&lt;-</span> <span class='fl'>0</span></span>
+<span><span class='va'>beta</span> <span class='op'>&lt;-</span> <span class='fl'>10</span></span>
+<span><span class='va'>sdy</span> <span class='op'>&lt;-</span> <span class='fl'>20</span></span>
+<span><span class='va'>errory</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>n</span>, <span class='fl'>0</span>, <span class='va'>sdy</span><span class='op'>)</span></span>
+<span><span class='va'>obsy</span> <span class='op'>&lt;-</span> <span class='va'>alpha</span> <span class='op'>+</span> <span class='va'>beta</span><span class='op'>*</span><span class='va'>truex</span> <span class='op'>+</span> <span class='va'>errory</span></span>
+<span><span class='va'>observed_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>obsx <span class='op'>=</span> <span class='va'>obsx</span>, obsy <span class='op'>=</span> <span class='va'>obsy</span><span class='op'>)</span></span>
+<span><span class='va'>parms</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>alpha</span>, <span class='va'>beta</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Ignoring error in the covariate:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# bundle data
-jags_d &lt;- list(x = obsx, y = obsy, n = length(obsx))
-
-# write model
-cat(&quot;
-    model{
-## Priors
-alpha ~ dnorm(0, .001)
-beta ~ dnorm(0, .001)
-sdy ~ dunif(0, 100)
-tauy &lt;- 1 / (sdy * sdy)
-
-## Likelihood
-  for (i in 1:n){
-    mu[i] &lt;- alpha + beta * x[i]
-    y[i] ~ dnorm(mu[i], tauy)
-  }
-}
-&quot;,
-    fill=TRUE, file=&quot;yerror.txt&quot;)
-
-# initiate model
-mod1 &lt;- jags.model(&quot;yerror.txt&quot;, data=jags_d,
-                   n.chains=3, n.adapt=1000)</code></pre>
-<pre><code>
-Compiling model graph
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># bundle data</span></span>
+<span><span class='va'>jags_d</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>obsx</span>, y <span class='op'>=</span> <span class='va'>obsy</span>, n <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>obsx</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># write model</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"</span></span>
+<span><span class='st'>    model{</span></span>
+<span><span class='st'>## Priors</span></span>
+<span><span class='st'>alpha ~ dnorm(0, .001)</span></span>
+<span><span class='st'>beta ~ dnorm(0, .001)</span></span>
+<span><span class='st'>sdy ~ dunif(0, 100)</span></span>
+<span><span class='st'>tauy &lt;- 1 / (sdy * sdy)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>## Likelihood</span></span>
+<span><span class='st'>  for (i in 1:n){</span></span>
+<span><span class='st'>    mu[i] &lt;- alpha + beta * x[i]</span></span>
+<span><span class='st'>    y[i] ~ dnorm(mu[i], tauy)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>}</span></span>
+<span><span class='st'>"</span>,</span>
+<span>    fill<span class='op'>=</span><span class='cn'>TRUE</span>, file<span class='op'>=</span><span class='st'>"yerror.txt"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># initiate model</span></span>
+<span><span class='va'>mod1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span><span class='st'>"yerror.txt"</span>, data<span class='op'>=</span><span class='va'>jags_d</span>,</span>
+<span>                   n.chains<span class='op'>=</span><span class='fl'>3</span>, n.adapt<span class='op'>=</span><span class='fl'>1000</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
@@ -2255,10 +2346,11 @@ Initializing model
   |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
   |                                                        
   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
-<pre class="r"><code>
-# simulate posterior
-out &lt;- coda.samples(mod1, n.iter=1000, thin=1,
-                    variable.names=c(&quot;alpha&quot;, &quot;beta&quot;, &quot;sdy&quot;))</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># simulate posterior</span></span>
+<span><span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>mod1</span>, n.iter<span class='op'>=</span><span class='fl'>1000</span>, thin<span class='op'>=</span><span class='fl'>1</span>,</span>
+<span>                    variable.names<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"alpha"</span>, <span class='st'>"beta"</span>, <span class='st'>"sdy"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -2362,44 +2454,48 @@ out &lt;- coda.samples(mod1, n.iter=1000, thin=1,
   |************************************************* |  98%
   |                                                        
   |**************************************************| 100%</code></pre>
-<pre class="r"><code>
-# store parameter estimates
-ggd &lt;- ggs(out)
-a &lt;- ggd$value[which(ggd$Parameter == &quot;alpha&quot;)]
-b &lt;- ggd$value[which(ggd$Parameter == &quot;beta&quot;)]
-d &lt;- data.frame(a, b)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># store parameter estimates</span></span>
+<span><span class='va'>ggd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs.html'>ggs</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span>
+<span><span class='va'>a</span> <span class='op'>&lt;-</span> <span class='va'>ggd</span><span class='op'>$</span><span class='va'>value</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>ggd</span><span class='op'>$</span><span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"alpha"</span><span class='op'>)</span><span class='op'>]</span></span>
+<span><span class='va'>b</span> <span class='op'>&lt;-</span> <span class='va'>ggd</span><span class='op'>$</span><span class='va'>value</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>ggd</span><span class='op'>$</span><span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"beta"</span><span class='op'>)</span><span class='op'>]</span></span>
+<span><span class='va'>d</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>a</span>, <span class='va'>b</span><span class='op'>)</span></span></code></pre>
 </div>
-<p>Incorporating error in the covariate: I’m assuming that we have substantive knowledge about covariate measurement represented in the prior for the precision in X. Further, the prior for the true X values reflects knowledge of the distribution of our X value in the population from which the sample was taken.</p>
+</div>
+<p>Incorporating error in the covariate: I’m assuming that we have substantive
+knowledge about covariate measurement represented in the prior for the precision
+in X. Further, the prior for the true X values reflects knowledge of the
+distribution of our X value in the population from which the sample was taken.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# specify model
-cat(&quot;
-    model {
-## Priors
-alpha ~ dnorm(0, .001)
-beta ~ dnorm(0, .001)
-sdy ~ dunif(0, 100)
-tauy &lt;- 1 / (sdy * sdy)
-taux ~ dunif(.03, .05)
-
-## Likelihood
-  for (i in 1:n){
-    truex[i] ~ dnorm(0, .04)
-    x[i] ~ dnorm(truex[i], taux)
-    y[i] ~ dnorm(mu[i], tauy)
-    mu[i] &lt;- alpha + beta * truex[i]
-  }
-}
-    &quot;, fill=T, file=&quot;xyerror.txt&quot;)
-
-# bundle data
-jags_d &lt;- list(x = obsx, y = obsy, n = length(obsx))
-
-# initiate model
-mod2 &lt;- jags.model(&quot;xyerror.txt&quot;, data=jags_d,
-                   n.chains=3, n.adapt=1000)</code></pre>
-<pre><code>
-Compiling model graph
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># specify model</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"</span></span>
+<span><span class='st'>    model {</span></span>
+<span><span class='st'>## Priors</span></span>
+<span><span class='st'>alpha ~ dnorm(0, .001)</span></span>
+<span><span class='st'>beta ~ dnorm(0, .001)</span></span>
+<span><span class='st'>sdy ~ dunif(0, 100)</span></span>
+<span><span class='st'>tauy &lt;- 1 / (sdy * sdy)</span></span>
+<span><span class='st'>taux ~ dunif(.03, .05)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>## Likelihood</span></span>
+<span><span class='st'>  for (i in 1:n){</span></span>
+<span><span class='st'>    truex[i] ~ dnorm(0, .04)</span></span>
+<span><span class='st'>    x[i] ~ dnorm(truex[i], taux)</span></span>
+<span><span class='st'>    y[i] ~ dnorm(mu[i], tauy)</span></span>
+<span><span class='st'>    mu[i] &lt;- alpha + beta * truex[i]</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>}</span></span>
+<span><span class='st'>    "</span>, fill<span class='op'>=</span><span class='cn'>T</span>, file<span class='op'>=</span><span class='st'>"xyerror.txt"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># bundle data</span></span>
+<span><span class='va'>jags_d</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>obsx</span>, y <span class='op'>=</span> <span class='va'>obsy</span>, n <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>obsx</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># initiate model</span></span>
+<span><span class='va'>mod2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span><span class='st'>"xyerror.txt"</span>, data<span class='op'>=</span><span class='va'>jags_d</span>,</span>
+<span>                   n.chains<span class='op'>=</span><span class='fl'>3</span>, n.adapt<span class='op'>=</span><span class='fl'>1000</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
@@ -2512,10 +2608,11 @@ Initializing model
   |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
   |                                                        
   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
-<pre class="r"><code>
-# simulate posterior
-out &lt;- coda.samples(mod2, n.iter=30000, thin=30,
-                    variable.names=c(&quot;alpha&quot;, &quot;beta&quot;, &quot;tauy&quot;, &quot;taux&quot;))</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># simulate posterior</span></span>
+<span><span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>mod2</span>, n.iter<span class='op'>=</span><span class='fl'>30000</span>, thin<span class='op'>=</span><span class='fl'>30</span>,</span>
+<span>                    variable.names<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"alpha"</span>, <span class='st'>"beta"</span>, <span class='st'>"tauy"</span>, <span class='st'>"taux"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -2619,31 +2716,37 @@ out &lt;- coda.samples(mod2, n.iter=30000, thin=30,
   |************************************************* |  98%
   |                                                        
   |**************************************************| 100%</code></pre>
-<pre class="r"><code>
-# store parameter estimates
-ggd &lt;- ggs(out)
-a2 &lt;- ggd$value[which(ggd$Parameter == &quot;alpha&quot;)]
-b2 &lt;- ggd$value[which(ggd$Parameter == &quot;beta&quot;)]
-d2 &lt;- data.frame(a2, b2)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># store parameter estimates</span></span>
+<span><span class='va'>ggd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs.html'>ggs</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span>
+<span><span class='va'>a2</span> <span class='op'>&lt;-</span> <span class='va'>ggd</span><span class='op'>$</span><span class='va'>value</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>ggd</span><span class='op'>$</span><span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"alpha"</span><span class='op'>)</span><span class='op'>]</span></span>
+<span><span class='va'>b2</span> <span class='op'>&lt;-</span> <span class='va'>ggd</span><span class='op'>$</span><span class='va'>value</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>ggd</span><span class='op'>$</span><span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"beta"</span><span class='op'>)</span><span class='op'>]</span></span>
+<span><span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>a2</span>, <span class='va'>b2</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Now let’s see how the two models perform.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-ggplot(observed_data, aes(x=obsx, obsy)) +
-  geom_abline(aes(intercept=a, slope=b), data=d, 
-              color=&quot;red&quot;, alpha=0.05) +
-  geom_abline(aes(intercept=a2, slope=b2), data=d2, 
-              color=&quot;dodgerblue&quot;, alpha=0.05) +
-  geom_abline(aes(intercept=alpha, slope=beta),
-              data=parms, color=&quot;green&quot;, size=1.5, linetype=&quot;dashed&quot;) +
-  geom_point(shape=19, size=3) +
-  theme_minimal() +
-  xlab(&quot;X values&quot;) + 
-  ylab(&quot;Observed Y values&quot;) +
-  ggtitle(&quot;Model results with and without modeling error in X&quot;)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>observed_data</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>obsx</span>, <span class='va'>obsy</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_abline</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>intercept<span class='op'>=</span><span class='va'>a</span>, slope<span class='op'>=</span><span class='va'>b</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>d</span>, </span>
+<span>              color<span class='op'>=</span><span class='st'>"red"</span>, alpha<span class='op'>=</span><span class='fl'>0.05</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_abline</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>intercept<span class='op'>=</span><span class='va'>a2</span>, slope<span class='op'>=</span><span class='va'>b2</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>d2</span>, </span>
+<span>              color<span class='op'>=</span><span class='st'>"dodgerblue"</span>, alpha<span class='op'>=</span><span class='fl'>0.05</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_abline</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>intercept<span class='op'>=</span><span class='va'>alpha</span>, slope<span class='op'>=</span><span class='va'>beta</span><span class='op'>)</span>,</span>
+<span>              data<span class='op'>=</span><span class='va'>parms</span>, color<span class='op'>=</span><span class='st'>"green"</span>, size<span class='op'>=</span><span class='fl'>1.5</span>, linetype<span class='op'>=</span><span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>shape<span class='op'>=</span><span class='fl'>19</span>, size<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='st'>"X values"</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ylab</a></span><span class='op'>(</span><span class='st'>"Observed Y values"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span><span class='op'>(</span><span class='st'>"Model results with and without modeling error in X"</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="bayesian-model-ii-regression_files/figure-html5/compare-models-1.png" width="624" /></p>
 </div>
-<p>The dashed green line shows the model that generated the data, i.e. the “true” line. The red lines show the posterior for the naive model ignoring error in X, while the less-biased blue lines show the posterior for the model incorporating error in X.</p>
+<p>The dashed green line shows the model that generated the data, i.e. the “true”
+line. The red lines show the posterior for the naive model ignoring error in X,
+while the less-biased blue lines show the posterior for the model incorporating
+error in X.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

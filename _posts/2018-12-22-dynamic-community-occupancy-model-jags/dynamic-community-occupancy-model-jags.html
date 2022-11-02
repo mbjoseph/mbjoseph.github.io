@@ -18,79 +18,219 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
+
   <!--radix_placeholder_meta_tags-->
   <title>Dynamic community occupancy modeling with R and JAGS</title>
-  
+
   <meta property="description" itemprop="description" content="Multi-species, multi-timestep occupancy model in R and JAGS"/>
-  
-  
+
+
   <!--  https://schema.org/Article -->
   <meta property="article:published" itemprop="datePublished" content="2013-02-04"/>
   <meta property="article:created" itemprop="dateCreated" content="2013-02-04"/>
   <meta name="article:author" content="Maxwell B. Joseph"/>
-  
+
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Dynamic community occupancy modeling with R and JAGS"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="Multi-species, multi-timestep occupancy model in R and JAGS"/>
   <meta property="og:locale" content="en_US"/>
-  
+
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Dynamic community occupancy modeling with R and JAGS"/>
   <meta property="twitter:description" content="Multi-species, multi-timestep occupancy model in R and JAGS"/>
-  
+
   <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Hierarchical modeling and inference in ecology: The analysis of data from populations, metapopulations and communities;citation_publication_date=2008;citation_publisher=Elsevier;citation_author=J Andrew Royle;citation_author=Robert M Dorazio"/>
+  <meta name="citation_reference" content="citation_title=Estimating site occupancy rates when detection probabilities are less than one;citation_publisher=Wiley Online Library;citation_volume=83;citation_author=Darryl I MacKenzie;citation_author=James D Nichols;citation_author=Gideon B Lachman;citation_author=Sam Droege;citation_author=J Andrew Royle;citation_author=Catherine A Langtimm"/>
+  <meta name="citation_reference" content="citation_title=A bayesian state-space formulation of dynamic occupancy models;citation_publisher=Wiley Online Library;citation_volume=88;citation_author=J Andrew Royle;citation_author=Marc Kéry"/>
+  <meta name="citation_reference" content="citation_title=Hierarchical bayes estimation of species richness and occupancy in spatially replicated surveys;citation_publisher=Wiley Online Library;citation_volume=45;citation_author=M Kéry;citation_author=J Andrew Royle"/>
+  <meta name="citation_reference" content="citation_title=Models for inference in dynamic metacommunity systems;citation_publisher=Wiley Online Library;citation_volume=91;citation_author=Robert M Dorazio;citation_author=Marc Kery;citation_author=J Andrew Royle;citation_author=Matthias Plattner"/>
+  <meta name="citation_reference" content="citation_title=Hierarchical modeling and inference in ecology: The analysis of data from populations, metapopulations and communities;citation_publisher=Elsevier;citation_author=J Andrew Royle;citation_author=Robert M Dorazio"/>
   <!--radix_placeholder_rmarkdown_metadata-->
-  
+
   <script type="text/json" id="radix-rmarkdown-metadata">
   {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","categories"]}},"value":[{"type":"character","attributes":{},"value":["Dynamic community occupancy modeling with R and JAGS"]},{"type":"character","attributes":{},"value":["Multi-species, multi-timestep occupancy model in R and JAGS\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]}]}]},{"type":"character","attributes":{},"value":["02-04-2013"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["jags"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","com_occ.txt","dynamic-community-occupancy-model-jags_files/bowser-1.9.3/bowser.min.js","dynamic-community-occupancy-model-jags_files/distill-2.2.21/template.v2.js","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png","dynamic-community-occupancy-model-jags_files/jquery-1.11.3/jquery.min.js","dynamic-community-occupancy-model-jags_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","com_occ.txt","dynamic-community-occupancy-model-jags_files/anchor-4.2.2/anchor.min.js","dynamic-community-occupancy-model-jags_files/bowser-1.9.3/bowser.min.js","dynamic-community-occupancy-model-jags_files/distill-2.2.21/template.v2.js","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png","dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png","dynamic-community-occupancy-model-jags_files/header-attrs-2.16/header-attrs.js","dynamic-community-occupancy-model-jags_files/jquery-1.11.3/jquery.min.js","dynamic-community-occupancy-model-jags_files/jquery-3.6.0/jquery-3.6.0.js","dynamic-community-occupancy-model-jags_files/jquery-3.6.0/jquery-3.6.0.min.js","dynamic-community-occupancy-model-jags_files/jquery-3.6.0/jquery-3.6.0.min.map","dynamic-community-occupancy-model-jags_files/popper-2.6.0/popper.min.js","dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy-bundle.umd.min.js","dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy-light-border.css","dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy.css","dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy.umd.min.js","dynamic-community-occupancy-model-jags_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
-  
+
   <style type="text/css">
-  
+
   body {
     background-color: white;
   }
-  
+
   .pandoc-table {
     width: 100%;
   }
-  
+
   .pandoc-table>caption {
     margin-bottom: 10px;
   }
-  
+
   .pandoc-table th:not([align]) {
     text-align: left;
   }
-  
+
   .pagedtable-footer {
     font-size: 15px;
   }
-  
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
   .html-widget {
     margin-bottom: 2.0em;
   }
-  
+
   .l-screen-inset {
     padding-right: 16px;
   }
-  
+
   .l-screen .caption {
     margin-left: 10px;
   }
-  
+
   .shaded {
     background: rgb(247, 247, 247);
     padding-top: 20px;
@@ -98,43 +238,130 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .html-widget {
     margin-bottom: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .shaded-content {
     background: white;
   }
-  
+
   .text-output {
     margin-top: 0;
     line-height: 1.5em;
   }
-  
+
   .hidden {
     display: none !important;
   }
-  
+
   d-article {
+    padding-top: 2.5rem;
     padding-bottom: 30px;
   }
-  
+
   d-appendix {
     padding-top: 30px;
   }
-  
+
   d-article>p>img {
     width: 100%;
   }
-  
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
   d-article iframe {
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 2.0em;
     width: 100%;
   }
-  
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
   figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -142,128 +369,103 @@
     padding: 18px;
     box-sizing: border-box;
   }
-  
-  /* CSS for table of contents */
-  
-  .d-toc {
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
     color: rgba(0,0,0,0.8);
-    font-size: 0.8em;
-    line-height: 1em;
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
   }
-  
-  .d-toc-header {
-    font-size: 0.6rem;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
     margin-top: 0;
-    margin-bottom: 1.3em;
+    margin-bottom: 1em;
   }
-  
-  .d-toc a {
-    border-bottom: none;
+
+  .d-contents li {
+    list-style-type: none
   }
-  
-  .d-toc ul {
+
+  .d-contents nav > ul {
     padding-left: 0;
   }
-  
-  .d-toc li>ul {
-    padding-top: 0.8em;
-    padding-left: 16px;
-    margin-bottom: 0.6em;
+
+  .d-contents ul {
+    padding-left: 1em
   }
-  
-  .d-toc ul,
-  .d-toc li {
-    list-style-type: none;
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
   }
-  
-  .d-toc li {
-    margin-bottom: 0.9em;
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
   }
-  
-  .d-toc-separator {
-    margin-top: 20px;
-    margin-bottom: 2em;
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
   }
-  
-  .d-article-with-toc {
-    border-top: none;
-    padding-top: 0;
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
   }
-  
-  
-  
-  /* Tweak code blocks (note that this CSS is repeated above in an injection
-     into the d-code shadow dom) */
-  
-  d-code {
-    overflow-x: auto !important;
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
   }
-  
-  pre.d-code code.d-code {
-    padding-left: 10px;
-    font-size: 12px;
-    border-left: 2px solid rgba(0,0,0,0.1);
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
   }
-  
-  pre.text-output {
-  
-    font-size: 12px;
-    color: black;
-    background: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-  
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-  
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
   }
-  
-  @media(min-width: 768px) {
-  
-  d-code {
-    overflow-x: visible !important;
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
   }
-  
-  pre.d-code code.d-code  {
-      padding-left: 18px;
-      font-size: 14px;
-  }
-  pre.text-output {
-    font-size: 14px;
-  }
-  }
-  
+
+
   /* Figure */
-  
+
   .figure {
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
   }
-  
-  .figure img {
-    width: 100%;
-  }
-  
+
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
     line-height: 1.5em;
   }
-  
+
   .figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -271,21 +473,42 @@
     padding: 18px;
     box-sizing: border-box;
   }
-  
+
   .figure .caption a {
     color: rgba(0, 0, 0, 0.6);
   }
-  
+
   .figure .caption b,
   .figure .caption strong, {
     font-weight: 600;
     color: rgba(0, 0, 0, 1.0);
   }
-  
-  
-  
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
   /* Tweak 1000px media break to show more text */
-  
+
   @media(min-width: 1000px) {
     .base-grid,
     distill-header,
@@ -301,11 +524,11 @@
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 16px;
     }
-  
+
     .grid {
       grid-column-gap: 16px;
     }
-  
+
     d-article {
       font-size: 1.06rem;
       line-height: 1.7em;
@@ -314,7 +537,7 @@
       font-size: 13px;
     }
   }
-  
+
   @media(min-width: 1180px) {
     .base-grid,
     distill-header,
@@ -330,16 +553,16 @@
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 32px;
     }
-  
+
     .grid {
       grid-column-gap: 32px;
     }
   }
-  
-  
+
+
   /* Get the citation styles for the appendix (not auto-injected on render since
      we do our own rendering of the citation appendix) */
-  
+
   d-appendix .citation-appendix,
   .d-appendix .citation-appendix {
     font-size: 11px;
@@ -356,101 +579,401 @@
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-  
-  
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
   /* Social footer */
-  
+
   .social_footer {
     margin-top: 30px;
     margin-bottom: 0;
     color: rgba(0,0,0,0.67);
   }
-  
+
   .disqus-comments {
     margin-right: 30px;
   }
-  
+
   .disqus-comment-count {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
-  
+
   #disqus_thread {
     margin-top: 30px;
   }
-  
+
   .article-sharing a {
     border-bottom: none;
     margin-right: 8px;
   }
-  
+
   .article-sharing a:hover {
     border-bottom: none;
   }
-  
+
   .sidebar-section.subscribe {
     font-size: 12px;
     line-height: 1.6em;
   }
-  
+
   .subscribe p {
     margin-bottom: 0.5em;
   }
-  
-  
+
+
   .article-footer .subscribe {
     font-size: 15px;
     margin-top: 45px;
   }
-  
-  
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
   /* Improve display for browsers without grid (IE/Edge <= 15) */
-  
+
   .downlevel {
     line-height: 1.6em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-  
+
   .downlevel .d-title {
     padding-top: 6rem;
     padding-bottom: 1.5rem;
   }
-  
+
   .downlevel .d-title h1 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.1em;
     margin: 0 0 0.5rem;
   }
-  
+
   .downlevel .d-title p {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.55em;
     margin-top: 0;
   }
-  
+
   .downlevel .d-byline {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     font-size: 0.8rem;
     line-height: 1.8em;
   }
-  
+
   .downlevel .section-separator {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .downlevel .d-article {
     font-size: 1.06rem;
     line-height: 1.7em;
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
-  
-  
+
+
   .downlevel .d-appendix {
     padding-left: 0;
     padding-right: 0;
@@ -462,11 +985,11 @@
     padding-top: 40px;
     padding-bottom: 48px;
   }
-  
+
   .downlevel .footnotes ol {
     padding-left: 13px;
   }
-  
+
   .downlevel .base-grid,
   .downlevel .distill-header,
   .downlevel .d-title,
@@ -483,7 +1006,7 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-  
+
   @media(min-width: 768px) {
     .downlevel .base-grid,
     .downlevel .distill-header,
@@ -503,14 +1026,14 @@
     max-width: 900px;
   }
   }
-  
+
   .downlevel pre code {
     display: block;
     border-left: 2px solid rgba(0, 0, 0, .1);
     padding: 0 0 0 20px;
     font-size: 14px;
   }
-  
+
   .downlevel code, .downlevel pre {
     color: black;
     background: none;
@@ -521,21 +1044,27 @@
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-  
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-  
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-  
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
   </style>
-  
+
   <script type="application/javascript">
-  
+
   function is_downlevel_browser() {
     if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
                                    window.navigator.userAgent)) {
@@ -544,13 +1073,20 @@
       return window.load_distill_framework === undefined;
     }
   }
-  
+
   // show body when load is complete
   function on_load_complete() {
-  
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
     // set body to visible
     document.body.style.visibility = 'visible';
-  
+
     // force redraw for leaflet widgets
     if (window.HTMLWidgets) {
       var maps = window.HTMLWidgets.findAll(".leaflet");
@@ -563,54 +1099,39 @@
         });
       });
     }
-  
+
     // trigger 'shown' so htmlwidgets resize
     $('d-article').trigger('shown');
   }
-  
+
   function init_distill() {
-  
+
     init_common();
-  
+
     // create front matter
     var front_matter = $('<d-front-matter></d-front-matter>');
     $('#distill-front-matter').wrap(front_matter);
-  
+
     // create d-title
     $('.d-title').changeElementType('d-title');
-  
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
-  
+
     // create d-article
     var article = $('<d-article></d-article>');
     $('.d-article').wrap(article).children().unwrap();
-  
+
     // move posts container into article
     $('.posts-container').appendTo($('d-article'));
-  
+
     // create d-appendix
     $('.d-appendix').changeElementType('d-appendix');
-  
-    // create d-bibliography
-    var bibliography = $('<d-bibliography></d-bibliography>');
-    $('#distill-bibliography').wrap(bibliography);
-  
+
     // flag indicating that we have appendix items
     var appendix = $('.appendix-bottom').children('h3').length > 0;
-  
-    // replace citations with <d-cite>
-    $('.citation').each(function(i, val) {
-      appendix = true;
-      var cites = $(this).attr('data-cites').split(" ");
-      var dt_cite = $('<d-cite></d-cite>');
-      dt_cite.attr('key', cites.join());
-      $(this).replaceWith(dt_cite);
-    });
-    // remove refs
-    $('#refs').remove();
-  
+
     // replace footnotes with <d-footnote>
     $('.footnote-ref').each(function(i, val) {
       appendix = true;
@@ -626,49 +1147,31 @@
     });
     // remove footnotes
     $('.footnotes').remove();
-  
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
     });
     $('h3.appendix').each(function(i, val) {
       var id = $(this).attr('id');
-      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
       appendix = true;
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
     });
-  
+
     // show d-appendix if we have appendix content
     $("d-appendix").css('display', appendix ? 'grid' : 'none');
-  
-    // replace code blocks with d-code
-    $('pre>code').each(function(i, val) {
-      var code = $(this);
-      var pre = code.parent();
-      var clz = "";
-      var language = pre.attr('class');
-      if (language) {
-        // map unknown languages to "clike" (without this they just dissapear)
-        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
-                                 "javascript", "js", "julia", "lua", "markdown",
-                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
-          language = "clike";
-        language = ' language="' + language + '"';
-        var dt_code = $('<d-code block' + language + clz + '></d-code>');
-        dt_code.text(code.text());
-        pre.replaceWith(dt_code);
-      } else {
-        code.addClass('text-output').unwrap().changeElementType('pre');
-      }
-    });
-  
+
     // localize layout chunks to just output
     $('.layout-chunk').each(function(i, val) {
-  
+
       // capture layout
       var layout = $(this).attr('data-layout');
-  
+
       // apply layout to markdown level block elements
-      var elements = $(this).children().not('d-code, pre.text-output, script');
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
       elements.each(function(i, el) {
         var layout_div = $('<div class="' + layout + '"></div>');
         if (layout_div.hasClass('shaded')) {
@@ -679,39 +1182,60 @@
           $(this).wrap(layout_div);
         }
       });
-  
-  
+
+
       // unwrap the layout-chunk div
       $(this).children().unwrap();
     });
-  
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
     // load distill framework
     load_distill_framework();
-  
+
     // wait for window.distillRunlevel == 4 to do post processing
     function distill_post_process() {
-  
+
       if (!window.distillRunlevel || window.distillRunlevel < 4)
         return;
-  
+
       // hide author/affiliations entirely if we have no authors
       var front_matter = JSON.parse($("#distill-front-matter").html());
       var have_authors = front_matter.authors && front_matter.authors.length > 0;
       if (!have_authors)
         $('d-byline').addClass('hidden');
-  
-      // table of contents
-      if (have_authors) // adjust border if we are in authors
-        $('.d-toc').parent().addClass('d-article-with-toc');
-  
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
       // strip links that point to #
       $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
-  
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
       // hide elements of author/affiliations grid that have no value
       function hide_byline_column(caption) {
         $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
       }
-  
+
       // affiliations
       var have_affiliations = false;
       for (var i = 0; i<front_matter.authors.length; ++i) {
@@ -723,11 +1247,11 @@
       }
       if (!have_affiliations)
         $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
-  
+
       // published date
       if (!front_matter.publishedDate)
         hide_byline_column("Published");
-  
+
       // document object identifier
       var doi = $('d-byline').find('h3:contains("DOI")');
       var doi_p = doi.next().empty();
@@ -747,61 +1271,108 @@
            .html(front_matter.doi)
            .appendTo(doi_p);
       }
-  
+
        // change plural form of authors/affiliations
       if (front_matter.authors.length === 1) {
         var grid = $('.authors-affiliations');
         grid.children('h3:contains("Authors")').text('Author');
         grid.children('h3:contains("Affiliations")').text('Affiliation');
       }
-  
-      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
-      $('d-code').each(function(i, val) {
-        var style = document.createElement('style');
-        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
-                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
-        if (this.shadowRoot)
-          this.shadowRoot.appendChild(style);
-      });
-  
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
       // move appendix-bottom entries to the bottom
       $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
       $('.appendix-bottom').remove();
-  
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
       // clear polling timer
       clearInterval(tid);
-  
+
       // show body now that everything is ready
       on_load_complete();
     }
-  
+
     var tid = setInterval(distill_post_process, 50);
     distill_post_process();
-  
+
   }
-  
+
   function init_downlevel() {
-  
+
     init_common();
-  
+
      // insert hr after d-title
     $('.d-title').after($('<hr class="section-separator"/>'));
-  
+
     // check if we have authors
     var front_matter = JSON.parse($("#distill-front-matter").html());
     var have_authors = front_matter.authors && front_matter.authors.length > 0;
-  
+
     // manage byline/border
     if (!have_authors)
       $('.d-byline').remove();
     $('.d-byline').after($('<hr class="section-separator"/>'));
     $('.d-byline a').remove();
-  
+
     // remove toc
-    $('.d-toc-header').remove();
-    $('.d-toc').remove();
-    $('.d-toc-separator').remove();
-  
+    $('.d-contents').remove();
+
     // move appendix elements
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
@@ -809,65 +1380,67 @@
     $('h3.appendix').each(function(i, val) {
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
     });
-  
-  
+
+
     // inject headers into references and footnotes
     var refs_header = $('<h3></h3>');
     refs_header.text('References');
     $('#refs').prepend(refs_header);
-  
+
     var footnotes_header = $('<h3></h3');
     footnotes_header.text('Footnotes');
     $('.footnotes').children('hr').first().replaceWith(footnotes_header);
-  
+
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
-  
+
     // remove appendix if it's empty
     if ($('.d-appendix').children().length === 0)
       $('.d-appendix').remove();
-  
+
     // prepend separator above appendix
     $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
-  
+
     // trim code
     $('pre>code').each(function(i, val) {
       $(this).html($.trim($(this).html()));
     });
-  
+
     // move posts-container right before article
     $('.posts-container').insertBefore($('.d-article'));
-  
+
     $('body').addClass('downlevel');
-  
+
     on_load_complete();
   }
-  
-  
+
+
   function init_common() {
-  
+
     // jquery plugin to change element types
     (function($) {
       $.fn.changeElementType = function(newType) {
         var attrs = {};
-  
+
         $.each(this[0].attributes, function(idx, attr) {
           attrs[attr.nodeName] = attr.nodeValue;
         });
-  
+
         this.replaceWith(function() {
           return $("<" + newType + "/>", attrs).append($(this).contents());
         });
       };
     })(jQuery);
-  
+
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
-  
+
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -876,35 +1449,35 @@
           var fig = $(this);
           fig.css('width', fig.attr('width') + 'px');
         });
-  
+
       }
     });
-  
+
     // auto-append index.html to post-preview links in file: protocol
     // and in rstudio ide preview
     $('.post-preview').each(function(i, val) {
       if (window.location.protocol === "file:")
         $(this).attr('href', $(this).attr('href') + "index.html");
     });
-  
+
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
-  
+
     // add class to pandoc style tables
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
-  
+
     // add figcaption style to table captions
     $('caption').parent('table').addClass("figcaption");
-  
+
     // initialize posts list
     if (window.init_posts_list)
       window.init_posts_list();
-  
+
     // implmement disqus comment link
     $('.disqus-comment-count').click(function() {
       window.headroom_prevent_pin = true;
@@ -918,18 +1491,24 @@
       }
     });
   }
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     if (is_downlevel_browser())
       init_downlevel();
     else
       window.addEventListener('WebComponentsReady', init_distill);
   });
-  
+
   </script>
-  
+
   <!--/radix_placeholder_distill-->
-  <script src="dynamic-community-occupancy-model-jags_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="dynamic-community-occupancy-model-jags_files/header-attrs-2.16/header-attrs.js"></script>
+  <script src="dynamic-community-occupancy-model-jags_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="dynamic-community-occupancy-model-jags_files/popper-2.6.0/popper.min.js"></script>
+  <link href="dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="dynamic-community-occupancy-model-jags_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="dynamic-community-occupancy-model-jags_files/anchor-4.2.2/anchor.min.js"></script>
   <script src="dynamic-community-occupancy-model-jags_files/bowser-1.9.3/bowser.min.js"></script>
   <script src="dynamic-community-occupancy-model-jags_files/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="dynamic-community-occupancy-model-jags_files/distill-2.2.21/template.v2.js"></script>
@@ -944,7 +1523,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Dynamic community occupancy modeling with R and JAGS","description":"Multi-species, multi-timestep occupancy model in R and JAGS","authors":[{"author":"Maxwell B. Joseph","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2013-02-04T00:00:00.000-07:00","citationText":"Joseph, 2013"}
+{"title":"Dynamic community occupancy modeling with R and JAGS","description":"Multi-species, multi-timestep occupancy model in R and JAGS","authors":[{"author":"Maxwell B. Joseph","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2013-02-04T00:00:00.000-07:00","citationText":"Joseph, 2013"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -955,7 +1534,12 @@
 
 <div class="d-title">
 <h1>Dynamic community occupancy modeling with R and JAGS</h1>
-<p>Multi-species, multi-timestep occupancy model in R and JAGS</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">jags</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Multi-species, multi-timestep occupancy model in R and JAGS</p></p>
 </div>
 
 <div class="d-byline">
@@ -965,21 +1549,61 @@
 </div>
 
 <div class="d-article">
-<p>This post is intended to provide a simple example of how to construct and make inferences on a multi-species multi-year occupancy model using R, JAGS, and the ‘rjags’ package. This is not intended to be a standalone tutorial on dynamic community occupancy modeling <span class="citation" data-cites="mackenzie2002estimating royle2007bayesian kery2008hierarchical dorazio2010models">(MacKenzie et al. <a href="#ref-mackenzie2002estimating">2002</a>; Royle and Kéry <a href="#ref-royle2007bayesian">2007</a>; Kéry and Royle <a href="#ref-kery2008hierarchical">2008</a>; Dorazio et al. <a href="#ref-dorazio2010models">2010</a>)</span>. Royle and Dorazio’s Hierarchichal Modeling and Inference in Ecology also provides a clear explanation of simple one species occupancy models, multispecies occupancy models, and dynamic (multiyear) occupancy models, among other things <span class="citation" data-cites="royle2008hierarchical">(Royle and Dorazio <a href="#ref-royle2008hierarchical">2008</a>)</span>. There’s also a wealth of code provided <a href="http://www.mbr-pwrc.usgs.gov/site/communitymodeling/home/">here</a> by Elise Zipkin, J. Andrew Royle, and others.</p>
+<p>This post is intended to provide a simple example of how to construct and make
+inferences on a multi-species multi-year occupancy model using R, JAGS, and the
+‘rjags’ package. This is not intended to be a standalone tutorial on dynamic
+community occupancy modeling <span class="citation" data-cites="mackenzie2002estimating royle2007bayesian kery2008hierarchical dorazio2010models">(<a href="#ref-mackenzie2002estimating" role="doc-biblioref">MacKenzie et al. 2002</a>; <a href="#ref-royle2007bayesian" role="doc-biblioref">Royle and Kéry 2007</a>; <a href="#ref-kery2008hierarchical" role="doc-biblioref">Kéry and Royle 2008</a>; <a href="#ref-dorazio2010models" role="doc-biblioref">Dorazio et al. 2010</a>)</span>.
+Royle and Dorazio’s
+Hierarchichal Modeling and Inference in Ecology also provides a clear
+explanation of simple one species occupancy models, multispecies occupancy
+models, and dynamic (multiyear) occupancy models, among other things <span class="citation" data-cites="royle2008hierarchical">(<a href="#ref-royle2008hierarchical" role="doc-biblioref">Royle and Dorazio 2008</a>)</span>.
+There’s also a wealth of code provided
+<a href="http://www.mbr-pwrc.usgs.gov/site/communitymodeling/home/">here</a> by Elise Zipkin,
+J. Andrew Royle, and others.</p>
 <p>Before getting started, we can define two convenience functions:</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mcmc-jags.sourceforge.io'>rjags</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>logit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='va'>x</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>antilogit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span></code></pre>
 </div>
-<p>Then, initializing the number of sites, species, years, and repeat surveys (i.e. surveys within years, where the occupancy status of a site is assumed to be constant),</p>
+</div>
+<p>Then, initializing the number of sites, species, years, and repeat surveys
+(i.e. surveys within years, where the occupancy status of a site is assumed to
+be constant),</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>nsite</span> <span class='op'>&lt;-</span> <span class='fl'>20</span></span>
+<span><span class='va'>nspec</span> <span class='op'>&lt;-</span> <span class='fl'>3</span></span>
+<span><span class='va'>nyear</span> <span class='op'>&lt;-</span> <span class='fl'>4</span></span>
+<span><span class='va'>nrep</span> <span class='op'>&lt;-</span> <span class='fl'>2</span></span></code></pre>
 </div>
-<p>we can begin to consider occupancy. We’re interested in making inferences about the rates of colonization and population persistence for each species in a community, while estimating and accounting for imperfect detection.</p>
-<p>Occupancy status at site <span class="math inline">\(j\)</span>, by species <span class="math inline">\(i\)</span>, in year <span class="math inline">\(t\)</span> is represented by <span class="math inline">\(z(j,i,t)\)</span>. For occupied sites <span class="math inline">\(z=1\)</span>; for unoccupied sites <span class="math inline">\(z=0\)</span>. However, <span class="math inline">\(Z\)</span> is incompletely observed: it is possible that a species <span class="math inline">\(i\)</span> is present at a site <span class="math inline">\(j\)</span> in some year <span class="math inline">\(t\)</span> (<span class="math inline">\(z(j,i,t)=1\)</span>) but species <span class="math inline">\(i\)</span> was never seen at at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> across all <span class="math inline">\(k\)</span> repeat surveys because of imperfect detection. These observations are represented by <span class="math inline">\(x(j,i,t,k)\)</span>. Here we assume that there are no “false positive” observations. In other words, if <span class="math inline">\(\sum_{1}^{k}x(j,i,t,k)&gt;0\)</span> , then <span class="math inline">\(z(j,i,t)=1\)</span>. If a site is occupied, the probability that <span class="math inline">\(x(j,i,t,k)=1\)</span> is represented as a Bernoulli trial with probability of detection <span class="math inline">\(p(j,i,t,k)\)</span>, such that</p>
+</div>
+<p>we can begin to consider occupancy. We’re interested in making inferences about
+the rates of colonization and population persistence for each species in a
+community, while estimating and accounting for imperfect detection.</p>
+<p>Occupancy status at site <span class="math inline">\(j\)</span>, by species <span class="math inline">\(i\)</span>, in year <span class="math inline">\(t\)</span> is represented by
+<span class="math inline">\(z(j,i,t)\)</span>. For occupied sites <span class="math inline">\(z=1\)</span>; for unoccupied sites <span class="math inline">\(z=0\)</span>.
+However, <span class="math inline">\(Z\)</span> is incompletely observed: it is possible that a species <span class="math inline">\(i\)</span> is
+present at a site <span class="math inline">\(j\)</span> in some year <span class="math inline">\(t\)</span> (<span class="math inline">\(z(j,i,t)=1\)</span>) but species <span class="math inline">\(i\)</span> was never
+seen at at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> across all <span class="math inline">\(k\)</span> repeat surveys because of
+imperfect detection. These observations are represented by <span class="math inline">\(x(j,i,t,k)\)</span>.
+Here we assume that there are no “false positive” observations.
+In other words, if <span class="math inline">\(\sum_{1}^{k}x(j,i,t,k)&gt;0\)</span> , then <span class="math inline">\(z(j,i,t)=1\)</span>.
+If a site is occupied, the probability that <span class="math inline">\(x(j,i,t,k)=1\)</span> is represented as a
+Bernoulli trial with probability of detection <span class="math inline">\(p(j,i,t,k)\)</span>, such that</p>
 <p><span class="math display">\[
 x(j,i,t,k) \sim \text{Bernoulli}(z(j,i,t)p(j,i,t,k))
 \]</span></p>
-<p>The occupancy status <span class="math inline">\(z\)</span> of species <span class="math inline">\(i\)</span> at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> is modeled as a Markov Bernoulli trial. In other words whether a species is present at a site in year <span class="math inline">\(t\)</span> is influenced by whether it was present at year <span class="math inline">\(t−1\)</span>.</p>
+<p>The occupancy status <span class="math inline">\(z\)</span> of species <span class="math inline">\(i\)</span> at site <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span> is modeled as a
+Markov Bernoulli trial. In other words whether a species is present at a site
+in year <span class="math inline">\(t\)</span> is influenced by whether it was present at year <span class="math inline">\(t−1\)</span>.</p>
 <p><span class="math display">\[
 z(j,i,t) \sim \text{Bernoulli}(\psi(j,i,t))
 \]</span></p>
@@ -991,39 +1615,201 @@ z(j,i,t) \sim \text{Bernoulli}(\psi(j,i,t))
 <p><span class="math display">\[
 \text{logit}(\psi_{j,i,1})=\beta_i + \rho_i z_0(i, j)
 \]</span></p>
-<p>where the occupancy status in year 0, <span class="math inline">\(z_0(i,j) \sim \text{Bernoulli}(\rho_{0i})\)</span>, and <span class="math inline">\(\rho_{0i} \sim \text{Uniform}(0,1)\)</span>. <span class="math inline">\(\beta_i\)</span> and <span class="math inline">\(\rho_i\)</span> are parameters that control the probabilities of colonization and persistence. If a site was unoccupied by species <span class="math inline">\(i\)</span> in a previous year <span class="math inline">\(z(i,j,t−1)=0\)</span>, then the probability of colonization is given by the antilogit of <span class="math inline">\(\beta_i\)</span>. If a site was previously occupied <span class="math inline">\(z(i,j,t−1)=1\)</span>, the probability of population persistence is given by the anitlogit of <span class="math inline">\(\beta_i + \rho_i\)</span>. We assume that the distributions of species specific parameters are defined by community level hyperparameters such that <span class="math inline">\(\beta_i \sim \text{Normal}(\mu_\beta, \sigma_\beta)\)</span> and <span class="math inline">\(rho_i \sim \text{Normal}(\mu_\rho, \sigma_\rho)\)</span>. We can generate occupancy data as follows:</p>
+<p>where the occupancy status in year 0, <span class="math inline">\(z_0(i,j) \sim \text{Bernoulli}(\rho_{0i})\)</span>, and
+<span class="math inline">\(\rho_{0i} \sim \text{Uniform}(0,1)\)</span>. <span class="math inline">\(\beta_i\)</span> and <span class="math inline">\(\rho_i\)</span> are parameters that
+control the probabilities of colonization and persistence.
+If a site was unoccupied by species <span class="math inline">\(i\)</span> in a previous year <span class="math inline">\(z(i,j,t−1)=0\)</span>, then
+the probability of colonization is given by the antilogit of <span class="math inline">\(\beta_i\)</span>.
+If a site was previously occupied <span class="math inline">\(z(i,j,t−1)=1\)</span>, the probability of population
+persistence is given by the anitlogit of <span class="math inline">\(\beta_i + \rho_i\)</span>. We assume that
+the distributions of species specific parameters are defined by community level
+hyperparameters such that <span class="math inline">\(\beta_i \sim \text{Normal}(\mu_\beta, \sigma_\beta)\)</span> and
+<span class="math inline">\(rho_i \sim \text{Normal}(\mu_\rho, \sigma_\rho)\)</span>. We can generate occupancy data as
+follows:</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># community level hyperparameters</span></span>
+<span><span class='va'>mubeta</span> <span class='op'>&lt;-</span> <span class='fl'>1</span></span>
+<span><span class='va'>sdbeta</span> <span class='op'>&lt;-</span> <span class='fl'>0.2</span></span>
+<span></span>
+<span><span class='va'>murho</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>2</span></span>
+<span><span class='va'>sdrho</span> <span class='op'>&lt;-</span> <span class='fl'>.1</span></span>
+<span></span>
+<span><span class='co'># species specific random effects</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>  <span class='co'># for reproducibility</span></span>
+<span><span class='va'>beta</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>nspec</span>, <span class='va'>mubeta</span>, <span class='va'>sdbeta</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1008</span><span class='op'>)</span></span>
+<span><span class='va'>rho</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>nspec</span>, <span class='va'>murho</span>, <span class='va'>sdrho</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># initial occupancy states</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>237</span><span class='op'>)</span></span>
+<span><span class='va'>rho0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='va'>nspec</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>z0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nspec</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='va'>z0</span><span class='op'>[</span>, <span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='fl'>1</span>, <span class='va'>rho0</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='co'># subsequent occupancy</span></span>
+<span><span class='va'>z</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>lpsi</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>psi</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nsite</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nspec</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>        <span class='kw'>for</span> <span class='op'>(</span><span class='va'>t</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nyear</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>            <span class='kw'>if</span> <span class='op'>(</span><span class='va'>t</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>                <span class='va'>lpsi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>beta</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>rho</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>*</span> <span class='va'>z0</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span><span class='op'>]</span></span>
+<span>                <span class='va'>psi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>lpsi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>                <span class='va'>z</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>psi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>            <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span></span>
+<span>                <span class='va'>lpsi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>beta</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>rho</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>*</span> <span class='va'>z</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span> <span class='op'>-</span> <span class='fl'>1</span><span class='op'>]</span></span>
+<span>                <span class='va'>psi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>lpsi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>                <span class='va'>z</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>psi</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>            <span class='op'>}</span></span>
+<span>        <span class='op'>}</span></span>
+<span>    <span class='op'>}</span></span>
+<span><span class='op'>}</span></span></code></pre>
 </div>
-<p>For simplicity, we’ll assume that there are no differences in species detectability among sites, years, or repeat surveys, but that detectability varies among species. We’ll again use hyperparameters to specify a distribution of detection probabilities in our community, such that <span class="math inline">\(\text{logit}(p_i) \sim \text{Normal}(\mu_p, \sigma_p)\)</span>.</p>
-<div class="layout-chunk" data-layout="l-body">
-
 </div>
-<p>We can now generate our observations based on occupancy states and detection probabilities. Although this could be vectorized for speed, let’s stick with nested for loops in the interest of clarity.</p>
+<p>For simplicity, we’ll assume that there are no differences in species
+detectability among sites, years, or repeat surveys, but that detectability
+varies among species. We’ll again use hyperparameters to specify a distribution
+of detection probabilities in our community, such that
+<span class="math inline">\(\text{logit}(p_i) \sim \text{Normal}(\mu_p, \sigma_p)\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p_p</span> <span class='op'>&lt;-</span> <span class='fl'>0.7</span></span>
+<span><span class='va'>mup</span> <span class='op'>&lt;-</span> <span class='fu'>logit</span><span class='op'>(</span><span class='va'>p_p</span><span class='op'>)</span></span>
+<span><span class='va'>sdp</span> <span class='op'>&lt;-</span> <span class='fl'>1.5</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>222</span><span class='op'>)</span></span>
+<span><span class='va'>lp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='va'>nspec</span>, <span class='va'>mup</span>, <span class='va'>sdp</span><span class='op'>)</span></span>
+<span><span class='va'>p</span> <span class='op'>&lt;-</span> <span class='fu'>antilogit</span><span class='op'>(</span><span class='va'>lp</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>We can now generate our observations based on occupancy states and detection
+probabilities. Although this could be vectorized for speed, let’s stick with
+nested for loops in the interest of clarity.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span>, <span class='va'>nrep</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nsite</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nspec</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>        <span class='kw'>for</span> <span class='op'>(</span><span class='va'>t</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nyear</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>            <span class='kw'>for</span> <span class='op'>(</span><span class='va'>k</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nrep</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>                <span class='va'>x</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span>, <span class='va'>k</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='va'>p</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>*</span> <span class='va'>z</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span><span class='op'>)</span></span>
+<span>            <span class='op'>}</span></span>
+<span>        <span class='op'>}</span></span>
+<span>    <span class='op'>}</span></span>
+<span><span class='op'>}</span></span></code></pre>
+</div>
 </div>
 <p>Now that we’ve collected some data, we can specify our model:</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"</span></span>
+<span><span class='st'>model{</span></span>
+<span><span class='st'>  #### priors</span></span>
+<span><span class='st'>  # beta hyperparameters</span></span>
+<span><span class='st'>  p_beta ~ dbeta(1, 1)</span></span>
+<span><span class='st'>  mubeta &lt;- log(p_beta / (1 - p_beta))</span></span>
+<span><span class='st'>  sigmabeta ~ dunif(0, 10)</span></span>
+<span><span class='st'>  taubeta &lt;- (1 / (sigmabeta * sigmabeta))</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # rho hyperparameters</span></span>
+<span><span class='st'>  p_rho ~ dbeta(1, 1)</span></span>
+<span><span class='st'>  murho &lt;- log(p_rho / (1 - p_rho))</span></span>
+<span><span class='st'>  sigmarho~dunif(0,10)</span></span>
+<span><span class='st'>  taurho&lt;-1/(sigmarho*sigmarho)</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # p hyperparameters</span></span>
+<span><span class='st'>  p_p ~ dbeta(1, 1)</span></span>
+<span><span class='st'>  mup &lt;- log(p_p / (1 - p_p))</span></span>
+<span><span class='st'>  sigmap ~ dunif(0,10)</span></span>
+<span><span class='st'>  taup &lt;- (1 / (sigmap * sigmap))</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  #### occupancy model</span></span>
+<span><span class='st'>  # species specific random effects</span></span>
+<span><span class='st'>  for (i in 1:(nspec)) {</span></span>
+<span><span class='st'>    rho0[i] ~ dbeta(1, 1)</span></span>
+<span><span class='st'>    beta[i] ~ dnorm(mubeta, taubeta)</span></span>
+<span><span class='st'>    rho[i] ~ dnorm(murho, taurho)</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  # occupancy states</span></span>
+<span><span class='st'>  for (j in 1:nsite) {</span></span>
+<span><span class='st'>    for (i in 1:nspec) {</span></span>
+<span><span class='st'>      z0[j, i] ~ dbern(rho0[i])</span></span>
+<span><span class='st'>      logit(psi[j, i, 1]) &lt;- beta[i] + rho[i] * z0[j, i]</span></span>
+<span><span class='st'>      z[j, i, 1] ~ dbern(psi[j, i, 1])</span></span>
+<span><span class='st'>      for (t in 2:nyear) {</span></span>
+<span><span class='st'>        logit(psi[j, i, t]) &lt;- beta[i] + rho[i] * z[j, i, t-1]</span></span>
+<span><span class='st'>        z[j, i, t] ~ dbern(psi[j, i, t])</span></span>
+<span><span class='st'>      }</span></span>
+<span><span class='st'>    }</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  #### detection model</span></span>
+<span><span class='st'>  for(i in 1:nspec){</span></span>
+<span><span class='st'>    lp[i] ~ dnorm(mup, taup)</span></span>
+<span><span class='st'>    p[i] &lt;- (exp(lp[i])) / (1 + exp(lp[i]))</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'></span></span>
+<span><span class='st'>  #### observation model</span></span>
+<span><span class='st'>  for (j in 1:nsite){</span></span>
+<span><span class='st'>    for (i in 1:nspec){</span></span>
+<span><span class='st'>      for (t in 1:nyear){</span></span>
+<span><span class='st'>        mu[j, i, t] &lt;- z[j, i, t] * p[i]</span></span>
+<span><span class='st'>        for (k in 1:nrep){</span></span>
+<span><span class='st'>          x[j, i, t, k] ~ dbern(mu[j, i, t])</span></span>
+<span><span class='st'>        }</span></span>
+<span><span class='st'>      }</span></span>
+<span><span class='st'>    }</span></span>
+<span><span class='st'>  }</span></span>
+<span><span class='st'>}</span></span>
+<span><span class='st'>"</span>, fill<span class='op'>=</span><span class='cn'>TRUE</span>, file<span class='op'>=</span><span class='st'>"com_occ.txt"</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Next, bundle up the data.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>x</span>, nrep <span class='op'>=</span> <span class='va'>nrep</span>, nsite <span class='op'>=</span> <span class='va'>nsite</span>, nspec <span class='op'>=</span> <span class='va'>nspec</span>, nyear <span class='op'>=</span> <span class='va'>nyear</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>Provide initial values.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>zinit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span>dim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>nsite</span>, <span class='va'>nspec</span>, <span class='va'>nyear</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nsite</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nspec</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>        <span class='kw'>for</span> <span class='op'>(</span><span class='va'>t</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nyear</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>            <span class='va'>zinit</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>[</span><span class='va'>j</span>, <span class='va'>i</span>, <span class='va'>t</span>, <span class='op'>]</span><span class='op'>)</span></span>
+<span>        <span class='op'>}</span></span>
+<span>    <span class='op'>}</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>inits</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>p_beta <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span>, p_rho <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span>, sigmarho <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>,</span>
+<span>        <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span>, sigmap <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>10</span><span class='op'>)</span>, sigmabeta <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>10</span><span class='op'>)</span>, z <span class='op'>=</span> <span class='va'>zinit</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span></code></pre>
 </div>
-<p>As a side note, it is helpful in JAGS to provide initial values for the incompletely observed occupancy state <span class="math inline">\(z\)</span> that are consistent with observed presences, as provided in this example with <code>zinit</code>. In other words if <span class="math inline">\(x(j,i,t,k)=1\)</span>, provide an intial value of 1 for <span class="math inline">\(z(j,i,t)\)</span>. Unlike WinBUGS and OpenBUGS, if you do not do this, you’ll often (but not always) encounter an error message such as:</p>
-<pre><code>
-# Error in jags.model(file = &#39;com_occ.txt&#39;, data = data, n.chains = 3) :
+</div>
+<p>As a side note, it is helpful in JAGS to provide initial values for the
+incompletely observed occupancy state <span class="math inline">\(z\)</span> that are consistent with observed
+presences, as provided in this example with <code>zinit</code>. In other words if
+<span class="math inline">\(x(j,i,t,k)=1\)</span>, provide an intial value of 1 for <span class="math inline">\(z(j,i,t)\)</span>. Unlike WinBUGS and
+OpenBUGS, if you do not do this, you’ll often (but not always) encounter an
+error message such as:</p>
+<pre><code># Error in jags.model(file = &#39;com_occ.txt&#39;, data = data, n.chains = 3) :
 # Error in node x[1,1,2,3] Observed node inconsistent with unobserved
 # parents at initialization</code></pre>
-<p>Now we’re ready to monitor and make inferences about some parameters of interest using JAGS.</p>
+<p>Now we’re ready to monitor and make inferences about some parameters of
+interest using JAGS.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>
-Compiling model graph
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>params</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"lp"</span>, <span class='st'>"beta"</span>, <span class='st'>"rho"</span><span class='op'>)</span></span>
+<span><span class='va'>ocmod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='st'>"com_occ.txt"</span>, inits <span class='op'>=</span> <span class='va'>inits</span>, data <span class='op'>=</span> <span class='va'>data</span>, </span>
+<span>                    n.chains <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Compiling model graph
    Resolving undeclared variables
    Allocating nodes
 Graph information:
@@ -1136,6 +1922,10 @@ Initializing model
   |+++++++++++++++++++++++++++++++++++++++++++++++++ |  98%
   |                                                        
   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>nburn</span> <span class='op'>&lt;-</span> <span class='fl'>10000</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>ocmod</span>, n.iter <span class='op'>=</span> <span class='va'>nburn</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -1239,6 +2029,9 @@ Initializing model
   |************************************************* |  98%
   |                                                        
   |**************************************************| 100%</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>ocmod</span>, n.iter <span class='op'>=</span> <span class='fl'>10000</span>, variable.names <span class='op'>=</span> <span class='va'>params</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
   |                                                        
   |                                                  |   0%
@@ -1342,6 +2135,9 @@ Initializing model
   |************************************************* |  98%
   |                                                        
   |**************************************************| 100%</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span></code></pre>
+</div>
 <pre><code>
 Iterations = 11001:21000
 Thinning interval = 1 
@@ -1352,45 +2148,49 @@ Sample size per chain = 10000
    plus standard error of the mean:
 
            Mean     SD Naive SE Time-series SE
-beta[1]  0.7813 0.3202 0.002264       0.008857
-beta[2]  1.0468 0.4867 0.003441       0.018857
-beta[3]  0.8522 0.3162 0.002236       0.007391
-lp[1]    4.3741 1.0743 0.007597       0.012395
-lp[2]    0.5424 0.2900 0.002051       0.003992
-lp[3]    3.6658 0.7431 0.005254       0.007818
-rho[1]  -1.8498 0.4820 0.003408       0.012032
-rho[2]  -2.4447 0.6907 0.004884       0.023822
-rho[3]  -2.1160 0.5040 0.003564       0.011320
+beta[1]  0.7679 0.3173 0.002244       0.007803
+beta[2]  1.0692 0.5820 0.004115       0.025065
+beta[3]  0.8474 0.3079 0.002177       0.006865
+lp[1]    4.3725 1.0684 0.007555       0.012143
+lp[2]    0.5402 0.2887 0.002041       0.004442
+lp[3]    3.6732 0.7496 0.005301       0.007816
+rho[1]  -1.8426 0.4896 0.003462       0.011560
+rho[2]  -2.4753 0.7493 0.005298       0.025575
+rho[3]  -2.1264 0.4960 0.003507       0.010948
 
 2. Quantiles for each variable:
 
             2.5%     25%     50%     75%   97.5%
-beta[1]  0.14747  0.5686  0.7791  1.0012  1.3968
-beta[2]  0.33931  0.7367  0.9735  1.2575  2.1867
-beta[3]  0.26391  0.6370  0.8411  1.0598  1.4899
-lp[1]    2.73335  3.6223  4.2153  4.9444  6.9273
-lp[2]   -0.01054  0.3467  0.5369  0.7349  1.1234
-lp[3]    2.41690  3.1469  3.5894  4.0979  5.3426
-rho[1]  -2.79556 -2.1745 -1.8518 -1.5268 -0.8797
-rho[2]  -4.07422 -2.8239 -2.3514 -1.9686 -1.3375
-rho[3]  -3.17608 -2.4312 -2.1003 -1.7746 -1.1768</code></pre>
+beta[1]  0.13043  0.5613  0.7683  0.9823  1.3799
+beta[2]  0.32801  0.7354  0.9671  1.2474  2.5356
+beta[3]  0.25697  0.6404  0.8386  1.0473  1.4730
+lp[1]    2.72967  3.6221  4.2195  4.9523  6.8553
+lp[2]   -0.01461  0.3429  0.5351  0.7323  1.1189
+lp[3]    2.41727  3.1468  3.5942  4.1151  5.3536
+rho[1]  -2.78718 -2.1701 -1.8526 -1.5200 -0.8629
+rho[2]  -4.23507 -2.8309 -2.3688 -1.9814 -1.3360
+rho[3]  -3.14440 -2.4444 -2.1116 -1.7889 -1.2037</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-1.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-2.png" width="768" /><img src="dynamic-community-occupancy-model-jags_files/figure-html5/fit-model-3.png" width="768" /></p>
 </div>
-<div id="refs" class="references">
-<div id="ref-dorazio2010models">
-<p>Dorazio, Robert M, Marc Kery, J Andrew Royle, and Matthias Plattner. 2010. “Models for Inference in Dynamic Metacommunity Systems.” <em>Ecology</em> 91 (8): 2466–75. <a href="https://doi.org/10.1890/09-1033.1">https://doi.org/10.1890/09-1033.1</a>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-dorazio2010models" class="csl-entry" role="doc-biblioentry">
+Dorazio, Robert M, Marc Kery, J Andrew Royle, and Matthias Plattner. 2010. <span>“Models for Inference in Dynamic Metacommunity Systems.”</span> <em>Ecology</em> 91 (8): 2466–75. <a href="https://doi.org/10.1890/09-1033.1">https://doi.org/10.1890/09-1033.1</a>.
 </div>
-<div id="ref-kery2008hierarchical">
-<p>Kéry, M, and J Andrew Royle. 2008. “Hierarchical Bayes Estimation of Species Richness and Occupancy in Spatially Replicated Surveys.” <em>Journal of Applied Ecology</em> 45 (2): 589–98. <a href="https://doi.org/10.1111/j.1365-2664.2007.01441.x">https://doi.org/10.1111/j.1365-2664.2007.01441.x</a>.</p>
+<div id="ref-kery2008hierarchical" class="csl-entry" role="doc-biblioentry">
+Kéry, M, and J Andrew Royle. 2008. <span>“Hierarchical Bayes Estimation of Species Richness and Occupancy in Spatially Replicated Surveys.”</span> <em>Journal of Applied Ecology</em> 45 (2): 589–98. <a href="https://doi.org/10.1111/j.1365-2664.2007.01441.x">https://doi.org/10.1111/j.1365-2664.2007.01441.x</a>.
 </div>
-<div id="ref-mackenzie2002estimating">
-<p>MacKenzie, Darryl I, James D Nichols, Gideon B Lachman, Sam Droege, J Andrew Royle, and Catherine A Langtimm. 2002. “Estimating Site Occupancy Rates When Detection Probabilities Are Less Than One.” <em>Ecology</em> 83 (8): 2248–55. <a href="https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2">https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2</a>.</p>
+<div id="ref-mackenzie2002estimating" class="csl-entry" role="doc-biblioentry">
+MacKenzie, Darryl I, James D Nichols, Gideon B Lachman, Sam Droege, J Andrew Royle, and Catherine A Langtimm. 2002. <span>“Estimating Site Occupancy Rates When Detection Probabilities Are Less Than One.”</span> <em>Ecology</em> 83 (8): 2248–55. <a href="https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2">https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2</a>.
 </div>
-<div id="ref-royle2008hierarchical">
-<p>Royle, J Andrew, and Robert M Dorazio. 2008. <em>Hierarchical Modeling and Inference in Ecology: The Analysis of Data from Populations, Metapopulations and Communities</em>. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-374097-7.50001-5">https://doi.org/10.1016/B978-0-12-374097-7.50001-5</a>.</p>
+<div id="ref-royle2008hierarchical" class="csl-entry" role="doc-biblioentry">
+Royle, J Andrew, and Robert M Dorazio. 2008. <em>Hierarchical Modeling and Inference in Ecology: The Analysis of Data from Populations, Metapopulations and Communities</em>. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-374097-7.50001-5">https://doi.org/10.1016/B978-0-12-374097-7.50001-5</a>.
 </div>
-<div id="ref-royle2007bayesian">
-<p>Royle, J Andrew, and Marc Kéry. 2007. “A Bayesian State-Space Formulation of Dynamic Occupancy Models.” <em>Ecology</em> 88 (7): 1813–23. <a href="https://doi.org/10.1890/06-0669.1">https://doi.org/10.1890/06-0669.1</a>.</p>
+<div id="ref-royle2007bayesian" class="csl-entry" role="doc-biblioentry">
+Royle, J Andrew, and Marc Kéry. 2007. <span>“A Bayesian State-Space Formulation of Dynamic Occupancy Models.”</span> <em>Ecology</em> 88 (7): 1813–23. <a href="https://doi.org/10.1890/06-0669.1">https://doi.org/10.1890/06-0669.1</a>.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
@@ -1413,65 +2213,10 @@ rho[3]  -3.17608 -2.4312 -2.1003 -1.7746 -1.1768</code></pre>
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
-<script id="distill-bibliography" type="text/bibtex">
-@article{mackenzie2002estimating,
-  title={Estimating site occupancy rates when detection probabilities are less than one},
-  author={MacKenzie, Darryl I and Nichols, James D and Lachman, Gideon B and Droege, Sam and Andrew Royle, J and Langtimm, Catherine A},
-  journal={Ecology},
-  volume={83},
-  number={8},
-  pages={2248--2255},
-  year={2002},
-  publisher={Wiley Online Library}, 
-  url={https://doi.org/10.1890/0012-9658(2002)083[2248:ESORWD]2.0.CO;2}
-}
-
-@article{royle2007bayesian,
-  title={A Bayesian state-space formulation of dynamic occupancy models},
-  author={Royle, J Andrew and K{\'e}ry, Marc},
-  journal={Ecology},
-  volume={88},
-  number={7},
-  pages={1813--1823},
-  year={2007},
-  publisher={Wiley Online Library}, 
-  url={https://doi.org/10.1890/06-0669.1}
-}
-
-@article{kery2008hierarchical,
-  title={Hierarchical Bayes estimation of species richness and occupancy in spatially replicated surveys},
-  author={K{\'e}ry, M and Royle, J Andrew},
-  journal={Journal of Applied Ecology},
-  volume={45},
-  number={2},
-  pages={589--598},
-  year={2008},
-  publisher={Wiley Online Library}, 
-  url={https://doi.org/10.1111/j.1365-2664.2007.01441.x}
-}
-
-@article{dorazio2010models,
-  title={Models for inference in dynamic metacommunity systems},
-  author={Dorazio, Robert M and Kery, Marc and Royle, J Andrew and Plattner, Matthias},
-  journal={Ecology},
-  volume={91},
-  number={8},
-  pages={2466--2475},
-  year={2010},
-  publisher={Wiley Online Library}, 
-  url={https://doi.org/10.1890/09-1033.1}
-}
-
-@book{royle2008hierarchical,
-  title={Hierarchical modeling and inference in ecology: the analysis of data from populations, metapopulations and communities},
-  author={Royle, J Andrew and Dorazio, Robert M},
-  year={2008},
-  publisher={Elsevier}, 
-  url={https://doi.org/10.1016/B978-0-12-374097-7.50001-5}
-}
-
-</script>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
