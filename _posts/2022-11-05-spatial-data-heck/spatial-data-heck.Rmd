@@ -13,6 +13,7 @@ editor_options:
   chunk_output_type: console
 categories:
   - rants
+  - spatial
 ---
 
 It's 2022. 
