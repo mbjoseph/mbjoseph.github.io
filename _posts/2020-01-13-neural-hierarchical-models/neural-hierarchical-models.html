@@ -18,80 +18,216 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
+
   <!--radix_placeholder_meta_tags-->
   <title>Behind the paper: Neural hierarchical models of ecological populations</title>
-  
+
   <meta property="description" itemprop="description" content="A high-level overview, an example, and a call to action."/>
-  
-  
+
+
   <!--  https://schema.org/Article -->
   <meta property="article:published" itemprop="datePublished" content="2020-01-23"/>
   <meta property="article:created" itemprop="dateCreated" content="2020-01-23"/>
   <meta name="article:author" content="Maxwell B. Joseph"/>
-  
+
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Behind the paper: Neural hierarchical models of ecological populations"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="A high-level overview, an example, and a call to action."/>
   <meta property="og:locale" content="en_US"/>
-  
+
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Behind the paper: Neural hierarchical models of ecological populations"/>
   <meta property="twitter:description" content="A high-level overview, an example, and a call to action."/>
-  
+
   <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=N-mixture models for estimating population size from spatially replicated counts;citation_publication_date=2004;citation_publisher=Wiley Online Library;citation_volume=60;citation_author=J Andrew Royle"/>
-  <meta name="citation_reference" content="citation_title=Neural hierarchical models of ecological populations;citation_publication_date=2020;citation_volume=in press;citation_doi=10.1111/ele.13462;citation_author=Maxwell B Joseph"/>
+  <meta name="citation_reference" content="citation_title=N-mixture models for estimating population size from spatially replicated counts;citation_publisher=Wiley Online Library;citation_volume=60;citation_author=J Andrew Royle"/>
+  <meta name="citation_reference" content="citation_title=Neural hierarchical models of ecological populations;citation_volume=in press;citation_doi=10.1111/ele.13462;citation_author=Maxwell B Joseph"/>
   <!--radix_placeholder_rmarkdown_metadata-->
-  
+
   <script type="text/json" id="radix-rmarkdown-metadata">
   {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","editor_options","categories"]}},"value":[{"type":"character","attributes":{},"value":["Behind the paper: Neural hierarchical models of ecological populations"]},{"type":"character","attributes":{},"value":["A high-level overview, an example, and a call to action.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxwell B. Joseph"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["01-23-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]},{"type":"character","attributes":{},"value":["papers"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["biblio.bib","conv_hmm_edited.png","neural-hierarchical-models_files/bowser-1.9.3/bowser.min.js","neural-hierarchical-models_files/distill-2.2.21/template.v2.js","neural-hierarchical-models_files/elevate-section-attrs-2.0/elevate-section-attrs.js","neural-hierarchical-models_files/figure-html5/conceptual-figure-1.png","neural-hierarchical-models_files/figure-html5/gen_data-1.png","neural-hierarchical-models_files/figure-html5/generate-data-1.png","neural-hierarchical-models_files/figure-html5/generate-data-2.png","neural-hierarchical-models_files/figure-html5/loss-plot-1.png","neural-hierarchical-models_files/figure-html5/p-plot-1.png","neural-hierarchical-models_files/figure-html5/plot-function-1.png","neural-hierarchical-models_files/figure-html5/plot-function-2.png","neural-hierarchical-models_files/figure-html5/sim-abundance-1.png","neural-hierarchical-models_files/figure-html5/train-1.png","neural-hierarchical-models_files/figure-html5/train-2.png","neural-hierarchical-models_files/figure-html5/unnamed-chunk-1-1.png","neural-hierarchical-models_files/jquery-1.11.3/jquery.min.js","neural-hierarchical-models_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["biblio.bib","conv_hmm_edited.png","neural-hierarchical-models_files/bowser-1.9.3/bowser.min.js","neural-hierarchical-models_files/distill-2.2.21/template.v2.js","neural-hierarchical-models_files/elevate-section-attrs-2.0/elevate-section-attrs.js","neural-hierarchical-models_files/figure-html5/conceptual-figure-1.png","neural-hierarchical-models_files/figure-html5/define-network-9.png","neural-hierarchical-models_files/figure-html5/fit-13.png","neural-hierarchical-models_files/figure-html5/gen_data-1.png","neural-hierarchical-models_files/figure-html5/gen_data-3.png","neural-hierarchical-models_files/figure-html5/gen_data-7.png","neural-hierarchical-models_files/figure-html5/generate-data-1.png","neural-hierarchical-models_files/figure-html5/generate-data-2.png","neural-hierarchical-models_files/figure-html5/generate-data-3.png","neural-hierarchical-models_files/figure-html5/load-deps-1.png","neural-hierarchical-models_files/figure-html5/loss-fn-11.png","neural-hierarchical-models_files/figure-html5/loss-plot-1.png","neural-hierarchical-models_files/figure-html5/loss-plot-23.png","neural-hierarchical-models_files/figure-html5/loss-plot-24.png","neural-hierarchical-models_files/figure-html5/make-dataloader-15.png","neural-hierarchical-models_files/figure-html5/make-optimizer-17.png","neural-hierarchical-models_files/figure-html5/p-plot-1.png","neural-hierarchical-models_files/figure-html5/plot-function-1.png","neural-hierarchical-models_files/figure-html5/plot-function-2.png","neural-hierarchical-models_files/figure-html5/sim-abundance-1.png","neural-hierarchical-models_files/figure-html5/sim-abundance-5.png","neural-hierarchical-models_files/figure-html5/train-1.png","neural-hierarchical-models_files/figure-html5/train-19.png","neural-hierarchical-models_files/figure-html5/train-2.png","neural-hierarchical-models_files/figure-html5/train-20.png","neural-hierarchical-models_files/figure-html5/unnamed-chunk-1-1.png","neural-hierarchical-models_files/jquery-1.11.3/jquery.min.js","neural-hierarchical-models_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
-  
+
   <style type="text/css">
-  
+
   body {
     background-color: white;
   }
-  
+
   .pandoc-table {
     width: 100%;
   }
-  
+
   .pandoc-table>caption {
     margin-bottom: 10px;
   }
-  
+
   .pandoc-table th:not([align]) {
     text-align: left;
   }
-  
+
   .pagedtable-footer {
     font-size: 15px;
   }
-  
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
   .html-widget {
     margin-bottom: 2.0em;
   }
-  
+
   .l-screen-inset {
     padding-right: 16px;
   }
-  
+
   .l-screen .caption {
     margin-left: 10px;
   }
-  
+
   .shaded {
     background: rgb(247, 247, 247);
     padding-top: 20px;
@@ -99,43 +235,130 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .html-widget {
     margin-bottom: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .shaded-content {
     background: white;
   }
-  
+
   .text-output {
     margin-top: 0;
     line-height: 1.5em;
   }
-  
+
   .hidden {
     display: none !important;
   }
-  
+
   d-article {
+    padding-top: 2.5rem;
     padding-bottom: 30px;
   }
-  
+
   d-appendix {
     padding-top: 30px;
   }
-  
+
   d-article>p>img {
     width: 100%;
   }
-  
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
   d-article iframe {
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 2.0em;
     width: 100%;
   }
-  
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
   figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -143,128 +366,103 @@
     padding: 18px;
     box-sizing: border-box;
   }
-  
-  /* CSS for table of contents */
-  
-  .d-toc {
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
     color: rgba(0,0,0,0.8);
-    font-size: 0.8em;
-    line-height: 1em;
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
   }
-  
-  .d-toc-header {
-    font-size: 0.6rem;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
     margin-top: 0;
-    margin-bottom: 1.3em;
+    margin-bottom: 1em;
   }
-  
-  .d-toc a {
-    border-bottom: none;
+
+  .d-contents li {
+    list-style-type: none
   }
-  
-  .d-toc ul {
+
+  .d-contents nav > ul {
     padding-left: 0;
   }
-  
-  .d-toc li>ul {
-    padding-top: 0.8em;
-    padding-left: 16px;
-    margin-bottom: 0.6em;
+
+  .d-contents ul {
+    padding-left: 1em
   }
-  
-  .d-toc ul,
-  .d-toc li {
-    list-style-type: none;
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
   }
-  
-  .d-toc li {
-    margin-bottom: 0.9em;
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
   }
-  
-  .d-toc-separator {
-    margin-top: 20px;
-    margin-bottom: 2em;
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
   }
-  
-  .d-article-with-toc {
-    border-top: none;
-    padding-top: 0;
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
   }
-  
-  
-  
-  /* Tweak code blocks (note that this CSS is repeated above in an injection
-     into the d-code shadow dom) */
-  
-  d-code {
-    overflow-x: auto !important;
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
   }
-  
-  pre.d-code code.d-code {
-    padding-left: 10px;
-    font-size: 12px;
-    border-left: 2px solid rgba(0,0,0,0.1);
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
   }
-  
-  pre.text-output {
-  
-    font-size: 12px;
-    color: black;
-    background: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-  
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-  
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
   }
-  
-  @media(min-width: 768px) {
-  
-  d-code {
-    overflow-x: visible !important;
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
   }
-  
-  pre.d-code code.d-code  {
-      padding-left: 18px;
-      font-size: 14px;
-  }
-  pre.text-output {
-    font-size: 14px;
-  }
-  }
-  
+
+
   /* Figure */
-  
+
   .figure {
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
   }
-  
-  .figure img {
-    width: 100%;
-  }
-  
+
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
     line-height: 1.5em;
   }
-  
+
   .figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -272,21 +470,42 @@
     padding: 18px;
     box-sizing: border-box;
   }
-  
+
   .figure .caption a {
     color: rgba(0, 0, 0, 0.6);
   }
-  
+
   .figure .caption b,
   .figure .caption strong, {
     font-weight: 600;
     color: rgba(0, 0, 0, 1.0);
   }
-  
-  
-  
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
   /* Tweak 1000px media break to show more text */
-  
+
   @media(min-width: 1000px) {
     .base-grid,
     distill-header,
@@ -302,11 +521,11 @@
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 16px;
     }
-  
+
     .grid {
       grid-column-gap: 16px;
     }
-  
+
     d-article {
       font-size: 1.06rem;
       line-height: 1.7em;
@@ -315,7 +534,7 @@
       font-size: 13px;
     }
   }
-  
+
   @media(min-width: 1180px) {
     .base-grid,
     distill-header,
@@ -331,16 +550,16 @@
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 32px;
     }
-  
+
     .grid {
       grid-column-gap: 32px;
     }
   }
-  
-  
+
+
   /* Get the citation styles for the appendix (not auto-injected on render since
      we do our own rendering of the citation appendix) */
-  
+
   d-appendix .citation-appendix,
   .d-appendix .citation-appendix {
     font-size: 11px;
@@ -357,101 +576,401 @@
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-  
-  
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
   /* Social footer */
-  
+
   .social_footer {
     margin-top: 30px;
     margin-bottom: 0;
     color: rgba(0,0,0,0.67);
   }
-  
+
   .disqus-comments {
     margin-right: 30px;
   }
-  
+
   .disqus-comment-count {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
-  
+
   #disqus_thread {
     margin-top: 30px;
   }
-  
+
   .article-sharing a {
     border-bottom: none;
     margin-right: 8px;
   }
-  
+
   .article-sharing a:hover {
     border-bottom: none;
   }
-  
+
   .sidebar-section.subscribe {
     font-size: 12px;
     line-height: 1.6em;
   }
-  
+
   .subscribe p {
     margin-bottom: 0.5em;
   }
-  
-  
+
+
   .article-footer .subscribe {
     font-size: 15px;
     margin-top: 45px;
   }
-  
-  
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
   /* Improve display for browsers without grid (IE/Edge <= 15) */
-  
+
   .downlevel {
     line-height: 1.6em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-  
+
   .downlevel .d-title {
     padding-top: 6rem;
     padding-bottom: 1.5rem;
   }
-  
+
   .downlevel .d-title h1 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.1em;
     margin: 0 0 0.5rem;
   }
-  
+
   .downlevel .d-title p {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.55em;
     margin-top: 0;
   }
-  
+
   .downlevel .d-byline {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     font-size: 0.8rem;
     line-height: 1.8em;
   }
-  
+
   .downlevel .section-separator {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .downlevel .d-article {
     font-size: 1.06rem;
     line-height: 1.7em;
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
-  
-  
+
+
   .downlevel .d-appendix {
     padding-left: 0;
     padding-right: 0;
@@ -463,11 +982,11 @@
     padding-top: 40px;
     padding-bottom: 48px;
   }
-  
+
   .downlevel .footnotes ol {
     padding-left: 13px;
   }
-  
+
   .downlevel .base-grid,
   .downlevel .distill-header,
   .downlevel .d-title,
@@ -484,7 +1003,7 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-  
+
   @media(min-width: 768px) {
     .downlevel .base-grid,
     .downlevel .distill-header,
@@ -504,14 +1023,14 @@
     max-width: 900px;
   }
   }
-  
+
   .downlevel pre code {
     display: block;
     border-left: 2px solid rgba(0, 0, 0, .1);
     padding: 0 0 0 20px;
     font-size: 14px;
   }
-  
+
   .downlevel code, .downlevel pre {
     color: black;
     background: none;
@@ -522,21 +1041,27 @@
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-  
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-  
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-  
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
   </style>
-  
+
   <script type="application/javascript">
-  
+
   function is_downlevel_browser() {
     if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
                                    window.navigator.userAgent)) {
@@ -545,13 +1070,20 @@
       return window.load_distill_framework === undefined;
     }
   }
-  
+
   // show body when load is complete
   function on_load_complete() {
-  
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
     // set body to visible
     document.body.style.visibility = 'visible';
-  
+
     // force redraw for leaflet widgets
     if (window.HTMLWidgets) {
       var maps = window.HTMLWidgets.findAll(".leaflet");
@@ -564,54 +1096,39 @@
         });
       });
     }
-  
+
     // trigger 'shown' so htmlwidgets resize
     $('d-article').trigger('shown');
   }
-  
+
   function init_distill() {
-  
+
     init_common();
-  
+
     // create front matter
     var front_matter = $('<d-front-matter></d-front-matter>');
     $('#distill-front-matter').wrap(front_matter);
-  
+
     // create d-title
     $('.d-title').changeElementType('d-title');
-  
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
-  
+
     // create d-article
     var article = $('<d-article></d-article>');
     $('.d-article').wrap(article).children().unwrap();
-  
+
     // move posts container into article
     $('.posts-container').appendTo($('d-article'));
-  
+
     // create d-appendix
     $('.d-appendix').changeElementType('d-appendix');
-  
-    // create d-bibliography
-    var bibliography = $('<d-bibliography></d-bibliography>');
-    $('#distill-bibliography').wrap(bibliography);
-  
+
     // flag indicating that we have appendix items
     var appendix = $('.appendix-bottom').children('h3').length > 0;
-  
-    // replace citations with <d-cite>
-    $('.citation').each(function(i, val) {
-      appendix = true;
-      var cites = $(this).attr('data-cites').split(" ");
-      var dt_cite = $('<d-cite></d-cite>');
-      dt_cite.attr('key', cites.join());
-      $(this).replaceWith(dt_cite);
-    });
-    // remove refs
-    $('#refs').remove();
-  
+
     // replace footnotes with <d-footnote>
     $('.footnote-ref').each(function(i, val) {
       appendix = true;
@@ -627,49 +1144,31 @@
     });
     // remove footnotes
     $('.footnotes').remove();
-  
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
     });
     $('h3.appendix').each(function(i, val) {
       var id = $(this).attr('id');
-      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
       appendix = true;
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
     });
-  
+
     // show d-appendix if we have appendix content
     $("d-appendix").css('display', appendix ? 'grid' : 'none');
-  
-    // replace code blocks with d-code
-    $('pre>code').each(function(i, val) {
-      var code = $(this);
-      var pre = code.parent();
-      var clz = "";
-      var language = pre.attr('class');
-      if (language) {
-        // map unknown languages to "clike" (without this they just dissapear)
-        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
-                                 "javascript", "js", "julia", "lua", "markdown",
-                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
-          language = "clike";
-        language = ' language="' + language + '"';
-        var dt_code = $('<d-code block' + language + clz + '></d-code>');
-        dt_code.text(code.text());
-        pre.replaceWith(dt_code);
-      } else {
-        code.addClass('text-output').unwrap().changeElementType('pre');
-      }
-    });
-  
+
     // localize layout chunks to just output
     $('.layout-chunk').each(function(i, val) {
-  
+
       // capture layout
       var layout = $(this).attr('data-layout');
-  
+
       // apply layout to markdown level block elements
-      var elements = $(this).children().not('d-code, pre.text-output, script');
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
       elements.each(function(i, el) {
         var layout_div = $('<div class="' + layout + '"></div>');
         if (layout_div.hasClass('shaded')) {
@@ -680,39 +1179,60 @@
           $(this).wrap(layout_div);
         }
       });
-  
-  
+
+
       // unwrap the layout-chunk div
       $(this).children().unwrap();
     });
-  
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
     // load distill framework
     load_distill_framework();
-  
+
     // wait for window.distillRunlevel == 4 to do post processing
     function distill_post_process() {
-  
+
       if (!window.distillRunlevel || window.distillRunlevel < 4)
         return;
-  
+
       // hide author/affiliations entirely if we have no authors
       var front_matter = JSON.parse($("#distill-front-matter").html());
       var have_authors = front_matter.authors && front_matter.authors.length > 0;
       if (!have_authors)
         $('d-byline').addClass('hidden');
-  
-      // table of contents
-      if (have_authors) // adjust border if we are in authors
-        $('.d-toc').parent().addClass('d-article-with-toc');
-  
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
       // strip links that point to #
       $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
-  
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
       // hide elements of author/affiliations grid that have no value
       function hide_byline_column(caption) {
         $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
       }
-  
+
       // affiliations
       var have_affiliations = false;
       for (var i = 0; i<front_matter.authors.length; ++i) {
@@ -724,11 +1244,11 @@
       }
       if (!have_affiliations)
         $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
-  
+
       // published date
       if (!front_matter.publishedDate)
         hide_byline_column("Published");
-  
+
       // document object identifier
       var doi = $('d-byline').find('h3:contains("DOI")');
       var doi_p = doi.next().empty();
@@ -748,61 +1268,108 @@
            .html(front_matter.doi)
            .appendTo(doi_p);
       }
-  
+
        // change plural form of authors/affiliations
       if (front_matter.authors.length === 1) {
         var grid = $('.authors-affiliations');
         grid.children('h3:contains("Authors")').text('Author');
         grid.children('h3:contains("Affiliations")').text('Affiliation');
       }
-  
-      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
-      $('d-code').each(function(i, val) {
-        var style = document.createElement('style');
-        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
-                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
-        if (this.shadowRoot)
-          this.shadowRoot.appendChild(style);
-      });
-  
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
       // move appendix-bottom entries to the bottom
       $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
       $('.appendix-bottom').remove();
-  
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
       // clear polling timer
       clearInterval(tid);
-  
+
       // show body now that everything is ready
       on_load_complete();
     }
-  
+
     var tid = setInterval(distill_post_process, 50);
     distill_post_process();
-  
+
   }
-  
+
   function init_downlevel() {
-  
+
     init_common();
-  
+
      // insert hr after d-title
     $('.d-title').after($('<hr class="section-separator"/>'));
-  
+
     // check if we have authors
     var front_matter = JSON.parse($("#distill-front-matter").html());
     var have_authors = front_matter.authors && front_matter.authors.length > 0;
-  
+
     // manage byline/border
     if (!have_authors)
       $('.d-byline').remove();
     $('.d-byline').after($('<hr class="section-separator"/>'));
     $('.d-byline a').remove();
-  
+
     // remove toc
-    $('.d-toc-header').remove();
-    $('.d-toc').remove();
-    $('.d-toc-separator').remove();
-  
+    $('.d-contents').remove();
+
     // move appendix elements
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
@@ -810,65 +1377,67 @@
     $('h3.appendix').each(function(i, val) {
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
     });
-  
-  
+
+
     // inject headers into references and footnotes
     var refs_header = $('<h3></h3>');
     refs_header.text('References');
     $('#refs').prepend(refs_header);
-  
+
     var footnotes_header = $('<h3></h3');
     footnotes_header.text('Footnotes');
     $('.footnotes').children('hr').first().replaceWith(footnotes_header);
-  
+
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
-  
+
     // remove appendix if it's empty
     if ($('.d-appendix').children().length === 0)
       $('.d-appendix').remove();
-  
+
     // prepend separator above appendix
     $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
-  
+
     // trim code
     $('pre>code').each(function(i, val) {
       $(this).html($.trim($(this).html()));
     });
-  
+
     // move posts-container right before article
     $('.posts-container').insertBefore($('.d-article'));
-  
+
     $('body').addClass('downlevel');
-  
+
     on_load_complete();
   }
-  
-  
+
+
   function init_common() {
-  
+
     // jquery plugin to change element types
     (function($) {
       $.fn.changeElementType = function(newType) {
         var attrs = {};
-  
+
         $.each(this[0].attributes, function(idx, attr) {
           attrs[attr.nodeName] = attr.nodeValue;
         });
-  
+
         this.replaceWith(function() {
           return $("<" + newType + "/>", attrs).append($(this).contents());
         });
       };
     })(jQuery);
-  
+
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
-  
+
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -877,35 +1446,35 @@
           var fig = $(this);
           fig.css('width', fig.attr('width') + 'px');
         });
-  
+
       }
     });
-  
+
     // auto-append index.html to post-preview links in file: protocol
     // and in rstudio ide preview
     $('.post-preview').each(function(i, val) {
       if (window.location.protocol === "file:")
         $(this).attr('href', $(this).attr('href') + "index.html");
     });
-  
+
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
-  
+
     // add class to pandoc style tables
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
-  
+
     // add figcaption style to table captions
     $('caption').parent('table').addClass("figcaption");
-  
+
     // initialize posts list
     if (window.init_posts_list)
       window.init_posts_list();
-  
+
     // implmement disqus comment link
     $('.disqus-comment-count').click(function() {
       window.headroom_prevent_pin = true;
@@ -919,18 +1488,24 @@
       }
     });
   }
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     if (is_downlevel_browser())
       init_downlevel();
     else
       window.addEventListener('WebComponentsReady', init_distill);
   });
-  
+
   </script>
-  
+
   <!--/radix_placeholder_distill-->
-  <script src="neural-hierarchical-models_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="neural-hierarchical-models_files/header-attrs-2.17/header-attrs.js"></script>
+  <script src="neural-hierarchical-models_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="neural-hierarchical-models_files/popper-2.6.0/popper.min.js"></script>
+  <link href="neural-hierarchical-models_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="neural-hierarchical-models_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="neural-hierarchical-models_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="neural-hierarchical-models_files/anchor-4.2.2/anchor.min.js"></script>
   <script src="neural-hierarchical-models_files/bowser-1.9.3/bowser.min.js"></script>
   <script src="neural-hierarchical-models_files/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="neural-hierarchical-models_files/distill-2.2.21/template.v2.js"></script>
@@ -945,7 +1520,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Behind the paper: Neural hierarchical models of ecological populations","description":"A high-level overview, an example, and a call to action.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2020-01-23T00:00:00.000-07:00","citationText":"Joseph, 2020"}
+{"title":"Behind the paper: Neural hierarchical models of ecological populations","description":"A high-level overview, an example, and a call to action.","authors":[{"author":"Maxwell B. Joseph","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-01-23T00:00:00.000-07:00","citationText":"Joseph, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -956,7 +1531,12 @@
 
 <div class="d-title">
 <h1>Behind the paper: Neural hierarchical models of ecological populations</h1>
-<p>A high-level overview, an example, and a call to action.</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">papers</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>A high-level overview, an example, and a call to action.</p></p>
 </div>
 
 <div class="d-byline">
@@ -966,10 +1546,12 @@
 </div>
 
 <div class="d-article">
-<p>This post gives some background and a demo for the paper <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13462">“Neural hierarchical models of ecological populations”</a> out today in Ecology Letters <span class="citation" data-cites="joseph2020">(Joseph <a href="#ref-joseph2020">2020</a>)</span>.</p>
-<p>Deep learning and model-based ecological inference may seem like totally separate pursuits. Yet, if you think about deep learning as a set of tools to approximate functions, it’s not much of a leap to begin seeing opportunities to unite deep learning with some standard ecological modeling approaches.</p>
+<p>This post gives some background and a demo for the paper <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13462">“Neural hierarchical models of ecological populations”</a> out today in Ecology Letters <span class="citation" data-cites="joseph2020">(<a href="#ref-joseph2020" role="doc-biblioref">Joseph 2020</a>)</span>.</p>
+<p>Deep learning and model-based ecological inference may seem like totally separate pursuits.
+Yet, if you think about deep learning as a set of tools to approximate functions, it’s not much of a leap to begin seeing opportunities to unite deep learning with some standard ecological modeling approaches.</p>
 <h2 id="hierarchical-models">Hierarchical models</h2>
-<p>Hierarchical models have been around for a while, and are now one of the workhorse methods of modern quantitative ecology (e.g., occupancy models, capture-recapture models, N-mixture models, animal movement models, state-space models, etc.). Hierarchical models combine:</p>
+<p>Hierarchical models have been around for a while, and are now one of the workhorse methods of modern quantitative ecology (e.g., occupancy models, capture-recapture models, N-mixture models, animal movement models, state-space models, etc.).
+Hierarchical models combine:</p>
 <ol type="1">
 <li>A data model <span class="math inline">\([y \mid z, \theta]\)</span> where we observe <span class="math inline">\(y\)</span>, that depends on a process <span class="math inline">\(z\)</span>, and parameter(s) <span class="math inline">\(\theta\)</span>,</li>
 <li>A process model <span class="math inline">\([z \mid \theta]\)</span>, and</li>
@@ -979,14 +1561,17 @@
 <p><span class="math display">\[[z, \theta \mid y] = \dfrac{[y \mid z, \theta] \times [z \mid \theta] \times [\theta]}{[y]}.\]</span></p>
 <p>We might also have some explanatory variables <span class="math inline">\(x\)</span> that might tell us something about <span class="math inline">\(z\)</span>, <span class="math inline">\(\theta\)</span>, and/or <span class="math inline">\(y\)</span>.</p>
 <h2 id="neural-networks">Neural networks</h2>
-<p>Neural networks approximate functions. Off the shelf neural networks usually just map <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>, and allow us to predict new values of <span class="math inline">\(y\)</span> for new values of <span class="math inline">\(x\)</span>. Sometimes, predicting <span class="math inline">\(y\)</span> is not really what we care about - we really want to learn something about a process <span class="math inline">\(z\)</span> or some parameters <span class="math inline">\(\theta\)</span>.</p>
+<p>Neural networks approximate functions.
+Off the shelf neural networks usually just map <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>, and allow us to predict new values of <span class="math inline">\(y\)</span> for new values of <span class="math inline">\(x\)</span>.
+Sometimes, predicting <span class="math inline">\(y\)</span> is not really what we care about - we really want to learn something about a process <span class="math inline">\(z\)</span> or some parameters <span class="math inline">\(\theta\)</span>.</p>
 <h2 id="neural-hierarchical-models">Neural hierarchical models</h2>
-<p>We can parameterize a hierarchical model with a neural network to learn about <span class="math inline">\(z\)</span>. So, for example, if <span class="math inline">\(\theta\)</span> represents the parameters of a neural network, then we can construct a process model <span class="math inline">\([z \mid \theta]\)</span> where our input <span class="math inline">\(x\)</span> is mapped to a process <span class="math inline">\(z\)</span> by way of some neural network:</p>
+<p>We can parameterize a hierarchical model with a neural network to learn about <span class="math inline">\(z\)</span>.
+So, for example, if <span class="math inline">\(\theta\)</span> represents the parameters of a neural network, then we can construct a process model <span class="math inline">\([z \mid \theta]\)</span> where our input <span class="math inline">\(x\)</span> is mapped to a process <span class="math inline">\(z\)</span> by way of some neural network:</p>
 <p><span class="math display">\[[z \mid \theta] = f(x, \theta),\]</span></p>
 <p>where <span class="math inline">\(f\)</span> is a neural network that maps <span class="math inline">\(x\)</span> and <span class="math inline">\(\theta\)</span> to some probabilistic model for <span class="math inline">\(z\)</span> (here because <span class="math inline">\(x\)</span> is observed, I’m not going to condition <span class="math inline">\(z\)</span> on it on the left hand side of the equation - <span class="math inline">\(x\)</span> is assumed to be constant and known without error).</p>
 <p>Graphically, you might consider a state-space model where some inputs <span class="math inline">\(x\)</span> are mapped to a state transition matrix (for an example with an animal movement model, see Appendix S2 in the paper):</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure"><span id="fig:conceptual-figure"></span>
+<div class="figure"><span style="display:block;" id="fig:conceptual-figure"></span>
 <img src="neural-hierarchical-models_files/figure-html5/conceptual-figure-1.png" alt="Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model" width="624" />
 <p class="caption">
 Figure 1: Using a convolutional neural network to map some input raster to a state transition matrix in a hidden Markov model
@@ -994,76 +1579,81 @@ Figure 1: Using a convolutional neural network to map some input raster to a sta
 </div>
 </div>
 <h2 id="an-example-a-neural-n-mixture-model">An example: a neural N-mixture model</h2>
-<p>An N-mixture model can be used to estimate latent integer-valued abundance when unmarked populations are repeatedly surveyed and it is assumed that detection of individuals is imperfect <span class="citation" data-cites="royle2004n">(Royle <a href="#ref-royle2004n">2004</a>)</span>. Assume that <span class="math inline">\(J\)</span> spatial locations are each surveyed <span class="math inline">\(K\)</span> times, in a short time interval for which it is reasonable to assume that the number of individuals is constant within locations <span class="math inline">\(j=1, ..., J\)</span>. Each spatial location has some continuous covariate value represented by <span class="math inline">\(x_j\)</span>, that relates to detection probabilities and expected abundance.</p>
-<h3 id="observation-model" class="unnumbered">Observation model</h3>
-<p>Observations at site <span class="math inline">\(j\)</span> in survey <span class="math inline">\(k\)</span> yield counts of the number of unique individuals detected, denoted <span class="math inline">\(y_{j, k}\)</span> for all <span class="math inline">\(j\)</span> and all <span class="math inline">\(k\)</span>. Assuming that the detection of each individual is conditionally independent, and that each individual is detected with site-specific probability <span class="math inline">\(p_j\)</span>, the observations can be modeled with a Binomial distribution where the number of trials is the true (latent) population abundance <span class="math inline">\(n_j\)</span>:</p>
+<p>An N-mixture model can be used to estimate latent integer-valued abundance when unmarked populations are repeatedly surveyed and it is assumed that detection of individuals is imperfect <span class="citation" data-cites="royle2004n">(<a href="#ref-royle2004n" role="doc-biblioref">Royle 2004</a>)</span>.
+Assume that <span class="math inline">\(J\)</span> spatial locations are each surveyed <span class="math inline">\(K\)</span> times, in a short time interval for which it is reasonable to assume that the number of individuals is constant within locations <span class="math inline">\(j=1, ..., J\)</span>.
+Each spatial location has some continuous covariate value represented by <span class="math inline">\(x_j\)</span>, that relates to detection probabilities and expected abundance.</p>
+<h3 class="unnumbered" id="observation-model">Observation model</h3>
+<p>Observations at site <span class="math inline">\(j\)</span> in survey <span class="math inline">\(k\)</span> yield counts of the number of unique individuals detected, denoted <span class="math inline">\(y_{j, k}\)</span> for all <span class="math inline">\(j\)</span> and all <span class="math inline">\(k\)</span>.
+Assuming that the detection of each individual is conditionally independent, and that each individual is detected with site-specific probability <span class="math inline">\(p_j\)</span>, the observations can be modeled with a Binomial distribution where the number of trials is the true (latent) population abundance <span class="math inline">\(n_j\)</span>:</p>
 <p><span class="math display">\[y_{j, k} \sim \text{Binomial}(p_j, n_j).\]</span></p>
-<h3 id="process-model" class="unnumbered">Process model</h3>
+<h3 class="unnumbered" id="process-model">Process model</h3>
 <p>The true population abundance <span class="math inline">\(n_j\)</span> is treated as a Poisson random variable with expected value <span class="math inline">\(\lambda_j\)</span>:</p>
 <p><span class="math display">\[n_j \sim \text{Poisson}(\lambda_j).\]</span></p>
-<h3 id="parameter-model" class="unnumbered">Parameter model</h3>
+<h3 class="unnumbered" id="parameter-model">Parameter model</h3>
 <p>Heterogeneity among sites was accounted for using a single layer neural network that ingests the one dimensional covariate <span class="math inline">\(x_i\)</span> for site <span class="math inline">\(i\)</span>, passes it through a single hidden layer, and outputs a two dimensional vector containing a detection probability <span class="math inline">\(p_i\)</span> and the expected abundance <span class="math inline">\(\lambda_i\)</span>:</p>
 <p><span class="math display">\[
 \begin{bmatrix}
    \lambda_i \\
    p_i
- \end{bmatrix} = f(x_i),
+\end{bmatrix} = f(x_i),
 \]</span></p>
 <p>where <span class="math inline">\(f\)</span> is a neural network with two dimensional output activations <span class="math inline">\(\vec{h}(x_i)\)</span> computed via:</p>
-<p><span class="math display">\[\vec{h}(x_i) = \vec{W}^{(2)} g(\vec{W}^{(1)} x_i ),\]</span> and final outputs computed using the log and logit link functions for expected abundance and detection probability:</p>
+<p><span class="math display">\[\vec{h}(x_i) = \vec{W}^{(2)} g(\vec{W}^{(1)} x_i ),\]</span>
+and final outputs computed using the log and logit link functions for expected abundance and detection probability:</p>
 <p><span class="math display">\[f(x_i) = \begin{bmatrix}
    \text{exp}(h_1(x_i)) \\
    \text{logit}^{-1}(h_2(x_i))
- \end{bmatrix}.\]</span></p>
-<p>Here too <span class="math inline">\(\vec{W}^{(1)}\)</span> is a parameter matrix that generates activations from the inputs, <span class="math inline">\(g\)</span> is an activation function, and <span class="math inline">\(\vec{W}^{(2)}\)</span> is a parameter matrix that maps the hidden layer to the outputs. Additionally <span class="math inline">\(h_1(x_i)\)</span> is the first element of the output activation vector, and <span class="math inline">\(h_2(x_i)\)</span> the second element.</p>
-<h3 id="loss-function" class="unnumbered">Loss function</h3>
-<p>The negative log likelihood was used as the loss function, enumerating over a large range of potential values of the true abundance (from <span class="math inline">\(\min(y_j.)\)</span> to <span class="math inline">\(5 \times \max(y_j.)\)</span>, where <span class="math inline">\(y_{j.}\)</span> is a vector of counts of length <span class="math inline">\(K\)</span>) to approximate the underlying infinite mixture model implied by the Poisson model of abundance <span class="citation" data-cites="royle2004n">(Royle <a href="#ref-royle2004n">2004</a>)</span>.</p>
+\end{bmatrix}.\]</span></p>
+<p>Here too <span class="math inline">\(\vec{W}^{(1)}\)</span> is a parameter matrix that generates activations from the inputs, <span class="math inline">\(g\)</span> is an activation function, and <span class="math inline">\(\vec{W}^{(2)}\)</span> is a parameter matrix that maps the hidden layer to the outputs.
+Additionally <span class="math inline">\(h_1(x_i)\)</span> is the first element of the output activation vector, and <span class="math inline">\(h_2(x_i)\)</span> the second element.</p>
+<h3 class="unnumbered" id="loss-function">Loss function</h3>
+<p>The negative log likelihood was used as the loss function, enumerating over a large range of potential values of the true abundance (from <span class="math inline">\(\min(y_j.)\)</span> to <span class="math inline">\(5 \times \max(y_j.)\)</span>, where <span class="math inline">\(y_{j.}\)</span> is a vector of counts of length <span class="math inline">\(K\)</span>) to approximate the underlying infinite mixture model implied by the Poisson model of abundance <span class="citation" data-cites="royle2004n">(<a href="#ref-royle2004n" role="doc-biblioref">Royle 2004</a>)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
 <h3 id="simulating-some-data">Simulating some data</h3>
 <p>First, load some python dependencies.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-import matplotlib.pyplot as plt
-import multiprocessing
-import numpy as np
-import torch
-from torch import nn
-from torch.distributions import Binomial, Poisson
-from torch.utils.data import DataLoader, TensorDataset</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> multiprocessing</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.distributions <span class="im">import</span> Binomial, Poisson</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.utils.data <span class="im">import</span> DataLoader, TensorDataset</span></code></pre></div>
+<p><img src="neural-hierarchical-models_files/figure-html5/load-deps-1.png" width="624" /></p>
 </div>
-<p>Simulate data at <code>nsite</code> sites, with <code>nrep</code> repeat surveys. Here it’s assumed that there is one continuous site-level covariate <span class="math inline">\(x\)</span> that has some nonlinear relationship with the expected number of individuals at a site.</p>
+<p>Simulate data at <code>nsite</code> sites, with <code>nrep</code> repeat surveys.
+Here it’s assumed that there is one continuous site-level covariate <span class="math inline">\(x\)</span> that has some nonlinear relationship with the expected number of individuals at a site.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-np.random.seed(123456)
-nsite = 200
-nrep = 5
-x = np.linspace(-2.5, 2.5, nsite, dtype=np.float32).reshape(-1,1)
-
-# Draw f(x) from a Gaussian process
-def kernel(x, theta):
-    m, n = np.meshgrid(x, x)
-    sqdist = abs(m-n)**2
-    return np.exp(- theta * sqdist)
-
-K = kernel(x, theta=.2)
-L = np.linalg.cholesky(K + 1e-5* np.eye(nsite))
-f_prior = np.dot(L, np.random.normal(size=(nsite, 1)))</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">123456</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>nsite <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>nrep <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>, nsite, dtype<span class="op">=</span>np.float32).reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw f(x) from a Gaussian process</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> kernel(x, theta):</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    m, n <span class="op">=</span> np.meshgrid(x, x)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    sqdist <span class="op">=</span> <span class="bu">abs</span>(m<span class="op">-</span>n)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.exp(<span class="op">-</span> theta <span class="op">*</span> sqdist)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> kernel(x, theta<span class="op">=</span><span class="fl">.2</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> np.linalg.cholesky(K <span class="op">+</span> <span class="fl">1e-5</span><span class="op">*</span> np.eye(nsite))</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>f_prior <span class="op">=</span> np.dot(L, np.random.normal(size<span class="op">=</span>(nsite, <span class="dv">1</span>)))</span></code></pre></div>
+<p><img src="neural-hierarchical-models_files/figure-html5/generate-data-3.png" width="624" /></p>
 </div>
 <p>Generate some abundance values from a Poisson distribution:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-offset = 3
-lam = np.exp(f_prior + offset)
-n = np.random.poisson(lam)
-
-plt.scatter(x, n, c=&#39;k&#39;, alpha=.3)
-plt.plot(x, lam)
-plt.xlabel(&#39;Covariate value&#39;)
-plt.ylabel(&#39;True (latent) abundance&#39;)</code></pre>
-<div class="figure"><span id="fig:sim-abundance"></span>
-<img src="neural-hierarchical-models_files/figure-html5/sim-abundance-1.png" alt="True relationship between latent abundance and the covariate, with sampled points." width="624" />
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>offset <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>lam <span class="op">=</span> np.exp(f_prior <span class="op">+</span> offset)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> np.random.poisson(lam)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, n, c<span class="op">=</span><span class="st">&#39;k&#39;</span>, alpha<span class="op">=</span><span class="fl">.3</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.plot(x, lam)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Covariate value&#39;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;True (latent) abundance&#39;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:sim-abundance"></span>
+<img src="neural-hierarchical-models_files/figure-html5/sim-abundance-5.png" alt="True relationship between latent abundance and the covariate, with sampled points." width="624" />
 <p class="caption">
 Figure 2: True relationship between latent abundance and the covariate, with sampled points.
 </p>
@@ -1071,129 +1661,133 @@ Figure 2: True relationship between latent abundance and the covariate, with sam
 </div>
 <p>For simplicity, assume that the probability of detection is constant across all sites and independent of <span class="math inline">\(x\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-pr_detection = np.array([0.5])
-y = np.random.binomial(n=n, 
-                       p=pr_detection, 
-                       size=(nsite, nrep)).astype(np.float32)
-
-plt.plot(x, lam)
-for i in range(nrep):
-    plt.scatter(x, y[:, i], c=&#39;b&#39;, s=4, alpha=.3)    
-plt.xlabel(&#39;Covariate value&#39;)
-plt.ylabel(&#39;Observed counts&#39;)</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pr_detection <span class="op">=</span> np.array([<span class="fl">0.5</span>])</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.binomial(n<span class="op">=</span>n, </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                       p<span class="op">=</span>pr_detection, </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                       size<span class="op">=</span>(nsite, nrep))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.plot(x, lam)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nrep):</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    plt.scatter(x, y[:, i], c<span class="op">=</span><span class="st">&#39;b&#39;</span>, s<span class="op">=</span><span class="dv">4</span>, alpha<span class="op">=</span><span class="fl">.3</span>)    </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Covariate value&#39;</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Observed counts&#39;</span>)</span></code></pre></div>
 <div class="figure">
-<img src="neural-hierarchical-models_files/figure-html5/gen_data-1.png" alt="Observed counts as a function of the covariate value." width="624" />
+<img src="neural-hierarchical-models_files/figure-html5/gen_data-7.png" alt="Observed counts as a function of the covariate value." width="624" />
 <p class="caption">
 (#fig:gen_data)Observed counts as a function of the covariate value.
 </p>
 </div>
 </div>
 <h3 id="defining-a-neural-network">Defining a neural network</h3>
-<p>We will define a <code>torch.nn.Module</code> class for our neural network. This ingests <span class="math inline">\(x\)</span> and outputs a value for <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(p\)</span>:</p>
+<p>We will define a <code>torch.nn.Module</code> class for our neural network.
+This ingests <span class="math inline">\(x\)</span> and outputs a value for <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(p\)</span>:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-class Net(nn.Module):
-    &quot;&quot;&quot; Neural N-mixture model 
-    
-    This is a neural network that ingests x and outputs:
-    - lam(bda): expected abundance
-    - p: detection probability
-    &quot;&quot;&quot;
-    def __init__(self, hidden_size):
-        super().__init__()
-        self.fc1 = nn.Linear(1, hidden_size)
-        self.fc2 = nn.Linear(hidden_size, 2)
-
-    def forward(self, x):
-        hidden_layer = torch.sigmoid(self.fc1(x))
-        output = self.fc2(hidden_layer)
-        lam = torch.exp(output[:, [0]])
-        p = torch.sigmoid(output[:, [1]])
-        return lam, p</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Net(nn.Module):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot; Neural N-mixture model </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">    This is a neural network that ingests x and outputs:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">    - lam(bda): expected abundance</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">    - p: detection probability</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, hidden_size):</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc1 <span class="op">=</span> nn.Linear(<span class="dv">1</span>, hidden_size)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc2 <span class="op">=</span> nn.Linear(hidden_size, <span class="dv">2</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        hidden_layer <span class="op">=</span> torch.sigmoid(<span class="va">self</span>.fc1(x))</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        output <span class="op">=</span> <span class="va">self</span>.fc2(hidden_layer)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        lam <span class="op">=</span> torch.exp(output[:, [<span class="dv">0</span>]])</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> torch.sigmoid(output[:, [<span class="dv">1</span>]])</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> lam, p</span></code></pre></div>
+<p><img src="neural-hierarchical-models_files/figure-html5/define-network-9.png" width="624" /></p>
 </div>
 <h3 id="defining-a-loss-function">Defining a loss function</h3>
 <p>We will use the negative log likelihood as our loss function:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-def nmix_loss(y_obs, lambda_hat, p_hat, n_max):
-    &quot;&quot;&quot; N-mixture loss.
-    
-    Args:
-      y_obs (tensor): nsite by nrep count observation matrix
-      lambda_hat (tensor): poisson abundance expected value
-      p_hat (tensor): individual detection probability
-      n_max (int): maximum abundance to consider
-    
-    Returns:
-      negative log-likelihood (tensor)
-    &quot;&quot;&quot;
-    batch_size, n_rep = y_obs.shape
-    
-    possible_n_vals = torch.arange(n_max).unsqueeze(0).float()
-    n_logprob = Poisson(lambda_hat).log_prob(possible_n_vals)
-    assert n_logprob.shape == (batch_size, n_max)
-    
-    y_dist = Binomial(possible_n_vals.view(1, 1, -1), probs=p_hat.view(-1, 1, 1))
-    y_obs = y_obs.unsqueeze(-1).repeat(1, 1, n_max)
-    y_logprob = y_dist.log_prob(y_obs).sum(dim=1) # sum over repeat surveys
-    assert y_logprob.shape == (batch_size, n_max)
-    
-    log_lik = torch.logsumexp(n_logprob + y_logprob, -1)
-    return -log_lik</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> nmix_loss(y_obs, lambda_hat, p_hat, n_max):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot; N-mixture loss.</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">      y_obs (tensor): nsite by nrep count observation matrix</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">      lambda_hat (tensor): poisson abundance expected value</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">      p_hat (tensor): individual detection probability</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">      n_max (int): maximum abundance to consider</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">      negative log-likelihood (tensor)</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    batch_size, n_rep <span class="op">=</span> y_obs.shape</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    possible_n_vals <span class="op">=</span> torch.arange(n_max).unsqueeze(<span class="dv">0</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    n_logprob <span class="op">=</span> Poisson(lambda_hat).log_prob(possible_n_vals)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> n_logprob.shape <span class="op">==</span> (batch_size, n_max)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    y_dist <span class="op">=</span> Binomial(</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>      possible_n_vals.view(<span class="dv">1</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>), </span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>      probs<span class="op">=</span>p_hat.view(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>), </span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      validate_args<span class="op">=</span><span class="va">False</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    y_obs <span class="op">=</span> y_obs.unsqueeze(<span class="op">-</span><span class="dv">1</span>).repeat(<span class="dv">1</span>, <span class="dv">1</span>, n_max)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    y_logprob <span class="op">=</span> y_dist.log_prob(y_obs).<span class="bu">sum</span>(dim<span class="op">=</span><span class="dv">1</span>) <span class="co"># sum over repeat surveys</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> y_logprob.shape <span class="op">==</span> (batch_size, n_max)</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    log_lik <span class="op">=</span> torch.logsumexp(n_logprob <span class="op">+</span> y_logprob, <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>log_lik</span></code></pre></div>
+<p><img src="neural-hierarchical-models_files/figure-html5/loss-fn-11.png" width="624" /></p>
 </div>
 <h3 id="preparing-to-train">Preparing to train</h3>
 <p>Instantiate a model.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-net = Net(hidden_size=32)
-net</code></pre>
-<pre><code>
-Net(
-  (fc1): Linear(in_features=1, out_features=32, bias=True)
-  (fc2): Linear(in_features=32, out_features=2, bias=True)
-)</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Net(hidden_size<span class="op">=</span><span class="dv">32</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>net</span></code></pre></div>
+<p><img src="neural-hierarchical-models_files/figure-html5/fit-13.png" width="624" /></p>
 </div>
 <p>Create a data loader.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-dataset = TensorDataset(torch.tensor(x).float(), torch.tensor(y).float())
-dataloader = DataLoader(dataset, 
-                        batch_size=16,
-                        shuffle=True, 
-                        num_workers=multiprocessing.cpu_count())</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> TensorDataset(torch.tensor(x).<span class="bu">float</span>(), torch.tensor(y))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>dataloader <span class="op">=</span> DataLoader(dataset, </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                        batch_size<span class="op">=</span><span class="dv">16</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                        shuffle<span class="op">=</span><span class="va">True</span>, </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                        num_workers<span class="op">=</span>multiprocessing.cpu_count())</span></code></pre></div>
+<p><img src="neural-hierarchical-models_files/figure-html5/make-dataloader-15.png" width="624" /></p>
 </div>
 <p>Instantiate an optimizer and choose the number of training epochs:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-n_epoch = 1000
-optimizer = torch.optim.Adam(net.parameters(), lr=0.01, weight_decay=1e-6)
-running_loss = []</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>n_epoch <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.Adam(net.parameters(), lr<span class="op">=</span><span class="fl">0.01</span>, weight_decay<span class="op">=</span><span class="fl">1e-6</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>running_loss <span class="op">=</span> []</span></code></pre></div>
+<p><img src="neural-hierarchical-models_files/figure-html5/make-optimizer-17.png" width="624" /></p>
 </div>
 <h3 id="training-the-model">Training the model</h3>
 <p>Finally, train the model, visualizing the estimated relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(N\)</span> after every gradient update.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-_ = plt.scatter(x, n, c=&#39;k&#39;)
-_ = plt.xlabel(&#39;Covariate value&#39;)
-_ = plt.ylabel(&#39;Abundance&#39;)
-colors = plt.cm.viridis(np.linspace(0,1,n_epoch))
-for i in range(n_epoch):
-    for i_batch, xy in enumerate(dataloader):
-        x_i, y_i = xy
-        optimizer.zero_grad()
-        lambda_i, p_i = net(x_i)
-        nll = nmix_loss(y_i, lambda_i, p_i, n_max = 200)
-        loss = torch.mean(nll)        
-        loss.backward()
-        optimizer.step()    # Does the update
-        running_loss.append(loss.data.detach().numpy())
-    lam_hat, p_hat = net(torch.from_numpy(x))
-    lam_hat = lam_hat.detach().numpy()
-    _ = plt.plot(x, lam_hat, color=colors[i], alpha=.1)
-plt.show()</code></pre>
-<div class="figure"><span id="fig:train"></span>
-<img src="neural-hierarchical-models_files/figure-html5/train-1.png" alt="Estimated relationships between x and abundance as training progresses. Dark blue lines represent predictions from early training iterations, and green/yellow represent middle/late training iterations." width="624" data-distill-preview=1 />
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> plt.scatter(x, n, c<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> plt.xlabel(<span class="st">&#39;Covariate value&#39;</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> plt.ylabel(<span class="st">&#39;Abundance&#39;</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> plt.cm.viridis(np.linspace(<span class="dv">0</span>,<span class="dv">1</span>,n_epoch))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_epoch):</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i_batch, xy <span class="kw">in</span> <span class="bu">enumerate</span>(dataloader):</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        x_i, y_i <span class="op">=</span> xy</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        optimizer.zero_grad()</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        lambda_i, p_i <span class="op">=</span> net(x_i)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        nll <span class="op">=</span> nmix_loss(y_i, lambda_i, p_i, n_max <span class="op">=</span> <span class="dv">200</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> torch.mean(nll)        </span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        loss.backward()</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        optimizer.step()    <span class="co"># Does the update</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>        running_loss.append(loss.data.detach().numpy())</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    lam_hat, p_hat <span class="op">=</span> net(torch.from_numpy(x))</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    lam_hat <span class="op">=</span> lam_hat.detach().numpy()</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    _ <span class="op">=</span> plt.plot(x, lam_hat, color<span class="op">=</span>colors[i], alpha<span class="op">=</span><span class="fl">.1</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:train"></span>
+<img src="neural-hierarchical-models_files/figure-html5/train-19.png" alt="Estimated relationships between x and abundance as training progresses. Dark blue lines represent predictions from early training iterations, and green/yellow represent middle/late training iterations." width="624" data-distill-preview=1 />
+<p class="caption">
+Figure 3: Estimated relationships between x and abundance as training progresses. Dark blue lines represent predictions from early training iterations, and green/yellow represent middle/late training iterations.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:train"></span>
+<img src="neural-hierarchical-models_files/figure-html5/train-20.png" alt="Estimated relationships between x and abundance as training progresses. Dark blue lines represent predictions from early training iterations, and green/yellow represent middle/late training iterations." width="624" data-distill-preview=1 />
 <p class="caption">
 Figure 3: Estimated relationships between x and abundance as training progresses. Dark blue lines represent predictions from early training iterations, and green/yellow represent middle/late training iterations.
 </p>
@@ -1201,15 +1795,20 @@ Figure 3: Estimated relationships between x and abundance as training progresses
 </div>
 <p>Visualize loss:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="python"><code>
-n_step = len(running_loss)
-_ = plt.scatter(x=np.arange(n_step), y=running_loss, s=2,
-                color=plt.cm.viridis(np.linspace(0,1,n_step)))
-_ = plt.xlabel(&#39;Number of training iterations&#39;)
-_ = plt.ylabel(&#39;N-mixture loss&#39;)
-plt.show()</code></pre>
-<div class="figure"><span id="fig:loss-plot"></span>
-<img src="neural-hierarchical-models_files/figure-html5/loss-plot-1.png" alt="Training loss over time. Each point corresponds to the loss after a gradient update." width="624" />
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>n_step <span class="op">=</span> <span class="bu">len</span>(running_loss)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> plt.scatter(x<span class="op">=</span>np.arange(n_step), y<span class="op">=</span>running_loss, s<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                color<span class="op">=</span>plt.cm.viridis(np.linspace(<span class="dv">0</span>,<span class="dv">1</span>,n_step)))</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> plt.xlabel(<span class="st">&#39;Number of training iterations&#39;</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> plt.ylabel(<span class="st">&#39;N-mixture loss&#39;</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:loss-plot"></span>
+<img src="neural-hierarchical-models_files/figure-html5/loss-plot-23.png" alt="Training loss over time. Each point corresponds to the loss after a gradient update." width="624" />
+<p class="caption">
+Figure 4: Training loss over time. Each point corresponds to the loss after a gradient update.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:loss-plot"></span>
+<img src="neural-hierarchical-models_files/figure-html5/loss-plot-24.png" alt="Training loss over time. Each point corresponds to the loss after a gradient update." width="624" />
 <p class="caption">
 Figure 4: Training loss over time. Each point corresponds to the loss after a gradient update.
 </p>
@@ -1218,20 +1817,24 @@ Figure 4: Training loss over time. Each point corresponds to the loss after a gr
 <h3 id="more-on-implementing-hierarchical-models">More on implementing hierarchical models</h3>
 <p>If you are interested in digging into the details of how to build these models, check out the companion repository on GitHub, which has all of the code required to reproduce the paper, as well as links to Jupyter Notebooks (thanks Binder!) to play with some toy occupancy, capture-recapture, and N-mixture models: <a href="https://github.com/mbjoseph/neuralecology" class="uri">https://github.com/mbjoseph/neuralecology</a></p>
 <h2 id="parting-thoughts">Parting thoughts</h2>
-<p>Deep learning is somewhat of a mystery to many ecologists. Those who are currently applying it have done some amazing things (like counting plants and animals in imagery). But, I worry that <strong>as a community, ecologists are thinking about deep learning too narrowly</strong>.</p>
-<p>We can look to hydrology and physics to get a sense for how we can advance science with deep learning. Here are a few key papers that are shaping my thinking around this topic, which might help motivate future work in science-based deep learning for ecology:</p>
+<p>Deep learning is somewhat of a mystery to many ecologists.
+Those who are currently applying it have done some amazing things (like counting plants and animals in imagery).
+But, I worry that <strong>as a community, ecologists are thinking about deep learning too narrowly</strong>.</p>
+<p>We can look to hydrology and physics to get a sense for how we can advance science with deep learning.
+Here are a few key papers that are shaping my thinking around this topic, which might help motivate future work in science-based deep learning for ecology:</p>
 <ul>
 <li>Karpatne, Anuj, et al. “Physics-guided neural networks (pgnn): An application in lake temperature modeling.” arXiv preprint arXiv:1710.11431 (2017). <a href="https://arxiv.org/abs/1710.11431">link</a></li>
 <li>Raissi, Maziar. “Deep hidden physics models: Deep learning of nonlinear partial differential equations.” The Journal of Machine Learning Research 19.1 (2018): 932-955. <a href="https://dl.acm.org/doi/10.5555/3291125.3291150">link</a></li>
 <li>Rangapuram, Syama Sundar, et al. “Deep state space models for time series forecasting.” Advances in neural information processing systems. 2018. <a href="https://papers.nips.cc/paper/8004-deep-state-space-models-for-time-series-forecasting">link</a></li>
 <li>Rackauckas, Christopher, et al. “Universal Differential Equations for Scientific Machine Learning.” arXiv preprint arXiv:2001.04385 (2020). <a href="https://arxiv.org/abs/2001.04385">link</a></li>
 </ul>
-<div id="refs" class="references">
-<div id="ref-joseph2020">
-<p>Joseph, Maxwell B. 2020. “Neural Hierarchical Models of Ecological Populations.” <em>Ecology Letters</em> in press. <a href="https://doi.org/10.1111/ele.13462">https://doi.org/10.1111/ele.13462</a>.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-joseph2020" class="csl-entry" role="doc-biblioentry">
+Joseph, Maxwell B. 2020. <span>“Neural Hierarchical Models of Ecological Populations.”</span> <em>Ecology Letters</em> in press. <a href="https://doi.org/10.1111/ele.13462">https://doi.org/10.1111/ele.13462</a>.
 </div>
-<div id="ref-royle2004n">
-<p>Royle, J Andrew. 2004. “N-Mixture Models for Estimating Population Size from Spatially Replicated Counts.” <em>Biometrics</em> 60 (1): 108–15.</p>
+<div id="ref-royle2004n" class="csl-entry" role="doc-biblioentry">
+Royle, J Andrew. 2004. <span>“N-Mixture Models for Estimating Population Size from Spatially Replicated Counts.”</span> <em>Biometrics</em> 60 (1): 108–15.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
@@ -1254,31 +1857,10 @@ Figure 4: Training loss over time. Each point corresponds to the loss after a gr
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
-<script id="distill-bibliography" type="text/bibtex">
-
-@article{royle2004n,
-  title={N-mixture models for estimating population size from spatially replicated counts},
-  author={Royle, J Andrew},
-  journal={Biometrics},
-  volume={60},
-  number={1},
-  pages={108--115},
-  year={2004},
-  publisher={Wiley Online Library}
-}
-
-
-@article{joseph2020,
-  title={Neural hierarchical models of ecological populations},
-  author={Joseph, Maxwell B},
-  journal={Ecology Letters},
-  volume={in press},
-  url={https://doi.org/10.1111/ele.13462},
-  doi={10.1111/ele.13462},
-  year={2020}
-  }
-</script>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

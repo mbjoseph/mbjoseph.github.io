@@ -234,7 +234,11 @@ def nmix_loss(y_obs, lambda_hat, p_hat, n_max):
     n_logprob = Poisson(lambda_hat).log_prob(possible_n_vals)
     assert n_logprob.shape == (batch_size, n_max)
     
-    y_dist = Binomial(possible_n_vals.view(1, 1, -1), probs=p_hat.view(-1, 1, 1))
+    y_dist = Binomial(
+      possible_n_vals.view(1, 1, -1), 
+      probs=p_hat.view(-1, 1, 1), 
+      validate_args=False
+    )
     y_obs = y_obs.unsqueeze(-1).repeat(1, 1, n_max)
     y_logprob = y_dist.log_prob(y_obs).sum(dim=1) # sum over repeat surveys
     assert y_logprob.shape == (batch_size, n_max)
