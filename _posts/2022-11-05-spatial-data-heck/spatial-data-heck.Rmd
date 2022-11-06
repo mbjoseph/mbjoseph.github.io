@@ -32,4 +32,3 @@ im <- load.image("spatial-heck-bingo.png")
 plot(im, axes = FALSE)
 ```
 
-![](spatial-heck-bingo.png)
