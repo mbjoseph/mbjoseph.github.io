@@ -1,25 +1,5 @@
 [
   {
-    "path": "posts/2022-11-05-spatial-data-heck/",
-    "title": "Spatial data heck bingo",
-    "description": "The bingo game we all play but don't want to win.",
-    "author": [
-      {
-        "name": "Maxwell B. Joseph",
-        "url": {}
-      }
-    ],
-    "date": "2022-11-05",
-    "categories": [
-      "rants",
-      "spatial"
-    ],
-    "contents": "\nIt’s 2022.\nWorking with spatial data is easier now than ever before.\nBetween the rise of cloud native geospatial, SpatioTemporal Asset Catalogs, and the maturation of open source spatial libraries, it is extremely rare to find oneself in spatial data hell.\nAnd yet, there are many small annoying things that slow the day to day work.\nThis is spatial data heck.\nAnd this is the spatial data heck bingo card.\nPut it on your wall and know that you’re not alone.\n\n\n\nFigure 1: Spatial data heck bingo card.\n\n\n\n\n\n\n",
-    "preview": "posts/2022-11-05-spatial-data-heck/spatial-data-heck_files/figure-html5/plot-img-1.png",
-    "last_modified": "2022-11-05T22:57:49-06:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2020-04-28-a-step-by-step-guide-to-marginalizing-over-discrete-parameters-for-ecologists-using-stan/",
     "title": "A step-by-step guide to marginalizing over discrete parameters for ecologists using Stan",
     "description": "Everything you might have been afraid to ask about implementing models with \ndiscrete parameters in Stan. Written for ecologists that know BUGS, JAGS, or NIMBLE, and want to use Stan. Provides an example by marginalizing\nover partly observed presence/absence states in a simple occupancy model.",
