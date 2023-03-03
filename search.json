@@ -4,15 +4,15 @@
       "path": "about.html",
       "title": "About",
       "author": [],
-      "contents": "\nI am a data scientist at NCX working on forest carbon, formerly an academic.\nI develop probabilistic models with applications to forest carbon, ecology, natural hazards, extreme events, and global change.\nI also contribute to and develop a variety of open source software projects in Python and R, in the interest of fostering open, reproducible, and reliable science.\n\n\n\n",
-      "last_modified": "2022-12-12T04:45:31-07:00"
+      "contents": "\nI am a data scientist at Planet working on forest carbon, formerly an academic.\nI develop probabilistic models with applications to forest carbon, ecology, natural hazards, extreme events, and global change.\nI also contribute to and develop a variety of open source software projects in Python and R, in the interest of fostering open, reproducible, and reliable science.\n\n\n\n",
+      "last_modified": "2023-03-03T12:48:53-07:00"
     },
     {
       "path": "index.html",
       "title": "Posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-12-12T04:45:32-07:00"
+      "last_modified": "2023-03-03T12:48:54-07:00"
     }
   ],
   "collections": ["posts/posts.json"]
